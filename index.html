@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/aulas.json. Edite o template, não o index.html. -->
+  <title>Edição de Vídeos com Claude — Guia do Professor, 12 Aulas</title>
+  <meta name="description" content="Este guia consolida as 12 aulas do nível iniciante de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ NAV (glass pill) ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="index.html" aria-label="Edição com Claude — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="#curso">Curso</a>
+        <a href="#aulas">Aulas</a>
+        <a href="#guia">Guia do professor</a>
+        <a href="guia.html">Referência</a>
+      </nav>
+      <a class="btn btn--clay btn--sm site-nav__cta" href="aulas/aula-01.html">Começar a aula 01</a>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="#curso">Curso</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#guia">Guia do professor</a>
+      <a href="guia.html">Referência</a>
+      <a class="btn btn--clay" href="aulas/aula-01.html">Começar a aula 01</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__meta">
+        <span class="rec" aria-hidden="true"><span class="rec__dot"></span>REC</span>
+        <span class="timecode" aria-hidden="true" data-timecode>00:00:00:00</span>
+        <span class="hero__fps" aria-hidden="true">30 FPS · 1080×1920</span>
+        <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+      </div>
+
+      <div class="hero__inner">
+        <h1 class="hero__title" id="hero-title">
+          <span class="wordmark" aria-hidden="true" data-wordmark>EDIÇÃO</span>
+          <span class="sr-only">Edição de Vídeos com Claude: Guia do professor, Nível iniciante. 12 aulas, roteiros, prompts e checklists</span>
+        </h1>
+        <p class="hero__lead">Guia do professor · Nível iniciante. <em>12 aulas</em>, roteiros, prompts e checklists.</p>
+        <div class="hero__actions">
+          <a class="btn btn--clay" href="aulas/aula-01.html">Começar a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#aulas">Ver as 12 aulas</a>
+        </div>
+      </div>
+
+      <!-- Abas numeradas dos módulos (faixas do "Mapa do curso") -->
+      <div class="hero__rail" data-hero-tabs>
+        <div class="hero__tabs" role="tablist" aria-label="Módulos do curso">
+          <button class="hero-tab" role="tab" aria-selected="true" aria-controls="mod-panel" id="mod-1" data-index="0">
+            <span class="hero-tab__bar"><span class="hero-tab__fill"></span></span>
+            <span class="hero-tab__no">01</span><span class="hero-tab__name">Fundamentos</span>
+          </button>
+          <button class="hero-tab" role="tab" aria-selected="false" aria-controls="mod-panel" id="mod-2" data-index="1" tabindex="-1">
+            <span class="hero-tab__bar"><span class="hero-tab__fill"></span></span>
+            <span class="hero-tab__no">02</span><span class="hero-tab__name">Composição</span>
+          </button>
+          <button class="hero-tab" role="tab" aria-selected="false" aria-controls="mod-panel" id="mod-3" data-index="2" tabindex="-1">
+            <span class="hero-tab__bar"><span class="hero-tab__fill"></span></span>
+            <span class="hero-tab__no">03</span><span class="hero-tab__name">Acabamento</span>
+          </button>
+          <button class="hero-tab" role="tab" aria-selected="false" aria-controls="mod-panel" id="mod-4" data-index="3" tabindex="-1">
+            <span class="hero-tab__bar"><span class="hero-tab__fill"></span></span>
+            <span class="hero-tab__no">04</span><span class="hero-tab__name">Projeto final</span>
+          </button>
+        </div>
+        <p class="hero__panel" id="mod-panel" role="tabpanel" aria-labelledby="mod-1" data-panel-texts='[&quot;Aulas 01–04: Fundamentos, instalações e Skills. Entrega: ambiente e skill personalizada.&quot;,&quot;Aulas 05–08: Composição, arquivos, cortes e tipografia. Entrega: vídeo de 30s estruturado.&quot;,&quot;Aulas 09–11: Áudio, cor, revisão e exportação. Entrega: primeiro mp4 final.&quot;,&quot;Aula 12: Projeto integrado independente. Entrega: segundo mp4 final.&quot;]'>Aulas 01–04: Fundamentos, instalações e Skills. Entrega: ambiente e skill personalizada.</p>
+      </div>
+    </section>
+
+    <!-- ============ STATS STRIP (contagens calculadas do aulas.json) ============ -->
+    <section class="stats" aria-label="O curso em números">
+      <dl class="stats__list">
+        <div class="stat"><dt>Aulas</dt><dd data-count="12">12</dd></div>
+        <div class="stat"><dt>Módulos</dt><dd data-count="4">4</dd></div>
+        <div class="stat"><dt>Comandos de demonstração</dt><dd data-count="12">12</dd></div>
+        <div class="stat"><dt>Itens de checklist do professor</dt><dd data-count="36">36</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ INTRO (mosaic) ============ -->
+    <section class="intro section" id="curso" aria-labelledby="intro-title">
+      <div class="mosaic">
+        <div class="tile tile--slogan reveal">
+          <h2 class="tile__slogan" id="intro-title">Do bruto<br>ao corte.</h2>
+        </div>
+        <div class="tile tile--figure reveal">
+          <span class="tile__figure">12</span>
+          <span class="tile__caption">aulas · nível iniciante</span>
+        </div>
+        <div class="tile tile--wave reveal" aria-hidden="true">
+          <canvas class="wave-canvas" data-wave></canvas>
+          <span class="tile__tc">A1 · 00:00:30:00</span>
+        </div>
+      </div>
+      <div class="intro__text reveal">
+        <p class="lead">Este guia consolida as 12 aulas do nível iniciante de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.</p>
+        <p><strong>Pré-requisito:</strong> computador Windows, acesso autorizado ao Claude Code, Node.js e projeto Remotion funcional. O modelo efetivamente disponível depende da conta e do ambiente do professor. Verifique nomes de modelos e comandos antes de gravar.</p>
+      </div>
+    </section>
+
+    <!-- ============ AULAS (timeline) ============ -->
+    <section class="lessons section" id="aulas" aria-labelledby="aulas-title">
+      <div class="container">
+        <div class="lessons__head">
+          <h2 class="section-title reveal" id="aulas-title">As 12 aulas</h2>
+          <div class="progress-summary reveal" data-progress-summary>
+            <p><strong data-progress-count>0</strong> de 12 aulas concluídas</p>
+            <div class="meter" aria-hidden="true"><span class="meter__fill" data-progress-fill></span></div>
+            <button class="link-btn" type="button" data-progress-reset>Zerar progresso</button>
+          </div>
+        </div>
+
+        <div class="timeline" data-timeline>
+          <div class="timeline__ruler" aria-hidden="true">
+            <span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span>
+          </div>
+          <div class="timeline__playhead" aria-hidden="true" data-playhead></div>
+          <div class="track-group">
+            <h3 class="track__label"><span class="track__id">V1</span> Fundamentos</h3>
+            <ol class="track">
+              <li><a class="clip reveal" href="aulas/aula-01.html" data-aula="01">
+                <span class="clip__no">01</span>
+                <span class="clip__title">Introdução à edição com Claude</span>
+                <span class="clip__meta">Fundamentos · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-02.html" data-aula="02">
+                <span class="clip__no">02</span>
+                <span class="clip__title">Instalando as ferramentas</span>
+                <span class="clip__meta">Fundamentos · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-03.html" data-aula="03">
+                <span class="clip__no">03</span>
+                <span class="clip__title">Instalando Skills</span>
+                <span class="clip__meta">Fundamentos · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-04.html" data-aula="04">
+                <span class="clip__no">04</span>
+                <span class="clip__title">Criando sua primeira Skill</span>
+                <span class="clip__meta">Fundamentos · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+            </ol>
+          </div>
+          <div class="track-group">
+            <h3 class="track__label"><span class="track__id">V2</span> Composição</h3>
+            <ol class="track" start="5">
+              <li><a class="clip reveal" href="aulas/aula-05.html" data-aula="05">
+                <span class="clip__no">05</span>
+                <span class="clip__title">Criando seu primeiro vídeo</span>
+                <span class="clip__meta">Composição · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-06.html" data-aula="06">
+                <span class="clip__no">06</span>
+                <span class="clip__title">Trabalhando com arquivos</span>
+                <span class="clip__meta">Composição · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-07.html" data-aula="07">
+                <span class="clip__no">07</span>
+                <span class="clip__title">Cortes, ritmo e transições</span>
+                <span class="clip__meta">Composição · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-08.html" data-aula="08">
+                <span class="clip__no">08</span>
+                <span class="clip__title">Textos e animações</span>
+                <span class="clip__meta">Composição · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+            </ol>
+          </div>
+          <div class="track-group">
+            <h3 class="track__label"><span class="track__id">V3</span> Acabamento</h3>
+            <ol class="track" start="9">
+              <li><a class="clip reveal" href="aulas/aula-09.html" data-aula="09">
+                <span class="clip__no">09</span>
+                <span class="clip__title">Música e efeitos sonoros</span>
+                <span class="clip__meta">Acabamento · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-10.html" data-aula="10">
+                <span class="clip__no">10</span>
+                <span class="clip__title">Acabamento visual</span>
+                <span class="clip__meta">Acabamento · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+              <li><a class="clip reveal" href="aulas/aula-11.html" data-aula="11">
+                <span class="clip__no">11</span>
+                <span class="clip__title">Revisão e exportação</span>
+                <span class="clip__meta">Acabamento · ≈ 7–10 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+            </ol>
+          </div>
+          <div class="track-group">
+            <h3 class="track__label"><span class="track__id">V4</span> Projeto final</h3>
+            <ol class="track" start="12">
+              <li><a class="clip reveal" href="aulas/aula-12.html" data-aula="12">
+                <span class="clip__no">12</span>
+                <span class="clip__title">Projeto final: vídeo completo</span>
+                <span class="clip__meta">Projeto final · ≈ 10–12 min</span>
+                <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
+              </a></li>
+            </ol>
+          </div>
+        </div>
+        <p class="lessons__note"><strong>Notas de produção:</strong> Duração de referência: aulas 01 a 11, aproximadamente 7 a 10 minutos; aula 12, 10 a 12 minutos. As durações são estimativas editoriais, não tempos garantidos de execução do software.</p>
+      </div>
+    </section>
+
+    <!-- ============ GUIA DO PROFESSOR ============ -->
+    <section class="guide section" id="guia" aria-labelledby="guia-title">
+      <div class="container guide__grid">
+        <div class="guide__intro reveal">
+          <h2 class="section-title" id="guia-title">Guia do professor</h2>
+          <p class="lead">Demonstrar o procedimento em um ambiente previamente testado, explicar o raciocínio de cada decisão, conferir o resultado real e distinguir as verificações automatizadas das avaliações criativas humanas.</p>
+          <p><a class="btn btn--ghost" href="guia.html">Mapa, plataformas, Skills e glossário <span class="btn__arrow" aria-hidden="true">→</span></a></p>
+        </div>
+        <figure class="flow reveal" aria-label="Diagrama: material bruto disperso é condensado pelo Claude e sai como uma linha do tempo ordenada">
+          <svg class="flow__svg" data-flow viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true"></svg>
+        </figure>
+        <ol class="guide__steps" aria-label="Método de cada aula">
+          <li class="reveal">
+            <h3>Mostrar o resultado esperado</h3>
+            <p>Passo 01 de 06</p>
+          </li>
+          <li class="reveal">
+            <h3>Apresentar o problema</h3>
+            <p>Passo 02 de 06</p>
+          </li>
+          <li class="reveal">
+            <h3>Explicar o conceito essencial</h3>
+            <p>Passo 03 de 06</p>
+          </li>
+          <li class="reveal">
+            <h3>Executar o prompt</h3>
+            <p>Passo 04 de 06</p>
+          </li>
+          <li class="reveal">
+            <h3>Validar o resultado</h3>
+            <p>Passo 05 de 06</p>
+          </li>
+          <li class="reveal">
+            <h3>Conectar à próxima aula</h3>
+            <p>Passo 06 de 06</p>
+          </li>
+        </ol>
+        <div class="guide__kit reveal">
+          <h3>Em cada aula</h3>
+          <ul class="kit">
+            <li><span class="kit__swatch kit__swatch--clay" aria-hidden="true"></span>Objetivo da aula</li>
+            <li><span class="kit__swatch kit__swatch--ink" aria-hidden="true"></span>Contexto narrativo</li>
+            <li><span class="kit__swatch kit__swatch--neon" aria-hidden="true"></span>Roteiro de cenas e condução</li>
+            <li><span class="kit__swatch kit__swatch--amber" aria-hidden="true"></span>Comando de demonstração</li>
+            <li><span class="kit__swatch kit__swatch--clay" aria-hidden="true"></span>Skills e repositórios nesta aula</li>
+            <li><span class="kit__swatch kit__swatch--ink" aria-hidden="true"></span>Checklist do professor</li>
+            <li><span class="kit__swatch kit__swatch--neon" aria-hidden="true"></span>Texto para narração</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner reveal">
+        <h2 class="cta-band__title" id="cta-title">Comece pela aula 01: Introdução à edição com Claude.</h2>
+        <a class="btn btn--dark" href="aulas/aula-01.html">Abrir a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__name" aria-hidden="true">EDIÇÃO · CLAUDE</p>
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="#curso">O curso</a>
+          <a href="#aulas">As 12 aulas</a>
+          <a href="#guia">Guia do professor</a>
+          <a href="guia.html">Referência</a>
+          <a href="aulas/aula-01.html">Começar</a>
+        </nav>
+        <p class="site-footer__note">Identidade editorial inspirada na comunicação visual do Claude; material independente. Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

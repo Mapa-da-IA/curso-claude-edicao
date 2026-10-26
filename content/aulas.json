@@ -1,0 +1,1862 @@
+{
+  "curso": {
+    "titulo": "Edição de Vídeos com Claude",
+    "subtitulo": "Guia do professor | Nível iniciante. 12 aulas, roteiros, prompts e checklists",
+    "introducao": [
+      "Identidade editorial inspirada na comunicação visual do Claude; material independente.",
+      "Este guia consolida as 12 aulas do nível iniciante de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.",
+      "Papel do professor: Demonstrar o procedimento em um ambiente previamente testado, explicar o raciocínio de cada decisão, conferir o resultado real e distinguir as verificações automatizadas das avaliações criativas humanas.",
+      "Método de cada aula: 1. Mostrar o resultado esperado. 2. Apresentar o problema. 3. Explicar o conceito essencial. 4. Executar o prompt. 5. Validar o resultado. 6. Conectar à próxima aula.",
+      "Notas de produção: Duração de referência: aulas 01 a 11, aproximadamente 7 a 10 minutos; aula 12, 10 a 12 minutos. As durações são estimativas editoriais, não tempos garantidos de execução do software.",
+      "Pré-requisito: computador Windows, acesso autorizado ao Claude Code, Node.js e projeto Remotion funcional. O modelo efetivamente disponível depende da conta e do ambiente do professor. Verifique nomes de modelos e comandos antes de gravar."
+    ],
+    "secoes_extras": [
+      {
+        "titulo": "Mapa do curso",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "linhas": [
+              [
+                "Aulas",
+                "Foco",
+                "Entrega"
+              ],
+              [
+                "01–04",
+                "Fundamentos, instalações e Skills",
+                "Ambiente e skill personalizada"
+              ],
+              [
+                "05–08",
+                "Composição, arquivos, cortes e tipografia",
+                "Vídeo de 30s estruturado"
+              ],
+              [
+                "09–11",
+                "Áudio, cor, revisão e exportação",
+                "Primeiro MP4 final"
+              ],
+              [
+                "12",
+                "Projeto integrado independente",
+                "Segundo MP4 final"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Índice pedagógico",
+        "blocos": [
+          {
+            "tipo": "titulo",
+            "texto": "Percurso das 12 aulas"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "01 | Introdução à edição com Claude",
+              "02 | Instalando as ferramentas",
+              "03 | Instalando Skills",
+              "04 | Criando sua primeira Skill",
+              "05 | Criando seu primeiro vídeo",
+              "06 | Trabalhando com arquivos",
+              "07 | Cortes, ritmo e transições",
+              "08 | Textos e animações",
+              "09 | Música e efeitos sonoros",
+              "10 | Acabamento visual",
+              "11 | Revisão e exportação",
+              "12 | Projeto final: vídeo completo"
+            ]
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Apêndices: kit de referência, roteiro de validação, glossário e fontes oficiais."
+          }
+        ]
+      },
+      {
+        "titulo": "Guia de plataformas",
+        "blocos": [
+          {
+            "tipo": "titulo",
+            "texto": "Qual Claude utilizar?"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "A palavra Claude pode identificar diferentes interfaces. Uma Skill instalada em um projeto do Claude Code não aparece automaticamente na conta do Chat ou Cowork. O professor deve escolher a superfície antes de seguir uma instalação."
+          },
+          {
+            "tipo": "tabela",
+            "linhas": [
+              [
+                "Ambiente",
+                "Como usa Skills",
+                "Serve ao curso?"
+              ],
+              [
+                "Claude Code (terminal / IDE)",
+                "Pasta .claude/skills no projeto ou ~/.claude/skills; comandos e arquivos locais.",
+                "SIM — recomendado para Remotion local."
+              ],
+              [
+                "Claude Desktop — Chat",
+                "Personalizar > Skills; instalar do diretório ou enviar ZIP.",
+                "Para tarefas de texto; não equivale ao terminal local."
+              ],
+              [
+                "Claude Desktop — Cowork",
+                "Skills e plugins da conta; arquivos locais dependem das capacidades e permissões disponíveis.",
+                "Alternativa visual; testar acesso à pasta e terminal."
+              ],
+              [
+                "Claude no navegador",
+                "Personalizar > Skills, conforme recursos da conta; Cowork na nuvem tem limites de acesso ao computador.",
+                "Consultar, planejar ou Cowork; não presumir acesso local."
+              ],
+              [
+                "Claude Code em Desktop",
+                "Se disponível na instalação, ambiente de código distinto do Chat/Cowork.",
+                "Pode servir, com projeto e ferramentas configurados."
+              ]
+            ]
+          },
+          {
+            "tipo": "dica",
+            "texto": "DIFERENÇA INDISPENSÁVEL: Claude Opus é o modelo. Claude Code é o ambiente de trabalho com arquivos e comandos. Claude Desktop é o aplicativo; nele podem existir Chat, Cowork e recursos de código. O navegador não executa automaticamente comandos PowerShell no PC do aluno."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Instalação A — Claude Code no projeto"
+          },
+          {
+            "tipo": "lista_numerada",
+            "itens": [
+              "Abra o terminal NA RAIZ do projeto Remotion.",
+              "Execute npx skills add remotion-dev/skills.",
+              "Revise origem, arquivos e permissões.",
+              "Inicie ou reinicie Claude Code.",
+              "Peça para identificar /remotion-best-practices e faça um teste com prévia real."
+            ]
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Para criar uma Skill própria no Claude Code, use .claude/skills/direcao-de-edicao/SKILL.md com metadados name e description. A pasta deve estar no projeto que será editado."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Instalação B — Claude na web ou aplicativo (Chat/Cowork)"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Entre em Personalizar > Skills. Para Skills do diretório, escolha Procurar Skills e Instalar. Para uma Skill personalizada, compacte sua pasta no formato ZIP e use Criar Skill > Enviar uma Skill. Os rótulos podem variar com idioma e versão."
+          },
+          {
+            "tipo": "atencao",
+            "texto": "ATENÇÃO: enviar uma Skill para a conta não instala Node.js, Remotion ou scripts locais. No Cowork, confirme acesso efetivo aos arquivos do computador; determinadas ações exigem Claude Desktop aberto e permissões explícitas."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Verificação antes da gravação"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Faça o teste na MESMA interface que os alunos utilizarão. Verifique a Skill reconhecida, as mídias existentes, a criação de um arquivo e a renderização de cinco segundos. Nunca anuncie uma instalação como universal entre produtos."
+          }
+        ]
+      },
+      {
+        "titulo": "Apêndice — Catálogo de Skills",
+        "blocos": [
+          {
+            "tipo": "titulo",
+            "texto": "Seleção por área de trabalho"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Duas referências por categoria. São recomendações editoriais, não as duas mais baixadas do GitHub; estrelas e forks não equivalem a downloads. Projetos de terceiros devem ser revalidados na data de gravação."
+          },
+          {
+            "tipo": "tabela",
+            "linhas": [
+              [
+                "Área",
+                "Opção A",
+                "Opção B"
+              ],
+              [
+                "Depuração",
+                "Superpowers / systematic-debugging",
+                "Claude Video Kit / revisão audiovisual"
+              ],
+              [
+                "Edição",
+                "Remotion Agent Skills (oficial)",
+                "Gadir Labs Video Editor (externa)"
+              ],
+              [
+                "Tipografia",
+                "UI UX Pro Max",
+                "Taste Skill"
+              ],
+              [
+                "Motion graphics",
+                "HyperFrames (ferramenta)",
+                "Claude Motion Design (projeto externo)"
+              ],
+              [
+                "Animações",
+                "GSAP Skills (oficial)",
+                "Remotion / markup e transições"
+              ],
+              [
+                "Efeitos sonoros",
+                "Sonilo Skills (API externa)",
+                "Claude Video Kit / mixagem"
+              ],
+              [
+                "Trilhas sonoras",
+                "Music Composition Skills",
+                "Sonilo video-to-music (API externa)"
+              ]
+            ]
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Não classifique um repositório de código como uma Skill instalável sem localizar o arquivo SKILL.md e confirmar o método de instalação. Um catálogo de Skills não instala automaticamente seus integrantes."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Links para instalação e verificação"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "Remotion Agent Skills: https://github.com/remotion-dev/skills",
+              "Anthropic Skills: https://github.com/anthropics/skills",
+              "Superpowers: https://github.com/obra/superpowers",
+              "GSAP Skills: https://github.com/greensock/gsap-skills",
+              "UI UX Pro Max: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+              "Taste Skill: https://github.com/Leonxlnx/taste-skill",
+              "HyperFrames: https://github.com/heygen-com/hyperframes",
+              "Claude Motion Design: https://github.com/howseen-ai/claude-motion-design",
+              "Video Editor: https://github.com/gadirlabs/video-editor",
+              "Claude Video Kit: https://github.com/edotheDev/claude-video-kit",
+              "Sonilo Skills: https://github.com/sonilo-ai/skills",
+              "Music Composition Skills: https://github.com/jtydhr88/music-composition-skills"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Apêndice — Instalação segura",
+        "blocos": [
+          {
+            "tipo": "titulo",
+            "texto": "Procedimento para professores"
+          },
+          {
+            "tipo": "lista_numerada",
+            "itens": [
+              "01 Confirme a superfície: Claude Code (terminal/projeto) ou Claude Chat/Cowork (conta)? Um procedimento não equivale automaticamente ao outro.",
+              "02 Verifique a proveniência: Abra README, SKILL.md, commits, issues, licenças, scripts e dependências. Não use ranking de estrelas como prova de segurança.",
+              "03 Entenda as permissões: Skills são instruções, mas seus scripts podem acionar ferramentas; revise comandos de shell, escrita de arquivos, downloads e comunicação com APIs.",
+              "04 Teste isoladamente: Use uma cópia de projeto e mídias não sensíveis; registre o comando, a versão e o resultado obtido.",
+              "05 Faça uma demonstração verificável: Mostre a Skill reconhecida e o resultado após renderização. Não prometa que a experiência será idêntica no Chat web, Cowork e Claude Code.",
+              "06 Ensine reversão: Mantenha backup e identifique os arquivos criados ou alterados; evite permissões irrestritas."
+            ]
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Instalação rápida de referência"
+          },
+          {
+            "tipo": "codigo",
+            "linguagem": "shell",
+            "texto": "npx skills add remotion-dev/skills"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Claude Code (dentro do projeto): comando acima. Claude Chat/Cowork: Personalizar > Skills > Procurar Skills > Instalar; ou Criar Skill > Enviar ZIP. Um ZIP de Skill própria é diferente de clonar um repositório GitHub."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Fontes oficiais — consulte antes de gravar"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "https://code.claude.com/docs/en/skills",
+              "https://support.claude.com/pt/articles/12512180-usar-skills-no-claude",
+              "https://support.claude.com/pt/articles/14328846-procure-skills-conectores-e-plugins-em-um-unico-diretorio",
+              "https://support.claude.com/pt/articles/15520349-use-claude-cowork-na-web-desktop-e-mobile",
+              "https://www.remotion.dev/docs/ai/skills",
+              "https://www.remotion.dev/docs/"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Apêndice 01 — Fluxo técnico de referência",
+        "blocos": [
+          {
+            "tipo": "titulo",
+            "texto": "Projeto Remotion"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Uma composition reúne resolução, taxa de quadros e duração. O curso usa 1080 × 1920, 30 FPS e 900 quadros para 30 segundos."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Arquivos estáticos"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Mantenha mídias em public/videos, public/imagens e public/audios. Use referências locais compatíveis com a versão instalada. Não invente arquivos para preencher lacunas."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Renderização"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Composição: O-Futuro-da-Criacao. Comando de referência:"
+          },
+          {
+            "tipo": "codigo",
+            "linguagem": "shell",
+            "texto": "npx remotion render O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Confirme a existência do arquivo e inspecione resolução, duração, FPS, imagem e áudio; o sucesso de uma instrução ao Claude não comprova, sozinho, a exportação."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Cuidados pedagógicos"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Use mídias licenciadas; proteja arquivos originais; não conceda permissões irrestritas ao computador; avalie fontes de Skills externas; diferencie diagnóstico automático de inspeção real de vídeo e áudio."
+          }
+        ]
+      },
+      {
+        "titulo": "Apêndice 02 — Glossário essencial",
+        "blocos": [
+          {
+            "tipo": "lista",
+            "itens": [
+              "Claude Code: Ferramenta de trabalho com instruções e arquivos de projeto.",
+              "Remotion: Framework usado para construir composições audiovisuais programáticas.",
+              "Skill / SKILL.md: Documento de instruções especializadas reutilizáveis.",
+              "Composition: Unidade de vídeo com dimensões, FPS e duração.",
+              "FPS: Quadros por segundo: 30 FPS equivalem a 900 quadros em 30 segundos.",
+              "Fade: Transição gradual de opacidade ou volume.",
+              "Trim: Seleção de um trecho de vídeo ou áudio.",
+              "Render: Processo que gera um arquivo final reproduzível a partir da composição.",
+              "H.264 / AAC: Codecs de vídeo e áudio utilizados na exportação de referência."
+            ]
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Referências oficiais para conferência"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "https://code.claude.com/docs/en/skills",
+              "https://www.remotion.dev/docs/",
+              "https://www.remotion.dev/docs/ai/skills",
+              "https://www.remotion.dev/docs/render",
+              "https://nodejs.org/"
+            ]
+          },
+          {
+            "tipo": "atencao",
+            "texto": "Observação: comandos, interfaces, modelos e caminhos podem mudar. Revise a documentação oficial na data da gravação."
+          }
+        ]
+      }
+    ]
+  },
+  "aulas": [
+    {
+      "numero": 1,
+      "slug": "aula-01",
+      "titulo": "Introdução à edição com Claude",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Início do curso: apresentar a promessa pedagógica e mostrar um resultado alcançável."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Abertura e resultado: Apresente uma prévia do vídeo de 30 segundos. Compare a experiência de editar manualmente e dirigir uma composição com linguagem natural.",
+            "02 O desafio da série: Mostre a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação.",
+            "03 Como o fluxo funciona: Explique que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização.",
+            "04 Primeiro teste: Peça um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja.",
+            "05 O papel das Skills: Antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão.",
+            "06 Gancho: Na próxima aula instalaremos o ambiente."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Crie uma composição Remotion vertical 1080x1920 de 5 segundos a 30 FPS. Fundo preto; título “MEU PRIMEIRO VÍDEO COM IA”, branco, detalhe laranja; entrada suave. Organize os componentes e apresente o resultado para revisão."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Panorama"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion Agent Skills (oficial) — https://www.remotion.dev/docs/ai/skills. Cite a direcao-de-edicao como skill que será construída, não como pacote externo."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Mostre que Skill fornece instruções; não concede controle de computador por si mesma."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Definiu corretamente o que Claude faz e o que Remotion faz",
+            "Mostrou um resultado concreto",
+            "Evitou prometer edição perfeita ou geração automática de filmagens"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 01 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar introdução à edição com claude. Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos apresentar uma prévia do vídeo de 30 segundos. Vamos comparar a experiência de editar manualmente e dirigir uma composição com linguagem natural."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos observar a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos entender que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, vamos pedir um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, na próxima aula instalaremos o ambiente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "slug": "aula-02",
+      "titulo": "Instalando as ferramentas",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Preparar Claude Code, Node.js e Remotion em um computador Windows."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Retomada: Relembre o título da aula anterior e a necessidade de um ambiente de trabalho.",
+            "02 Três ferramentas: Claude Code recebe instruções e altera arquivos; Node.js executa o ecossistema; Remotion compõe e renderiza.",
+            "03 Instalação Node.js: Acesse nodejs.org, instale a versão LTS e verifique node -v e npm -v.",
+            "04 Claude Code: Use o instalador nativo oficial do Claude para Windows; autentique uma conta com acesso.",
+            "05 Criar projeto Remotion: Crie o projeto em branco chamado meu-primeiro-video.",
+            "06 Primeira visualização: Abra npm run dev e localize o Remotion Studio; projeto em branco não é erro.",
+            "07 Gancho: Nas próximas aulas instalaremos Skills."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "shell",
+          "texto": "Verificar: node -v ; npm -v ; claude --version.\nInstalar Claude Code: irm https://claude.ai/install.ps1 | iex\nCriar Remotion: npx create-video@latest --yes --blank meu-primeiro-video\nEntrar na pasta: cd meu-primeiro-video\nAbrir Studio: npm run dev"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Escolha do ambiente"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Claude Code local é o caminho principal. Para Chrome/claude.ai ou Chat do Desktop, use Personalizar > Skills: não execute comandos de instalação diretamente na conversa."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Validar node -v, npm -v, claude --version e npm run dev. Uma conta Claude no navegador não substitui esta configuração."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Node.js e npm disponíveis",
+            "Claude Code autenticado",
+            "Projeto Remotion e Studio funcionando"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 02 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar instalando as ferramentas. Preparar Claude Code, Node.js e Remotion em um computador Windows. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, relembre o título da aula anterior e a necessidade de um ambiente de trabalho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, claude Code recebe instruções e altera arquivos; Node.js executa o ecossistema; Remotion compõe e renderiza."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos acessar nodejs.org, instale a versão LTS e verifique node -v e npm -v."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, use o instalador nativo oficial do Claude para Windows; autentique uma conta com acesso."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos criar o projeto em branco chamado meu-primeiro-video."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, vamos abrir npm run dev e localize o Remotion Studio; projeto em branco não é erro."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, nas próximas aulas instalaremos Skills."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "slug": "aula-03",
+      "titulo": "Instalando Skills",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Explicar o conceito de Skills e instalar instruções oficiais do Remotion no projeto."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 A pergunta: Se Claude cria vídeos, por que instalar Skills?",
+            "02 Definição útil: Skills são orientações especializadas armazenadas em arquivos, como SKILL.md; não substituem os softwares nem garantem qualidade.",
+            "03 Onde buscar: Demonstre a documentação oficial remotion.dev/docs/ai/skills e verifique a origem dos repositórios.",
+            "04 Instalação: Na pasta do projeto, execute o comando oficial npx skills add remotion-dev/skills; confira os arquivos e reinicie a sessão do Claude Code quando necessário.",
+            "05 Teste: Consulte /skills, peça um título com boas práticas e abra a composição no Studio.",
+            "06 Gancho: Agora criaremos regras próprias de edição."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "shell",
+          "texto": "No diretório do projeto: npx skills add remotion-dev/skills"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "No Claude Code, consulte /skills."
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Teste: “Use as Skills oficiais do Remotion para criar um título vertical de 5 segundos. Informe quais orientações foram consultadas e quais arquivos foram alterados.”"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skill obrigatória"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion Agent Skills: https://github.com/remotion-dev/skills. Comando principal: npx skills add remotion-dev/skills. Dentro do Claude Code, verificar remotion-best-practices."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: No Chat/Cowork, instalar uma Skill pela conta é outra operação. Evite colar comandos npm como se fossem instruções da interface web."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Skill instalada em local reconhecido",
+            "Claude Code reconhece ou acessa a Skill",
+            "O resultado foi conferido no Studio"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 03 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar instalando skills. Explicar o conceito de Skills e instalar instruções oficiais do Remotion no projeto. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, se Claude cria vídeos, por que instalar Skills?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, skills são orientações especializadas armazenadas em arquivos, como SKILL.md; não substituem os softwares nem garantem qualidade."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos demonstrar a documentação oficial remotion.dev/docs/ai/skills e verifique a origem dos repositórios."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, na pasta do projeto, execute o comando oficial npx skills add remotion-dev/skills; confira os arquivos e reinicie a sessão do Claude Code quando necessário."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, consulte /skills, peça um título com boas práticas e abra a composição no Studio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, agora criaremos regras próprias de edição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "slug": "aula-04",
+      "titulo": "Criando sua primeira Skill",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Problema: O aluno repete margens, formatos e estilos em todos os prompts.",
+            "02 O manual: Apresente nome, descrição e conteúdo de um SKILL.md.",
+            "03 Criação: Solicite ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md.",
+            "04 Regras: 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais.",
+            "05 Teste: Revise a composição de cinco segundos da aula 03 com a nova Skill.",
+            "06 Refinamento: Adicione uma regra após perceber um texto perto da margem.",
+            "07 Gancho: A próxima etapa é criar um vídeo de verdade."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Crie .claude/skills/direcao-de-edicao/SKILL.md com metadados name e description. Oriente edição no Remotion: padrão vertical 1080x1920, 30 FPS, tipografia legível, margem mínima de 80 px, animações suaves, preservação de mídias originais e relatório de arquivos modificados. Escreva em português e teste na composição anterior."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skill própria"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Direção de Edição: .claude/skills/direcao-de-edicao/SKILL.md. Alternativa no Chat/Cowork: ZIP da pasta da Skill via Personalizar > Skills > Criar Skill > Enviar."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Campos name e description, diretório correto, invocação e teste. Não presumir sincronização entre a Skill local e a Skill enviada à conta."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "SKILL.md possui nome e descrição",
+            "Regras são claras e específicas",
+            "Skill testada e revisada"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 04 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar criando sua primeira skill. Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, o aluno repete margens, formatos e estilos em todos os prompts."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos apresentar nome, descrição e conteúdo de um SKILL.md."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos solicitar ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos revisar a composição de cinco segundos da aula 03 com a nova Skill."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, vamos adicionar uma regra após perceber um texto perto da margem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, a próxima etapa é criar um vídeo de verdade."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "slug": "aula-05",
+      "titulo": "Criando seu primeiro vídeo",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Revelação: Mostre o storyboard e um corte rápido do resultado.",
+            "02 Planejar antes de executar: Explique a lógica de cinco mensagens de seis segundos.",
+            "03 Abrir o mesmo projeto: Mantenha Skills e composições anteriores.",
+            "04 Prompt principal: Forneça resolução, FPS, duração, textos e cores.",
+            "05 Visualização: Selecione O-Futuro-da-Criacao no Studio, reveja todas as cenas.",
+            "06 Correção: Peça ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo.",
+            "07 Gancho: Na próxima aula adicionaremos filmagens, fotografias e áudio."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Crie uma composição O-Futuro-da-Criacao, 1080x1920, 30 FPS e 900 quadros. Cinco cenas de 6s: 1 UMA NOVA ERA; 2 SUAS IDEIAS; 3 SEM LIMITES; 4 CRIE COM IA; 5 O FUTURO COMEÇA AGORA. Fundo gráfico preto, branco e laranja. Use as Skills instaladas; animações simples; preserve composições anteriores. Não adicione mídias externas ou áudio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills aplicadas"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion: remotion-create, remotion-markup, remotion-studio e remotion-best-practices; Direção de Edição para regras visuais."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Manter 900 quadros, cinco cenas e nenhum arquivo inventado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Cinco cenas na ordem",
+            "Exatos 900 quadros",
+            "Composição funcional no Studio"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 05 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar criando seu primeiro vídeo. Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos observar o storyboard e um corte rápido do resultado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos entender a lógica de cinco mensagens de seis segundos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, mantenha Skills e composições anteriores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, forneça resolução, FPS, duração, textos e cores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos selecionar O-Futuro-da-Criacao no Studio, reveja todas as cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, vamos pedir ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, na próxima aula adicionaremos filmagens, fotografias e áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "slug": "aula-06",
+      "titulo": "Trabalhando com arquivos",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Importar mídias reais preservando a estrutura audiovisual."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Antes/depois: Mostre os fundos gráficos sendo substituídos por mídia real.",
+            "02 Estrutura: Organize public/videos, public/imagens e public/audios.",
+            "03 Acesso às mídias: Mostre staticFile() e os componentes de mídia como conceito, sem aprofundar código.",
+            "04 Importação com Claude: Use computador.mp4, criacao.mp4 e tecnologia.jpg nas cenas 1, 2 e 3.",
+            "05 Enquadramento: Compare crop com distorção e preserve o assunto principal.",
+            "06 Arquivo de áudio: Confirme trilha.mp3; não adicione música ainda.",
+            "07 Gancho: Na próxima aula trabalharemos o ritmo."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Atualize O-Futuro-da-Criacao usando arquivos reais: cena 1 public/videos/computador.mp4, cena 2 public/videos/criacao.mp4, cena 3 public/imagens/tecnologia.jpg. Mantenha os fundos das cenas 4 e 5, todos os títulos, 30s, 30 FPS. Não distorça os vídeos, silencie áudios de origem e apenas confirme public/audios/trilha.mp3. Informe arquivos ausentes e não invente mídia."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Opções de edição"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion Agent Skills como referência principal. Video Editor (Gadir Labs): https://github.com/gadirlabs/video-editor — repositório complementar: conferir existência, README, dependências e licença antes de indicar instalação."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Use public/videos, public/imagens e public/audios. Verificar se arquivos de exemplo realmente existem."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Pastas e mídias reconhecidas",
+            "Cenas mantêm textos e duração",
+            "Enquadramento sem distorções"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 06 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar trabalhando com arquivos. Importar mídias reais preservando a estrutura audiovisual. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos observar os fundos gráficos sendo substituídos por mídia real."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos organizar public/videos, public/imagens e public/audios."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos observar staticFile() e os componentes de mídia como conceito, sem aprofundar código."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, use computador.mp4, criacao.mp4 e tecnologia.jpg nas cenas 1, 2 e 3."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos comparar crop com distorção e preserve o assunto principal."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, confirme trilha.mp3; não adicione música ainda."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, na próxima aula trabalharemos o ritmo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "slug": "aula-07",
+      "titulo": "Cortes, ritmo e transições",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Diagnóstico: Cinco cenas de 6s criam cadência uniforme.",
+            "02 Ritmo: Mostre cortes rápidos e pausas de leitura; a duração deve ter intenção.",
+            "03 Redistribuição: Defina 4, 5, 4, 7 e 10 segundos para as cinco cenas.",
+            "04 Aparagem: Comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição.",
+            "05 Transições: Compare corte seco, fade e slide; não aplique um efeito em todos os cortes.",
+            "06 Fade final: Insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros.",
+            "07 Gancho: Agora a tipografia terá destaque."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Use a Skill direcao-de-edicao. Ajuste as cinco cenas para 4, 5, 4, 7 e 10 segundos, mantendo os textos e o total de 900 frames. Primeiro utilize cortes secos. Depois adicione fade de 15 frames apenas entre cenas 4 e 5, compensando corretamente a sobreposição para preservar 30 segundos. Confira transições, entradas dos títulos e ausência de lacunas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Ritmo, animações e depuração"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion: remotion-markup / remotion-best-practices. GSAP Skills: https://github.com/greensock/gsap-skills — alternativa para animação programática, não dependência obrigatória do Remotion."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Se cortes/transições causarem erro, Superpowers systematic-debugging: https://github.com/obra/superpowers; investigar causa antes de corrigir."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Duração exata de 30s",
+            "Trecho escolhido é válido",
+            "Fade sem lacunas nem redução indevida da duração"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 07 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar cortes, ritmo e transições. Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, cinco cenas de 6s criam cadência uniforme."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos observar cortes rápidos e pausas de leitura; a duração deve ter intenção."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos definir 4, 5, 4, 7 e 10 segundos para as cinco cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos comparar corte seco, fade e slide; não aplique um efeito em todos os cortes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, agora a tipografia terá destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "slug": "aula-08",
+      "titulo": "Textos e animações",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Criar linguagem tipográfica consistente e animar títulos com foco em leitura."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Comparação: Título básico versus versão editorial com destaque.",
+            "02 Três conceitos: Legibilidade, hierarquia e consistência.",
+            "03 Identidade: Montserrat regular e bold; preto, branco e laranja; margens de 80 px.",
+            "04 Primeiro título: UMA NOVA / ERA, com palavra ERA em laranja, fade e movimento vertical.",
+            "05 Movimentos: Explique fade, slide e scale com exemplos isolados.",
+            "06 Sistema visual: Aplique o padrão às cinco cenas respeitando suas durações.",
+            "07 Revisão: Checar contraste e margens sobre as filmagens.",
+            "08 Gancho: Na próxima aula construiremos o áudio."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Use as Skills e padronize os títulos de O-Futuro-da-Criacao: Montserrat, branco, laranja #F97316, preto, margens de 80 px. Primeiro ajuste “UMA NOVA / ERA”, enfatizando ERA e animando a entrada em aproximadamente 15 frames. Depois aplique animações discretas aos outros títulos. Preserve cenas, cortes, 900 quadros, mídia e áudio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Tipografia e motion graphics"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "UI UX Pro Max: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill; Taste Skill: https://github.com/Leonxlnx/taste-skill; Remotion markup para implementação. HyperFrames: https://github.com/heygen-com/hyperframes (alternativa, nível intermediário)."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: UI/UX e Taste são orientação de design, não garantem tipografia própria de vídeo; confira licença e compatibilidade. Não misturar frameworks sem planejamento."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Títulos legíveis em fundo real",
+            "Hierarquia e cores consistentes",
+            "Tempos de leitura adequados às durações das cenas"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 08 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar textos e animações. Criar linguagem tipográfica consistente e animar títulos com foco em leitura. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, título básico versus versão editorial com destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, legibilidade, hierarquia e consistência."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, montserrat regular e bold; preto, branco e laranja; margens de 80 px."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, uMA NOVA / ERA, com palavra ERA em laranja, fade e movimento vertical."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos entender fade, slide e scale com exemplos isolados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, aplique o padrão às cinco cenas respeitando suas durações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, checar contraste e margens sobre as filmagens."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como conclusão, na próxima aula construiremos o áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 9,
+      "slug": "aula-09",
+      "titulo": "Música e efeitos sonoros",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Inserir trilha, fades de volume e efeitos pontuais sincronizados."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Comparação sonora: Reproduza o mesmo trecho com e sem áudio.",
+            "02 Papéis sonoros: Trilha define clima, efeitos destacam momentos e volume mantém equilíbrio.",
+            "03 Preparação: Organize trilha.mp3, whoosh.wav e impact.wav.",
+            "04 Trilha: Adicione música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s.",
+            "05 Efeitos: Whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA.",
+            "06 Sincronismo: Utilize o quadro real da animação; não invente batidas musicais.",
+            "07 Revisão: Ouça integralmente e procure picos, cortes e distorções.",
+            "08 Gancho: A próxima aula harmoniza a imagem."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Adicione public/audios/trilha.mp3 a O-Futuro-da-Criacao por 30s. Volume inicial 30%, fade in 30 frames e fade out 60 frames. Sem repetir música curta sem autorização. Adicione whoosh.wav nas entradas dos títulos UMA NOVA ERA e SEM LIMITES e impact.wav no destaque de CRIE COM IA. Posicione pelos quadros reais das animações, ajuste volumes e mantenha cortes, 900 frames e mídias originais."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Som e música"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion markup + Direção de Edição para mixagem e sincronismo. Sonilo: https://github.com/sonilo-ai/skills (integração externa a validar). Music Composition Skills: https://github.com/jtydhr88/music-composition-skills (planejamento musical, não garante áudio renderizado)."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Checar licença da música, disponibilidade de APIs, custos, áudio original silenciado e conferência auditiva. Não afirmar análise de batidas sem ler o áudio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Trilha cobre o vídeo sem loop não autorizado",
+            "Efeitos sincronizados e discretos",
+            "Ausência de áudio abrupto ou distorcido"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 09 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar música e efeitos sonoros. Inserir trilha, fades de volume e efeitos pontuais sincronizados. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos reproduzir o mesmo trecho com e sem áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, trilha define clima, efeitos destacam momentos e volume mantém equilíbrio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos organizar trilha.mp3, whoosh.wav e impact.wav."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, vamos adicionar música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, vamos utilizar o quadro real da animação; não invente batidas musicais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, ouça integralmente e procure picos, cortes e distorções."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como conclusão, a próxima aula harmoniza a imagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 10,
+      "slug": "aula-10",
+      "titulo": "Acabamento visual",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Antes/depois: Mostre correção moderada de uma imagem do projeto.",
+            "02 Correção vs estilo: Primeiro recuperar equilíbrio; depois considerar aparência estética.",
+            "03 Inspeção: Analise quadros representativos das cinco cenas.",
+            "04 Exposição e contraste: Corrija com moderação; material estourado pode não ter informação recuperável.",
+            "05 Saturação e temperatura: Aproxime cenas sem impor o mesmo filtro indiscriminadamente.",
+            "06 Reenquadramento: Preserve proporções, assunto e espaço de títulos.",
+            "07 Harmonização: Confira sequência completa sem alterar textos, cortes ou áudio.",
+            "08 Gancho: Na aula 11 revisaremos e exportaremos."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Analise quadros reais das cinco cenas de O-Futuro-da-Criacao. Liste diferenças confirmadas de exposição, contraste, saturação, temperatura e enquadramento. Aplique ajustes moderados apenas onde necessário, usando recursos disponíveis no Remotion. Não altere títulos, animações, cortes, transições, áudio, 1080x1920, 30 FPS ou 900 frames. Permita comparar antes e depois."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Acabamento e estética"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Remotion Agent Skills + Direção de Edição. UI UX Pro Max e Taste podem orientar hierarquia e identidade visual, mas não substituem inspeção de quadros reais."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Ajustes de exposição não restauram automaticamente dados perdidos. Preserve a versão original das cenas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Problemas identificados em quadros reais",
+            "Cores harmonizadas sem filtros extremos",
+            "Montagem e áudio intactos"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 10 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar acabamento visual. Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos observar correção moderada de uma imagem do projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, primeiro recuperar equilíbrio; depois considerar aparência estética."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, analise quadros representativos das cinco cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, corrija com moderação; material estourado pode não ter informação recuperável."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, aproxime cenas sem impor o mesmo filtro indiscriminadamente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, preserve proporções, assunto e espaço de títulos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, vamos conferir sequência completa sem alterar textos, cortes ou áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como conclusão, na aula 11 revisaremos e exportaremos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 11,
+      "slug": "aula-11",
+      "titulo": "Revisão e exportação",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Verificar elementos técnicos, corrigir erros confirmados e exportar MP4 H.264/AAC."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Gancho de abertura: O vídeo parece pronto, mas ainda pode conter erros.",
+            "02 Checklist técnico: Textos, mídia, áudio, primeiros e últimos quadros, 900 frames.",
+            "03 Diagnóstico com Claude: Peça relatório por cena, gravidade e tempo; não altere ainda.",
+            "04 Correções: Corrija apenas erros confirmados; mantenha cópia de segurança.",
+            "05 Exportar pelo Studio: Selecione composição, escolha Render, revise codec e saída.",
+            "06 Exportar via Claude: Mostre comando remotion render e o caminho de saída.",
+            "07 Validar MP4: Reproduza fora do Remotion, confira duração, resolução e áudio.",
+            "08 Gancho: O último desafio será um novo projeto inteiro."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Revise O-Futuro-da-Criacao. Confirme 900 frames a 30 FPS, 1080x1920, textos e mídias, sincronismo e presença de áudio. Não modifique arquivos antes de apresentar os problemas. Após corrigir somente falhas comprovadas, renderize:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "shell",
+          "texto": "npx remotion render O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Confirme existência do MP4 e inspecione duração, resolução e áudio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Depuração e QA"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Systematic Debugging (Superpowers): https://github.com/obra/superpowers/tree/main/skills/systematic-debugging; revisão audiovisual usando as ferramentas do Remotion. Claude Video Kit: https://github.com/edotheDev/claude-video-kit — conferir conteúdo antes do uso."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Executar render real, abrir o MP4, verificar H.264/AAC, FPS e duração. Não declarar sucesso com base apenas no texto do agente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Revisão documentada e problemas corrigidos",
+            "Exportação H.264 com áudio AAC",
+            "Arquivo conferido fora do ambiente de edição"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 11 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar revisão e exportação. Verificar elementos técnicos, corrigir erros confirmados e exportar MP4 H.264/AAC. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, o vídeo parece pronto, mas ainda pode conter erros."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, textos, mídia, áudio, primeiros e últimos quadros, 900 frames."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos pedir relatório por cena, gravidade e tempo; não altere ainda."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, corrija apenas erros confirmados; mantenha cópia de segurança."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos selecionar composição, escolha Render, revise codec e saída."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, vamos observar comando remotion render e o caminho de saída."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, vamos reproduzir fora do Remotion, confira duração, resolução e áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como conclusão, o último desafio será um novo projeto inteiro."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    },
+    {
+      "numero": 12,
+      "slug": "aula-12",
+      "titulo": "Projeto final: vídeo completo",
+      "subtitulo_ou_tema": "Projeto integrado independente",
+      "duracao": "Aproximadamente 10 a 12 minutos (referência editorial)",
+      "objetivos": [
+        "Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado."
+      ],
+      "blocos": [
+        {
+          "tipo": "titulo",
+          "texto": "Contexto narrativo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Desafio de encerramento: produzir um segundo vídeo independente, reunindo todas as competências do módulo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Roteiro de cenas e condução"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "01 Retrospectiva: Apresente resultado do primeiro projeto e um teaser do segundo.",
+            "02 Novo desafio: Transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas.",
+            "03 Novo projeto: Crie pasta independente; reutilize Skill personalizada e reinstale Skills Remotion.",
+            "04 Planejamento: Faça Claude inventariar arquivos e propor distribuição sem inventar mídias.",
+            "05 Produção integrada: Peça montagem, textos, animações, cortes, áudio e acabamento em sequência.",
+            "06 Inspeção: Assista no Studio, corrija aspectos pontuais e confirme mídia.",
+            "07 Exportação: Renderize MP4 e confira parâmetros e reprodução.",
+            "08 Encerramento: Recapitule o fluxo planejar -> executar -> revisar -> exportar e introduza módulo intermediário."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Comando de demonstração"
+        },
+        {
+          "tipo": "prompt",
+          "texto": "Crie a composição Transforme-Suas-Ideias, 1080x1920, 30 FPS, 900 frames, preto/branco/laranja e Montserrat. Cenas: 0–4s TUDO COMEÇA COM UMA IDEIA; 4–9s IMAGINE; 9–15s TRANSFORME; 15–22s CRIE SEM LIMITES; 22–30s O PRÓXIMO PASSO É SEU. Analise mídias locais, não invente arquivos, use Skills Remotion e direcao-de-edicao. Monte, anime, sonorize, revise e só então exporte out/Transforme-Suas-Ideias.mp4 com H.264/AAC. Confirme o arquivo produzido."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Skills e repositórios nesta aula"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Pacote final recomendado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Obrigatórias: Remotion Agent Skills e Direção de Edição. Complementares conforme necessidade: Systematic Debugging, UI UX Pro Max, Taste, GSAP Skills; HyperFrames e serviços de áudio como extensão intermediária."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Não instalar todas indiscriminadamente; separar ferramentas externas de Skills e revisar README, licença, permissões e requisitos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist do professor"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Projeto independente com Skills disponíveis",
+            "Cinco cenas e áudio revisados",
+            "MP4 exportado e verificado"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "AULA 12 / NARRAÇÃO"
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Texto contínuo para locução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, vamos trabalhar projeto final: vídeo completo. Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos apresentar resultado do primeiro projeto e um teaser do segundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, vamos criar pasta independente; reutilize Skill personalizada e reinstale Skills Remotion."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na prática, faça Claude inventariar arquivos e propor distribuição sem inventar mídias."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois disso, vamos pedir montagem, textos, animações, cortes, áudio e acabamento em sequência."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para conferir, assista no Studio, corrija aspectos pontuais e confirme mídia."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, renderize MP4 e confira parâmetros e reprodução."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como conclusão, recapitule o fluxo planejar -> executar -> revisar -> exportar e introduza módulo intermediário."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com isso, encerramos o nível iniciante. O mais importante é conseguir repetir o processo com autonomia, revisar os resultados e continuar aprimorando as próprias edições."
+        },
+        {
+          "tipo": "dica",
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Capturas de tela locais
+_screens/
+
+# Dependências
+node_modules/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs e temporários
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~

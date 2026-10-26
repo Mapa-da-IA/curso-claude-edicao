@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BUILDER: {{NN}} = número com 2 dígitos ("01"), {{TITULO}} = título da aula -->
+  <title>Aula {{NN}} · {{TITULO}} — Edição de Vídeos com Claude</title>
+  <meta name="description" content="{{TEMA}} — aula {{NN}} do guia do professor Edição de Vídeos com Claude.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<!-- BUILDER: data-aula = "NN" (2 dígitos). site.js usa para marcar a aula atual e o progresso. -->
+<body class="page-lesson" data-aula="01">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
+
+  <!-- ============ NAV com seletor de aulas ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="../index.html" aria-label="Edição com Claude — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="../index.html#aulas">Todas as aulas</a>
+        <a href="../index.html#guia">Guia do professor</a>
+        <a href="../guia.html">Referência</a>
+      </nav>
+      <div class="switcher" data-switcher>
+        <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
+          <span class="switcher__label">Aula</span> <span class="switcher__current">{{NN}}</span><span class="switcher__of">/12</span>
+          <span class="switcher__caret" aria-hidden="true"></span>
+        </button>
+        <!-- BUILDER: 12 links fixos; o JS marca aria-current="page" no link cujo data-aula = body[data-aula]. Títulos vêm do aulas.json. -->
+        <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
+          <ol class="switcher__grid">
+            <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Conhecendo o Claude para edição</span></a></li>
+            <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Roteiro e pré-produção com IA</span></a></li>
+            <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Decupagem e organização do bruto</span></a></li>
+            <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Prompts para corte e ritmo</span></a></li>
+            <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Transcrição e legendas</span></a></li>
+            <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Áudio, trilha e cor</span></a></li>
+            <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Motion graphics com código</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Automatizando tarefas repetitivas</span></a></li>
+            <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Formatos para redes sociais</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Narrativa e storytelling</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e feedback com IA</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: do bruto ao corte</span></a></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="../index.html#aulas">Todas as aulas</a>
+      <a href="../index.html#guia">Guia do professor</a>
+      <a href="../guia.html">Referência</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ LESSON HERO ============ -->
+    <header class="lesson-hero">
+      <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="container lesson-hero__inner">
+        <div class="lesson-hero__top">
+          <p class="lesson-hero__crumb"><a href="../index.html#aulas">Aulas</a> <span aria-hidden="true">/</span> Módulo {{MODULO}}</p>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+        </div>
+        <div class="lesson-hero__head">
+          <!-- BUILDER: número grande decorativo -->
+          <span class="lesson-hero__no" aria-hidden="true">{{NN}}</span>
+          <div>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula {{NN}}: </span>{{TITULO}}</h1>
+            <p class="lesson-hero__theme">{{TEMA — uma frase que resume a aula}}</p>
+          </div>
+        </div>
+        <dl class="lesson-meta">
+          <div><dt>Duração</dt><dd>{{DURACAO, ex.: 90 min}}</dd></div>
+          <div><dt>Tema</dt><dd>{{TEMA_CURTO}}</dd></div>
+          <div><dt>Nível</dt><dd>{{NIVEL, opcional — remova o &lt;div&gt; se não houver}}</dd></div>
+        </dl>
+        <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
+          <span class="done-toggle__box" aria-hidden="true"></span>
+          <span data-done-text>Marcar como concluída</span>
+        </button>
+        <section class="objectives" aria-labelledby="obj-title">
+          <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
+          <!-- BUILDER: um <li> por objetivo -->
+          <ol class="objectives__list">
+            <li>{{OBJETIVO 1}}</li>
+            <li>{{OBJETIVO 2}}</li>
+            <li>{{OBJETIVO 3}}</li>
+          </ol>
+        </section>
+      </div>
+    </header>
+
+    <!-- ============ CORPO: TOC + CONTEÚDO ============ -->
+    <div class="container lesson-layout">
+      <aside class="toc" aria-label="Nesta aula">
+        <!-- BUILDER: um <li> por bloco "titulo" (h2), mesmo id. Se deixar o <ol> vazio, site.js monta a lista a partir dos h2[id] do conteúdo. -->
+        <nav class="toc__inner" data-toc>
+          <p class="toc__title">Nesta aula</p>
+          <ol class="toc__list">
+            <li><a href="#abertura">Abertura</a></li>
+            <li><a href="#prompts">Prompts e código</a></li>
+            <li><a href="#pratica">Prática</a></li>
+            <li><a href="#referencia">Referência</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="lesson-body" data-lesson-body>
+        <!-- ================================================================
+             BLOCOS — cada tipo do aulas.json tem um único formato abaixo.
+             Ver DESIGN.md §6 para o contrato completo.
+             ================================================================ -->
+
+        <!-- titulo -->
+        <h2 class="b-titulo" id="abertura">Abertura</h2>
+
+        <!-- paragrafo -->
+        <p class="b-paragrafo">Texto corrido da aula. Parágrafos usam a fonte sem serifa a 17–18px, com medida de leitura limitada a cerca de 68 caracteres. <strong>Negrito</strong>, <em>itálico</em> e <a href="#prompts">links</a> são permitidos dentro do parágrafo, além de <code>código inline</code>.</p>
+
+        <p class="b-paragrafo">Um segundo parágrafo mostra o ritmo vertical entre blocos de texto, que é de cerca de 1,1em.</p>
+
+        <!-- lista -->
+        <ul class="b-lista">
+          <li>Item de lista com marcador em forma de quadro-chave.</li>
+          <li>Itens podem ter <strong>ênfase</strong> e quebrar em várias linhas sem perder o alinhamento do recuo.</li>
+          <li>Terceiro item.</li>
+        </ul>
+
+        <!-- lista_numerada -->
+        <ol class="b-lista-num">
+          <li>Primeiro passo numerado, com contador em cor de destaque.</li>
+          <li>Segundo passo: importe o material bruto para o editor.</li>
+          <li>Terceiro passo: peça ao Claude uma proposta de ordem para os trechos.</li>
+        </ol>
+
+        <!-- titulo -->
+        <h2 class="b-titulo" id="prompts">Prompts e código</h2>
+
+        <!-- prompt (copiável, estilo conversa) — o texto vai DENTRO de .b-prompt__text, já escapado, quebras de linha preservadas -->
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para o Claude</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Você é meu assistente de montagem. Vou colar a transcrição de uma entrevista de 12 minutos.
+Separe os trechos em três blocos (abertura, conflito, conclusão) e indique o timecode de entrada e saída de cada um.
+Prefira frases completas e evite cortes no meio de uma respiração.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <!-- codigo (copiável). data-lang opcional: aparece no cabeçalho -->
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">bash</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>ffmpeg -i bruto.mp4 -ss 00:01:12 -to 00:02:40 -c copy trecho-01.mp4
+ffmpeg -i trecho-01.mp4 -vf "subtitles=legendas.srt" saida.mp4</code></pre>
+        </figure>
+
+        <!-- dica -->
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Peça ao Claude que justifique cada corte. A justificativa vira material de discussão com a turma.</p></div>
+        </aside>
+
+        <!-- atencao -->
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>O Claude não assiste ao vídeo: ele trabalha com a transcrição e com o que você descreve. Confira sempre os timecodes no editor.</p></div>
+        </aside>
+
+        <!-- titulo -->
+        <h2 class="b-titulo" id="pratica">Prática</h2>
+
+        <!-- exercicio — id único por exercício (ex-1, ex-2...) -->
+        <section class="b-exercicio" aria-labelledby="ex-1">
+          <div class="b-exercicio__head">
+            <span class="b-exercicio__tag">Exercício</span>
+            <h3 class="b-exercicio__title" id="ex-1">Monte um corte de 60 segundos</h3>
+          </div>
+          <div class="b-exercicio__body">
+            <p>Usando a entrevista da aula, peça ao Claude três propostas de corte e escolha uma para montar no editor.</p>
+            <ol>
+              <li>Cole a transcrição e o prompt da seção anterior.</li>
+              <li>Monte a versão escolhida e exporte em 1080p.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- citacao -->
+        <figure class="b-citacao">
+          <blockquote><p>O corte é a decisão. A ferramenta só encurta o caminho até ela.</p></blockquote>
+          <figcaption>Nota do professor</figcaption>
+        </figure>
+
+        <!-- titulo -->
+        <h2 class="b-titulo" id="referencia">Referência</h2>
+
+        <!-- tabela — envolver sempre no .b-tabela (rolagem horizontal própria no celular) -->
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Atalhos e equivalentes</caption>
+            <thead>
+              <tr><th scope="col">Tarefa</th><th scope="col">Prompt curto</th><th scope="col">Tempo médio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Decupagem</td><td>Liste os melhores trechos com timecode</td><td>5 min</td></tr>
+              <tr><td>Legendas</td><td>Revise o SRT mantendo 42 caracteres por linha</td><td>3 min</td></tr>
+              <tr><td>Título</td><td>Sugira 5 títulos com até 60 caracteres</td><td>1 min</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <!-- ============ PREV / NEXT ============ -->
+    <!-- BUILDER: na aula 01 remova o <a> "prev" e use <span class="pager__spacer"></span>; na aula 12 faça o mesmo com "next". -->
+    <nav class="pager container" aria-label="Navegação entre aulas">
+      <a class="pager__link pager__link--prev" href="aula-00.html" rel="prev">
+        <span class="pager__dir">← Aula anterior</span>
+        <span class="pager__no">{{NN-1}}</span>
+        <span class="pager__title">{{TITULO_ANTERIOR}}</span>
+      </a>
+      <a class="pager__link pager__link--next" href="aula-02.html" rel="next">
+        <span class="pager__dir">Próxima aula →</span>
+        <span class="pager__no">{{NN+1}}</span>
+        <span class="pager__title">{{TITULO_PROXIMO}}</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container">
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="../index.html">Início</a>
+          <a href="../index.html#aulas">Todas as aulas</a>
+          <a href="../index.html#guia">Guia do professor</a>
+          <a href="../guia.html">Referência</a>
+        </nav>
+        <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

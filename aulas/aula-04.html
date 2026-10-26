@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula 04 · Criando sua primeira Skill — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Fundamentos, instalações e Skills — aula 04 do guia do professor Edição de Vídeos com Claude: Criando sua primeira Skill.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-lesson" data-aula="04">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
+
+  <!-- ============ NAV com seletor de aulas ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="../index.html" aria-label="Edição com Claude — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="../index.html#aulas">Todas as aulas</a>
+        <a href="../index.html#guia">Guia do professor</a>
+        <a href="../guia.html">Referência</a>
+      </nav>
+      <div class="switcher" data-switcher>
+        <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
+          <span class="switcher__label">Aula</span> <span class="switcher__current">04</span><span class="switcher__of">/12</span>
+          <span class="switcher__caret" aria-hidden="true"></span>
+        </button>
+        <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
+          <ol class="switcher__grid">
+            <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Introdução à edição com Claude</span></a></li>
+            <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Instalando as ferramentas</span></a></li>
+            <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills</span></a></li>
+            <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill</span></a></li>
+            <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo</span></a></li>
+            <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com arquivos</span></a></li>
+            <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="../index.html#aulas">Todas as aulas</a>
+      <a href="../index.html#guia">Guia do professor</a>
+      <a href="../guia.html">Referência</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ LESSON HERO ============ -->
+    <header class="lesson-hero">
+      <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="container lesson-hero__inner">
+        <div class="lesson-hero__top">
+          <p class="lesson-hero__crumb"><a href="../index.html#aulas">Aulas</a> <span aria-hidden="true">/</span> Módulo 1 · Fundamentos</p>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+        </div>
+        <div class="lesson-hero__head">
+          <span class="lesson-hero__no" aria-hidden="true">04</span>
+          <div>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 04: </span>Criando sua primeira Skill</h1>
+            <p class="lesson-hero__theme">Fundamentos, instalações e Skills</p>
+          </div>
+        </div>
+        <dl class="lesson-meta">
+          <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Ambiente e skill personalizada</dd></div>
+          <div><dt>Nível</dt><dd>Iniciante</dd></div>
+        </dl>
+        <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
+          <span class="done-toggle__box" aria-hidden="true"></span>
+          <span data-done-text>Marcar como concluída</span>
+        </button>
+        <section class="objectives" aria-labelledby="obj-title">
+          <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
+          <ol class="objectives__list">
+            <li>Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas.</li>
+          </ol>
+        </section>
+      </div>
+    </header>
+
+    <!-- ============ CORPO: TOC + CONTEÚDO ============ -->
+    <div class="container lesson-layout">
+      <aside class="toc" aria-label="Nesta aula">
+        <nav class="toc__inner" data-toc>
+          <p class="toc__title">Nesta aula</p>
+          <ol class="toc__list">
+            <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
+            <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
+            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
+            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#checklist-do-professor">Checklist do professor</a></li>
+            <li><a href="#aula-04-narracao">AULA 04 / NARRAÇÃO</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="lesson-body" data-lesson-body>
+        <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
+
+        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+
+        <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
+
+        <ol class="b-lista-num"><li><strong>Problema:</strong> O aluno repete margens, formatos e estilos em todos os prompts.</li><li><strong>O manual:</strong> Apresente nome, descrição e conteúdo de um SKILL.md.</li><li><strong>Criação:</strong> Solicite ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md.</li><li><strong>Regras:</strong> 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais.</li><li><strong>Teste:</strong> Revise a composição de cinco segundos da aula 03 com a nova Skill.</li><li><strong>Refinamento:</strong> Adicione uma regra após perceber um texto perto da margem.</li><li><strong>Gancho:</strong> A próxima etapa é criar um vídeo de verdade.</li></ol>
+
+        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para o Claude</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Crie .claude/skills/direcao-de-edicao/SKILL.md com metadados name e description. Oriente edição no Remotion: padrão vertical 1080x1920, 30 FPS, tipografia legível, margem mínima de 80 px, animações suaves, preservação de mídias originais e relatório de arquivos modificados. Escreva em português e teste na composição anterior.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+
+        <h3 class="b-titulo" id="skill-propria">Skill própria</h3>
+
+        <p class="b-paragrafo">Direção de Edição: .claude/skills/direcao-de-edicao/SKILL.md. Alternativa no Chat/Cowork: ZIP da pasta da Skill via Personalizar &gt; Skills &gt; Criar Skill &gt; Enviar.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Campos name e description, diretório correto, invocação e teste. Não presumir sincronização entre a Skill local e a Skill enviada à conta.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
+
+        <ul class="b-lista"><li>SKILL.md possui nome e descrição</li><li>Regras são claras e específicas</li><li>Skill testada e revisada</li></ul>
+
+        <h2 class="b-titulo" id="aula-04-narracao">AULA 04 / NARRAÇÃO</h2>
+
+        <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
+
+        <p class="b-paragrafo">Nesta aula, vamos trabalhar criando sua primeira skill. Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+
+        <p class="b-paragrafo">Primeiro, o aluno repete margens, formatos e estilos em todos os prompts.</p>
+
+        <p class="b-paragrafo">Agora, vamos apresentar nome, descrição e conteúdo de um SKILL.md.</p>
+
+        <p class="b-paragrafo">Em seguida, vamos solicitar ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md.</p>
+
+        <p class="b-paragrafo">Na prática, 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais.</p>
+
+        <p class="b-paragrafo">Depois disso, vamos revisar a composição de cinco segundos da aula 03 com a nova Skill.</p>
+
+        <p class="b-paragrafo">Para conferir, vamos adicionar uma regra após perceber um texto perto da margem.</p>
+
+        <p class="b-paragrafo">Por fim, a próxima etapa é criar um vídeo de verdade.</p>
+
+        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+        </aside>
+      </article>
+    </div>
+
+    <!-- ============ PREV / NEXT ============ -->
+    <nav class="pager container" aria-label="Navegação entre aulas">
+      <a class="pager__link pager__link--prev" href="aula-03.html" rel="prev">
+        <span class="pager__dir">← Aula anterior</span>
+        <span class="pager__no">03</span>
+        <span class="pager__title">Instalando Skills</span>
+      </a>
+      <a class="pager__link pager__link--next" href="aula-05.html" rel="next">
+        <span class="pager__dir">Próxima aula →</span>
+        <span class="pager__no">05</span>
+        <span class="pager__title">Criando seu primeiro vídeo</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container">
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="../index.html">Início</a>
+          <a href="../index.html#aulas">Todas as aulas</a>
+          <a href="../index.html#guia">Guia do professor</a>
+          <a href="../guia.html">Referência</a>
+        </nav>
+        <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

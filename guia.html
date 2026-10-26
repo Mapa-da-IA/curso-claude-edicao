@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de referência — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Mapa do curso, índice pedagógico, guia de plataformas, catálogo de Skills, instalação segura, fluxo técnico e glossário do guia do professor Edição de Vídeos com Claude.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-lesson page-guide">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
+
+  <!-- ============ NAV com seletor de aulas ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="index.html" aria-label="Edição com Claude — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="index.html#aulas">Todas as aulas</a>
+        <a href="index.html#guia">Guia do professor</a>
+        <a href="guia.html" aria-current="page">Referência</a>
+      </nav>
+      <div class="switcher" data-switcher>
+        <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
+          <span class="switcher__label">Aula</span> <span class="switcher__current">—</span><span class="switcher__of">/12</span>
+          <span class="switcher__caret" aria-hidden="true"></span>
+        </button>
+        <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
+          <ol class="switcher__grid">
+            <li><a href="aulas/aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Introdução à edição com Claude</span></a></li>
+            <li><a href="aulas/aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Instalando as ferramentas</span></a></li>
+            <li><a href="aulas/aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills</span></a></li>
+            <li><a href="aulas/aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill</span></a></li>
+            <li><a href="aulas/aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo</span></a></li>
+            <li><a href="aulas/aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com arquivos</span></a></li>
+            <li><a href="aulas/aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
+            <li><a href="aulas/aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aulas/aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
+            <li><a href="aulas/aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
+            <li><a href="aulas/aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
+            <li><a href="aulas/aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="index.html#aulas">Todas as aulas</a>
+      <a href="index.html#guia">Guia do professor</a>
+      <a href="guia.html" aria-current="page">Referência</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ LESSON HERO ============ -->
+    <header class="lesson-hero">
+      <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="container lesson-hero__inner">
+        <div class="lesson-hero__top">
+          <p class="lesson-hero__crumb"><a href="index.html">Início</a> <span aria-hidden="true">/</span> Referência do professor</p>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+        </div>
+        <div class="lesson-hero__head">
+          <span class="lesson-hero__no" aria-hidden="true">§</span>
+          <div>
+            <h1 class="lesson-hero__title">Guia de referência</h1>
+            <p class="lesson-hero__theme">Edição de Vídeos com Claude: Guia do professor · Nível iniciante. 12 aulas, roteiros, prompts e checklists.</p>
+          </div>
+        </div>
+        <dl class="lesson-meta">
+          <div><dt>Seções</dt><dd>8</dd></div>
+          <div><dt>Apêndices</dt><dd>4</dd></div>
+          <div><dt>Nível</dt><dd>Iniciante</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ============ CORPO: TOC + CONTEÚDO ============ -->
+    <div class="container lesson-layout">
+      <aside class="toc" aria-label="Nesta página">
+        <nav class="toc__inner" data-toc>
+          <p class="toc__title">Nesta página</p>
+          <ol class="toc__list">
+            <li><a href="#sobre-este-guia">Sobre este guia</a></li>
+            <li><a href="#mapa-do-curso">Mapa do curso</a></li>
+            <li><a href="#indice-pedagogico">Índice pedagógico</a></li>
+            <li><a href="#guia-de-plataformas">Guia de plataformas</a></li>
+            <li><a href="#apendice-catalogo-de-skills">Apêndice — Catálogo de Skills</a></li>
+            <li><a href="#apendice-instalacao-segura">Apêndice — Instalação segura</a></li>
+            <li><a href="#apendice-01-fluxo-tecnico-de-referencia">Apêndice 01 — Fluxo técnico de referência</a></li>
+            <li><a href="#apendice-02-glossario-essencial">Apêndice 02 — Glossário essencial</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="lesson-body" data-lesson-body>
+        <h2 class="b-titulo" id="sobre-este-guia">Sobre este guia</h2>
+
+        <p class="b-paragrafo">Identidade editorial inspirada na comunicação visual do Claude; material independente.</p>
+
+        <p class="b-paragrafo">Este guia consolida as 12 aulas do nível iniciante de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.</p>
+
+        <p class="b-paragrafo"><strong>Papel do professor:</strong> Demonstrar o procedimento em um ambiente previamente testado, explicar o raciocínio de cada decisão, conferir o resultado real e distinguir as verificações automatizadas das avaliações criativas humanas.</p>
+
+        <p class="b-paragrafo"><strong>Método de cada aula:</strong></p>
+
+        <ol class="b-lista-num"><li>Mostrar o resultado esperado</li><li>Apresentar o problema</li><li>Explicar o conceito essencial</li><li>Executar o prompt</li><li>Validar o resultado</li><li>Conectar à próxima aula</li></ol>
+
+        <p class="b-paragrafo"><strong>Notas de produção:</strong> Duração de referência: aulas 01 a 11, aproximadamente 7 a 10 minutos; aula 12, 10 a 12 minutos. As durações são estimativas editoriais, não tempos garantidos de execução do software.</p>
+
+        <p class="b-paragrafo"><strong>Pré-requisito:</strong> computador Windows, acesso autorizado ao Claude Code, Node.js e projeto Remotion funcional. O modelo efetivamente disponível depende da conta e do ambiente do professor. Verifique nomes de modelos e comandos antes de gravar.</p>
+
+        <h2 class="b-titulo" id="mapa-do-curso">Mapa do curso</h2>
+
+        <div class="b-tabela" role="region" aria-label="Tabela: Mapa do curso" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Aulas</th><th scope="col">Foco</th><th scope="col">Entrega</th></tr></thead>
+            <tbody>
+              <tr><td>01–04</td><td>Fundamentos, instalações e Skills</td><td>Ambiente e skill personalizada</td></tr>
+              <tr><td>05–08</td><td>Composição, arquivos, cortes e tipografia</td><td>Vídeo de 30s estruturado</td></tr>
+              <tr><td>09–11</td><td>Áudio, cor, revisão e exportação</td><td>Primeiro MP4 final</td></tr>
+              <tr><td>12</td><td>Projeto integrado independente</td><td>Segundo MP4 final</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="b-titulo" id="indice-pedagogico">Índice pedagógico</h2>
+
+        <h3 class="b-titulo" id="percurso-das-12-aulas">Percurso das 12 aulas</h3>
+
+        <ul class="b-lista"><li><a href="aulas/aula-01.html">Aula 01 · Introdução à edição com Claude</a></li><li><a href="aulas/aula-02.html">Aula 02 · Instalando as ferramentas</a></li><li><a href="aulas/aula-03.html">Aula 03 · Instalando Skills</a></li><li><a href="aulas/aula-04.html">Aula 04 · Criando sua primeira Skill</a></li><li><a href="aulas/aula-05.html">Aula 05 · Criando seu primeiro vídeo</a></li><li><a href="aulas/aula-06.html">Aula 06 · Trabalhando com arquivos</a></li><li><a href="aulas/aula-07.html">Aula 07 · Cortes, ritmo e transições</a></li><li><a href="aulas/aula-08.html">Aula 08 · Textos e animações</a></li><li><a href="aulas/aula-09.html">Aula 09 · Música e efeitos sonoros</a></li><li><a href="aulas/aula-10.html">Aula 10 · Acabamento visual</a></li><li><a href="aulas/aula-11.html">Aula 11 · Revisão e exportação</a></li><li><a href="aulas/aula-12.html">Aula 12 · Projeto final: vídeo completo</a></li></ul>
+
+        <p class="b-paragrafo">Apêndices: kit de referência, roteiro de validação, glossário e fontes oficiais.</p>
+
+        <h2 class="b-titulo" id="guia-de-plataformas">Guia de plataformas</h2>
+
+        <h3 class="b-titulo" id="qual-claude-utilizar">Qual Claude utilizar?</h3>
+
+        <p class="b-paragrafo">A palavra Claude pode identificar diferentes interfaces. Uma Skill instalada em um projeto do Claude Code não aparece automaticamente na conta do Chat ou Cowork. O professor deve escolher a superfície antes de seguir uma instalação.</p>
+
+        <div class="b-tabela" role="region" aria-label="Tabela: Guia de plataformas" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Ambiente</th><th scope="col">Como usa Skills</th><th scope="col">Serve ao curso?</th></tr></thead>
+            <tbody>
+              <tr><td>Claude Code (terminal / IDE)</td><td>Pasta .claude/skills no projeto ou ~/.claude/skills; comandos e arquivos locais.</td><td>SIM — recomendado para Remotion local.</td></tr>
+              <tr><td>Claude Desktop — Chat</td><td>Personalizar &gt; Skills; instalar do diretório ou enviar ZIP.</td><td>Para tarefas de texto; não equivale ao terminal local.</td></tr>
+              <tr><td>Claude Desktop — Cowork</td><td>Skills e plugins da conta; arquivos locais dependem das capacidades e permissões disponíveis.</td><td>Alternativa visual; testar acesso à pasta e terminal.</td></tr>
+              <tr><td>Claude no navegador</td><td>Personalizar &gt; Skills, conforme recursos da conta; Cowork na nuvem tem limites de acesso ao computador.</td><td>Consultar, planejar ou Cowork; não presumir acesso local.</td></tr>
+              <tr><td>Claude Code em Desktop</td><td>Se disponível na instalação, ambiente de código distinto do Chat/Cowork.</td><td>Pode servir, com projeto e ferramentas configurados.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIFERENÇA INDISPENSÁVEL:</strong> Claude Opus é o modelo. Claude Code é o ambiente de trabalho com arquivos e comandos. Claude Desktop é o aplicativo; nele podem existir Chat, Cowork e recursos de código. O navegador não executa automaticamente comandos PowerShell no PC do aluno.</p></div>
+        </aside>
+
+        <h3 class="b-titulo" id="instalacao-a-claude-code-no-projeto">Instalação A — Claude Code no projeto</h3>
+
+        <ol class="b-lista-num"><li>Abra o terminal NA RAIZ do projeto Remotion.</li><li>Execute npx skills add remotion-dev/skills.</li><li>Revise origem, arquivos e permissões.</li><li>Inicie ou reinicie Claude Code.</li><li>Peça para identificar /remotion-best-practices e faça um teste com prévia real.</li></ol>
+
+        <p class="b-paragrafo">Para criar uma Skill própria no Claude Code, use .claude/skills/direcao-de-edicao/SKILL.md com metadados name e description. A pasta deve estar no projeto que será editado.</p>
+
+        <h3 class="b-titulo" id="instalacao-b-claude-na-web-ou-aplicativo-chat-cowork">Instalação B — Claude na web ou aplicativo (Chat/Cowork)</h3>
+
+        <p class="b-paragrafo">Entre em Personalizar &gt; Skills. Para Skills do diretório, escolha Procurar Skills e Instalar. Para uma Skill personalizada, compacte sua pasta no formato ZIP e use Criar Skill &gt; Enviar uma Skill. Os rótulos podem variar com idioma e versão.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>ATENÇÃO:</strong> enviar uma Skill para a conta não instala Node.js, Remotion ou scripts locais. No Cowork, confirme acesso efetivo aos arquivos do computador; determinadas ações exigem Claude Desktop aberto e permissões explícitas.</p></div>
+        </aside>
+
+        <h3 class="b-titulo" id="verificacao-antes-da-gravacao">Verificação antes da gravação</h3>
+
+        <p class="b-paragrafo">Faça o teste na MESMA interface que os alunos utilizarão. Verifique a Skill reconhecida, as mídias existentes, a criação de um arquivo e a renderização de cinco segundos. Nunca anuncie uma instalação como universal entre produtos.</p>
+
+        <h2 class="b-titulo" id="apendice-catalogo-de-skills">Apêndice — Catálogo de Skills</h2>
+
+        <h3 class="b-titulo" id="selecao-por-area-de-trabalho">Seleção por área de trabalho</h3>
+
+        <p class="b-paragrafo">Duas referências por categoria. São recomendações editoriais, não as duas mais baixadas do GitHub; estrelas e forks não equivalem a downloads. Projetos de terceiros devem ser revalidados na data de gravação.</p>
+
+        <div class="b-tabela" role="region" aria-label="Tabela: Apêndice — Catálogo de Skills" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Área</th><th scope="col">Opção A</th><th scope="col">Opção B</th></tr></thead>
+            <tbody>
+              <tr><td>Depuração</td><td>Superpowers / systematic-debugging</td><td>Claude Video Kit / revisão audiovisual</td></tr>
+              <tr><td>Edição</td><td>Remotion Agent Skills (oficial)</td><td>Gadir Labs Video Editor (externa)</td></tr>
+              <tr><td>Tipografia</td><td>UI UX Pro Max</td><td>Taste Skill</td></tr>
+              <tr><td>Motion graphics</td><td>HyperFrames (ferramenta)</td><td>Claude Motion Design (projeto externo)</td></tr>
+              <tr><td>Animações</td><td>GSAP Skills (oficial)</td><td>Remotion / markup e transições</td></tr>
+              <tr><td>Efeitos sonoros</td><td>Sonilo Skills (API externa)</td><td>Claude Video Kit / mixagem</td></tr>
+              <tr><td>Trilhas sonoras</td><td>Music Composition Skills</td><td>Sonilo video-to-music (API externa)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Não classifique um repositório de código como uma Skill instalável sem localizar o arquivo SKILL.md e confirmar o método de instalação. Um catálogo de Skills não instala automaticamente seus integrantes.</p>
+
+        <h3 class="b-titulo" id="links-para-instalacao-e-verificacao">Links para instalação e verificação</h3>
+
+        <ul class="b-lista"><li><strong>Remotion Agent Skills:</strong> <a href="https://github.com/remotion-dev/skills" rel="noopener">https://github.com/remotion-dev/skills</a></li><li><strong>Anthropic Skills:</strong> <a href="https://github.com/anthropics/skills" rel="noopener">https://github.com/anthropics/skills</a></li><li><strong>Superpowers:</strong> <a href="https://github.com/obra/superpowers" rel="noopener">https://github.com/obra/superpowers</a></li><li><strong>GSAP Skills:</strong> <a href="https://github.com/greensock/gsap-skills" rel="noopener">https://github.com/greensock/gsap-skills</a></li><li><strong>UI UX Pro Max:</strong> <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" rel="noopener">https://github.com/nextlevelbuilder/ui-ux-pro-max-skill</a></li><li><strong>Taste Skill:</strong> <a href="https://github.com/Leonxlnx/taste-skill" rel="noopener">https://github.com/Leonxlnx/taste-skill</a></li><li><strong>HyperFrames:</strong> <a href="https://github.com/heygen-com/hyperframes" rel="noopener">https://github.com/heygen-com/hyperframes</a></li><li><strong>Claude Motion Design:</strong> <a href="https://github.com/howseen-ai/claude-motion-design" rel="noopener">https://github.com/howseen-ai/claude-motion-design</a></li><li><strong>Video Editor:</strong> <a href="https://github.com/gadirlabs/video-editor" rel="noopener">https://github.com/gadirlabs/video-editor</a></li><li><strong>Claude Video Kit:</strong> <a href="https://github.com/edotheDev/claude-video-kit" rel="noopener">https://github.com/edotheDev/claude-video-kit</a></li><li><strong>Sonilo Skills:</strong> <a href="https://github.com/sonilo-ai/skills" rel="noopener">https://github.com/sonilo-ai/skills</a></li><li><strong>Music Composition Skills:</strong> <a href="https://github.com/jtydhr88/music-composition-skills" rel="noopener">https://github.com/jtydhr88/music-composition-skills</a></li></ul>
+
+        <h2 class="b-titulo" id="apendice-instalacao-segura">Apêndice — Instalação segura</h2>
+
+        <h3 class="b-titulo" id="procedimento-para-professores">Procedimento para professores</h3>
+
+        <ol class="b-lista-num"><li><strong>Confirme a superfície:</strong> Claude Code (terminal/projeto) ou Claude Chat/Cowork (conta)? Um procedimento não equivale automaticamente ao outro.</li><li><strong>Verifique a proveniência:</strong> Abra README, SKILL.md, commits, issues, licenças, scripts e dependências. Não use ranking de estrelas como prova de segurança.</li><li><strong>Entenda as permissões:</strong> Skills são instruções, mas seus scripts podem acionar ferramentas; revise comandos de shell, escrita de arquivos, downloads e comunicação com APIs.</li><li><strong>Teste isoladamente:</strong> Use uma cópia de projeto e mídias não sensíveis; registre o comando, a versão e o resultado obtido.</li><li><strong>Faça uma demonstração verificável:</strong> Mostre a Skill reconhecida e o resultado após renderização. Não prometa que a experiência será idêntica no Chat web, Cowork e Claude Code.</li><li><strong>Ensine reversão:</strong> Mantenha backup e identifique os arquivos criados ou alterados; evite permissões irrestritas.</li></ol>
+
+        <h3 class="b-titulo" id="instalacao-rapida-de-referencia">Instalação rápida de referência</h3>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">shell</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx skills add remotion-dev/skills</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Claude Code (dentro do projeto): comando acima. Claude Chat/Cowork: Personalizar &gt; Skills &gt; Procurar Skills &gt; Instalar; ou Criar Skill &gt; Enviar ZIP. Um ZIP de Skill própria é diferente de clonar um repositório GitHub.</p>
+
+        <h3 class="b-titulo" id="fontes-oficiais-consulte-antes-de-gravar">Fontes oficiais — consulte antes de gravar</h3>
+
+        <ul class="b-lista"><li><a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li><li><a href="https://support.claude.com/pt/articles/12512180-usar-skills-no-claude" rel="noopener">https://support.claude.com/pt/articles/12512180-usar-skills-no-claude</a></li><li><a href="https://support.claude.com/pt/articles/14328846-procure-skills-conectores-e-plugins-em-um-unico-diretorio" rel="noopener">https://support.claude.com/pt/articles/14328846-procure-skills-conectores-e-plugins-em-um-unico-diretorio</a></li><li><a href="https://support.claude.com/pt/articles/15520349-use-claude-cowork-na-web-desktop-e-mobile" rel="noopener">https://support.claude.com/pt/articles/15520349-use-claude-cowork-na-web-desktop-e-mobile</a></li><li><a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li><li><a href="https://www.remotion.dev/docs/" rel="noopener">https://www.remotion.dev/docs/</a></li></ul>
+
+        <h2 class="b-titulo" id="apendice-01-fluxo-tecnico-de-referencia">Apêndice 01 — Fluxo técnico de referência</h2>
+
+        <h3 class="b-titulo" id="projeto-remotion">Projeto Remotion</h3>
+
+        <p class="b-paragrafo">Uma composition reúne resolução, taxa de quadros e duração. O curso usa 1080 × 1920, 30 FPS e 900 quadros para 30 segundos.</p>
+
+        <h3 class="b-titulo" id="arquivos-estaticos">Arquivos estáticos</h3>
+
+        <p class="b-paragrafo">Mantenha mídias em public/videos, public/imagens e public/audios. Use referências locais compatíveis com a versão instalada. Não invente arquivos para preencher lacunas.</p>
+
+        <h3 class="b-titulo" id="renderizacao">Renderização</h3>
+
+        <p class="b-paragrafo">Composição: O-Futuro-da-Criacao. Comando de referência:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">shell</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx remotion render O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Confirme a existência do arquivo e inspecione resolução, duração, FPS, imagem e áudio; o sucesso de uma instrução ao Claude não comprova, sozinho, a exportação.</p>
+
+        <h3 class="b-titulo" id="cuidados-pedagogicos">Cuidados pedagógicos</h3>
+
+        <p class="b-paragrafo">Use mídias licenciadas; proteja arquivos originais; não conceda permissões irrestritas ao computador; avalie fontes de Skills externas; diferencie diagnóstico automático de inspeção real de vídeo e áudio.</p>
+
+        <h2 class="b-titulo" id="apendice-02-glossario-essencial">Apêndice 02 — Glossário essencial</h2>
+
+        <ul class="b-lista"><li><strong>Claude Code:</strong> Ferramenta de trabalho com instruções e arquivos de projeto.</li><li><strong>Remotion:</strong> Framework usado para construir composições audiovisuais programáticas.</li><li>Skill / SKILL.md: Documento de instruções especializadas reutilizáveis.</li><li><strong>Composition:</strong> Unidade de vídeo com dimensões, FPS e duração.</li><li><strong>FPS:</strong> Quadros por segundo: 30 FPS equivalem a 900 quadros em 30 segundos.</li><li><strong>Fade:</strong> Transição gradual de opacidade ou volume.</li><li><strong>Trim:</strong> Seleção de um trecho de vídeo ou áudio.</li><li><strong>Render:</strong> Processo que gera um arquivo final reproduzível a partir da composição.</li><li>H.264 / AAC: Codecs de vídeo e áudio utilizados na exportação de referência.</li></ul>
+
+        <h3 class="b-titulo" id="referencias-oficiais-para-conferencia">Referências oficiais para conferência</h3>
+
+        <ul class="b-lista"><li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener">https://docs.anthropic.com/en/docs/claude-code/overview</a></li><li><a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li><li><a href="https://www.remotion.dev/docs/" rel="noopener">https://www.remotion.dev/docs/</a></li><li><a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li><li><a href="https://www.remotion.dev/docs/render" rel="noopener">https://www.remotion.dev/docs/render</a></li><li><a href="https://nodejs.org/" rel="noopener">https://nodejs.org/</a></li></ul>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>Observação:</strong> comandos, interfaces, modelos e caminhos podem mudar. Revise a documentação oficial na data da gravação.</p></div>
+        </aside>
+      </article>
+    </div>
+
+    <!-- ============ PREV / NEXT ============ -->
+    <nav class="pager container" aria-label="Continuar">
+      <a class="pager__link pager__link--prev" href="index.html#aulas">
+        <span class="pager__dir">← Início</span>
+        <span class="pager__title">Todas as aulas</span>
+      </a>
+      <a class="pager__link pager__link--next" href="aulas/aula-01.html">
+        <span class="pager__dir">Começar →</span>
+        <span class="pager__no">01</span>
+        <span class="pager__title">Introdução à edição com Claude</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container">
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="index.html#aulas">Todas as aulas</a>
+          <a href="index.html#guia">Guia do professor</a>
+          <a href="guia.html" aria-current="page">Referência</a>
+        </nav>
+        <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

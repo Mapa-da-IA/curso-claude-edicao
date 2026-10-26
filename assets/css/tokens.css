@@ -1,0 +1,87 @@
+/* =====================================================================
+   Guia do Professor — Claude: Edição de Vídeos · Design tokens
+   Every component in site.css reads from these. Change here, not there.
+   ===================================================================== */
+:root {
+  /* ---------- Colour: warm near-black canvas, ivory ink, clay accent ---------- */
+  --c-ground:        #0c0b0a;   /* page ground (warm near-black)            */
+  --c-ground-2:      #131110;   /* section step                              */
+  --c-surface:       #1a1715;   /* cards, panels                             */
+  --c-surface-2:     #231f1c;   /* raised / hover                            */
+  --c-surface-3:     #2e2925;   /* chips, track lanes                        */
+  --c-line:          rgba(242, 237, 228, 0.10); /* hairlines inside UI only */
+  --c-line-strong:   rgba(242, 237, 228, 0.20);
+
+  --c-ink:           #f2ede4;   /* primary text (ivory)  17.0:1 on ground    */
+  --c-ink-soft:      #bdb5a8;   /* secondary text        9.6:1 on ground     */
+  --c-ink-mute:      #8f877b;   /* tertiary, >=14px only 5.4:1 on ground     */
+
+  --c-clay:          #d97757;   /* accent (Claude-like clay)  6.3:1 on ground */
+  --c-clay-hi:       #e8916f;   /* hover / text on surfaces                  */
+  --c-clay-deep:     #bb6644;   /* pressed (clay-ink on it 4.6:1)            */
+  --c-clay-ink:      #1b0e08;   /* text on clay fills       6.0:1            */
+  --c-clay-wash:     rgba(217, 119, 87, 0.12);
+
+  --c-neon:          #5fd4c7;   /* secondary glow (cyan-teal), sparing        */
+  --c-neon-wash:     rgba(95, 212, 199, 0.10);
+  --c-amber:         #e9b44c;   /* "atenção"                                 */
+  --c-amber-wash:    rgba(233, 180, 76, 0.10);
+
+  --c-ivory:         #f4efe6;   /* inverse field (light sections)            */
+  --c-ivory-ink:     #1a1613;
+
+  /* ---------- Typography ---------- */
+  /* Serif ≈ Copernicus/Tiempos → Newsreader (opsz axis, editorial cut)
+     Sans  ≈ Styrene           → Hanken Grotesk (geometric grotesk, open)
+     Mono  (prompts/code)      → JetBrains Mono                             */
+  --f-serif: "Newsreader", "Tiempos Headline", Georgia, "Times New Roman", serif;
+  --f-sans:  "Hanken Grotesk", "Styrene B", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:  "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* Fluid scale (360px → 1440px). Five visible steps + wordmark. */
+  --t-wordmark: clamp(2.6rem, 9.6vw, 9.5rem);   /* spaced hero wordmark      */
+  --t-display:  clamp(2.5rem, 6.2vw, 5.75rem);  /* serif display, lesson no. */
+  --t-h1:       clamp(2.1rem, 4.4vw, 4rem);     /* section / lesson title    */
+  --t-h2:       clamp(1.6rem, 2.6vw, 2.35rem);  /* block titles              */
+  --t-h3:       clamp(1.2rem, 1.6vw, 1.45rem);
+  --t-lead:     clamp(1.125rem, 1.5vw, 1.375rem);
+  --t-body:     1.0625rem;                      /* 17px                      */
+  --t-small:    0.875rem;                       /* 14px                      */
+  --t-micro:    0.8125rem;                      /* 13px — floor              */
+
+  --lh-tight: 1.02;
+  --lh-head:  1.12;
+  --lh-body:  1.62;
+
+  --tr-wordmark: 0.42em;   /* the spaced, cinematic wordmark            */
+  --tr-caps:     0.16em;   /* small all-caps UI labels                   */
+  --tr-display: -0.02em;
+
+  /* ---------- Space (4px base) ---------- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 144px;
+  --gutter: clamp(16px, 4vw, 48px);           /* outer page margin         */
+  --section-gap: clamp(88px, 12vw, 176px);
+  --content-max: 1320px;
+  --measure: 68ch;
+  --axis: 42%;                                  /* editorial column line    */
+
+  /* ---------- Radii ---------- */
+  --r-xs: 4px; --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-pill: 999px;
+
+  /* ---------- Shadows & glow (only on floating things + accents) ---------- */
+  --sh-float: 0 24px 60px -20px rgba(0,0,0,.7), 0 2px 8px rgba(0,0,0,.4);
+  --sh-card:  0 1px 0 rgba(242,237,228,.04) inset;
+  --glow-clay: 0 0 24px rgba(217,119,87,.45), 0 0 64px rgba(217,119,87,.18);
+  --glow-neon: 0 0 22px rgba(95,212,199,.40);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-io:  cubic-bezier(.65, 0, .35, 1);
+  --d-fast: 160ms; --d-med: 320ms; --d-slow: 900ms;
+
+  /* ---------- Layers ---------- */
+  --z-nav: 50; --z-menu: 60; --z-toast: 70;
+
+  color-scheme: dark;
+}
