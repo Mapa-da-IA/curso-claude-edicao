@@ -44,11 +44,11 @@
             <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
-            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
             <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
-            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
-            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
-            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação do vídeo</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
           </ol>
         </nav>
       </div>
@@ -81,7 +81,7 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Primeiro MP4 final</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Projeto com áudio, imagens equilibradas e primeiro MP4</dd></div>
           <div><dt>Nível</dt><dd>Iniciante</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Inserir trilha, fades de volume e efeitos pontuais sincronizados.</li>
+            <li>Perceber, comparando o mesmo trecho sem som e com música, como a trilha cria o ambiente e os efeitos destacam acontecimentos.</li>
+            <li>Organizar trilha.mp3, whoosh.wav e impact.wav em public/audios, usando apenas arquivos próprios ou licenciados.</li>
+            <li>Entender volume, fade-in e fade-out e usar 30% apenas como volume de referência.</li>
+            <li>Adicionar com o Claude Code a trilha à composição O-Futuro-da-Criacao, com fade-in de 1 segundo e fade-out de 2 segundos.</li>
+            <li>Sincronizar o whoosh com os títulos das cenas 1 e 3 e o impact com &quot;CRIE COM IA&quot;, mantendo os 900 quadros.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,15 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-por-que-o-audio-e-tao-importante">1. Por que o áudio é tão importante?</a></li>
+            <li><a href="#2-preparando-os-arquivos-de-audio">2. Preparando os arquivos de áudio</a></li>
+            <li><a href="#3-aprendendo-a-controlar-o-volume">3. Aprendendo a controlar o volume</a></li>
+            <li><a href="#4-demonstracao-pratica-adicionando-a-musica">4. Demonstração prática: adicionando a música</a></li>
+            <li><a href="#5-adicionando-efeitos-sonoros">5. Adicionando efeitos sonoros</a></li>
+            <li><a href="#6-revisando-o-audio">6. Revisando o áudio</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-09-narracao">AULA 09 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,69 +125,251 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+        <p class="b-paragrafo">Tema: como utilizar o som para valorizar suas edições. Até a aula anterior, a composição O-Futuro-da-Criacao, no projeto meu-primeiro-video (1080x1920, 30 FPS, 30 segundos, 900 quadros), ganhou cenas organizadas, cortes, transições, filmagens e textos animados, incluindo a expressão &quot;CRIE COM IA&quot; na última cena. Na aula 6, o arquivo trilha.mp3 foi colocado em public/audios, mas ainda não entrou na composição. Nesta aula, o vídeo recebe pela primeira vez música e efeitos sonoros.</p>
+
+        <p class="b-paragrafo">Objetivo: adicionar uma trilha sonora ao vídeo, aprender a controlar o volume e utilizar efeitos sonoros sincronizados com as animações.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video), e a composição O-Futuro-da-Criacao é a mesma das aulas anteriores. Sempre que possível, faça a revisão do áudio com fones de ouvido.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Comparação sonora:</strong> Reproduza o mesmo trecho com e sem áudio.</li><li><strong>Papéis sonoros:</strong> Trilha define clima, efeitos destacam momentos e volume mantém equilíbrio.</li><li><strong>Preparação:</strong> Organize trilha.mp3, whoosh.wav e impact.wav.</li><li><strong>Trilha:</strong> Adicione música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s.</li><li><strong>Efeitos:</strong> Whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA.</li><li><strong>Sincronismo:</strong> Utilize o quadro real da animação; não invente batidas musicais.</li><li><strong>Revisão:</strong> Ouça integralmente e procure picos, cortes e distorções.</li><li><strong>Gancho:</strong> A próxima aula harmoniza a imagem.</li></ol>
+        <ol class="b-lista-num"><li><strong>Sem som x com som:</strong> Reproduza cerca de dez segundos do projeto sem nenhum som e, depois, o mesmo trecho com música de fundo.</li><li><strong>Arquivos de áudio:</strong> Mostre trilha.mp3, whoosh.wav e impact.wav na pasta public/audios.</li><li><strong>Volume:</strong> Explique volume, fade-in e fade-out e o valor de referência de 30%.</li><li><strong>Trilha com o Claude:</strong> Envie o prompt que adiciona trilha.mp3 com fade-in de 1 segundo e fade-out de 2 segundos.</li><li><strong>Efeitos sonoros:</strong> Envie o prompt que sincroniza o whoosh com os títulos das cenas 1 e 3 e o impact com &quot;CRIE COM IA&quot;.</li><li><strong>Revisão:</strong> Reproduza o vídeo completo, de preferência com fones de ouvido.</li><li><strong>Gancho:</strong> Na próxima aula, vamos trabalhar exposição, contraste e cores das filmagens.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-por-que-o-audio-e-tao-importante">1. Por que o áudio é tão importante?</h2>
+
+        <p class="b-paragrafo">Comece reproduzindo aproximadamente dez segundos do projeto sem nenhum som.</p>
+
+        <p class="b-paragrafo">Em seguida, reproduza o mesmo trecho com uma música de fundo.</p>
+
+        <p class="b-paragrafo">Peça ao aluno para observar a diferença.</p>
+
+        <p class="b-paragrafo">Explique que a música influencia a sensação transmitida pelo vídeo. Uma mesma sequência de imagens pode parecer emocionante, misteriosa ou animada dependendo da trilha escolhida.</p>
+
+        <p class="b-paragrafo">Já os efeitos sonoros ajudam a destacar momentos específicos, como a entrada de um título, uma transição ou uma mudança de cena.</p>
+
+        <p class="b-paragrafo">Use esta comparação: a trilha sonora cria o ambiente; os efeitos sonoros chamam a atenção para acontecimentos importantes dentro desse ambiente.</p>
+
+        <h2 class="b-titulo" id="2-preparando-os-arquivos-de-audio">2. Preparando os arquivos de áudio</h2>
+
+        <p class="b-paragrafo">Na aula 06, criamos uma pasta para organizar os arquivos de áudio. Agora vamos utilizá-la: public/audios.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Arquivos em public/audios</caption>
+            <thead><tr><th scope="col">Arquivo</th><th scope="col">Uso</th></tr></thead>
+            <tbody>
+              <tr><td>trilha.mp3</td><td>Música de fundo do vídeo.</td></tr>
+              <tr><td>whoosh.wav</td><td>Efeito de movimento, ideal para entradas de textos.</td></tr>
+              <tr><td>impact.wav</td><td>Efeito curto para destacar uma informação importante.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Utilize músicas e efeitos próprios ou licenciados, com permissão de uso. O aluno deve obter arquivos reais e colocá-los nas pastas antes da demonstração. O Claude não deve presumir que esses arquivos existem.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele confere se trilha.mp3 continua em public/audios e coloca na mesma pasta os arquivos whoosh.wav e impact.wav, com exatamente esses nomes.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="3-aprendendo-a-controlar-o-volume">3. Aprendendo a controlar o volume</h2>
+
+        <p class="b-paragrafo">Explique que colocar uma música no vídeo não significa que ela deva tocar sempre no volume máximo.</p>
+
+        <p class="b-paragrafo">Vamos trabalhar com três conceitos:</p>
+
+        <ul class="b-lista"><li><strong>Volume:</strong> intensidade do som durante a reprodução.</li><li><strong>Fade-in:</strong> aumento gradual do volume no início.</li><li><strong>Fade-out:</strong> diminuição gradual do volume no final.</li></ul>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Exemplo de volume da trilha sonora</caption>
+            <thead><tr><th scope="col">Trecho</th><th scope="col">Comportamento</th></tr></thead>
+            <tbody>
+              <tr><td>Início</td><td>Fade-in de 1s</td></tr>
+              <tr><td>Meio</td><td>Volume constante</td></tr>
+              <tr><td>Final</td><td>Fade-out de 2s</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Utilizaremos 30% como valor inicial do controle de amplitude. Esse número não garante um volume ideal, porque cada arquivo possui um nível de áudio diferente. O ajuste definitivo dependerá de escutar o resultado. O Remotion permite controlar esse volume e criar variações ao longo do tempo.</p>
+
+        <h2 class="b-titulo" id="4-demonstracao-pratica-adicionando-a-musica">4. Demonstração prática: adicionando a música</h2>
+
+        <p class="b-paragrafo">Abra o Claude Code na pasta do projeto e envie o seguinte prompt.</p>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para inserir a trilha</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Adicione public/audios/trilha.mp3 a O-Futuro-da-Criacao por 30s. Volume inicial 30%, fade in 30 frames e fade out 60 frames. Sem repetir música curta sem autorização. Adicione whoosh.wav nas entradas dos títulos UMA NOVA ERA e SEM LIMITES e impact.wav no destaque de CRIE COM IA. Posicione pelos quadros reais das animações, ajuste volumes e mantenha cortes, 900 frames e mídias originais.</p>
+            <p class="b-prompt__text" data-copy-source>Vamos adicionar uma trilha sonora à composição O-Futuro-da-Criacao.&#10;Antes de começar, verifique se existe o arquivo public/audios/trilha.mp3.&#10;Se o arquivo não existir, informe e não substitua por outra música.&#10;Se estiver disponível, adicione a trilha com estas configurações:&#10;- O áudio deve acompanhar os 30 segundos do projeto.&#10;- Volume inicial de referência: 30%.&#10;- Fade-in de 1 segundo no início.&#10;- Fade-out de 2 segundos no final.&#10;- Caso a música seja maior que o vídeo, utilize somente o trecho necessário.&#10;- Caso seja menor, informe e proponha uma solução sem criar cortes bruscos.&#10;Mantenha os áudios originais das filmagens desativados nesta etapa.&#10;Não altere os textos, os cortes, as transições ou as animações.&#10;Ao finalizar, confira se a música começa e termina suavemente.&#10;Utilize as boas práticas de áudio do Remotion.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>O CLAUDE CUIDA DISSO (se quiser mostrar no código): a documentação atual do Remotion recomenda, em novos usos, o componente Audio do pacote @remotion/media. O volume é um número de 0 a 1 (os 30% viram 0.3, apenas como ponto de partida) ou um valor calculado com interpolate() para criar o fade-in e o fade-out. Para usar só um trecho do arquivo, a propriedade atual é trimBefore; startFrom e endAt estão descontinuadas. O aluno não precisa escrever nada disso.</p></div>
+        </aside>
 
-        <h3 class="b-titulo" id="som-e-musica">Som e música</h3>
+        <p class="b-paragrafo">Depois, abra o Remotion Studio, selecione O-Futuro-da-Criacao e reproduza o vídeo. Observe se a música começa suavemente e se não existe um corte repentino no final.</p>
 
-        <p class="b-paragrafo">Remotion markup + Direção de Edição para mixagem e sincronismo. Sonilo: <a href="https://github.com/sonilo-ai/skills" rel="noopener">https://github.com/sonilo-ai/skills</a> (integração externa a validar). Music Composition Skills: <a href="https://github.com/jtydhr88/music-composition-skills" rel="noopener">https://github.com/jtydhr88/music-composition-skills</a> (planejamento musical, não garante áudio renderizado).</p>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o mesmo prompt, lê o que o Claude informou (inclusive se o arquivo faltou ou se a música é menor que o vídeo) e escuta o início e o final da composição no Remotion Studio.</p></div>
+        </aside>
 
-        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
-          <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Checar licença da música, disponibilidade de APIs, custos, áudio original silenciado e conferência auditiva. Não afirmar análise de batidas sem ler o áudio.</p></div>
+        <h2 class="b-titulo" id="5-adicionando-efeitos-sonoros">5. Adicionando efeitos sonoros</h2>
+
+        <p class="b-paragrafo">Agora explique que os efeitos sonoros devem acompanhar acontecimentos visuais.</p>
+
+        <p class="b-paragrafo">Por exemplo, se um título entra com uma animação, podemos utilizar um whoosh para reforçar a sensação de movimento.</p>
+
+        <p class="b-paragrafo">Também podemos utilizar um efeito de impacto discreto quando uma expressão importante aparece.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para efeitos sonoros</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Agora vamos adicionar efeitos sonoros ao vídeo O-Futuro-da-Criacao.&#10;Verifique se existem:&#10;- public/audios/whoosh.wav&#10;- public/audios/impact.wav&#10;Se algum arquivo não existir, não invente nem substitua automaticamente.&#10;Adicione o efeito whoosh nas entradas dos títulos principais das cenas 1 e 3.&#10;Adicione o efeito impact no momento em que a expressão &quot;CRIE COM IA&quot; aparecer na última cena.&#10;Regras:&#10;- Identifique o quadro exato de início de cada animação.&#10;- Sincronize os efeitos com os acontecimentos visuais.&#10;- Utilize volume moderado.&#10;- Evite que os efeitos encubram a música ou causem distorção.&#10;- Não altere a duração total de 900 quadros.&#10;- Não modifique textos nem animações.&#10;Não invente batidas musicais. Utilize somente informações existentes na composição e nos arquivos reais.&#10;Depois, informe os quadros em que cada efeito foi colocado.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Não precisamos criar vários efeitos em todas as cenas. Às vezes, poucos sons bem posicionados produzem um resultado muito melhor.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt, anota os quadros que o Claude informou e confere no Remotion Studio se cada efeito toca junto com a entrada do título ou da expressão &quot;CRIE COM IA&quot;.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="6-revisando-o-audio">6. Revisando o áudio</h2>
+
+        <p class="b-paragrafo">Reproduza o vídeo completo, preferencialmente utilizando fones de ouvido.</p>
+
+        <p class="b-paragrafo">Durante a demonstração, verifique se a música inicia suavemente, se os efeitos estão sincronizados e se não existem mudanças desagradáveis de volume.</p>
+
+        <p class="b-paragrafo">Resultado esperado: um vídeo com música de fundo e efeitos sonoros pontuais, mantendo os 30 segundos de duração.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>O valor de 30% é apenas uma referência. Se a música estiver alta ou baixa demais, peça ao Claude para ajustar o volume e escute de novo antes de considerar a aula concluída.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Trilha cobre o vídeo sem loop não autorizado</li><li>Efeitos sincronizados e discretos</li><li>Ausência de áudio abrupto ou distorcido</li></ul>
+        <ul class="b-lista"><li>Comparou cerca de dez segundos do projeto sem som e com música de fundo</li><li>Usou apenas músicas e efeitos próprios ou licenciados</li><li>Conferiu trilha.mp3, whoosh.wav e impact.wav em public/audios antes da demonstração</li><li>Explicou volume, fade-in e fade-out e que 30% é só um ponto de partida</li><li>Adicionou a trilha com fade-in de 1 segundo e fade-out de 2 segundos, com o som original das filmagens desativado</li><li>Adicionou o whoosh nos títulos das cenas 1 e 3 e o impact em &quot;CRIE COM IA&quot;, com os quadros informados pelo Claude</li><li>Manteve os 900 quadros (30 segundos) e não alterou textos nem animações</li><li>Revisou o vídeo completo com fones de ouvido</li></ul>
 
         <h2 class="b-titulo" id="aula-09-narracao">AULA 09 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar música e efeitos sonoros. Inserir trilha, fades de volume e efeitos pontuais sincronizados. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Até agora, nosso vídeo já possui praticamente todos os elementos visuais que precisamos.</p>
 
-        <p class="b-paragrafo">Primeiro, vamos reproduzir o mesmo trecho com e sem áudio.</p>
+        <p class="b-paragrafo">Temos cenas organizadas, cortes, transições, filmagens e textos animados.</p>
 
-        <p class="b-paragrafo">Agora, trilha define clima, efeitos destacam momentos e volume mantém equilíbrio.</p>
+        <p class="b-paragrafo">Mas ainda falta algo que pode transformar completamente a experiência de quem está assistindo: o áudio.</p>
 
-        <p class="b-paragrafo">Em seguida, vamos organizar trilha.mp3, whoosh.wav e impact.wav.</p>
+        <p class="b-paragrafo">Nesta aula, vamos aprender como utilizar músicas e efeitos sonoros para valorizar nossas edições.</p>
 
-        <p class="b-paragrafo">Na prática, vamos adicionar música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s.</p>
+        <p class="b-paragrafo">Vamos começar com uma demonstração simples.</p>
 
-        <p class="b-paragrafo">Depois disso, whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA.</p>
+        <p class="b-paragrafo">Primeiro, vou reproduzir um trecho do nosso vídeo sem nenhum som.</p>
 
-        <p class="b-paragrafo">Para conferir, vamos utilizar o quadro real da animação; não invente batidas musicais.</p>
+        <p class="b-paragrafo">Agora, vamos assistir ao mesmo trecho com uma música de fundo.</p>
 
-        <p class="b-paragrafo">Por fim, ouça integralmente e procure picos, cortes e distorções.</p>
+        <p class="b-paragrafo">Perceba como a sensação transmitida pelas imagens muda.</p>
 
-        <p class="b-paragrafo">Como conclusão, a próxima aula harmoniza a imagem.</p>
+        <p class="b-paragrafo">Uma trilha sonora pode deixar um vídeo mais emocionante, mais tranquilo ou mais dinâmico.</p>
 
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">Mas escolher uma boa música é apenas uma parte do trabalho.</p>
+
+        <p class="b-paragrafo">Também precisamos controlar o volume e decidir como ela começa e termina.</p>
+
+        <p class="b-paragrafo">Vamos utilizar a pasta de áudios que organizamos nas aulas anteriores.</p>
+
+        <p class="b-paragrafo">Aqui temos nossa trilha musical e dois efeitos sonoros.</p>
+
+        <p class="b-paragrafo">O primeiro efeito é chamado whoosh e costuma ser utilizado para acompanhar movimentos, como a entrada de um texto.</p>
+
+        <p class="b-paragrafo">O segundo é um efeito de impacto, que pode destacar momentos específicos da edição.</p>
+
+        <p class="b-paragrafo">Agora vamos começar pela música.</p>
+
+        <p class="b-paragrafo">Nossa composição possui trinta segundos, então precisamos garantir que a trilha acompanhe corretamente esse tempo.</p>
+
+        <p class="b-paragrafo">Também vamos definir um volume inicial de trinta por cento.</p>
+
+        <p class="b-paragrafo">Esse número é apenas uma referência. Depois vamos ouvir o resultado para avaliar se precisa de ajustes.</p>
+
+        <p class="b-paragrafo">Outro recurso importante é o fade-in.</p>
+
+        <p class="b-paragrafo">Com ele, a música não começa imediatamente no volume definido. Ela aumenta de maneira gradual.</p>
+
+        <p class="b-paragrafo">Vamos utilizar um fade-in de um segundo.</p>
+
+        <p class="b-paragrafo">No final do vídeo, faremos o contrário.</p>
+
+        <p class="b-paragrafo">Durante os últimos dois segundos, a música vai diminuir progressivamente até desaparecer.</p>
+
+        <p class="b-paragrafo">Isso é chamado de fade-out.</p>
+
+        <p class="b-paragrafo">Agora vamos pedir ao Claude para realizar essas alterações.</p>
+
+        <p class="b-paragrafo">Depois de adicionar a trilha, vamos conferir o resultado no Remotion Studio.</p>
+
+        <p class="b-paragrafo">Observe se a música começa suavemente e se não existe um corte repentino no final.</p>
+
+        <p class="b-paragrafo">Com a trilha funcionando, podemos adicionar os efeitos sonoros.</p>
+
+        <p class="b-paragrafo">Vamos utilizar o whoosh em duas entradas de títulos.</p>
+
+        <p class="b-paragrafo">E na última cena, quando aparecer a expressão Crie com IA, vamos adicionar um efeito de impacto discreto.</p>
+
+        <p class="b-paragrafo">Mas existe um detalhe muito importante.</p>
+
+        <p class="b-paragrafo">O efeito sonoro precisa acompanhar o momento em que a animação acontece.</p>
+
+        <p class="b-paragrafo">Se o som for reproduzido muito antes ou muito depois da entrada do texto, a edição pode parecer desorganizada.</p>
+
+        <p class="b-paragrafo">Por isso, vamos pedir ao Claude para identificar os quadros em que as animações começam e posicionar os efeitos nesses momentos.</p>
+
+        <p class="b-paragrafo">Não precisamos criar vários efeitos em todas as cenas.</p>
+
+        <p class="b-paragrafo">Às vezes, poucos sons bem posicionados produzem um resultado muito melhor.</p>
+
+        <p class="b-paragrafo">Agora vamos reproduzir nosso vídeo completo.</p>
+
+        <p class="b-paragrafo">Preste atenção se existe alguma mudança brusca de volume, algum efeito muito alto ou algum trecho de áudio interrompido.</p>
+
+        <p class="b-paragrafo">Também é importante lembrar que devemos utilizar músicas e efeitos que tenhamos permissão para usar.</p>
+
+        <p class="b-paragrafo">Com isso, concluímos nossa primeira etapa de edição sonora.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos voltar nossa atenção para a imagem, aprendendo a melhorar a exposição, o contraste e as cores das filmagens.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e escute a composição no Remotion Studio antes de afirmar que a trilha e os efeitos foram adicionados corretamente.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Áudio no Remotion:</strong> <a href="https://www.remotion.dev/docs/audio" rel="noopener">https://www.remotion.dev/docs/audio</a></li><li><strong>Controle de volume:</strong> <a href="https://www.remotion.dev/docs/audio/volume" rel="noopener">https://www.remotion.dev/docs/audio/volume</a></li><li><strong>interpolate():</strong> <a href="https://www.remotion.dev/docs/interpolate" rel="noopener">https://www.remotion.dev/docs/interpolate</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
@@ -187,12 +378,12 @@
       <a class="pager__link pager__link--prev" href="aula-08.html" rel="prev">
         <span class="pager__dir">← Aula anterior</span>
         <span class="pager__no">08</span>
-        <span class="pager__title">Textos e animações</span>
+        <span class="pager__title">Textos, tipografia e animações</span>
       </a>
       <a class="pager__link pager__link--next" href="aula-10.html" rel="next">
         <span class="pager__dir">Próxima aula →</span>
         <span class="pager__no">10</span>
-        <span class="pager__title">Acabamento visual</span>
+        <span class="pager__title">Acabamento visual e correção de cores</span>
       </a>
     </nav>
   </main>

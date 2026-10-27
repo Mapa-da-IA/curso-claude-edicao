@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 12 · Projeto final: vídeo completo — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Projeto integrado independente — aula 12 do guia do professor Edição de Vídeos com Claude: Projeto final: vídeo completo.">
+  <title>Aula 12 · Projeto final: criando um vídeo completo do zero — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Projeto integrado independente — aula 12 do guia do professor Edição de Vídeos com Claude: Projeto final: criando um vídeo completo do zero.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +44,11 @@
             <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
-            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
             <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
-            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
-            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
-            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação do vídeo</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
           </ol>
         </nav>
       </div>
@@ -75,13 +75,13 @@
         <div class="lesson-hero__head">
           <span class="lesson-hero__no" aria-hidden="true">12</span>
           <div>
-            <h1 class="lesson-hero__title"><span class="sr-only">Aula 12: </span>Projeto final: vídeo completo</h1>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 12: </span>Projeto final: criando um vídeo completo do zero</h1>
             <p class="lesson-hero__theme">Projeto integrado independente</p>
           </div>
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 10–12 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Segundo MP4 final</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Segundo vídeo independente</dd></div>
           <div><dt>Nível</dt><dd>Iniciante</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado.</li>
+            <li>Planejar um novo vídeo de 30 segundos, Transforme suas Ideias em Realidade, com cinco cenas de durações diferentes e a identidade visual do curso.</li>
+            <li>Criar um projeto independente, transformando-ideias, e preparar nele a Skill direcao-de-edicao e as Skills oficiais do Remotion, sem alterar o projeto anterior.</li>
+            <li>Pedir ao Claude um inventário das mídias disponíveis antes da montagem, sem inventar arquivos.</li>
+            <li>Montar com o Claude Code a composição completa (1080x1920, 30 FPS, 900 quadros) e conferi-la no Remotion Studio.</li>
+            <li>Revisar, corrigir apenas erros confirmados, exportar em MP4 e reconhecer o fluxo completo de produção: planejar, criar, revisar e exportar.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,16 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-apresentando-o-desafio-final">1. Apresentando o desafio final</a></li>
+            <li><a href="#2-planejando-o-novo-video">2. Planejando o novo vídeo</a></li>
+            <li><a href="#3-criando-uma-pasta-independente">3. Criando uma pasta independente</a></li>
+            <li><a href="#4-primeiro-passo-organizar-o-material-disponivel">4. Primeiro passo — Organizar o material disponível</a></li>
+            <li><a href="#5-segundo-passo-criando-o-video-completo">5. Segundo passo — Criando o vídeo completo</a></li>
+            <li><a href="#6-revisando-o-resultado-final">6. Revisando o resultado final</a></li>
+            <li><a href="#7-encerramento-o-que-o-aluno-aprendeu">7. Encerramento — O que o aluno aprendeu?</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-12-narracao">AULA 12 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,69 +126,397 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Desafio de encerramento: produzir um segundo vídeo independente, reunindo todas as competências do módulo.</p>
+        <p class="b-paragrafo">Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível iniciante, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia.</p>
+
+        <p class="b-paragrafo">Objetivo: produzir um novo vídeo de 30 segundos chamado Transforme suas Ideias em Realidade, aplicando todas as técnicas apresentadas nas aulas anteriores.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> esta é uma aula de consolidação. O aluno não aprende uma ferramenta completamente nova: ele usa o que já sabe para realizar um projeto com mais autonomia. Explique cada etapa, demonstre e deixe o aluno reproduzir. O projeto meu-primeiro-video não é alterado; o novo trabalho fica na pasta transformando-ideias, para que o aluno guarde os dois e compare sua evolução.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Retrospectiva:</strong> Apresente resultado do primeiro projeto e um teaser do segundo.</li><li><strong>Novo desafio:</strong> Transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas.</li><li><strong>Novo projeto:</strong> Crie pasta independente; reutilize Skill personalizada e reinstale Skills Remotion.</li><li><strong>Planejamento:</strong> Faça Claude inventariar arquivos e propor distribuição sem inventar mídias.</li><li><strong>Produção integrada:</strong> Peça montagem, textos, animações, cortes, áudio e acabamento em sequência.</li><li><strong>Inspeção:</strong> Assista no Studio, corrija aspectos pontuais e confirme mídia.</li><li><strong>Exportação:</strong> Renderize MP4 e confira parâmetros e reprodução.</li><li><strong>Encerramento:</strong> Recapitule o fluxo planejar -&gt; executar -&gt; revisar -&gt; exportar e introduza módulo intermediário.</li></ol>
+        <ol class="b-lista-num"><li><strong>Desafio final:</strong> Reproduza um trecho de O Futuro da Criação e apresente a proposta do novo vídeo.</li><li><strong>Planejamento:</strong> Apresente o título, a identidade visual e o storyboard de cinco cenas em 30 segundos.</li><li><strong>Pasta independente:</strong> Crie o projeto transformando-ideias, abra o Claude Code, traga a Skill direcao-de-edicao e instale as Skills oficiais do Remotion.</li><li><strong>Inventário:</strong> Coloque as mídias em public e peça ao Claude um inventário, sem iniciar a montagem.</li><li><strong>Criação:</strong> Envie o prompt de criação do projeto final e abra a composição no Remotion Studio.</li><li><strong>Revisão e exportação:</strong> Peça a revisão final, corrija só erros confirmados, exporte em MP4 e assista fora do Remotion.</li><li><strong>Encerramento:</strong> Recapitule o fluxo completo de produção: planejar, criar, revisar e exportar.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-apresentando-o-desafio-final">1. Apresentando o desafio final</h2>
+
+        <p class="b-paragrafo">Comece reproduzindo um trecho do primeiro projeto, O Futuro da Criação.</p>
+
+        <p class="b-paragrafo">Depois, apresente a proposta do novo vídeo.</p>
+
+        <p class="b-paragrafo">Explique que agora o aluno já conhece todas as principais etapas do processo: planejar o conteúdo, organizar os arquivos, utilizar Skills, criar cenas, adicionar animações, trabalhar o áudio, revisar e exportar.</p>
+
+        <p class="b-paragrafo">O objetivo será repetir esse fluxo, mas em um projeto independente.</p>
+
+        <h2 class="b-titulo" id="2-planejando-o-novo-video">2. Planejando o novo vídeo</h2>
+
+        <p class="b-paragrafo">Nosso projeto terá o título:</p>
+
+        <p class="b-paragrafo">“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível iniciante)</p>
+
+        <p class="b-paragrafo">O vídeo terá cinco cenas e duração de 30 segundos.</p>
+
+        <p class="b-paragrafo">Vamos utilizar a identidade visual desenvolvida nas aulas anteriores, com tipografia Montserrat, fundo escuro, textos brancos e detalhes em laranja.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Storyboard — Transforme suas Ideias em Realidade — 30 segundos</caption>
+            <thead><tr><th scope="col">Cena</th><th scope="col">Tempo</th><th scope="col">Texto</th><th scope="col">Função</th></tr></thead>
+            <tbody>
+              <tr><td>01</td><td>4s (0–4s)</td><td>TODA CRIAÇÃO COMEÇA COM UMA IDEIA</td><td>Apresentação do tema</td></tr>
+              <tr><td>02</td><td>6s (4–10s)</td><td>IMAGINE</td><td>Introdução da proposta visual</td></tr>
+              <tr><td>03</td><td>6s (10–16s)</td><td>CRIE</td><td>Filmagens, imagens e animações</td></tr>
+              <tr><td>04</td><td>6s (16–22s)</td><td>TRANSFORME</td><td>Momento de maior intensidade</td></tr>
+              <tr><td>05</td><td>8s (22–30s)</td><td>TRANSFORME SUAS IDEIAS EM REALIDADE</td><td>Mensagem final de encerramento</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Total: 30 segundos, ou 900 quadros a 30 FPS. Assim como na montagem reorganizada de O Futuro da Criação (aula 7), as cenas aqui não têm a mesma duração: a primeira é mais curta e a última, mais longa.</p>
+
+        <p class="b-paragrafo">Esse storyboard é um ponto de partida. O aluno poderá adaptar o conteúdo para criar uma versão personalizada do projeto.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele confere as contas do storyboard antes de abrir o Claude Code (4 + 6 + 6 + 6 + 8 = 30 segundos) e, se quiser, adapta os textos para uma versão personalizada, mantendo cinco cenas e 30 segundos.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="3-criando-uma-pasta-independente">3. Criando uma pasta independente</h2>
+
+        <p class="b-paragrafo">Explique que é importante separar o projeto final do exercício anterior.</p>
+
+        <p class="b-paragrafo">Dessa maneira, o aluno poderá guardar os dois trabalhos e comparar sua evolução.</p>
+
+        <p class="b-paragrafo">Abra o Prompt de Comando e execute:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>cd /d &quot;%USERPROFILE%\CursoClaude&quot;&#10;npx create-video@latest --yes --blank transformando-ideias&#10;cd transformando-ideias</code></pre>
+        </figure>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Execute o create-video fora de qualquer repositório Git: a documentação do Remotion orienta não rodar o comando dentro de um repositório já existente. A pasta CursoClaude deve ser apenas uma pasta comum que guarda os projetos do curso.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Depois, inicie o Claude Code:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>claude</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Agora precisamos configurar o novo projeto.</p>
+
+        <p class="b-paragrafo">Explique que as Skills instaladas somente na pasta do projeto anterior não são transferidas automaticamente. Skills de um projeto ficam dentro da pasta .claude/skills desse projeto, cada uma em sua própria pasta com um arquivo SKILL.md.</p>
+
+        <p class="b-paragrafo">Peça ao Claude para verificar a Skill personalizada anterior e copiar as instruções necessárias para o novo projeto, sem modificar os arquivos originais.</p>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para copiar a Skill personalizada</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Crie a composição Transforme-Suas-Ideias, 1080x1920, 30 FPS, 900 frames, preto/branco/laranja e Montserrat. Cenas: 0–4s TUDO COMEÇA COM UMA IDEIA; 4–9s IMAGINE; 9–15s TRANSFORME; 15–22s CRIE SEM LIMITES; 22–30s O PRÓXIMO PASSO É SEU. Analise mídias locais, não invente arquivos, use Skills Remotion e direcao-de-edicao. Monte, anime, sonorize, revise e só então exporte out/Transforme-Suas-Ideias.mp4 com H.264/AAC. Confirme o arquivo produzido.</p>
+            <p class="b-prompt__text" data-copy-source>Verifique a Skill direcao-de-edicao do projeto anterior, em ..\meu-primeiro-video\.claude\skills\direcao-de-edicao\SKILL.md.&#10;Copie essa Skill para este projeto, em .claude\skills\direcao-de-edicao\SKILL.md.&#10;Não modifique os arquivos originais do projeto meu-primeiro-video.&#10;Ao terminar, informe o caminho da cópia e confirme que o conteúdo é o mesmo do original.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">text</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>transformando-ideias/&#10;  .claude/&#10;    skills/&#10;      direcao-de-edicao/&#10;        SKILL.md</code></pre>
+        </figure>
 
-        <h3 class="b-titulo" id="pacote-final-recomendado">Pacote final recomendado</h3>
+        <p class="b-paragrafo">Instale as Skills oficiais do Remotion na pasta do novo projeto, caso ainda não estejam disponíveis:</p>
 
-        <p class="b-paragrafo">Obrigatórias: Remotion Agent Skills e Direção de Edição. Complementares conforme necessidade: Systematic Debugging, UI UX Pro Max, Taste, GSAP Skills; HyperFrames e serviços de áudio como extensão intermediária.</p>
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx skills add remotion-dev/skills</code></pre>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele cria o projeto transformando-ideias, abre o Claude Code dentro dele, copia a Skill direcao-de-edicao sem alterar o projeto meu-primeiro-video e instala as Skills oficiais do Remotion.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-primeiro-passo-organizar-o-material-disponivel">4. Primeiro passo — Organizar o material disponível</h2>
+
+        <p class="b-paragrafo">Antes de criar o vídeo, vamos ensinar uma prática importante: analisar quais arquivos realmente temos disponíveis.</p>
+
+        <p class="b-paragrafo">Coloque as mídias que pretende utilizar nas pastas &lt;code&gt;public/videos&lt;/code&gt;, &lt;code&gt;public/imagens&lt;/code&gt; e &lt;code&gt;public/audios&lt;/code&gt;.</p>
+
+        <p class="b-paragrafo">Depois, peça ao Claude:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt de organização do projeto</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Vamos começar nosso projeto final do curso: Transforme suas Ideias em Realidade.&#10;Antes de criar qualquer animação, analise a estrutura do projeto atual.&#10;Tarefas:&#10;1. Verifique quais mídias existem nas pastas public/videos, public/imagens e public/audios.&#10;2. Identifique o nome, o formato e a duração dos arquivos, quando aplicável.&#10;3. Verifique se as Skills oficiais do Remotion estão disponíveis.&#10;4. Verifique se nossa Skill direcao-de-edicao está disponível e contém as regras atualizadas de tipografia e animação.&#10;5. Organize um inventário dos materiais encontrados.&#10;Depois, apresente uma proposta de distribuição dessas mídias em cinco cenas de um vídeo de 30 segundos.&#10;Não invente arquivos, filmagens ou fotografias que não existem.&#10;Caso faltem mídias, informe quais elementos poderão ser produzidos apenas com textos e gráficos.&#10;Não inicie a montagem ainda.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Explique ao aluno: antes de começar a criar, precisamos saber com quais materiais podemos trabalhar.</p>
+
+        <p class="b-paragrafo">Isso evita erros causados por nomes de arquivos incorretos ou mídias inexistentes.</p>
 
         <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
           <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Não instalar todas indiscriminadamente; separar ferramentas externas de Skills e revisar README, licença, permissões e requisitos.</p></div>
+          <div class="b-callout__body"><p>Utilize arquivos próprios ou mídias que tenham permissão de uso.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele coloca suas mídias nas três pastas de public, envia o prompt de organização e lê o inventário apresentado pelo Claude antes de seguir para a montagem.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-segundo-passo-criando-o-video-completo">5. Segundo passo — Criando o vídeo completo</h2>
+
+        <p class="b-paragrafo">Agora vamos solicitar a montagem.</p>
+
+        <p class="b-paragrafo">A proposta é criar uma composição de 30 segundos, com as mesmas técnicas aprendidas anteriormente.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para criação do projeto final</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Vamos produzir o vídeo final do curso utilizando o projeto atual.&#10;Título: Transforme suas Ideias em Realidade.&#10;Utilize as Skills oficiais do Remotion e nossa Skill personalizada direcao-de-edicao.&#10;Configurações:&#10;- Resolução: 1080x1920 pixels.&#10;- Taxa: 30 FPS.&#10;- Duração: 30 segundos.&#10;- Total: 900 quadros.&#10;- Formato vertical.&#10;Estrutura:&#10;Cena 1 — 4 segundos&#10;Texto: &quot;TODA CRIAÇÃO COMEÇA COM UMA IDEIA&quot;&#10;Cena 2 — 6 segundos&#10;Texto: &quot;IMAGINE&quot;&#10;Cena 3 — 6 segundos&#10;Texto: &quot;CRIE&quot;&#10;Cena 4 — 6 segundos&#10;Texto: &quot;TRANSFORME&quot;&#10;Cena 5 — 8 segundos&#10;Texto: &quot;TRANSFORME SUAS IDEIAS EM REALIDADE&quot;&#10;Direção visual:&#10;- Fonte Montserrat Regular e Bold.&#10;- Fundo escuro.&#10;- Textos brancos com detalhes em laranja.&#10;- Margens de segurança de 80 pixels.&#10;- Animações suaves e bem sincronizadas.&#10;- Cortes com intenção.&#10;- Transições utilizadas com moderação.&#10;- Elementos visuais consistentes entre as cenas.&#10;Utilize somente as mídias realmente encontradas no inventário anterior.&#10;Caso não existam arquivos adequados para alguma cena, utilize elementos gráficos e animações tipográficas.&#10;Não invente caminhos de arquivos.&#10;Adicione trilha sonora e efeitos somente quando existirem arquivos disponíveis e apropriados.&#10;Organize o trabalho nesta ordem:&#10;1. Construir as cinco cenas.&#10;2. Ajustar textos e tipografia.&#10;3. Adicionar mídias reais.&#10;4. Refinar cortes e animações.&#10;5. Adicionar áudio, se disponível.&#10;6. Realizar acabamento visual.&#10;7. Verificar resolução, margens e duração.&#10;Preserve o projeto organizado e não altere outros projetos do curso.&#10;Ao concluir, disponibilize a composição para visualização no Remotion Studio.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>O ID da composição aceita apenas letras, números e hifens, sem acentos nem espaços. Um nome adequado é Transforme-suas-Ideias. O título que aparece no vídeo continua com acentos e espaços: TRANSFORME SUAS IDEIAS EM REALIDADE.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>CONFERÊNCIA NO STUDIO:</strong> a 30 FPS, as cenas ocupam 120, 180, 180, 180 e 240 quadros: cena 1 de 0 a 119, cena 2 de 120 a 299, cena 3 de 300 a 479, cena 4 de 480 a 659 e cena 5 de 660 a 899, somando 900 quadros.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt de criação, espera o Claude terminar e informar o que foi criado, abre o Remotion Studio com npm run dev e reproduz a composição inteira.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="6-revisando-o-resultado-final">6. Revisando o resultado final</h2>
+
+        <p class="b-paragrafo">Abra o Remotion Studio e reproduza o vídeo completo.</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Durante a demonstração, mostre que o processo de revisão será o mesmo que aprendemos na aula 11.</p>
+
+        <p class="b-paragrafo">Peça ao Claude para verificar problemas antes de exportar.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt de revisão final</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Realize a revisão final do vídeo Transforme suas Ideias em Realidade.&#10;Verifique:&#10;- Duração de exatamente 900 quadros.&#10;- Resolução 1080x1920.&#10;- Taxa de 30 FPS.&#10;- Textos legíveis e sem cortes.&#10;- Transições funcionando.&#10;- Enquadramento correto das mídias.&#10;- Áudio sincronizado, quando houver.&#10;- Primeiro e último quadro.&#10;- Consistência da identidade visual.&#10;Identifique problemas reais e corrija somente os erros confirmados.&#10;Preserve uma versão de segurança antes de modificar os arquivos.&#10;Depois da revisão, prepare o projeto para exportação em MP4, utilizando H.264 e AAC quando houver áudio.&#10;Informe o caminho do arquivo final e os parâmetros utilizados.&#10;Não declare que a renderização foi concluída se o arquivo não tiver sido realmente gerado.&#10;Ao finalizar, apresente um resumo das etapas realizadas e dos pontos que ainda precisam de verificação manual.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">A exportação segue o mesmo caminho da aula 11. Pelo terminal, na pasta do projeto, o comando fica assim (troque o ID se a composição tiver outro nome):</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx remotion render src/index.ts Transforme-suas-Ideias out/transforme-suas-ideias.mp4 --codec=h264</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Com o codec H.264, o Remotion gera um MP4 e usa AAC como áudio padrão. Quando a renderização terminar, abra o arquivo fora do Remotion e assista ao vídeo completo, conferindo duração, resolução e áudio.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Não considere o vídeo pronto com base apenas na mensagem do Claude. Confira se o arquivo MP4 existe na pasta out e assista a ele do início ao fim.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt de revisão, lê o relatório, aprova só as correções de erros confirmados, exporta o MP4 e assiste ao arquivo final fora do Remotion.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="7-encerramento-o-que-o-aluno-aprendeu">7. Encerramento — O que o aluno aprendeu?</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Fluxo completo de produção</caption>
+            <thead><tr><th scope="col">Etapa</th><th scope="col">O que fazer</th></tr></thead>
+            <tbody>
+              <tr><td>1. Planejar</td><td>Definir a ideia, as cenas e o material.</td></tr>
+              <tr><td>2. Criar</td><td>Montar as cenas, animações e efeitos.</td></tr>
+              <tr><td>3. Revisar</td><td>Conferir a qualidade e corrigir erros.</td></tr>
+              <tr><td>4. Exportar</td><td>Gerar o arquivo final e conferir a reprodução.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>As Skills orientam o Claude, mas não garantem um resultado perfeito. A inteligência artificial acelera várias etapas da produção, mas a avaliação final do vídeo continua sendo nossa.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Projeto independente com Skills disponíveis</li><li>Cinco cenas e áudio revisados</li><li>MP4 exportado e verificado</li></ul>
+        <ul class="b-lista"><li>Reproduziu um trecho de O Futuro da Criação e apresentou a proposta do novo vídeo</li><li>Apresentou o título, a identidade visual (Montserrat, fundo escuro, textos brancos e detalhes em laranja) e o storyboard de cinco cenas em 30 segundos</li><li>Criou o projeto transformando-ideias fora de um repositório Git, sem alterar meu-primeiro-video</li><li>Copiou a Skill direcao-de-edicao para .claude/skills do novo projeto, sem modificar o original, e instalou as Skills oficiais do Remotion</li><li>Pediu o inventário das mídias antes de qualquer montagem e usou apenas arquivos reais, próprios ou com permissão de uso</li><li>Criou a composição com 1080x1920, 30 FPS e 900 quadros, com ID só de letras, números e hifens</li><li>Fez a revisão final, corrigiu somente erros confirmados e preservou uma versão de segurança</li><li>Exportou em MP4 (H.264, com AAC quando houver áudio) e assistiu ao arquivo fora do Remotion</li><li><strong>Recapitulou o fluxo completo:</strong> planejar, criar, revisar e exportar</li></ul>
 
         <h2 class="b-titulo" id="aula-12-narracao">AULA 12 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar projeto final: vídeo completo. Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Chegamos à última aula do nível iniciante do nosso curso de edição de vídeos com Claude.</p>
 
-        <p class="b-paragrafo">Primeiro, vamos apresentar resultado do primeiro projeto e um teaser do segundo.</p>
+        <p class="b-paragrafo">E, para encerrar, vamos realizar um desafio especial.</p>
 
-        <p class="b-paragrafo">Agora, transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas.</p>
+        <p class="b-paragrafo">Nas aulas anteriores, construímos nosso primeiro projeto aos poucos.</p>
 
-        <p class="b-paragrafo">Em seguida, vamos criar pasta independente; reutilize Skill personalizada e reinstale Skills Remotion.</p>
+        <p class="b-paragrafo">Começamos preparando o computador, conhecemos as Skills, criamos nossas próprias orientações de edição e aprendemos a trabalhar com animações, imagens, cortes, música e acabamento visual.</p>
 
-        <p class="b-paragrafo">Na prática, faça Claude inventariar arquivos e propor distribuição sem inventar mídias.</p>
+        <p class="b-paragrafo">Agora vamos utilizar tudo isso para criar um novo vídeo do zero.</p>
 
-        <p class="b-paragrafo">Depois disso, vamos pedir montagem, textos, animações, cortes, áudio e acabamento em sequência.</p>
+        <p class="b-paragrafo">Nosso projeto final terá o título Transforme suas Ideias em Realidade.</p>
 
-        <p class="b-paragrafo">Para conferir, assista no Studio, corrija aspectos pontuais e confirme mídia.</p>
+        <p class="b-paragrafo">Será um vídeo vertical de trinta segundos, dividido em cinco cenas.</p>
 
-        <p class="b-paragrafo">Por fim, renderize MP4 e confira parâmetros e reprodução.</p>
+        <p class="b-paragrafo">Mas desta vez vamos trabalhar de uma maneira um pouco diferente.</p>
 
-        <p class="b-paragrafo">Como conclusão, recapitule o fluxo planejar -&gt; executar -&gt; revisar -&gt; exportar e introduza módulo intermediário.</p>
+        <p class="b-paragrafo">Em vez de aprender cada recurso separadamente, vamos utilizar tudo em um único processo de produção.</p>
 
-        <p class="b-paragrafo">Com isso, encerramos o nível iniciante. O mais importante é conseguir repetir o processo com autonomia, revisar os resultados e continuar aprimorando as próprias edições.</p>
+        <p class="b-paragrafo">E o primeiro passo não será pedir para o Claude criar o vídeo imediatamente.</p>
+
+        <p class="b-paragrafo">Vamos começar organizando nosso projeto.</p>
+
+        <p class="b-paragrafo">Precisamos criar uma pasta independente para não misturar os arquivos do novo trabalho com aqueles utilizados nas aulas anteriores.</p>
+
+        <p class="b-paragrafo">Depois, vamos preparar nossas ferramentas e conferir se as Skills estão disponíveis.</p>
+
+        <p class="b-paragrafo">Lembra da Skill de direção de edição que criamos?</p>
+
+        <p class="b-paragrafo">Ela será muito útil agora.</p>
+
+        <p class="b-paragrafo">Podemos aproveitar as orientações que definimos anteriormente, como as margens de segurança, a tipografia, as cores e o estilo das animações.</p>
+
+        <p class="b-paragrafo">Também vamos utilizar as Skills oficiais do Remotion.</p>
+
+        <p class="b-paragrafo">Com isso, nosso novo projeto já começa com uma estrutura de trabalho conhecida.</p>
+
+        <p class="b-paragrafo">Agora vamos organizar as mídias.</p>
+
+        <p class="b-paragrafo">Antes de iniciar a montagem, precisamos saber quais vídeos, fotografias e arquivos de áudio estão realmente disponíveis.</p>
+
+        <p class="b-paragrafo">Vamos pedir ao Claude para analisar as pastas do projeto e apresentar uma lista dos materiais encontrados.</p>
+
+        <p class="b-paragrafo">Essa etapa é importante porque não queremos que ele utilize arquivos inexistentes ou suponha que determinada filmagem está disponível.</p>
+
+        <p class="b-paragrafo">Com o inventário concluído, vamos planejar nossas cinco cenas.</p>
+
+        <p class="b-paragrafo">A primeira apresentará a ideia central do vídeo.</p>
+
+        <p class="b-paragrafo">Na segunda, vamos destacar a palavra Imagine.</p>
+
+        <p class="b-paragrafo">Na terceira, trabalharemos com a mensagem Crie.</p>
+
+        <p class="b-paragrafo">Na quarta, a palavra Transforme será nosso principal destaque.</p>
+
+        <p class="b-paragrafo">E na última cena, teremos a mensagem completa: Transforme suas Ideias em Realidade.</p>
+
+        <p class="b-paragrafo">Agora vamos pedir ao Claude para construir essa composição.</p>
+
+        <p class="b-paragrafo">Vamos utilizar a identidade visual que desenvolvemos durante o curso, com fundo escuro, textos brancos e detalhes em laranja.</p>
+
+        <p class="b-paragrafo">Também vamos orientar o Claude a utilizar animações suaves, cortes bem definidos e transições apenas quando forem necessárias.</p>
+
+        <p class="b-paragrafo">Se tivermos filmagens e imagens adequadas, elas poderão ser utilizadas nas cenas.</p>
+
+        <p class="b-paragrafo">Caso contrário, o projeto também poderá funcionar com elementos gráficos e animações tipográficas.</p>
+
+        <p class="b-paragrafo">Depois da montagem, vamos cuidar do áudio.</p>
+
+        <p class="b-paragrafo">Vamos utilizar uma trilha sonora, caso tenhamos um arquivo apropriado, e adicionar efeitos pontuais para destacar alguns movimentos.</p>
+
+        <p class="b-paragrafo">Mas precisamos lembrar de algo importante: os efeitos sonoros devem acompanhar as animações, e não aparecer aleatoriamente.</p>
+
+        <p class="b-paragrafo">Com a montagem pronta, vamos realizar o acabamento visual.</p>
+
+        <p class="b-paragrafo">Precisamos conferir se as imagens estão equilibradas, se os textos possuem bom contraste e se todos os elementos estão respeitando as margens de segurança.</p>
+
+        <p class="b-paragrafo">Agora chegou a hora da revisão.</p>
+
+        <p class="b-paragrafo">Vamos pedir ao Claude para analisar o projeto e identificar possíveis problemas.</p>
+
+        <p class="b-paragrafo">Se algum erro for encontrado, vamos realizar uma correção específica, preservando todo o restante da composição.</p>
+
+        <p class="b-paragrafo">Depois de concluir essa etapa, estaremos prontos para exportar.</p>
+
+        <p class="b-paragrafo">Vamos utilizar o formato MP4, mantendo a resolução vertical e os trinta quadros por segundo.</p>
+
+        <p class="b-paragrafo">Quando a renderização terminar, vamos abrir o arquivo fora do Remotion e assistir ao vídeo completo.</p>
+
+        <p class="b-paragrafo">E aqui temos nosso projeto final.</p>
+
+        <p class="b-paragrafo">Mas o mais importante não é apenas o arquivo que conseguimos produzir.</p>
+
+        <p class="b-paragrafo">É perceber que agora conhecemos um processo completo de edição utilizando inteligência artificial.</p>
+
+        <p class="b-paragrafo">Aprendemos que não basta pedir para uma IA criar um vídeo.</p>
+
+        <p class="b-paragrafo">Precisamos planejar, fornecer boas instruções, organizar os materiais, avaliar os resultados e realizar correções.</p>
+
+        <p class="b-paragrafo">A inteligência artificial pode acelerar várias etapas da produção, mas nosso olhar como editor continua sendo fundamental.</p>
+
+        <p class="b-paragrafo">Com isso, encerramos o nível iniciante.</p>
+
+        <p class="b-paragrafo">A partir de agora, você já possui uma base para desenvolver seus próprios projetos utilizando o Claude Code e o Remotion.</p>
+
+        <p class="b-paragrafo">No próximo módulo, poderemos avançar para técnicas mais elaboradas, como composições complexas, motion graphics, animações personalizadas e automações de produção.</p>
+
+        <p class="b-paragrafo">O principal objetivo é que você consiga repetir esse processo com cada vez mais autonomia, desenvolvendo seu próprio estilo e aperfeiçoando suas edições.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira o MP4 exportado antes de afirmar que o projeto final ficou pronto.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>create-video (criação de projetos Remotion):</strong> <a href="https://www.remotion.dev/docs/cli/create-video" rel="noopener">https://www.remotion.dev/docs/cli/create-video</a></li><li><strong>Skills oficiais do Remotion:</strong> <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li><li><strong>Skills no Claude Code:</strong> <a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li><li><strong>Comando render do Remotion:</strong> <a href="https://www.remotion.dev/docs/render-command" rel="noopener">https://www.remotion.dev/docs/render-command</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
@@ -187,7 +525,7 @@
       <a class="pager__link pager__link--prev" href="aula-11.html" rel="prev">
         <span class="pager__dir">← Aula anterior</span>
         <span class="pager__no">11</span>
-        <span class="pager__title">Revisão e exportação</span>
+        <span class="pager__title">Revisão e exportação do vídeo</span>
       </a>
       <a class="pager__link pager__link--next" href="../index.html#aulas">
         <span class="pager__dir">Fim do curso →</span>

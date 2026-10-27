@@ -44,11 +44,11 @@
             <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
-            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
             <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
-            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
-            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
-            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação do vídeo</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
           </ol>
         </nav>
       </div>
@@ -81,7 +81,7 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Vídeo de 30s estruturado</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Vídeo de 30s com filmagens, montagem reorganizada e identidade visual</dd></div>
           <div><dt>Nível</dt><dd>Iniciante</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos.</li>
+            <li>Entender que a duração de cada cena define o ritmo do vídeo e que nem toda informação precisa do mesmo tempo de tela.</li>
+            <li>Redistribuir com o Claude Code as cinco cenas de O-Futuro-da-Criacao em 4, 5, 4, 7 e 10 segundos, mantendo 30 segundos, 1080x1920, 30 FPS e 900 quadros.</li>
+            <li>Selecionar o trecho mais adequado de uma filmagem mudando o ponto de leitura do arquivo, sem deslocar a cena na montagem e sem acelerar ou desacelerar o vídeo.</li>
+            <li>Diferenciar corte seco, dissolvência (fade) e slide, e usar transições sem exageros.</li>
+            <li>Aplicar uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto no final, compensando a sobreposição para manter os 900 quadros.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,14 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-como-explicar-o-ritmo-da-edicao">1. Como explicar o ritmo da edição</a></li>
+            <li><a href="#2-planejando-um-novo-ritmo">2. Planejando um novo ritmo</a></li>
+            <li><a href="#3-conhecendo-tres-tipos-de-transicao">3. Conhecendo três tipos de transição</a></li>
+            <li><a href="#4-demonstracao-pratica-ajustando-o-ritmo">4. Demonstração prática: ajustando o ritmo</a></li>
+            <li><a href="#5-aplicando-uma-transicao-sem-aumentar-ou-reduzir-o-video">5. Aplicando uma transição sem aumentar ou reduzir o vídeo</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-07-narracao">AULA 07 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,67 +124,227 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+        <p class="b-paragrafo">Tema: como deixar o vídeo mais dinâmico e agradável de assistir. Até a aula 6, o aluno montou no projeto meu-primeiro-video a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 30 segundos e cinco cenas de seis segundos, com textos, animações, duas filmagens e uma fotografia. A partir desta aula, o mesmo projeto ganha ritmo, identidade visual, áudio e acabamento; somente na aula 12 o aluno começa um projeto novo.</p>
+
+        <p class="b-paragrafo">Objetivo: ensinar como a duração das cenas influencia o ritmo do vídeo, como selecionar trechos de uma filmagem e como utilizar transições sem exageros.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> mostre antes de explicar (comece reproduzindo o vídeo atual), separe a explicação da execução (conceito, prompt e conferência no Remotion Studio) e ensine a corrigir: nem toda primeira versão do Claude estará correta. Guarde a versão da aula 6 para comparar o antes e o depois.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Diagnóstico:</strong> Cinco cenas de 6s criam cadência uniforme.</li><li><strong>Ritmo:</strong> Mostre cortes rápidos e pausas de leitura; a duração deve ter intenção.</li><li><strong>Redistribuição:</strong> Defina 4, 5, 4, 7 e 10 segundos para as cinco cenas.</li><li><strong>Aparagem:</strong> Comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição.</li><li><strong>Transições:</strong> Compare corte seco, fade e slide; não aplique um efeito em todos os cortes.</li><li><strong>Fade final:</strong> Insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros.</li><li><strong>Gancho:</strong> Agora a tipografia terá destaque.</li></ol>
+        <ol class="b-lista-num"><li><strong>Ponto de partida:</strong> Reproduza O-Futuro-da-Criacao e mostre que as cinco cenas têm seis segundos cada.</li><li><strong>Ritmo:</strong> Explique, com a comparação da história contada, que a duração das cenas deve ter uma intenção.</li><li><strong>Novo planejamento:</strong> Apresente a nova distribuição de 4, 5, 4, 7 e 10 segundos, mantendo os 30 segundos.</li><li><strong>Transições:</strong> Mostre separadamente o corte seco, a dissolvência e o slide.</li><li><strong>Ajuste do ritmo:</strong> Envie o prompt que reorganiza a montagem e confira os 900 quadros.</li><li><strong>Transição com compensação:</strong> Envie o prompt da dissolvência entre as cenas 4 e 5 e do fade para preto no final.</li><li><strong>Comparação:</strong> Mostre no Studio o corte seco x a dissolvência e reproduza os 30 segundos completos.</li><li><strong>Gancho:</strong> Na próxima aula, vamos trabalhar a tipografia.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-como-explicar-o-ritmo-da-edicao">1. Como explicar o ritmo da edição</h2>
+
+        <p class="b-paragrafo">Comece reproduzindo o vídeo criado nas aulas anteriores.</p>
+
+        <p class="b-paragrafo">Mostre que todas as cinco cenas possuem seis segundos. Isso facilita a montagem inicial, mas pode deixar o resultado previsível.</p>
+
+        <p class="b-paragrafo">Explique que nem todas as informações precisam do mesmo tempo de tela. Uma cena com apenas duas palavras pode ser compreendida rapidamente, enquanto outra com mais informações ou uma animação elaborada pode precisar de mais tempo.</p>
+
+        <p class="b-paragrafo">Use esta comparação:</p>
+
+        <p class="b-paragrafo">“Editar um vídeo é parecido com contar uma história. Em alguns momentos falamos mais rápido para criar empolgação. Em outros, fazemos pausas para destacar algo importante.”</p>
+
+        <p class="b-paragrafo">Na edição, essas pausas e mudanças de velocidade são construídas principalmente pela duração das cenas e pelo movimento dos elementos.</p>
+
+        <h2 class="b-titulo" id="2-planejando-um-novo-ritmo">2. Planejando um novo ritmo</h2>
+
+        <p class="b-paragrafo">Vamos manter os 30 segundos, mas distribuir o tempo de maneira diferente. A 30 FPS, cada segundo tem 30 quadros, e o vídeo inteiro continua com 900 quadros.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Nova distribuição das cenas (total: 30 segundos, 900 quadros)</caption>
+            <thead><tr><th scope="col">Cena</th><th scope="col">Início</th><th scope="col">Fim</th><th scope="col">Duração</th><th scope="col">Quadros</th></tr></thead>
+            <tbody>
+              <tr><td>1 · Abertura</td><td>00:00</td><td>00:04</td><td>4s</td><td>120</td></tr>
+              <tr><td>2 · A ideia</td><td>00:04</td><td>00:09</td><td>5s</td><td>150</td></tr>
+              <tr><td>3 · Movimento</td><td>00:09</td><td>00:13</td><td>4s</td><td>120</td></tr>
+              <tr><td>4 · Sem limites</td><td>00:13</td><td>00:20</td><td>7s</td><td>210</td></tr>
+              <tr><td>5 · Encerramento</td><td>00:20</td><td>00:30</td><td>10s</td><td>300</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Explique que esses tempos são uma escolha para a demonstração, não uma regra obrigatória. A quinta cena recebe mais espaço para trabalhar uma conclusão com maior presença visual.</p>
+
+        <h2 class="b-titulo" id="3-conhecendo-tres-tipos-de-transicao">3. Conhecendo três tipos de transição</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Três tipos de transição</caption>
+            <thead><tr><th scope="col">Transição</th><th scope="col">Como funciona</th><th scope="col">Quando usar</th></tr></thead>
+            <tbody>
+              <tr><td>Corte seco</td><td>Uma imagem substitui a outra instantaneamente.</td><td>É simples, rápido e muito utilizado em vídeos para redes sociais.</td></tr>
+              <tr><td>Fade ou dissolvência</td><td>Uma cena desaparece gradualmente enquanto outra aparece.</td><td>Para criar uma passagem mais suave.</td></tr>
+              <tr><td>Slide ou deslizamento</td><td>A nova cena entra deslizando pela tela.</td><td>Para mudanças de assunto e movimentos mais expressivos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Mostre os três efeitos separadamente. Explique que uma edição profissional não precisa utilizar uma transição diferente a cada corte.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>No Remotion, cenas colocadas uma depois da outra, sem sobreposição, formam um Series: é o corte seco. A dissolvência e o slide vêm do pacote @remotion/transitions (instalado com npx remotion add @remotion/transitions), por meio do TransitionSeries com fade() ou slide(). O aluno não precisa escrever esse código: o Claude cuida disso.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-demonstracao-pratica-ajustando-o-ritmo">4. Demonstração prática: ajustando o ritmo</h2>
+
+        <p class="b-paragrafo">Abra o Claude Code na pasta do projeto e utilize este prompt.</p>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para ajustar a montagem</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Use a Skill direcao-de-edicao. Ajuste as cinco cenas para 4, 5, 4, 7 e 10 segundos, mantendo os textos e o total de 900 frames. Primeiro utilize cortes secos. Depois adicione fade de 15 frames apenas entre cenas 4 e 5, compensando corretamente a sobreposição para preservar 30 segundos. Confira transições, entradas dos títulos e ausência de lacunas.</p>
+            <p class="b-prompt__text" data-copy-source>Vamos melhorar o ritmo da composição O-Futuro-da-Criacao.&#10;Atualmente, nosso vídeo possui cinco cenas com duração uniforme.&#10;Quero reorganizar a montagem mantendo exatamente 30 segundos, resolução 1080x1920 e 30 FPS.&#10;Nova distribuição:&#10;- Cena 1: 4 segundos.&#10;- Cena 2: 5 segundos.&#10;- Cena 3: 4 segundos.&#10;- Cena 4: 7 segundos.&#10;- Cena 5: 10 segundos.&#10;Mantenha os textos, as mídias, a identidade visual e as animações já existentes.&#10;Ajuste o tempo das animações para que continuem naturais dentro das novas durações.&#10;Se necessário, selecione um trecho mais adequado das filmagens, modificando o ponto de leitura do arquivo, sem deslocar a posição da cena na montagem.&#10;Não acelere nem desacelere as filmagens apenas para preencher o tempo.&#10;Não adicione transições ainda.&#10;Preserve a versão anterior e confirme que a nova composição possui exatamente 900 quadros.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>O QUE CONFERIR NO CÓDIGO (se quiser mostrar):</strong> para escolher a partir de que ponto a filmagem começa, a propriedade atual é trimBefore, medida em quadros do arquivo original. Os nomes antigos startFrom e endAt estão obsoletos. Mudar o ponto de leitura não muda o momento em que a cena aparece na composição.</p></div>
+        </aside>
 
-        <h3 class="b-titulo" id="ritmo-animacoes-e-depuracao">Ritmo, animações e depuração</h3>
+        <p class="b-paragrafo">Depois, abra o Remotion Studio, selecione O-Futuro-da-Criacao e confira: as cenas seguem a nova distribuição, os textos e as mídias continuam os mesmos, as filmagens não foram aceleradas nem desaceleradas e a composição tem exatamente 900 quadros.</p>
 
-        <p class="b-paragrafo">Remotion: remotion-markup / remotion-best-practices. GSAP Skills: <a href="https://github.com/greensock/gsap-skills" rel="noopener">https://github.com/greensock/gsap-skills</a> — alternativa para animação programática, não dependência obrigatória do Remotion.</p>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o mesmo prompt no Claude Code, na pasta meu-primeiro-video, reproduz o vídeo no Studio e compara o ritmo com a versão anterior, conferindo os 900 quadros.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-aplicando-uma-transicao-sem-aumentar-ou-reduzir-o-video">5. Aplicando uma transição sem aumentar ou reduzir o vídeo</h2>
+
+        <p class="b-paragrafo">Vamos adicionar uma dissolvência de 15 quadros, equivalente a meio segundo, entre as cenas 4 e 5.</p>
 
         <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
           <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Se cortes/transições causarem erro, Superpowers systematic-debugging: <a href="https://github.com/obra/superpowers" rel="noopener">https://github.com/obra/superpowers</a>; investigar causa antes de corrigir.</p></div>
+          <div class="b-callout__body"><p><strong>Existe um detalhe técnico importante:</strong> no Remotion, uma transição com sobreposição reduz a duração combinada das sequências. A duração total é a soma das sequências menos a duração das transições. Portanto, precisamos compensar essa sobreposição para preservar os 900 quadros do projeto.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Na demonstração, a cena 5 poderá começar 15 quadros antes do corte nominal, usando esse trecho adicional para realizar a dissolvência.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para criar a transição</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Agora quero adicionar uma transição suave entre as cenas 4 e 5.&#10;Utilize uma dissolvência (crossfade) com duração de 15 quadros.&#10;Mantenha os cortes secos entre as demais cenas.&#10;Compense corretamente a sobreposição. Se utilizar TransitionSeries, ajuste a duração efetiva das sequências para que o resultado final continue com exatamente 900 quadros.&#10;A transição deverá ocorrer entre 19,5 e 20 segundos, sem remover conteúdo importante.&#10;Adicione também um fade visual para preto nos últimos 15 quadros do vídeo, sem aumentar a duração.&#10;Não altere os textos nem substitua as mídias.&#10;Ao concluir, verifique se a composição continua com 30 segundos.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Mostre a diferença entre o corte seco e a dissolvência no Studio. Ao final, reproduza os 30 segundos completos.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt da transição, confere no Studio a dissolvência entre 19,5 e 20 segundos e o fade para preto no final, e confirma que a composição continua com 900 quadros. Se a duração mudar, ele pede ao Claude para corrigir a compensação.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>As Skills orientam o Claude, mas não garantem um resultado perfeito. Confira cada cena no Remotion Studio antes de considerar a aula concluída.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Duração exata de 30s</li><li>Trecho escolhido é válido</li><li>Fade sem lacunas nem redução indevida da duração</li></ul>
+        <ul class="b-lista"><li>Reproduziu o vídeo atual e mostrou que as cinco cenas têm seis segundos</li><li>Explicou o ritmo com a comparação da história contada</li><li>Apresentou a nova distribuição (4, 5, 4, 7 e 10 segundos) como escolha, não como regra</li><li>Mostrou separadamente o corte seco, a dissolvência e o slide</li><li>Reorganizou a montagem com o Claude e conferiu os 900 quadros, sem acelerar ou desacelerar as filmagens</li><li>Explicou que mudar o ponto de leitura de uma filmagem não desloca a cena na montagem</li><li>Aplicou a dissolvência de 15 quadros entre as cenas 4 e 5, compensando a sobreposição</li><li>Adicionou o fade para preto nos últimos 15 quadros e confirmou os 30 segundos</li><li>Reproduziu os 30 segundos completos no Remotion Studio</li></ul>
 
         <h2 class="b-titulo" id="aula-07-narracao">AULA 07 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar cortes, ritmo e transições. Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Na última aula, adicionamos vídeos e imagens reais ao nosso projeto. Agora temos uma composição muito mais interessante, mas ainda podemos melhorar bastante o resultado.</p>
 
-        <p class="b-paragrafo">Primeiro, cinco cenas de 6s criam cadência uniforme.</p>
+        <p class="b-paragrafo">Nesta aula, vamos aprender três fundamentos importantes da edição: cortes, ritmo e transições.</p>
 
-        <p class="b-paragrafo">Agora, vamos observar cortes rápidos e pausas de leitura; a duração deve ter intenção.</p>
+        <p class="b-paragrafo">Vamos começar reproduzindo nosso vídeo.</p>
 
-        <p class="b-paragrafo">Em seguida, vamos definir 4, 5, 4, 7 e 10 segundos para as cinco cenas.</p>
+        <p class="b-paragrafo">Perceba que temos cinco cenas e que todas possuem exatamente seis segundos de duração.</p>
 
-        <p class="b-paragrafo">Na prática, comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição.</p>
+        <p class="b-paragrafo">Isso não está necessariamente errado, mas faz com que o vídeo tenha um ritmo muito uniforme.</p>
 
-        <p class="b-paragrafo">Depois disso, vamos comparar corte seco, fade e slide; não aplique um efeito em todos os cortes.</p>
+        <p class="b-paragrafo">Na prática, nem todas as cenas precisam durar o mesmo tempo.</p>
 
-        <p class="b-paragrafo">Para conferir, insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros.</p>
+        <p class="b-paragrafo">Imagine uma cena que mostra apenas duas palavras. O espectador provavelmente conseguirá ler essa mensagem rapidamente.</p>
 
-        <p class="b-paragrafo">Por fim, agora a tipografia terá destaque.</p>
+        <p class="b-paragrafo">Agora imagine outra cena com uma animação mais elaborada ou uma informação importante. Talvez seja necessário deixar essa imagem na tela por mais tempo.</p>
 
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">É por isso que a duração de cada cena deve ter uma intenção.</p>
+
+        <p class="b-paragrafo">Podemos comparar a edição com a maneira como contamos uma história.</p>
+
+        <p class="b-paragrafo">Em alguns momentos, falamos rapidamente. Em outros, fazemos uma pausa para destacar uma informação.</p>
+
+        <p class="b-paragrafo">Na edição de vídeo, também podemos utilizar essas mudanças de ritmo.</p>
+
+        <p class="b-paragrafo">Vamos reorganizar nosso projeto.</p>
+
+        <p class="b-paragrafo">A primeira cena terá quatro segundos. A segunda terá cinco. A terceira voltará para quatro. A quarta terá sete, e a última ficará com dez segundos.</p>
+
+        <p class="b-paragrafo">Somando tudo, continuamos com trinta segundos de vídeo.</p>
+
+        <p class="b-paragrafo">Agora vamos pedir ao Claude para realizar essas alterações, preservando o material que já criamos.</p>
+
+        <p class="b-paragrafo">Também vamos explicar que ele pode selecionar trechos diferentes das filmagens quando necessário.</p>
+
+        <p class="b-paragrafo">Por exemplo, se o momento mais interessante de uma gravação aparece depois dos primeiros segundos, podemos começar a reproduzir o vídeo a partir daquele ponto.</p>
+
+        <p class="b-paragrafo">Isso não significa mudar o momento em que a cena aparece na composição. Estamos apenas escolhendo qual parte do arquivo original queremos mostrar.</p>
+
+        <p class="b-paragrafo">Com os novos tempos definidos, vamos conhecer outro recurso importante: as transições.</p>
+
+        <p class="b-paragrafo">A primeira é o corte seco, quando uma imagem é substituída imediatamente por outra.</p>
+
+        <p class="b-paragrafo">A segunda é a dissolvência, quando uma cena desaparece enquanto a próxima começa a aparecer.</p>
+
+        <p class="b-paragrafo">E a terceira é o slide, quando uma imagem entra deslizando pela tela.</p>
+
+        <p class="b-paragrafo">Cada uma pode produzir uma sensação diferente.</p>
+
+        <p class="b-paragrafo">Mas precisamos tomar cuidado para não exagerar.</p>
+
+        <p class="b-paragrafo">Usar transições elaboradas em todos os cortes pode deixar um vídeo visualmente cansativo.</p>
+
+        <p class="b-paragrafo">Por isso, vamos manter os cortes secos na maior parte do projeto e aplicar apenas uma dissolvência entre a quarta e a quinta cena.</p>
+
+        <p class="b-paragrafo">Essa transição terá quinze quadros, o equivalente a meio segundo.</p>
+
+        <p class="b-paragrafo">Aqui existe um detalhe importante: quando duas cenas se sobrepõem durante uma transição, precisamos cuidar da duração final do projeto.</p>
+
+        <p class="b-paragrafo">Vamos orientar o Claude a compensar essa sobreposição para que nosso vídeo continue com exatamente trinta segundos.</p>
+
+        <p class="b-paragrafo">Também vamos adicionar um desaparecimento suave da imagem no final.</p>
+
+        <p class="b-paragrafo">Agora podemos abrir o Remotion Studio e observar as alterações.</p>
+
+        <p class="b-paragrafo">Compare a montagem anterior com a nova versão.</p>
+
+        <p class="b-paragrafo">Perceba como a mudança de duração das cenas influencia a maneira como acompanhamos as informações.</p>
+
+        <p class="b-paragrafo">E esse é o aprendizado mais importante desta aula: uma boa edição não depende apenas de efeitos. Muitas vezes, o que melhora um vídeo é saber quando mostrar uma informação e quanto tempo deixá-la na tela.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos dar atenção especial à tipografia, aprendendo a transformar textos simples em elementos visuais mais interessantes.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que o vídeo continua com 30 segundos.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Transições no Remotion (@remotion/transitions):</strong> <a href="https://www.remotion.dev/docs/transitions" rel="noopener">https://www.remotion.dev/docs/transitions</a></li><li><strong>TransitionSeries:</strong> <a href="https://www.remotion.dev/docs/transitions/transitionseries" rel="noopener">https://www.remotion.dev/docs/transitions/transitionseries</a></li><li><strong>Series:</strong> <a href="https://www.remotion.dev/docs/series" rel="noopener">https://www.remotion.dev/docs/series</a></li><li><strong>Componente Video:</strong> <a href="https://www.remotion.dev/docs/video" rel="noopener">https://www.remotion.dev/docs/video</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
@@ -190,7 +358,7 @@
       <a class="pager__link pager__link--next" href="aula-08.html" rel="next">
         <span class="pager__dir">Próxima aula →</span>
         <span class="pager__no">08</span>
-        <span class="pager__title">Textos e animações</span>
+        <span class="pager__title">Textos, tipografia e animações</span>
       </a>
     </nav>
   </main>

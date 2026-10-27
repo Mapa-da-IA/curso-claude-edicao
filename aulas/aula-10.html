@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 10 · Acabamento visual — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Áudio, cor, revisão e exportação — aula 10 do guia do professor Edição de Vídeos com Claude: Acabamento visual.">
+  <title>Aula 10 · Acabamento visual e correção de cores — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Áudio, cor, revisão e exportação — aula 10 do guia do professor Edição de Vídeos com Claude: Acabamento visual e correção de cores.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +44,11 @@
             <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
-            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
             <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
-            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual</span></a></li>
-            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
-            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: vídeo completo</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação do vídeo</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
           </ol>
         </nav>
       </div>
@@ -75,13 +75,13 @@
         <div class="lesson-hero__head">
           <span class="lesson-hero__no" aria-hidden="true">10</span>
           <div>
-            <h1 class="lesson-hero__title"><span class="sr-only">Aula 10: </span>Acabamento visual</h1>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 10: </span>Acabamento visual e correção de cores</h1>
             <p class="lesson-hero__theme">Áudio, cor, revisão e exportação</p>
           </div>
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Primeiro MP4 final</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Projeto com áudio, imagens equilibradas e primeiro MP4</dd></div>
           <div><dt>Nível</dt><dd>Iniciante</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem.</li>
+            <li>Entender que corrigir a cor busca primeiro o equilíbrio visual, e não simplesmente clarear as imagens ou aumentar a saturação.</li>
+            <li>Reconhecer os conceitos de exposição, contraste, saturação e temperatura de cor.</li>
+            <li>Pedir ao Claude Code uma análise das cinco cenas de O-Futuro-da-Criacao antes de qualquer modificação, sem diagnósticos inventados.</li>
+            <li>Aplicar com o Claude um acabamento visual moderado, apenas onde a análise indicou necessidade, sem alterar textos, animações, cortes, áudio ou duração.</li>
+            <li>Comparar o antes e o depois de pelo menos uma filmagem e reconhecer os limites dos arquivos originais.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,14 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-entendendo-o-acabamento-visual">1. Entendendo o acabamento visual</a></li>
+            <li><a href="#2-conhecendo-os-conceitos-fundamentais">2. Conhecendo os conceitos fundamentais</a></li>
+            <li><a href="#3-comecando-pela-analise">3. Começando pela análise</a></li>
+            <li><a href="#4-fazendo-as-correcoes">4. Fazendo as correções</a></li>
+            <li><a href="#5-comparando-antes-e-depois">5. Comparando antes e depois</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-10-narracao">AULA 10 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,69 +124,235 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+        <p class="b-paragrafo">Tema: como deixar as imagens mais equilibradas e consistentes. Na aula 9, a composição O-Futuro-da-Criacao, do projeto meu-primeiro-video, recebeu música e efeitos sonoros. O vídeo já tem cenas organizadas, animações, transições e áudio. Mas, quando usamos filmagens de origens diferentes, é comum que uma cena pareça mais escura, mais fria ou mais saturada do que a outra. Nesta aula, trabalhamos exclusivamente o acabamento da imagem, sem mexer na montagem.</p>
+
+        <p class="b-paragrafo">Objetivo: ensinar o aluno a identificar diferenças de iluminação, contraste e cor entre cenas, realizando melhorias sem modificar a montagem.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> primeiro analisar, depois modificar. O aluno precisa aprender a revisar antes de alterar. Antes de começar, guarde uma cópia ou uma gravação da versão da aula 9 para mostrar o antes e o depois.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Antes/depois:</strong> Mostre correção moderada de uma imagem do projeto.</li><li><strong>Correção vs estilo:</strong> Primeiro recuperar equilíbrio; depois considerar aparência estética.</li><li><strong>Inspeção:</strong> Analise quadros representativos das cinco cenas.</li><li><strong>Exposição e contraste:</strong> Corrija com moderação; material estourado pode não ter informação recuperável.</li><li><strong>Saturação e temperatura:</strong> Aproxime cenas sem impor o mesmo filtro indiscriminadamente.</li><li><strong>Reenquadramento:</strong> Preserve proporções, assunto e espaço de títulos.</li><li><strong>Harmonização:</strong> Confira sequência completa sem alterar textos, cortes ou áudio.</li><li><strong>Gancho:</strong> Na aula 11 revisaremos e exportaremos.</li></ol>
+        <ol class="b-lista-num"><li><strong>Ponto de partida:</strong> Reproduza O-Futuro-da-Criacao como ficou na aula 9, com música e efeitos sonoros, e aponte diferenças de luz e cor entre as filmagens.</li><li><strong>Acabamento visual:</strong> Mostre uma imagem com pouca luz e uma mais equilibrada e explique que corrigir não é só clarear ou saturar.</li><li><strong>Conceitos:</strong> Apresente exposição, contraste, saturação e temperatura de cor.</li><li><strong>Análise:</strong> Envie o prompt que pede ao Claude um relatório das cinco cenas, sem modificar nada.</li><li><strong>Correções:</strong> Envie o prompt de acabamento visual moderado, apenas com os ajustes necessários.</li><li><strong>Antes e depois:</strong> Compare pelo menos uma filmagem real antes e depois dos ajustes.</li><li><strong>Gancho:</strong> Na próxima aula, vamos revisar o projeto completo e exportar o vídeo final em MP4.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-entendendo-o-acabamento-visual">1. Entendendo o acabamento visual</h2>
+
+        <p class="b-paragrafo">Comece mostrando duas versões de uma mesma imagem.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Pouca luz x imagem equilibrada</caption>
+            <thead><tr><th scope="col">Exemplo</th><th scope="col">O que se vê</th></tr></thead>
+            <tbody>
+              <tr><td>Imagem com pouca luz</td><td>Pode apresentar detalhes difíceis de visualizar.</td></tr>
+              <tr><td>Imagem mais equilibrada</td><td>Permite perceber melhor os detalhes principais.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>Mostre quadros do próprio projeto:</strong> capture um quadro de uma das filmagens de O-Futuro-da-Criacao antes do acabamento e o mesmo quadro depois. Se usar outros exemplos de iluminação, deixe claro que são ilustrativos, e não a mesma imagem corrigida.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Explique que corrigir a cor não significa simplesmente deixar todas as imagens mais claras ou aumentar a saturação.</p>
+
+        <p class="b-paragrafo">O primeiro objetivo é encontrar um equilíbrio visual. Depois, podemos pensar em uma aparência estética consistente para o projeto.</p>
+
+        <h2 class="b-titulo" id="2-conhecendo-os-conceitos-fundamentais">2. Conhecendo os conceitos fundamentais</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Conceitos de acabamento visual</caption>
+            <thead><tr><th scope="col">Conceito</th><th scope="col">O que é</th><th scope="col">Cuidado</th></tr></thead>
+            <tbody>
+              <tr><td>Exposição</td><td>A luminosidade. Ajuda a avaliar se a imagem está muito clara ou muito escura.</td><td>Uma cena muito escura ou excessivamente clara dificulta a visualização de detalhes.</td></tr>
+              <tr><td>Contraste</td><td>A diferença entre claros e escuros. Pode deixar a imagem com maior definição visual.</td><td>Em excesso, prejudica os detalhes.</td></tr>
+              <tr><td>Saturação</td><td>A intensidade das cores. Controla a força das cores na imagem.</td><td>Valores exagerados podem produzir um aspecto artificial.</td></tr>
+              <tr><td>Temperatura de cor</td><td>Sensação de quente ou frio. Imagens mais amareladas parecem quentes; imagens mais azuladas parecem frias.</td><td>Diferenças de temperatura entre cenas deixam o vídeo menos consistente.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Explique que esses ajustes precisam ser realizados de acordo com cada imagem, e não necessariamente aplicando os mesmos valores em todas as cenas.</p>
+
+        <h2 class="b-titulo" id="3-comecando-pela-analise">3. Começando pela análise</h2>
+
+        <p class="b-paragrafo">Nesta aula, a primeira tarefa do Claude será analisar o projeto e informar o que pode ser melhorado. Isso é importante porque o aluno precisa aprender a revisar antes de modificar.</p>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para analisar as imagens</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Analise quadros reais das cinco cenas de O-Futuro-da-Criacao. Liste diferenças confirmadas de exposição, contraste, saturação, temperatura e enquadramento. Aplique ajustes moderados apenas onde necessário, usando recursos disponíveis no Remotion. Não altere títulos, animações, cortes, transições, áudio, 1080x1920, 30 FPS ou 900 frames. Permita comparar antes e depois.</p>
+            <p class="b-prompt__text" data-copy-source>Quero analisar o acabamento visual da composição O-Futuro-da-Criacao antes de realizar qualquer alteração.&#10;Examine as cinco cenas, utilizando quadros representativos de cada uma.&#10;Avalie:&#10;- Exposição e luminosidade.&#10;- Contraste.&#10;- Saturação.&#10;- Temperatura de cor.&#10;- Consistência visual entre as cenas.&#10;- Enquadramento das filmagens.&#10;- Legibilidade dos títulos sobre as imagens.&#10;Identifique quais cenas realmente precisam de ajustes.&#10;Diferencie problemas das filmagens de problemas dos elementos gráficos.&#10;Não faça nenhuma modificação ainda.&#10;Apresente um relatório simples, indicando o problema identificado e a melhoria sugerida para cada cena.&#10;Se não conseguir inspecionar visualmente os quadros, informe essa limitação e não invente diagnósticos.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <p class="b-paragrafo">Mostre o relatório ao aluno e explique quais correções serão realizadas.</p>
 
-        <h3 class="b-titulo" id="acabamento-e-estetica">Acabamento e estética</h3>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt de análise e lê o relatório, conferindo se o Claude informou alguma limitação para inspecionar os quadros.</p></div>
+        </aside>
 
-        <p class="b-paragrafo">Remotion Agent Skills + Direção de Edição. UI UX Pro Max e Taste podem orientar hierarquia e identidade visual, mas não substituem inspeção de quadros reais.</p>
+        <h2 class="b-titulo" id="4-fazendo-as-correcoes">4. Fazendo as correções</h2>
+
+        <p class="b-paragrafo">Agora vamos pedir apenas os ajustes realmente necessários.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para acabamento visual</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Com base nos problemas realmente identificados na análise anterior, faça um acabamento visual moderado no vídeo O-Futuro-da-Criacao.&#10;Prioridades:&#10;1. Corrigir diferenças excessivas de exposição entre as filmagens.&#10;2. Ajustar contraste e saturação somente quando necessário.&#10;3. Buscar consistência visual entre as cenas.&#10;4. Preservar cores naturais e detalhes importantes.&#10;5. Manter as proporções e o enquadramento correto das mídias.&#10;6. Garantir a legibilidade dos textos.&#10;Evite aplicar o mesmo filtro em todas as cenas.&#10;Não tente recuperar artificialmente detalhes que não existem no arquivo original.&#10;Preserve os arquivos de mídia originais.&#10;Não altere:&#10;- Os textos.&#10;- As animações.&#10;- Os cortes e transições.&#10;- A música e os efeitos sonoros.&#10;- A duração total de 30 segundos.&#10;Ao finalizar, compare os ajustes com o estado anterior e informe exatamente o que foi modificado.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>O QUE CONFERIR NO CÓDIGO (se quiser mostrar):</strong> o Remotion não tem uma ferramenta oficial de correção de cor, e o prompt deixa o método a cargo do Claude. Uma técnica comum que ele pode usar é aplicar um filter do CSS (brightness, contrast, saturate) no elemento de vídeo ou de imagem de cada cena. Esse ajuste acontece só na composição: os arquivos originais em public continuam intactos.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Depois, abra o Remotion Studio com npm run dev, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro. Confira se os textos, as animações, os cortes, a música, os efeitos sonoros e a duração de 30 segundos continuam iguais.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt de acabamento visual, lê o resumo do que o Claude modificou e reproduz a composição no Remotion Studio.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-comparando-antes-e-depois">5. Comparando antes e depois</h2>
+
+        <p class="b-paragrafo">Peça ao Claude para preservar uma versão anterior da composição ou permitir ativar e desativar os ajustes durante a demonstração.</p>
+
+        <p class="b-paragrafo">Mostre pelo menos uma comparação real de uma das filmagens.</p>
+
+        <p class="b-paragrafo">Explique que o objetivo é melhorar a qualidade percebida sem destruir a aparência natural da imagem.</p>
 
         <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
           <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Ajustes de exposição não restauram automaticamente dados perdidos. Preserve a versão original das cenas.</p></div>
+          <div class="b-callout__body"><p>Quando uma imagem foi gravada com regiões completamente estouradas ou sem detalhes, nem sempre é possível recuperar essas informações. A inteligência artificial não consegue garantir a recuperação de detalhes que nunca foram registrados. Evite correções exageradas.</p></div>
         </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele compara uma filmagem antes e depois dos ajustes e aponta se os detalhes ficaram mais visíveis e se as cenas ficaram mais consistentes entre si.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Resultado esperado: o projeto terá filmagens visualmente mais equilibradas, sem alterações na montagem, nos textos ou no áudio.</p>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Problemas identificados em quadros reais</li><li>Cores harmonizadas sem filtros extremos</li><li>Montagem e áudio intactos</li></ul>
+        <ul class="b-lista"><li>Reproduziu o vídeo da aula 9 e guardou uma versão para comparar</li><li>Mostrou um exemplo com pouca luz e outro mais equilibrado, usando quadros do próprio projeto</li><li>Explicou que corrigir a cor não é só clarear ou aumentar a saturação</li><li>Apresentou exposição, contraste, saturação e temperatura de cor</li><li>Pediu primeiro a análise das cinco cenas, sem nenhuma modificação</li><li>Aplicou apenas os ajustes indicados pela análise, sem o mesmo filtro em todas as cenas</li><li>Conferiu que textos, animações, cortes, música, efeitos sonoros e os 30 segundos não mudaram</li><li>Mostrou pelo menos uma comparação real de antes e depois</li><li>Explicou que detalhes que não existem no arquivo original não podem ser recuperados</li></ul>
 
         <h2 class="b-titulo" id="aula-10-narracao">AULA 10 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar acabamento visual. Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Nosso vídeo já possui cenas organizadas, animações, transições, música e efeitos sonoros.</p>
 
-        <p class="b-paragrafo">Primeiro, vamos observar correção moderada de uma imagem do projeto.</p>
+        <p class="b-paragrafo">Agora chegou o momento de trabalhar o acabamento visual.</p>
 
-        <p class="b-paragrafo">Agora, primeiro recuperar equilíbrio; depois considerar aparência estética.</p>
+        <p class="b-paragrafo">Nesta aula, vamos aprender como pequenos ajustes de imagem podem ajudar a deixar uma produção mais consistente.</p>
 
-        <p class="b-paragrafo">Em seguida, analise quadros representativos das cinco cenas.</p>
+        <p class="b-paragrafo">Quando utilizamos filmagens de origens diferentes, é comum encontrar diferenças de iluminação, contraste e cores.</p>
 
-        <p class="b-paragrafo">Na prática, corrija com moderação; material estourado pode não ter informação recuperável.</p>
+        <p class="b-paragrafo">Por exemplo, podemos ter uma cena gravada em um ambiente muito iluminado e outra com uma aparência mais escura.</p>
 
-        <p class="b-paragrafo">Depois disso, aproxime cenas sem impor o mesmo filtro indiscriminadamente.</p>
+        <p class="b-paragrafo">Quando colocamos esses materiais no mesmo vídeo, a diferença pode ficar bastante evidente.</p>
 
-        <p class="b-paragrafo">Para conferir, preserve proporções, assunto e espaço de títulos.</p>
+        <p class="b-paragrafo">E é por isso que fazemos a correção de cores.</p>
 
-        <p class="b-paragrafo">Por fim, vamos conferir sequência completa sem alterar textos, cortes ou áudio.</p>
+        <p class="b-paragrafo">Mas antes de começar, precisamos entender alguns conceitos.</p>
 
-        <p class="b-paragrafo">Como conclusão, na aula 11 revisaremos e exportaremos.</p>
+        <p class="b-paragrafo">O primeiro é a exposição.</p>
 
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">De maneira simples, a exposição está relacionada à quantidade de luz na imagem.</p>
+
+        <p class="b-paragrafo">Uma cena pode estar muito escura ou excessivamente clara, dificultando a visualização de determinados detalhes.</p>
+
+        <p class="b-paragrafo">O segundo conceito é o contraste.</p>
+
+        <p class="b-paragrafo">O contraste representa a diferença entre as regiões claras e escuras da imagem.</p>
+
+        <p class="b-paragrafo">Aumentar o contraste pode dar mais destaque a alguns elementos, mas exagerar nesse ajuste pode fazer com que percamos detalhes.</p>
+
+        <p class="b-paragrafo">Outro conceito importante é a saturação.</p>
+
+        <p class="b-paragrafo">Ela está relacionada à intensidade das cores.</p>
+
+        <p class="b-paragrafo">Quando aumentamos a saturação, as cores ficam mais fortes. Quando diminuímos, ficam mais discretas.</p>
+
+        <p class="b-paragrafo">Também temos a temperatura de cor.</p>
+
+        <p class="b-paragrafo">Uma imagem com tonalidades azuladas pode transmitir uma sensação mais fria.</p>
+
+        <p class="b-paragrafo">Já uma imagem com tons amarelados pode parecer mais quente.</p>
+
+        <p class="b-paragrafo">Mas existe algo importante que precisamos entender.</p>
+
+        <p class="b-paragrafo">Corrigir uma imagem não significa aplicar vários efeitos ou aumentar todos os controles.</p>
+
+        <p class="b-paragrafo">Nosso primeiro objetivo deve ser encontrar um equilíbrio.</p>
+
+        <p class="b-paragrafo">Depois, podemos pensar na aparência estética que queremos para o vídeo.</p>
+
+        <p class="b-paragrafo">Agora vamos abrir nosso projeto no Claude Code.</p>
+
+        <p class="b-paragrafo">Em vez de pedir imediatamente para modificar todas as cenas, vamos começar solicitando uma análise.</p>
+
+        <p class="b-paragrafo">Quero que o Claude observe os materiais do projeto e identifique possíveis problemas de exposição, contraste, saturação e enquadramento.</p>
+
+        <p class="b-paragrafo">Também vamos pedir para verificar se os textos continuam legíveis sobre as filmagens.</p>
+
+        <p class="b-paragrafo">Com essa análise, conseguimos entender melhor o que precisa ser corrigido.</p>
+
+        <p class="b-paragrafo">Agora vamos selecionar os ajustes necessários e pedir ao Claude para aplicá-los com moderação.</p>
+
+        <p class="b-paragrafo">É importante deixar claro que não queremos modificar os cortes, a música, os textos ou a duração do vídeo.</p>
+
+        <p class="b-paragrafo">Nosso objetivo nesta aula é trabalhar exclusivamente o acabamento da imagem.</p>
+
+        <p class="b-paragrafo">Depois das correções, vamos comparar o resultado anterior com a nova versão.</p>
+
+        <p class="b-paragrafo">Observe se os detalhes estão mais visíveis e se existe maior consistência entre as cenas.</p>
+
+        <p class="b-paragrafo">Também precisamos ter cuidado com os limites dos arquivos originais.</p>
+
+        <p class="b-paragrafo">Quando uma imagem foi gravada com regiões completamente estouradas ou sem detalhes, nem sempre é possível recuperar essas informações.</p>
+
+        <p class="b-paragrafo">A inteligência artificial não consegue garantir a recuperação de detalhes que nunca foram registrados.</p>
+
+        <p class="b-paragrafo">Por isso, é importante evitar correções exageradas.</p>
+
+        <p class="b-paragrafo">Agora vamos reproduzir nosso vídeo completo.</p>
+
+        <p class="b-paragrafo">Perceba que não mudamos a história nem a montagem.</p>
+
+        <p class="b-paragrafo">Apenas trabalhamos para deixar as imagens mais equilibradas e agradáveis de assistir.</p>
+
+        <p class="b-paragrafo">Esse é um dos objetivos do acabamento visual.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos realizar uma revisão completa do projeto e aprender a exportar nosso vídeo final em MP4.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que os ajustes de imagem foram aplicados.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Componente Video (Remotion):</strong> <a href="https://www.remotion.dev/docs/video" rel="noopener">https://www.remotion.dev/docs/video</a></li><li><strong>Componente Img (Remotion):</strong> <a href="https://www.remotion.dev/docs/img" rel="noopener">https://www.remotion.dev/docs/img</a></li><li><strong>Propriedade filter do CSS (MDN):</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/filter</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
@@ -192,7 +366,7 @@
       <a class="pager__link pager__link--next" href="aula-11.html" rel="next">
         <span class="pager__dir">Próxima aula →</span>
         <span class="pager__no">11</span>
-        <span class="pager__title">Revisão e exportação</span>
+        <span class="pager__title">Revisão e exportação do vídeo</span>
       </a>
     </nav>
   </main>

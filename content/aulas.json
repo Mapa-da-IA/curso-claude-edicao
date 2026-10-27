@@ -30,17 +30,17 @@
               [
                 "05–08",
                 "Composição, arquivos, cortes e tipografia",
-                "Vídeo de 30s estruturado"
+                "Vídeo de 30s com filmagens, montagem reorganizada e identidade visual"
               ],
               [
                 "09–11",
                 "Áudio, cor, revisão e exportação",
-                "Primeiro MP4 final"
+                "Projeto com áudio, imagens equilibradas e primeiro MP4"
               ],
               [
                 "12",
                 "Projeto integrado independente",
-                "Segundo MP4 final"
+                "Segundo vídeo independente"
               ]
             ]
           }
@@ -63,11 +63,11 @@
               "05 | Criando seu primeiro vídeo completo com Claude",
               "06 | Trabalhando com vídeos, imagens e arquivos",
               "07 | Cortes, ritmo e transições",
-              "08 | Textos e animações",
+              "08 | Textos, tipografia e animações",
               "09 | Música e efeitos sonoros",
-              "10 | Acabamento visual",
-              "11 | Revisão e exportação",
-              "12 | Projeto final: vídeo completo"
+              "10 | Acabamento visual e correção de cores",
+              "11 | Revisão e exportação do vídeo",
+              "12 | Projeto final: criando um vídeo completo do zero"
             ]
           },
           {
@@ -90,6 +90,79 @@
           {
             "tipo": "dica",
             "texto": "Preserve as versões anteriores do projeto (cópias ou gravações de cada etapa) para mostrar comparações visuais entre uma aula e outra."
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Módulo final: aulas 07–12"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "A partir da aula 07, os alunos já terão um vídeo de 30 segundos com cinco cenas, animações, filmagens e fotografias. Agora vamos transformar esse primeiro projeto em uma produção com ritmo, identidade visual, áudio e acabamento profissional."
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Nas aulas 07 a 11, o aluno continua trabalhando no projeto O Futuro da Criação, criado anteriormente. Somente na aula 12 começa um projeto completamente novo, para aplicar tudo o que aprendeu."
+          },
+          {
+            "tipo": "tabela",
+            "titulo": "Visão geral do módulo final",
+            "linhas": [
+              [
+                "Aula",
+                "Aprendizado principal",
+                "Entrega prática"
+              ],
+              [
+                "07",
+                "Ritmo, cortes e transições",
+                "Montagem reorganizada"
+              ],
+              [
+                "08",
+                "Tipografia e animação",
+                "Identidade visual consistente"
+              ],
+              [
+                "09",
+                "Música e efeitos sonoros",
+                "Projeto com áudio"
+              ],
+              [
+                "10",
+                "Acabamento visual",
+                "Imagens equilibradas"
+              ],
+              [
+                "11",
+                "Revisão e exportação",
+                "Primeiro MP4 finalizado"
+              ],
+              [
+                "12",
+                "Produção completa",
+                "Segundo vídeo independente"
+              ]
+            ]
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Recomendações para a gravação das aulas"
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "Para tornar o curso ainda mais fácil de acompanhar, mantenha três práticas em todas as aulas:"
+          },
+          {
+            "tipo": "lista_numerada",
+            "itens": [
+              "Mostrar antes de explicar. Sempre que possível, começar com uma comparação visual ou um trecho do resultado que será criado.",
+              "Separar a explicação da execução. Apresentar o conceito em linguagem simples, demonstrar o prompt e depois conferir o resultado no Remotion Studio.",
+              "Ensinar a corrigir, não apenas a criar. Mostrar que o trabalho com Claude é um processo de orientação, análise e refinamento, e que nem toda primeira versão estará correta."
+            ]
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "O conjunto das 12 aulas passa, assim, a construir uma jornada contínua de aprendizado: o aluno prepara o ambiente, desenvolve técnicas progressivamente, finaliza seu primeiro vídeo e termina o nível iniciante produzindo um segundo projeto com maior autonomia."
           },
           {
             "tipo": "paragrafo",
@@ -2237,7 +2310,7 @@
             "04 Importação com o Claude: Envie o prompt que adiciona computador.mp4, criacao.mp4 e tecnologia.jpg às cenas 1, 2 e 3.",
             "05 Recorte x distorção: Compare enquadramento correto com imagem esticada e peça ao Claude para corrigir um enquadramento.",
             "06 Áudio: Confirme que trilha.mp3 está em public/audios, sem adicioná-la à composição.",
-            "07 Gancho: Na próxima aula, vamos trabalhar o ritmo da edição."
+            "07 Gancho: Na próxima aula, vamos trabalhar ritmo, cortes e transições; a trilha fica para a aula 9."
           ]
         },
         {
@@ -2380,7 +2453,7 @@
         },
         {
           "tipo": "titulo",
-          "texto": "6. Preparando o áudio para a próxima aula"
+          "texto": "6. Preparando o áudio para as próximas aulas"
         },
         {
           "tipo": "paragrafo",
@@ -2388,7 +2461,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Não vamos adicioná-lo à composição ainda, porque na próxima aula o aluno começará a estudar ritmo, duração das cenas e sincronização audiovisual."
+          "texto": "Não vamos adicioná-lo à composição ainda: a trilha fica reservada para a aula 9. Na próxima aula, o aluno vai trabalhar ritmo, cortes e transições."
         },
         {
           "tipo": "paragrafo",
@@ -2585,7 +2658,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Isso porque, na próxima aula, vamos começar a trabalhar o ritmo da edição, entendendo como a música pode influenciar a duração das cenas, os cortes e as animações."
+          "texto": "Ela fica reservada para a aula 9. Na próxima aula, vamos trabalhar o ritmo da edição: a duração das cenas, os cortes e as transições."
         },
         {
           "tipo": "paragrafo",
@@ -2620,7 +2693,11 @@
       "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos."
+        "Entender que a duração de cada cena define o ritmo do vídeo e que nem toda informação precisa do mesmo tempo de tela.",
+        "Redistribuir com o Claude Code as cinco cenas de O-Futuro-da-Criacao em 4, 5, 4, 7 e 10 segundos, mantendo 30 segundos, 1080x1920, 30 FPS e 900 quadros.",
+        "Selecionar o trecho mais adequado de uma filmagem mudando o ponto de leitura do arquivo, sem deslocar a cena na montagem e sem acelerar ou desacelerar o vídeo.",
+        "Diferenciar corte seco, dissolvência (fade) e slide, e usar transições sem exageros.",
+        "Aplicar uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto no final, compensando a sobreposição para manter os 900 quadros."
       ],
       "blocos": [
         {
@@ -2629,7 +2706,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como deixar o vídeo mais dinâmico e agradável de assistir. Até a aula 6, o aluno montou no projeto meu-primeiro-video a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 30 segundos e cinco cenas de seis segundos, com textos, animações, duas filmagens e uma fotografia. A partir desta aula, o mesmo projeto ganha ritmo, identidade visual, áudio e acabamento; somente na aula 12 o aluno começa um projeto novo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: ensinar como a duração das cenas influencia o ritmo do vídeo, como selecionar trechos de uma filmagem e como utilizar transições sem exageros."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: mostre antes de explicar (comece reproduzindo o vídeo atual), separe a explicação da execução (conceito, prompt e conferência no Remotion Studio) e ensine a corrigir: nem toda primeira versão do Claude estará correta. Guarde a versão da aula 6 para comparar o antes e o depois."
         },
         {
           "tipo": "titulo",
@@ -2638,38 +2723,199 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Diagnóstico: Cinco cenas de 6s criam cadência uniforme.",
-            "02 Ritmo: Mostre cortes rápidos e pausas de leitura; a duração deve ter intenção.",
-            "03 Redistribuição: Defina 4, 5, 4, 7 e 10 segundos para as cinco cenas.",
-            "04 Aparagem: Comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição.",
-            "05 Transições: Compare corte seco, fade e slide; não aplique um efeito em todos os cortes.",
-            "06 Fade final: Insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros.",
-            "07 Gancho: Agora a tipografia terá destaque."
+            "01 Ponto de partida: Reproduza O-Futuro-da-Criacao e mostre que as cinco cenas têm seis segundos cada.",
+            "02 Ritmo: Explique, com a comparação da história contada, que a duração das cenas deve ter uma intenção.",
+            "03 Novo planejamento: Apresente a nova distribuição de 4, 5, 4, 7 e 10 segundos, mantendo os 30 segundos.",
+            "04 Transições: Mostre separadamente o corte seco, a dissolvência e o slide.",
+            "05 Ajuste do ritmo: Envie o prompt que reorganiza a montagem e confira os 900 quadros.",
+            "06 Transição com compensação: Envie o prompt da dissolvência entre as cenas 4 e 5 e do fade para preto no final.",
+            "07 Comparação: Mostre no Studio o corte seco x a dissolvência e reproduza os 30 segundos completos.",
+            "08 Gancho: Na próxima aula, vamos trabalhar a tipografia."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Use a Skill direcao-de-edicao. Ajuste as cinco cenas para 4, 5, 4, 7 e 10 segundos, mantendo os textos e o total de 900 frames. Primeiro utilize cortes secos. Depois adicione fade de 15 frames apenas entre cenas 4 e 5, compensando corretamente a sobreposição para preservar 30 segundos. Confira transições, entradas dos títulos e ausência de lacunas."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Ritmo, animações e depuração"
+          "texto": "1. Como explicar o ritmo da edição"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion: remotion-markup / remotion-best-practices. GSAP Skills: https://github.com/greensock/gsap-skills — alternativa para animação programática, não dependência obrigatória do Remotion."
+          "texto": "Comece reproduzindo o vídeo criado nas aulas anteriores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre que todas as cinco cenas possuem seis segundos. Isso facilita a montagem inicial, mas pode deixar o resultado previsível."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que nem todas as informações precisam do mesmo tempo de tela. Uma cena com apenas duas palavras pode ser compreendida rapidamente, enquanto outra com mais informações ou uma animação elaborada pode precisar de mais tempo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Use esta comparação:"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "“Editar um vídeo é parecido com contar uma história. Em alguns momentos falamos mais rápido para criar empolgação. Em outros, fazemos pausas para destacar algo importante.”"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na edição, essas pausas e mudanças de velocidade são construídas principalmente pela duração das cenas e pelo movimento dos elementos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Planejando um novo ritmo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos manter os 30 segundos, mas distribuir o tempo de maneira diferente. A 30 FPS, cada segundo tem 30 quadros, e o vídeo inteiro continua com 900 quadros."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Nova distribuição das cenas (total: 30 segundos, 900 quadros)",
+          "linhas": [
+            [
+              "Cena",
+              "Início",
+              "Fim",
+              "Duração",
+              "Quadros"
+            ],
+            [
+              "1 · Abertura",
+              "00:00",
+              "00:04",
+              "4s",
+              "120"
+            ],
+            [
+              "2 · A ideia",
+              "00:04",
+              "00:09",
+              "5s",
+              "150"
+            ],
+            [
+              "3 · Movimento",
+              "00:09",
+              "00:13",
+              "4s",
+              "120"
+            ],
+            [
+              "4 · Sem limites",
+              "00:13",
+              "00:20",
+              "7s",
+              "210"
+            ],
+            [
+              "5 · Encerramento",
+              "00:20",
+              "00:30",
+              "10s",
+              "300"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que esses tempos são uma escolha para a demonstração, não uma regra obrigatória. A quinta cena recebe mais espaço para trabalhar uma conclusão com maior presença visual."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Conhecendo três tipos de transição"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Três tipos de transição",
+          "linhas": [
+            [
+              "Transição",
+              "Como funciona",
+              "Quando usar"
+            ],
+            [
+              "Corte seco",
+              "Uma imagem substitui a outra instantaneamente.",
+              "É simples, rápido e muito utilizado em vídeos para redes sociais."
+            ],
+            [
+              "Fade ou dissolvência",
+              "Uma cena desaparece gradualmente enquanto outra aparece.",
+              "Para criar uma passagem mais suave."
+            ],
+            [
+              "Slide ou deslizamento",
+              "A nova cena entra deslizando pela tela.",
+              "Para mudanças de assunto e movimentos mais expressivos."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre os três efeitos separadamente. Explique que uma edição profissional não precisa utilizar uma transição diferente a cada corte."
+        },
+        {
+          "tipo": "dica",
+          "texto": "No Remotion, cenas colocadas uma depois da outra, sem sobreposição, formam um Series: é o corte seco. A dissolvência e o slide vêm do pacote @remotion/transitions (instalado com npx remotion add @remotion/transitions), por meio do TransitionSeries com fade() ou slide(). O aluno não precisa escrever esse código: o Claude cuida disso."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Demonstração prática: ajustando o ritmo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Claude Code na pasta do projeto e utilize este prompt."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para ajustar a montagem",
+          "texto": "Vamos melhorar o ritmo da composição O-Futuro-da-Criacao.\nAtualmente, nosso vídeo possui cinco cenas com duração uniforme.\nQuero reorganizar a montagem mantendo exatamente 30 segundos, resolução 1080x1920 e 30 FPS.\nNova distribuição:\n- Cena 1: 4 segundos.\n- Cena 2: 5 segundos.\n- Cena 3: 4 segundos.\n- Cena 4: 7 segundos.\n- Cena 5: 10 segundos.\nMantenha os textos, as mídias, a identidade visual e as animações já existentes.\nAjuste o tempo das animações para que continuem naturais dentro das novas durações.\nSe necessário, selecione um trecho mais adequado das filmagens, modificando o ponto de leitura do arquivo, sem deslocar a posição da cena na montagem.\nNão acelere nem desacelere as filmagens apenas para preencher o tempo.\nNão adicione transições ainda.\nPreserve a versão anterior e confirme que a nova composição possui exatamente 900 quadros."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O QUE CONFERIR NO CÓDIGO (se quiser mostrar): para escolher a partir de que ponto a filmagem começa, a propriedade atual é trimBefore, medida em quadros do arquivo original. Os nomes antigos startFrom e endAt estão obsoletos. Mudar o ponto de leitura não muda o momento em que a cena aparece na composição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, abra o Remotion Studio, selecione O-Futuro-da-Criacao e confira: as cenas seguem a nova distribuição, os textos e as mídias continuam os mesmos, as filmagens não foram aceleradas nem desaceleradas e a composição tem exatamente 900 quadros."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o mesmo prompt no Claude Code, na pasta meu-primeiro-video, reproduz o vídeo no Studio e compara o ritmo com a versão anterior, conferindo os 900 quadros."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Aplicando uma transição sem aumentar ou reduzir o vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos adicionar uma dissolvência de 15 quadros, equivalente a meio segundo, entre as cenas 4 e 5."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Se cortes/transições causarem erro, Superpowers systematic-debugging: https://github.com/obra/superpowers; investigar causa antes de corrigir."
+          "texto": "Existe um detalhe técnico importante: no Remotion, uma transição com sobreposição reduz a duração combinada das sequências. A duração total é a soma das sequências menos a duração das transições. Portanto, precisamos compensar essa sobreposição para preservar os 900 quadros do projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na demonstração, a cena 5 poderá começar 15 quadros antes do corte nominal, usando esse trecho adicional para realizar a dissolvência."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para criar a transição",
+          "texto": "Agora quero adicionar uma transição suave entre as cenas 4 e 5.\nUtilize uma dissolvência (crossfade) com duração de 15 quadros.\nMantenha os cortes secos entre as demais cenas.\nCompense corretamente a sobreposição. Se utilizar TransitionSeries, ajuste a duração efetiva das sequências para que o resultado final continue com exatamente 900 quadros.\nA transição deverá ocorrer entre 19,5 e 20 segundos, sem remover conteúdo importante.\nAdicione também um fade visual para preto nos últimos 15 quadros do vídeo, sem aumentar a duração.\nNão altere os textos nem substitua as mídias.\nAo concluir, verifique se a composição continua com 30 segundos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre a diferença entre o corte seco e a dissolvência no Studio. Ao final, reproduza os 30 segundos completos."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt da transição, confere no Studio a dissolvência entre 19,5 e 20 segundos e o fade para preto no final, e confirma que a composição continua com 900 quadros. Se a duração mudar, ele pede ao Claude para corrigir a compensação."
+        },
+        {
+          "tipo": "dica",
+          "texto": "As Skills orientam o Claude, mas não garantem um resultado perfeito. Confira cada cena no Remotion Studio antes de considerar a aula concluída."
         },
         {
           "tipo": "titulo",
@@ -2678,9 +2924,15 @@
         {
           "tipo": "lista",
           "itens": [
-            "Duração exata de 30s",
-            "Trecho escolhido é válido",
-            "Fade sem lacunas nem redução indevida da duração"
+            "Reproduziu o vídeo atual e mostrou que as cinco cenas têm seis segundos",
+            "Explicou o ritmo com a comparação da história contada",
+            "Apresentou a nova distribuição (4, 5, 4, 7 e 10 segundos) como escolha, não como regra",
+            "Mostrou separadamente o corte seco, a dissolvência e o slide",
+            "Reorganizou a montagem com o Claude e conferiu os 900 quadros, sem acelerar ou desacelerar as filmagens",
+            "Explicou que mudar o ponto de leitura de uma filmagem não desloca a cena na montagem",
+            "Aplicou a dissolvência de 15 quadros entre as cenas 4 e 5, compensando a sobreposição",
+            "Adicionou o fade para preto nos últimos 15 quadros e confirmou os 30 segundos",
+            "Reproduziu os 30 segundos completos no Remotion Studio"
           ]
         },
         {
@@ -2693,54 +2945,183 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar cortes, ritmo e transições. Variar duração, selecionar trechos e aplicar um fade final sem mudar os 30 segundos. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Na última aula, adicionamos vídeos e imagens reais ao nosso projeto. Agora temos uma composição muito mais interessante, mas ainda podemos melhorar bastante o resultado."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, cinco cenas de 6s criam cadência uniforme."
+          "texto": "Nesta aula, vamos aprender três fundamentos importantes da edição: cortes, ritmo e transições."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, vamos observar cortes rápidos e pausas de leitura; a duração deve ter intenção."
+          "texto": "Vamos começar reproduzindo nosso vídeo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos definir 4, 5, 4, 7 e 10 segundos para as cinco cenas."
+          "texto": "Perceba que temos cinco cenas e que todas possuem exatamente seis segundos de duração."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, comece uma filmagem num ponto específico do arquivo, sem alterar a posição da cena na composição."
+          "texto": "Isso não está necessariamente errado, mas faz com que o vídeo tenha um ritmo muito uniforme."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos comparar corte seco, fade e slide; não aplique um efeito em todos os cortes."
+          "texto": "Na prática, nem todas as cenas precisam durar o mesmo tempo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, insira transição de 15 quadros entre cenas 4 e 5 e compense a sobreposição para conservar 900 quadros."
+          "texto": "Imagine uma cena que mostra apenas duas palavras. O espectador provavelmente conseguirá ler essa mensagem rapidamente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, agora a tipografia terá destaque."
+          "texto": "Agora imagine outra cena com uma animação mais elaborada ou uma informação importante. Talvez seja necessário deixar essa imagem na tela por mais tempo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "É por isso que a duração de cada cena deve ter uma intenção."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Podemos comparar a edição com a maneira como contamos uma história."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em alguns momentos, falamos rapidamente. Em outros, fazemos uma pausa para destacar uma informação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na edição de vídeo, também podemos utilizar essas mudanças de ritmo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos reorganizar nosso projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A primeira cena terá quatro segundos. A segunda terá cinco. A terceira voltará para quatro. A quarta terá sete, e a última ficará com dez segundos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Somando tudo, continuamos com trinta segundos de vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos pedir ao Claude para realizar essas alterações, preservando o material que já criamos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos explicar que ele pode selecionar trechos diferentes das filmagens quando necessário."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por exemplo, se o momento mais interessante de uma gravação aparece depois dos primeiros segundos, podemos começar a reproduzir o vídeo a partir daquele ponto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Isso não significa mudar o momento em que a cena aparece na composição. Estamos apenas escolhendo qual parte do arquivo original queremos mostrar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com os novos tempos definidos, vamos conhecer outro recurso importante: as transições."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A primeira é o corte seco, quando uma imagem é substituída imediatamente por outra."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A segunda é a dissolvência, quando uma cena desaparece enquanto a próxima começa a aparecer."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E a terceira é o slide, quando uma imagem entra deslizando pela tela."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Cada uma pode produzir uma sensação diferente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas precisamos tomar cuidado para não exagerar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Usar transições elaboradas em todos os cortes pode deixar um vídeo visualmente cansativo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por isso, vamos manter os cortes secos na maior parte do projeto e aplicar apenas uma dissolvência entre a quarta e a quinta cena."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essa transição terá quinze quadros, o equivalente a meio segundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui existe um detalhe importante: quando duas cenas se sobrepõem durante uma transição, precisamos cuidar da duração final do projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos orientar o Claude a compensar essa sobreposição para que nosso vídeo continue com exatamente trinta segundos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos adicionar um desaparecimento suave da imagem no final."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora podemos abrir o Remotion Studio e observar as alterações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Compare a montagem anterior com a nova versão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba como a mudança de duração das cenas influencia a maneira como acompanhamos as informações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E esse é o aprendizado mais importante desta aula: uma boa edição não depende apenas de efeitos. Muitas vezes, o que melhora um vídeo é saber quando mostrar uma informação e quanto tempo deixá-la na tela."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos dar atenção especial à tipografia, aprendendo a transformar textos simples em elementos visuais mais interessantes."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que o vídeo continua com 30 segundos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Transições no Remotion (@remotion/transitions): https://www.remotion.dev/docs/transitions",
+            "TransitionSeries: https://www.remotion.dev/docs/transitions/transitionseries",
+            "Series: https://www.remotion.dev/docs/series",
+            "Componente Video: https://www.remotion.dev/docs/video"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
     {
       "numero": 8,
       "slug": "aula-08",
-      "titulo": "Textos e animações",
+      "titulo": "Textos, tipografia e animações",
       "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Criar linguagem tipográfica consistente e animar títulos com foco em leitura."
+        "Entender que tipografia envolve fonte, tamanho, espaçamento, alinhamento, cor e facilidade de leitura, e não só a escolha de uma fonte bonita.",
+        "Definir a identidade tipográfica do projeto: Montserrat Regular e Bold, preto (#171717), branco (#FFFFFF), laranja (#FF8A35) e margem mínima de 80 pixels, com o laranja substituindo os detalhes roxos usados até aqui.",
+        "Criar com o Claude Code a composição de teste Teste-Tipografia, com o título UMA NOVA ERA animado por fade e movimento vertical suave, sem modificar o vídeo principal.",
+        "Diferenciar as três animações básicas de texto (fade, slide e scale) e saber que elas podem ser usadas sozinhas ou combinadas.",
+        "Atualizar a Skill direcao-de-edicao e aplicar a identidade tipográfica às cinco cenas de O-Futuro-da-Criacao, conferindo margens, contraste e legibilidade."
       ],
       "blocos": [
         {
@@ -2749,7 +3130,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como transformar textos simples em títulos profissionais. Até a aula 7, o aluno construiu no projeto meu-primeiro-video a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 30 segundos e cinco cenas, com filmagens, uma fotografia, cortes com novo ritmo e transições. Os textos, porém, ainda não seguem um padrão visual próprio, e os detalhes usam roxo. Nesta aula, o projeto ganha uma identidade tipográfica: Montserrat, preto, branco e laranja."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: criar uma identidade tipográfica consistente e aprender a destacar palavras com cores, tamanhos e animações."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video). A demonstração começa numa composição de teste separada, Teste-Tipografia, e só depois o padrão é aplicado a O-Futuro-da-Criacao. Guarde uma gravação da versão da aula 7 para mostrar o antes e o depois."
         },
         {
           "tipo": "titulo",
@@ -2758,39 +3147,228 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Comparação: Título básico versus versão editorial com destaque.",
-            "02 Três conceitos: Legibilidade, hierarquia e consistência.",
-            "03 Identidade: Montserrat regular e bold; preto, branco e laranja; margens de 80 px.",
-            "04 Primeiro título: UMA NOVA / ERA, com palavra ERA em laranja, fade e movimento vertical.",
-            "05 Movimentos: Explique fade, slide e scale com exemplos isolados.",
-            "06 Sistema visual: Aplique o padrão às cinco cenas respeitando suas durações.",
-            "07 Revisão: Checar contraste e margens sobre as filmagens.",
-            "08 Gancho: Na próxima aula construiremos o áudio."
+            "01 Tipografia importa: Compare um título básico com um título com identidade visual.",
+            "02 Padrão visual: Apresente a paleta preto, branco e laranja, a fonte Montserrat (Regular e Bold) e a margem mínima de 80 pixels.",
+            "03 Primeira animação tipográfica: Envie o prompt que cria a composição Teste-Tipografia com UMA NOVA ERA.",
+            "04 Três animações básicas: Explique fade, slide e scale, sozinhas ou combinadas.",
+            "05 Padrão no vídeo principal: Atualize a Skill direcao-de-edicao e aplique a identidade às cinco cenas, acrescentando CRIE COM IA na cena final.",
+            "06 Conferência: Reproduza o vídeo inteiro e confira destaque, tempo de leitura, margens e contraste.",
+            "07 Gancho: Na próxima aula, vamos adicionar música e efeitos sonoros."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Use as Skills e padronize os títulos de O-Futuro-da-Criacao: Montserrat, branco, laranja #F97316, preto, margens de 80 px. Primeiro ajuste “UMA NOVA / ERA”, enfatizando ERA e animando a entrada em aproximadamente 15 frames. Depois aplique animações discretas aos outros títulos. Preserve cenas, cortes, 900 quadros, mídia e áudio."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Tipografia e motion graphics"
+          "texto": "1. O que é tipografia e por que ela importa?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "UI UX Pro Max: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill; Taste Skill: https://github.com/Leonxlnx/taste-skill; Remotion markup para implementação. HyperFrames: https://github.com/heygen-com/hyperframes (alternativa, nível intermediário)."
+          "texto": "Comece mostrando dois exemplos do mesmo título."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Título básico x Título com identidade visual",
+          "linhas": [
+            [
+              "Versão",
+              "Como aparece",
+              "Por quê"
+            ],
+            [
+              "Título básico",
+              "Uma nova era",
+              "Uma fonte simples, sem hierarquia ou destaque."
+            ],
+            [
+              "Título com identidade visual",
+              "UMA NOVA (menor) / ERA (maior, em destaque)",
+              "Contraste, tamanhos diferentes e destaque na palavra principal."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que tipografia não é apenas escolher uma fonte bonita. Também envolve tamanho, espaçamento, alinhamento, cor e facilidade de leitura."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nos vídeos, ela é ainda mais importante porque o espectador precisa compreender a mensagem antes que o texto desapareça."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Criando nosso padrão visual"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para esta aula, vamos adotar uma identidade com preto, branco e laranja."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Identidade tipográfica do projeto",
+          "linhas": [
+            [
+              "Elemento",
+              "Valor",
+              "Uso"
+            ],
+            [
+              "Preto",
+              "#171717",
+              "Base das composições (fundo)."
+            ],
+            [
+              "Branco",
+              "#FFFFFF",
+              "Leitura dos textos."
+            ],
+            [
+              "Laranja",
+              "#FF8A35",
+              "Cor de destaque para palavras importantes. Substitui os detalhes roxos usados nas aulas anteriores."
+            ],
+            [
+              "Montserrat Bold",
+              "Peso 700",
+              "Títulos, palavras importantes e informações de destaque."
+            ],
+            [
+              "Montserrat Regular",
+              "Peso 400",
+              "Informações secundárias e textos de apoio."
+            ],
+            [
+              "Margem mínima de segurança",
+              "80 px",
+              "Distância mínima entre os textos e as bordas do vídeo."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A fonte Montserrat pode ser carregada pelo pacote @remotion/google-fonts, usando os pesos 400 (Regular) e 700 (Bold)."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: UI/UX e Taste são orientação de design, não garantem tipografia própria de vídeo; confira licença e compatibilidade. Não misturar frameworks sem planejamento."
+          "texto": "Explique que essa nova paleta substituirá os detalhes roxos utilizados anteriormente. Como estamos definindo um padrão visual, também vamos atualizar nossa Skill personalizada direcao-de-edicao."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Criando nossa primeira animação tipográfica"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para facilitar a aprendizagem, vamos criar uma composição curta de teste com a mensagem UMA NOVA ERA. A palavra ERA ficará em laranja, enquanto as outras palavras permanecerão brancas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar duas animações combinadas: um movimento vertical suave e uma aparição gradual. Abra o Claude Code na pasta do projeto e envie o seguinte prompt."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para demonstração",
+          "texto": "Quero criar uma demonstração de tipografia animada no Remotion.\nCrie uma nova composição chamada Teste-Tipografia, sem modificar nosso vídeo principal.\nConfiguração:\n- 1080x1920 pixels.\n- 30 FPS.\n- Duração de 5 segundos.\n- Fundo preto (#171717).\n- Fonte Montserrat.\n- Pesos Regular 400 e Bold 700.\n- Texto centralizado.\n- Margens de segurança de 80 pixels.\nTexto:\nUMA NOVA\nERA\nA expressão \"UMA NOVA\" deve aparecer em branco e a palavra \"ERA\" em laranja (#FF8A35), com maior destaque visual.\nAnime a entrada dos textos com:\n- Opacidade gradual (fade).\n- Movimento vertical suave, de baixo para cima.\nMantenha o texto principal visível por tempo suficiente para leitura.\nEvite movimentos exagerados, distorções ou efeitos desnecessários.\nUtilize as boas práticas das Skills do Remotion.\nSe necessário, instale e configure o pacote oficial de fontes compatível com a versão do projeto.\nAo finalizar, disponibilize a composição no Remotion Studio."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O QUE O CLAUDE FARÁ POR VOCÊ (se quiser mostrar): ele instala o pacote oficial com npx remotion add @remotion/google-fonts e carrega a Montserrat no código. O aluno não precisa digitar nada disso. Nas versões atuais, a lista de pesos (weights) e a de alfabetos (subsets) não podem ficar vazias. É assim que fica:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "tsx",
+          "texto": "import {loadFont} from \"@remotion/google-fonts/Montserrat\";\n\nconst {fontFamily} = loadFont(\"normal\", {\n  weights: [\"400\", \"700\"],\n  subsets: [\"latin\"],\n});"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, abra o Remotion Studio com npm run dev, selecione Teste-Tipografia e reproduza. Confira: UMA NOVA em branco, ERA em laranja e maior, entrada com fade e subida suave, texto centralizado dentro das margens e O-Futuro-da-Criacao sem alterações."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt e reproduz a composição Teste-Tipografia no Remotion Studio, conferindo cores, tamanhos e o tempo de leitura."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Conhecendo três animações básicas"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Fade, slide e scale",
+          "linhas": [
+            [
+              "Animação",
+              "Nome",
+              "O que acontece"
+            ],
+            [
+              "Fade",
+              "Aparição suave",
+              "O texto começa invisível e aparece gradualmente."
+            ],
+            [
+              "Slide",
+              "Movimento",
+              "O texto entra de alguma direção, como de baixo para cima."
+            ],
+            [
+              "Scale",
+              "Mudança de tamanho",
+              "O texto aumenta ou diminui de tamanho durante a animação."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que esses três tipos de movimento podem ser utilizados individualmente ou combinados. A escolha deve considerar a leitura e a intenção da cena."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Aplicando o padrão ao vídeo principal"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos atualizar nossa Skill de direção de edição e aplicar a identidade tipográfica às cinco cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos adicionar uma pequena frase de apoio na cena final, que será utilizada para demonstrar um efeito sonoro na próxima aula."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para padronizar o vídeo",
+          "texto": "Quero atualizar a Skill direcao-de-edicao e padronizar a tipografia do vídeo O-Futuro-da-Criacao.\nAdicione à Skill as seguintes orientações:\n- Utilizar Montserrat Regular e Bold.\n- Priorizar preto (#171717), branco (#FFFFFF) e laranja (#FF8A35).\n- Utilizar laranja para destacar palavras importantes.\n- Manter margem de segurança de pelo menos 80 pixels.\n- Preservar legibilidade e contraste sobre filmagens.\n- Utilizar animações tipográficas suaves e consistentes.\n- Evitar que textos sejam cortados ou ultrapassem a área segura.\nDepois, aplique essa identidade visual às cinco cenas do vídeo principal.\nPreserve os textos principais, as filmagens, os cortes, as transições e a duração de 30 segundos.\nSubstitua gradualmente os detalhes roxos pela nova paleta visual.\nNa última cena, mantenha a mensagem principal \"COMECE A CRIAR\" e acrescente a expressão secundária \"CRIE COM IA\", com uma animação discreta.\nNão modifique a composição Teste-Tipografia.\nAo finalizar, verifique todas as margens e o contraste de cada cena."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o mesmo prompt, abre o arquivo da Skill direcao-de-edicao para ver as novas orientações registradas e confirma que a composição Teste-Tipografia não mudou."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "6. Conferindo o resultado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Reproduza o vídeo inteiro e observe se o padrão está consistente."
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "As palavras mais importantes recebem destaque em laranja.",
+            "Os textos aparecem durante tempo suficiente para leitura.",
+            "Os textos continuam legíveis sobre os vídeos de fundo.",
+            "Nenhum texto é cortado ou ultrapassa a margem de 80 pixels.",
+            "A cena final mostra COMECE A CRIAR e, com animação discreta, CRIE COM IA.",
+            "O vídeo continua com 30 segundos, com os mesmos cortes, filmagens e transições."
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Quando um texto ficar difícil de ler sobre uma filmagem com muitos detalhes, um escurecimento discreto atrás do texto pode facilitar a leitura."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: o aluno terá uma animação tipográfica de teste, uma Skill atualizada e um vídeo com identidade visual consistente."
+        },
+        {
+          "tipo": "dica",
+          "texto": "As Skills orientam o Claude, mas não garantem um resultado perfeito. Confira cada cena no Remotion Studio antes de considerar a aula concluída."
         },
         {
           "tipo": "titulo",
@@ -2799,9 +3377,15 @@
         {
           "tipo": "lista",
           "itens": [
-            "Títulos legíveis em fundo real",
-            "Hierarquia e cores consistentes",
-            "Tempos de leitura adequados às durações das cenas"
+            "Comparou o título básico com o título com identidade visual",
+            "Explicou que tipografia envolve tamanho, espaçamento, alinhamento, cor e leitura",
+            "Apresentou a paleta preto, branco e laranja, a Montserrat Regular e Bold e a margem mínima de 80 pixels",
+            "Explicou que o laranja substitui os detalhes roxos das aulas anteriores",
+            "Criou a composição Teste-Tipografia com UMA NOVA ERA, sem modificar O-Futuro-da-Criacao",
+            "Explicou fade, slide e scale, sozinhas ou combinadas",
+            "Atualizou a Skill direcao-de-edicao e aplicou a identidade às cinco cenas",
+            "Acrescentou CRIE COM IA na cena final, mantendo COMECE A CRIAR",
+            "Conferiu margens, contraste, tempo de leitura e duração de 30 segundos"
           ]
         },
         {
@@ -2814,47 +3398,207 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar textos e animações. Criar linguagem tipográfica consistente e animar títulos com foco em leitura. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Até agora, aprendemos a criar cenas, adicionar filmagens, organizar os cortes e trabalhar o ritmo do nosso vídeo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, título básico versus versão editorial com destaque."
+          "texto": "Mas existe outro elemento muito importante para a qualidade visual de uma edição: a tipografia."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, legibilidade, hierarquia e consistência."
+          "texto": "E é justamente sobre isso que vamos conversar nesta aula."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, montserrat regular e bold; preto, branco e laranja; margens de 80 px."
+          "texto": "Quando falamos em tipografia, não estamos falando apenas de escolher uma fonte bonita."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, uMA NOVA / ERA, com palavra ERA em laranja, fade e movimento vertical."
+          "texto": "Também estamos falando de tamanho, cor, espaçamento, alinhamento e da maneira como as palavras aparecem na tela."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos entender fade, slide e scale com exemplos isolados."
+          "texto": "Imagine um vídeo com um título pequeno, sem destaque e difícil de ler."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, aplique o padrão às cinco cenas respeitando suas durações."
+          "texto": "Mesmo que a animação seja bonita, o espectador pode não conseguir compreender a mensagem."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, checar contraste e margens sobre as filmagens."
+          "texto": "Agora imagine o mesmo título com uma fonte bem escolhida, palavras importantes em destaque e uma animação suave."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Como conclusão, na próxima aula construiremos o áudio."
+          "texto": "A informação continua sendo a mesma, mas a apresentação se torna muito mais interessante."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "É isso que vamos aprender a construir."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Primeiro, vamos definir uma identidade visual para nosso projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar a fonte Montserrat, que possui um visual moderno e funciona bem para títulos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Teremos duas versões principais: Regular, para informações secundárias, e Bold, para palavras que precisam de mais destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos trabalhar com três cores: preto, branco e laranja."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O preto será utilizado principalmente como base para nossas composições."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O branco será responsável pela leitura dos textos, e o laranja será nossa cor de destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas precisamos tomar cuidado com o excesso de informações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não é necessário colocar todas as palavras em laranja ou criar movimentos diferentes para cada frase."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O objetivo é direcionar a atenção do espectador."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos começar criando uma composição de teste."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso título será: Uma nova era."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "As duas primeiras palavras aparecerão em branco, enquanto a palavra Era terá maior tamanho e será destacada em laranja."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos pedir ao Claude para criar uma animação combinando dois movimentos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O primeiro é o fade, quando o texto aparece gradualmente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O segundo é um pequeno movimento vertical, fazendo com que as palavras subam suavemente até a posição final."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de criar a animação, vamos abrir o Remotion Studio para conferir."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Observe como um movimento simples pode deixar o texto mais interessante sem dificultar a leitura."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos conhecer outro tipo de animação: o scale."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesse caso, o elemento aumenta ou diminui de tamanho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse recurso pode ser utilizado para criar destaque, mas também precisa de moderação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com esses três conceitos, fade, slide e scale, já conseguimos criar diversas animações tipográficas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E o melhor é que podemos utilizar o Claude para combinar esses recursos sem precisar programar os movimentos manualmente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora chegou o momento de aplicar nosso novo padrão ao vídeo principal."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos atualizar a Skill de direção de edição que criamos anteriormente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nela, vamos registrar a fonte, as cores e as regras de animação que escolhemos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, vamos pedir ao Claude para revisar as cinco cenas utilizando essa identidade visual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "É importante preservar a duração do vídeo, os cortes e as filmagens que já organizamos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos verificar se os títulos estão dentro das margens de segurança."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Outro cuidado essencial é o contraste."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando utilizamos textos sobre filmagens, precisamos garantir que as palavras continuem visíveis, mesmo quando o fundo possui muitos detalhes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em alguns casos, podemos utilizar um escurecimento discreto atrás do texto para facilitar a leitura."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos reproduzir nosso vídeo completo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba como a utilização consistente da tipografia ajuda a unir as cenas, mesmo quando estamos trabalhando com imagens diferentes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essa é uma das principais vantagens de criar uma identidade visual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso vídeo começa a parecer parte de uma produção planejada, e não apenas um conjunto de animações independentes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos adicionar outro elemento fundamental para a experiência audiovisual: a música e os efeitos sonoros."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira as composições no Remotion Studio antes de afirmar que a tipografia foi aplicada corretamente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Google Fonts no Remotion (@remotion/google-fonts): https://www.remotion.dev/docs/google-fonts",
+            "loadFont() de @remotion/google-fonts: https://www.remotion.dev/docs/google-fonts/load-font",
+            "Montserrat no Google Fonts: https://fonts.google.com/specimen/Montserrat"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
@@ -2865,7 +3609,11 @@
       "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Inserir trilha, fades de volume e efeitos pontuais sincronizados."
+        "Perceber, comparando o mesmo trecho sem som e com música, como a trilha cria o ambiente e os efeitos destacam acontecimentos.",
+        "Organizar trilha.mp3, whoosh.wav e impact.wav em public/audios, usando apenas arquivos próprios ou licenciados.",
+        "Entender volume, fade-in e fade-out e usar 30% apenas como volume de referência.",
+        "Adicionar com o Claude Code a trilha à composição O-Futuro-da-Criacao, com fade-in de 1 segundo e fade-out de 2 segundos.",
+        "Sincronizar o whoosh com os títulos das cenas 1 e 3 e o impact com \"CRIE COM IA\", mantendo os 900 quadros."
       ],
       "blocos": [
         {
@@ -2874,7 +3622,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como utilizar o som para valorizar suas edições. Até a aula anterior, a composição O-Futuro-da-Criacao, no projeto meu-primeiro-video (1080x1920, 30 FPS, 30 segundos, 900 quadros), ganhou cenas organizadas, cortes, transições, filmagens e textos animados, incluindo a expressão \"CRIE COM IA\" na última cena. Na aula 6, o arquivo trilha.mp3 foi colocado em public/audios, mas ainda não entrou na composição. Nesta aula, o vídeo recebe pela primeira vez música e efeitos sonoros."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: adicionar uma trilha sonora ao vídeo, aprender a controlar o volume e utilizar efeitos sonoros sincronizados com as animações."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video), e a composição O-Futuro-da-Criacao é a mesma das aulas anteriores. Sempre que possível, faça a revisão do áudio com fones de ouvido."
         },
         {
           "tipo": "titulo",
@@ -2883,39 +3639,200 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Comparação sonora: Reproduza o mesmo trecho com e sem áudio.",
-            "02 Papéis sonoros: Trilha define clima, efeitos destacam momentos e volume mantém equilíbrio.",
-            "03 Preparação: Organize trilha.mp3, whoosh.wav e impact.wav.",
-            "04 Trilha: Adicione música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s.",
-            "05 Efeitos: Whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA.",
-            "06 Sincronismo: Utilize o quadro real da animação; não invente batidas musicais.",
-            "07 Revisão: Ouça integralmente e procure picos, cortes e distorções.",
-            "08 Gancho: A próxima aula harmoniza a imagem."
+            "01 Sem som x com som: Reproduza cerca de dez segundos do projeto sem nenhum som e, depois, o mesmo trecho com música de fundo.",
+            "02 Arquivos de áudio: Mostre trilha.mp3, whoosh.wav e impact.wav na pasta public/audios.",
+            "03 Volume: Explique volume, fade-in e fade-out e o valor de referência de 30%.",
+            "04 Trilha com o Claude: Envie o prompt que adiciona trilha.mp3 com fade-in de 1 segundo e fade-out de 2 segundos.",
+            "05 Efeitos sonoros: Envie o prompt que sincroniza o whoosh com os títulos das cenas 1 e 3 e o impact com \"CRIE COM IA\".",
+            "06 Revisão: Reproduza o vídeo completo, de preferência com fones de ouvido.",
+            "07 Gancho: Na próxima aula, vamos trabalhar exposição, contraste e cores das filmagens."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Adicione public/audios/trilha.mp3 a O-Futuro-da-Criacao por 30s. Volume inicial 30%, fade in 30 frames e fade out 60 frames. Sem repetir música curta sem autorização. Adicione whoosh.wav nas entradas dos títulos UMA NOVA ERA e SEM LIMITES e impact.wav no destaque de CRIE COM IA. Posicione pelos quadros reais das animações, ajuste volumes e mantenha cortes, 900 frames e mídias originais."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Som e música"
+          "texto": "1. Por que o áudio é tão importante?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion markup + Direção de Edição para mixagem e sincronismo. Sonilo: https://github.com/sonilo-ai/skills (integração externa a validar). Music Composition Skills: https://github.com/jtydhr88/music-composition-skills (planejamento musical, não garante áudio renderizado)."
+          "texto": "Comece reproduzindo aproximadamente dez segundos do projeto sem nenhum som."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em seguida, reproduza o mesmo trecho com uma música de fundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça ao aluno para observar a diferença."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que a música influencia a sensação transmitida pelo vídeo. Uma mesma sequência de imagens pode parecer emocionante, misteriosa ou animada dependendo da trilha escolhida."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Já os efeitos sonoros ajudam a destacar momentos específicos, como a entrada de um título, uma transição ou uma mudança de cena."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Use esta comparação: a trilha sonora cria o ambiente; os efeitos sonoros chamam a atenção para acontecimentos importantes dentro desse ambiente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Preparando os arquivos de áudio"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na aula 06, criamos uma pasta para organizar os arquivos de áudio. Agora vamos utilizá-la: public/audios."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Arquivos em public/audios",
+          "linhas": [
+            [
+              "Arquivo",
+              "Uso"
+            ],
+            [
+              "trilha.mp3",
+              "Música de fundo do vídeo."
+            ],
+            [
+              "whoosh.wav",
+              "Efeito de movimento, ideal para entradas de textos."
+            ],
+            [
+              "impact.wav",
+              "Efeito curto para destacar uma informação importante."
+            ]
+          ]
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Checar licença da música, disponibilidade de APIs, custos, áudio original silenciado e conferência auditiva. Não afirmar análise de batidas sem ler o áudio."
+          "texto": "Utilize músicas e efeitos próprios ou licenciados, com permissão de uso. O aluno deve obter arquivos reais e colocá-los nas pastas antes da demonstração. O Claude não deve presumir que esses arquivos existem."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele confere se trilha.mp3 continua em public/audios e coloca na mesma pasta os arquivos whoosh.wav e impact.wav, com exatamente esses nomes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Aprendendo a controlar o volume"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que colocar uma música no vídeo não significa que ela deva tocar sempre no volume máximo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos trabalhar com três conceitos:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Volume: intensidade do som durante a reprodução.",
+            "Fade-in: aumento gradual do volume no início.",
+            "Fade-out: diminuição gradual do volume no final."
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Exemplo de volume da trilha sonora",
+          "linhas": [
+            [
+              "Trecho",
+              "Comportamento"
+            ],
+            [
+              "Início",
+              "Fade-in de 1s"
+            ],
+            [
+              "Meio",
+              "Volume constante"
+            ],
+            [
+              "Final",
+              "Fade-out de 2s"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Utilizaremos 30% como valor inicial do controle de amplitude. Esse número não garante um volume ideal, porque cada arquivo possui um nível de áudio diferente. O ajuste definitivo dependerá de escutar o resultado. O Remotion permite controlar esse volume e criar variações ao longo do tempo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Demonstração prática: adicionando a música"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Claude Code na pasta do projeto e envie o seguinte prompt."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para inserir a trilha",
+          "texto": "Vamos adicionar uma trilha sonora à composição O-Futuro-da-Criacao.\nAntes de começar, verifique se existe o arquivo public/audios/trilha.mp3.\nSe o arquivo não existir, informe e não substitua por outra música.\nSe estiver disponível, adicione a trilha com estas configurações:\n- O áudio deve acompanhar os 30 segundos do projeto.\n- Volume inicial de referência: 30%.\n- Fade-in de 1 segundo no início.\n- Fade-out de 2 segundos no final.\n- Caso a música seja maior que o vídeo, utilize somente o trecho necessário.\n- Caso seja menor, informe e proponha uma solução sem criar cortes bruscos.\nMantenha os áudios originais das filmagens desativados nesta etapa.\nNão altere os textos, os cortes, as transições ou as animações.\nAo finalizar, confira se a música começa e termina suavemente.\nUtilize as boas práticas de áudio do Remotion."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O CLAUDE CUIDA DISSO (se quiser mostrar no código): a documentação atual do Remotion recomenda, em novos usos, o componente Audio do pacote @remotion/media. O volume é um número de 0 a 1 (os 30% viram 0.3, apenas como ponto de partida) ou um valor calculado com interpolate() para criar o fade-in e o fade-out. Para usar só um trecho do arquivo, a propriedade atual é trimBefore; startFrom e endAt estão descontinuadas. O aluno não precisa escrever nada disso."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, abra o Remotion Studio, selecione O-Futuro-da-Criacao e reproduza o vídeo. Observe se a música começa suavemente e se não existe um corte repentino no final."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o mesmo prompt, lê o que o Claude informou (inclusive se o arquivo faltou ou se a música é menor que o vídeo) e escuta o início e o final da composição no Remotion Studio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Adicionando efeitos sonoros"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora explique que os efeitos sonoros devem acompanhar acontecimentos visuais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por exemplo, se um título entra com uma animação, podemos utilizar um whoosh para reforçar a sensação de movimento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também podemos utilizar um efeito de impacto discreto quando uma expressão importante aparece."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para efeitos sonoros",
+          "texto": "Agora vamos adicionar efeitos sonoros ao vídeo O-Futuro-da-Criacao.\nVerifique se existem:\n- public/audios/whoosh.wav\n- public/audios/impact.wav\nSe algum arquivo não existir, não invente nem substitua automaticamente.\nAdicione o efeito whoosh nas entradas dos títulos principais das cenas 1 e 3.\nAdicione o efeito impact no momento em que a expressão \"CRIE COM IA\" aparecer na última cena.\nRegras:\n- Identifique o quadro exato de início de cada animação.\n- Sincronize os efeitos com os acontecimentos visuais.\n- Utilize volume moderado.\n- Evite que os efeitos encubram a música ou causem distorção.\n- Não altere a duração total de 900 quadros.\n- Não modifique textos nem animações.\nNão invente batidas musicais. Utilize somente informações existentes na composição e nos arquivos reais.\nDepois, informe os quadros em que cada efeito foi colocado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não precisamos criar vários efeitos em todas as cenas. Às vezes, poucos sons bem posicionados produzem um resultado muito melhor."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt, anota os quadros que o Claude informou e confere no Remotion Studio se cada efeito toca junto com a entrada do título ou da expressão \"CRIE COM IA\"."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "6. Revisando o áudio"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Reproduza o vídeo completo, preferencialmente utilizando fones de ouvido."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Durante a demonstração, verifique se a música inicia suavemente, se os efeitos estão sincronizados e se não existem mudanças desagradáveis de volume."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: um vídeo com música de fundo e efeitos sonoros pontuais, mantendo os 30 segundos de duração."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O valor de 30% é apenas uma referência. Se a música estiver alta ou baixa demais, peça ao Claude para ajustar o volume e escute de novo antes de considerar a aula concluída."
         },
         {
           "tipo": "titulo",
@@ -2924,9 +3841,14 @@
         {
           "tipo": "lista",
           "itens": [
-            "Trilha cobre o vídeo sem loop não autorizado",
-            "Efeitos sincronizados e discretos",
-            "Ausência de áudio abrupto ou distorcido"
+            "Comparou cerca de dez segundos do projeto sem som e com música de fundo",
+            "Usou apenas músicas e efeitos próprios ou licenciados",
+            "Conferiu trilha.mp3, whoosh.wav e impact.wav em public/audios antes da demonstração",
+            "Explicou volume, fade-in e fade-out e que 30% é só um ponto de partida",
+            "Adicionou a trilha com fade-in de 1 segundo e fade-out de 2 segundos, com o som original das filmagens desativado",
+            "Adicionou o whoosh nos títulos das cenas 1 e 3 e o impact em \"CRIE COM IA\", com os quadros informados pelo Claude",
+            "Manteve os 900 quadros (30 segundos) e não alterou textos nem animações",
+            "Revisou o vídeo completo com fones de ouvido"
           ]
         },
         {
@@ -2939,58 +3861,206 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar música e efeitos sonoros. Inserir trilha, fades de volume e efeitos pontuais sincronizados. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Até agora, nosso vídeo já possui praticamente todos os elementos visuais que precisamos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos reproduzir o mesmo trecho com e sem áudio."
+          "texto": "Temos cenas organizadas, cortes, transições, filmagens e textos animados."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, trilha define clima, efeitos destacam momentos e volume mantém equilíbrio."
+          "texto": "Mas ainda falta algo que pode transformar completamente a experiência de quem está assistindo: o áudio."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos organizar trilha.mp3, whoosh.wav e impact.wav."
+          "texto": "Nesta aula, vamos aprender como utilizar músicas e efeitos sonoros para valorizar nossas edições."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, vamos adicionar música por 30s; comece em 30% como ponto inicial, fade in de 1s e fade out de 2s."
+          "texto": "Vamos começar com uma demonstração simples."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, whoosh nos títulos 1 e 3; impact discreto em CRIE COM IA."
+          "texto": "Primeiro, vou reproduzir um trecho do nosso vídeo sem nenhum som."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, vamos utilizar o quadro real da animação; não invente batidas musicais."
+          "texto": "Agora, vamos assistir ao mesmo trecho com uma música de fundo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, ouça integralmente e procure picos, cortes e distorções."
+          "texto": "Perceba como a sensação transmitida pelas imagens muda."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Como conclusão, a próxima aula harmoniza a imagem."
+          "texto": "Uma trilha sonora pode deixar um vídeo mais emocionante, mais tranquilo ou mais dinâmico."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Mas escolher uma boa música é apenas uma parte do trabalho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também precisamos controlar o volume e decidir como ela começa e termina."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar a pasta de áudios que organizamos nas aulas anteriores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui temos nossa trilha musical e dois efeitos sonoros."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O primeiro efeito é chamado whoosh e costuma ser utilizado para acompanhar movimentos, como a entrada de um texto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O segundo é um efeito de impacto, que pode destacar momentos específicos da edição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos começar pela música."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nossa composição possui trinta segundos, então precisamos garantir que a trilha acompanhe corretamente esse tempo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos definir um volume inicial de trinta por cento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse número é apenas uma referência. Depois vamos ouvir o resultado para avaliar se precisa de ajustes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Outro recurso importante é o fade-in."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com ele, a música não começa imediatamente no volume definido. Ela aumenta de maneira gradual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar um fade-in de um segundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No final do vídeo, faremos o contrário."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Durante os últimos dois segundos, a música vai diminuir progressivamente até desaparecer."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Isso é chamado de fade-out."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos pedir ao Claude para realizar essas alterações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de adicionar a trilha, vamos conferir o resultado no Remotion Studio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Observe se a música começa suavemente e se não existe um corte repentino no final."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com a trilha funcionando, podemos adicionar os efeitos sonoros."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar o whoosh em duas entradas de títulos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E na última cena, quando aparecer a expressão Crie com IA, vamos adicionar um efeito de impacto discreto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas existe um detalhe muito importante."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O efeito sonoro precisa acompanhar o momento em que a animação acontece."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se o som for reproduzido muito antes ou muito depois da entrada do texto, a edição pode parecer desorganizada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por isso, vamos pedir ao Claude para identificar os quadros em que as animações começam e posicionar os efeitos nesses momentos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não precisamos criar vários efeitos em todas as cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Às vezes, poucos sons bem posicionados produzem um resultado muito melhor."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos reproduzir nosso vídeo completo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Preste atenção se existe alguma mudança brusca de volume, algum efeito muito alto ou algum trecho de áudio interrompido."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também é importante lembrar que devemos utilizar músicas e efeitos que tenhamos permissão para usar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com isso, concluímos nossa primeira etapa de edição sonora."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos voltar nossa atenção para a imagem, aprendendo a melhorar a exposição, o contraste e as cores das filmagens."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e escute a composição no Remotion Studio antes de afirmar que a trilha e os efeitos foram adicionados corretamente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Áudio no Remotion: https://www.remotion.dev/docs/audio",
+            "Controle de volume: https://www.remotion.dev/docs/audio/volume",
+            "interpolate(): https://www.remotion.dev/docs/interpolate"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
     {
       "numero": 10,
       "slug": "aula-10",
-      "titulo": "Acabamento visual",
+      "titulo": "Acabamento visual e correção de cores",
       "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem."
+        "Entender que corrigir a cor busca primeiro o equilíbrio visual, e não simplesmente clarear as imagens ou aumentar a saturação.",
+        "Reconhecer os conceitos de exposição, contraste, saturação e temperatura de cor.",
+        "Pedir ao Claude Code uma análise das cinco cenas de O-Futuro-da-Criacao antes de qualquer modificação, sem diagnósticos inventados.",
+        "Aplicar com o Claude um acabamento visual moderado, apenas onde a análise indicou necessidade, sem alterar textos, animações, cortes, áudio ou duração.",
+        "Comparar o antes e o depois de pelo menos uma filmagem e reconhecer os limites dos arquivos originais."
       ],
       "blocos": [
         {
@@ -2999,7 +4069,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como deixar as imagens mais equilibradas e consistentes. Na aula 9, a composição O-Futuro-da-Criacao, do projeto meu-primeiro-video, recebeu música e efeitos sonoros. O vídeo já tem cenas organizadas, animações, transições e áudio. Mas, quando usamos filmagens de origens diferentes, é comum que uma cena pareça mais escura, mais fria ou mais saturada do que a outra. Nesta aula, trabalhamos exclusivamente o acabamento da imagem, sem mexer na montagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: ensinar o aluno a identificar diferenças de iluminação, contraste e cor entre cenas, realizando melhorias sem modificar a montagem."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: primeiro analisar, depois modificar. O aluno precisa aprender a revisar antes de alterar. Antes de começar, guarde uma cópia ou uma gravação da versão da aula 9 para mostrar o antes e o depois."
         },
         {
           "tipo": "titulo",
@@ -3008,39 +4086,165 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Antes/depois: Mostre correção moderada de uma imagem do projeto.",
-            "02 Correção vs estilo: Primeiro recuperar equilíbrio; depois considerar aparência estética.",
-            "03 Inspeção: Analise quadros representativos das cinco cenas.",
-            "04 Exposição e contraste: Corrija com moderação; material estourado pode não ter informação recuperável.",
-            "05 Saturação e temperatura: Aproxime cenas sem impor o mesmo filtro indiscriminadamente.",
-            "06 Reenquadramento: Preserve proporções, assunto e espaço de títulos.",
-            "07 Harmonização: Confira sequência completa sem alterar textos, cortes ou áudio.",
-            "08 Gancho: Na aula 11 revisaremos e exportaremos."
+            "01 Ponto de partida: Reproduza O-Futuro-da-Criacao como ficou na aula 9, com música e efeitos sonoros, e aponte diferenças de luz e cor entre as filmagens.",
+            "02 Acabamento visual: Mostre uma imagem com pouca luz e uma mais equilibrada e explique que corrigir não é só clarear ou saturar.",
+            "03 Conceitos: Apresente exposição, contraste, saturação e temperatura de cor.",
+            "04 Análise: Envie o prompt que pede ao Claude um relatório das cinco cenas, sem modificar nada.",
+            "05 Correções: Envie o prompt de acabamento visual moderado, apenas com os ajustes necessários.",
+            "06 Antes e depois: Compare pelo menos uma filmagem real antes e depois dos ajustes.",
+            "07 Gancho: Na próxima aula, vamos revisar o projeto completo e exportar o vídeo final em MP4."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Analise quadros reais das cinco cenas de O-Futuro-da-Criacao. Liste diferenças confirmadas de exposição, contraste, saturação, temperatura e enquadramento. Aplique ajustes moderados apenas onde necessário, usando recursos disponíveis no Remotion. Não altere títulos, animações, cortes, transições, áudio, 1080x1920, 30 FPS ou 900 frames. Permita comparar antes e depois."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Acabamento e estética"
+          "texto": "1. Entendendo o acabamento visual"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion Agent Skills + Direção de Edição. UI UX Pro Max e Taste podem orientar hierarquia e identidade visual, mas não substituem inspeção de quadros reais."
+          "texto": "Comece mostrando duas versões de uma mesma imagem."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Pouca luz x imagem equilibrada",
+          "linhas": [
+            [
+              "Exemplo",
+              "O que se vê"
+            ],
+            [
+              "Imagem com pouca luz",
+              "Pode apresentar detalhes difíceis de visualizar."
+            ],
+            [
+              "Imagem mais equilibrada",
+              "Permite perceber melhor os detalhes principais."
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Mostre quadros do próprio projeto: capture um quadro de uma das filmagens de O-Futuro-da-Criacao antes do acabamento e o mesmo quadro depois. Se usar outros exemplos de iluminação, deixe claro que são ilustrativos, e não a mesma imagem corrigida."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que corrigir a cor não significa simplesmente deixar todas as imagens mais claras ou aumentar a saturação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O primeiro objetivo é encontrar um equilíbrio visual. Depois, podemos pensar em uma aparência estética consistente para o projeto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Conhecendo os conceitos fundamentais"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Conceitos de acabamento visual",
+          "linhas": [
+            [
+              "Conceito",
+              "O que é",
+              "Cuidado"
+            ],
+            [
+              "Exposição",
+              "A luminosidade. Ajuda a avaliar se a imagem está muito clara ou muito escura.",
+              "Uma cena muito escura ou excessivamente clara dificulta a visualização de detalhes."
+            ],
+            [
+              "Contraste",
+              "A diferença entre claros e escuros. Pode deixar a imagem com maior definição visual.",
+              "Em excesso, prejudica os detalhes."
+            ],
+            [
+              "Saturação",
+              "A intensidade das cores. Controla a força das cores na imagem.",
+              "Valores exagerados podem produzir um aspecto artificial."
+            ],
+            [
+              "Temperatura de cor",
+              "Sensação de quente ou frio. Imagens mais amareladas parecem quentes; imagens mais azuladas parecem frias.",
+              "Diferenças de temperatura entre cenas deixam o vídeo menos consistente."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que esses ajustes precisam ser realizados de acordo com cada imagem, e não necessariamente aplicando os mesmos valores em todas as cenas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Começando pela análise"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, a primeira tarefa do Claude será analisar o projeto e informar o que pode ser melhorado. Isso é importante porque o aluno precisa aprender a revisar antes de modificar."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para analisar as imagens",
+          "texto": "Quero analisar o acabamento visual da composição O-Futuro-da-Criacao antes de realizar qualquer alteração.\nExamine as cinco cenas, utilizando quadros representativos de cada uma.\nAvalie:\n- Exposição e luminosidade.\n- Contraste.\n- Saturação.\n- Temperatura de cor.\n- Consistência visual entre as cenas.\n- Enquadramento das filmagens.\n- Legibilidade dos títulos sobre as imagens.\nIdentifique quais cenas realmente precisam de ajustes.\nDiferencie problemas das filmagens de problemas dos elementos gráficos.\nNão faça nenhuma modificação ainda.\nApresente um relatório simples, indicando o problema identificado e a melhoria sugerida para cada cena.\nSe não conseguir inspecionar visualmente os quadros, informe essa limitação e não invente diagnósticos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre o relatório ao aluno e explique quais correções serão realizadas."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt de análise e lê o relatório, conferindo se o Claude informou alguma limitação para inspecionar os quadros."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Fazendo as correções"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos pedir apenas os ajustes realmente necessários."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para acabamento visual",
+          "texto": "Com base nos problemas realmente identificados na análise anterior, faça um acabamento visual moderado no vídeo O-Futuro-da-Criacao.\nPrioridades:\n1. Corrigir diferenças excessivas de exposição entre as filmagens.\n2. Ajustar contraste e saturação somente quando necessário.\n3. Buscar consistência visual entre as cenas.\n4. Preservar cores naturais e detalhes importantes.\n5. Manter as proporções e o enquadramento correto das mídias.\n6. Garantir a legibilidade dos textos.\nEvite aplicar o mesmo filtro em todas as cenas.\nNão tente recuperar artificialmente detalhes que não existem no arquivo original.\nPreserve os arquivos de mídia originais.\nNão altere:\n- Os textos.\n- As animações.\n- Os cortes e transições.\n- A música e os efeitos sonoros.\n- A duração total de 30 segundos.\nAo finalizar, compare os ajustes com o estado anterior e informe exatamente o que foi modificado."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O QUE CONFERIR NO CÓDIGO (se quiser mostrar): o Remotion não tem uma ferramenta oficial de correção de cor, e o prompt deixa o método a cargo do Claude. Uma técnica comum que ele pode usar é aplicar um filter do CSS (brightness, contrast, saturate) no elemento de vídeo ou de imagem de cada cena. Esse ajuste acontece só na composição: os arquivos originais em public continuam intactos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, abra o Remotion Studio com npm run dev, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro. Confira se os textos, as animações, os cortes, a música, os efeitos sonoros e a duração de 30 segundos continuam iguais."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt de acabamento visual, lê o resumo do que o Claude modificou e reproduz a composição no Remotion Studio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Comparando antes e depois"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça ao Claude para preservar uma versão anterior da composição ou permitir ativar e desativar os ajustes durante a demonstração."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre pelo menos uma comparação real de uma das filmagens."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que o objetivo é melhorar a qualidade percebida sem destruir a aparência natural da imagem."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Ajustes de exposição não restauram automaticamente dados perdidos. Preserve a versão original das cenas."
+          "texto": "Quando uma imagem foi gravada com regiões completamente estouradas ou sem detalhes, nem sempre é possível recuperar essas informações. A inteligência artificial não consegue garantir a recuperação de detalhes que nunca foram registrados. Evite correções exageradas."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele compara uma filmagem antes e depois dos ajustes e aponta se os detalhes ficaram mais visíveis e se as cenas ficaram mais consistentes entre si."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: o projeto terá filmagens visualmente mais equilibradas, sem alterações na montagem, nos textos ou no áudio."
         },
         {
           "tipo": "titulo",
@@ -3049,9 +4253,15 @@
         {
           "tipo": "lista",
           "itens": [
-            "Problemas identificados em quadros reais",
-            "Cores harmonizadas sem filtros extremos",
-            "Montagem e áudio intactos"
+            "Reproduziu o vídeo da aula 9 e guardou uma versão para comparar",
+            "Mostrou um exemplo com pouca luz e outro mais equilibrado, usando quadros do próprio projeto",
+            "Explicou que corrigir a cor não é só clarear ou aumentar a saturação",
+            "Apresentou exposição, contraste, saturação e temperatura de cor",
+            "Pediu primeiro a análise das cinco cenas, sem nenhuma modificação",
+            "Aplicou apenas os ajustes indicados pela análise, sem o mesmo filtro em todas as cenas",
+            "Conferiu que textos, animações, cortes, música, efeitos sonoros e os 30 segundos não mudaram",
+            "Mostrou pelo menos uma comparação real de antes e depois",
+            "Explicou que detalhes que não existem no arquivo original não podem ser recuperados"
           ]
         },
         {
@@ -3064,58 +4274,210 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar acabamento visual. Harmonizar exposição, contraste, cores e enquadramento sem alterar a montagem. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Nosso vídeo já possui cenas organizadas, animações, transições, música e efeitos sonoros."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos observar correção moderada de uma imagem do projeto."
+          "texto": "Agora chegou o momento de trabalhar o acabamento visual."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, primeiro recuperar equilíbrio; depois considerar aparência estética."
+          "texto": "Nesta aula, vamos aprender como pequenos ajustes de imagem podem ajudar a deixar uma produção mais consistente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, analise quadros representativos das cinco cenas."
+          "texto": "Quando utilizamos filmagens de origens diferentes, é comum encontrar diferenças de iluminação, contraste e cores."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, corrija com moderação; material estourado pode não ter informação recuperável."
+          "texto": "Por exemplo, podemos ter uma cena gravada em um ambiente muito iluminado e outra com uma aparência mais escura."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, aproxime cenas sem impor o mesmo filtro indiscriminadamente."
+          "texto": "Quando colocamos esses materiais no mesmo vídeo, a diferença pode ficar bastante evidente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, preserve proporções, assunto e espaço de títulos."
+          "texto": "E é por isso que fazemos a correção de cores."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, vamos conferir sequência completa sem alterar textos, cortes ou áudio."
+          "texto": "Mas antes de começar, precisamos entender alguns conceitos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Como conclusão, na aula 11 revisaremos e exportaremos."
+          "texto": "O primeiro é a exposição."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "De maneira simples, a exposição está relacionada à quantidade de luz na imagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma cena pode estar muito escura ou excessivamente clara, dificultando a visualização de determinados detalhes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O segundo conceito é o contraste."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O contraste representa a diferença entre as regiões claras e escuras da imagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aumentar o contraste pode dar mais destaque a alguns elementos, mas exagerar nesse ajuste pode fazer com que percamos detalhes."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Outro conceito importante é a saturação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Ela está relacionada à intensidade das cores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando aumentamos a saturação, as cores ficam mais fortes. Quando diminuímos, ficam mais discretas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também temos a temperatura de cor."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma imagem com tonalidades azuladas pode transmitir uma sensação mais fria."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Já uma imagem com tons amarelados pode parecer mais quente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas existe algo importante que precisamos entender."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Corrigir uma imagem não significa aplicar vários efeitos ou aumentar todos os controles."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso primeiro objetivo deve ser encontrar um equilíbrio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, podemos pensar na aparência estética que queremos para o vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos abrir nosso projeto no Claude Code."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em vez de pedir imediatamente para modificar todas as cenas, vamos começar solicitando uma análise."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quero que o Claude observe os materiais do projeto e identifique possíveis problemas de exposição, contraste, saturação e enquadramento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos pedir para verificar se os textos continuam legíveis sobre as filmagens."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com essa análise, conseguimos entender melhor o que precisa ser corrigido."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos selecionar os ajustes necessários e pedir ao Claude para aplicá-los com moderação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "É importante deixar claro que não queremos modificar os cortes, a música, os textos ou a duração do vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso objetivo nesta aula é trabalhar exclusivamente o acabamento da imagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois das correções, vamos comparar o resultado anterior com a nova versão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Observe se os detalhes estão mais visíveis e se existe maior consistência entre as cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também precisamos ter cuidado com os limites dos arquivos originais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando uma imagem foi gravada com regiões completamente estouradas ou sem detalhes, nem sempre é possível recuperar essas informações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A inteligência artificial não consegue garantir a recuperação de detalhes que nunca foram registrados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por isso, é importante evitar correções exageradas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos reproduzir nosso vídeo completo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba que não mudamos a história nem a montagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Apenas trabalhamos para deixar as imagens mais equilibradas e agradáveis de assistir."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse é um dos objetivos do acabamento visual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos realizar uma revisão completa do projeto e aprender a exportar nosso vídeo final em MP4."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que os ajustes de imagem foram aplicados."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Componente Video (Remotion): https://www.remotion.dev/docs/video",
+            "Componente Img (Remotion): https://www.remotion.dev/docs/img",
+            "Propriedade filter do CSS (MDN): https://developer.mozilla.org/en-US/docs/Web/CSS/filter"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
     {
       "numero": 11,
       "slug": "aula-11",
-      "titulo": "Revisão e exportação",
+      "titulo": "Revisão e exportação do vídeo",
       "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Verificar elementos técnicos, corrigir erros confirmados e exportar MP4 H.264/AAC."
+        "Entender por que um vídeo que parece pronto ainda precisa de uma revisão final antes da exportação.",
+        "Conferir O-Futuro-da-Criacao com um checklist de nove itens: textos, mídias, ordem das cenas, transições, áudio, primeiro e último quadro, 900 quadros a 30 FPS e 1080x1920.",
+        "Pedir ao Claude Code uma revisão técnica sem modificar arquivos e ler o relatório, separando erros confirmados de possíveis problemas.",
+        "Solicitar a correção somente dos erros confirmados, preservando textos, identidade visual, duração, música e efeitos sonoros.",
+        "Exportar o vídeo em MP4 (H.264 e AAC), pelo Remotion Studio ou pelo terminal, e conferir o arquivo final em um reprodutor fora do Remotion."
       ],
       "blocos": [
         {
@@ -3124,7 +4486,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como identificar erros e preparar um vídeo para publicação. Ao longo das aulas anteriores, o aluno construiu no projeto meu-primeiro-video a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 900 quadros (30 segundos) e cinco cenas, com filmagens, animações, transições, música e efeitos sonoros (aula 9) e acabamento de cor (aula 10). O vídeo parece pronto. Nesta aula, ele passa por uma revisão final, recebe apenas as correções confirmadas e é exportado como arquivo MP4."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: realizar uma revisão técnica e visual do projeto, corrigir problemas confirmados e exportar o vídeo em MP4."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: primeiro analisar, depois corrigir. O projeto continua o mesmo (meu-primeiro-video) e a composição é a mesma O-Futuro-da-Criacao das aulas anteriores. Mostre ao aluno a diferença entre identificar um problema e modificá-lo."
         },
         {
           "tipo": "titulo",
@@ -3133,48 +4503,205 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Gancho de abertura: O vídeo parece pronto, mas ainda pode conter erros.",
-            "02 Checklist técnico: Textos, mídia, áudio, primeiros e últimos quadros, 900 frames.",
-            "03 Diagnóstico com Claude: Peça relatório por cena, gravidade e tempo; não altere ainda.",
-            "04 Correções: Corrija apenas erros confirmados; mantenha cópia de segurança.",
-            "05 Exportar pelo Studio: Selecione composição, escolha Render, revise codec e saída.",
-            "06 Exportar via Claude: Mostre comando remotion render e o caminho de saída.",
-            "07 Validar MP4: Reproduza fora do Remotion, confira duração, resolução e áudio.",
-            "08 Gancho: O último desafio será um novo projeto inteiro."
+            "01 Por que revisar: Reproduza o vídeo completo e explique que, mesmo pronto, ele ainda pode ter pequenos problemas.",
+            "02 Checklist: Apresente os nove itens que precisam ser conferidos antes da exportação.",
+            "03 Revisão técnica: Envie ao Claude o prompt de revisão, sem modificar nenhum arquivo, e leia o relatório com o aluno.",
+            "04 Correção: Envie o prompt que corrige somente os problemas confirmados e verifica o resultado.",
+            "05 Exportação: Renderize O-Futuro-da-Criacao em MP4 pelo Remotion Studio ou pelo terminal.",
+            "06 Arquivo final: Abra o MP4 fora do Remotion e confira som, quadros pretos, duração e resolução.",
+            "07 Gancho: Na próxima aula, teremos o desafio final, com um novo projeto."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Revise O-Futuro-da-Criacao. Confirme 900 frames a 30 FPS, 1080x1920, textos e mídias, sincronismo e presença de áudio. Não modifique arquivos antes de apresentar os problemas. Após corrigir somente falhas comprovadas, renderize:"
-        },
-        {
-          "tipo": "codigo",
-          "linguagem": "shell",
-          "texto": "npx remotion render O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Confirme existência do MP4 e inspecione duração, resolução e áudio."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Depuração e QA"
+          "texto": "1. Por que precisamos revisar um vídeo?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Systematic Debugging (Superpowers): https://github.com/obra/superpowers/tree/main/skills/systematic-debugging; revisão audiovisual usando as ferramentas do Remotion. Claude Video Kit: https://github.com/edotheDev/claude-video-kit — conferir conteúdo antes do uso."
+          "texto": "Comece mostrando o vídeo completo e explique que, mesmo quando o resultado parece pronto, ainda podem existir pequenos problemas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um título pode estar cortado, um efeito sonoro pode entrar atrasado ou uma filmagem pode apresentar um enquadramento inadequado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E, muitas vezes, esses problemas passam despercebidos enquanto estamos concentrados em criar as animações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por isso, antes da exportação, precisamos realizar uma revisão final."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Use esta comparação: assim como revisamos um texto antes de publicá-lo, também precisamos revisar um vídeo antes de entregá-lo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. O que precisamos conferir?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Checklist de revisão do vídeo:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Todos os textos estão legíveis e sem cortes.",
+            "Os vídeos e as imagens carregam corretamente.",
+            "As cinco cenas aparecem na ordem planejada.",
+            "As transições estão funcionando.",
+            "A música e os efeitos estão sincronizados.",
+            "Não existem mudanças bruscas de volume.",
+            "O primeiro e o último quadro estão corretos.",
+            "O projeto possui 900 quadros a 30 FPS.",
+            "A resolução continua em 1080x1920."
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Esse checklist também pode ser disponibilizado aos alunos como material de apoio."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele reproduz O-Futuro-da-Criacao no Remotion Studio do começo ao fim e confere, um a um, os nove itens do checklist, anotando o que parecer errado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Primeiro vamos analisar, depois corrigir"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que existe uma diferença importante entre identificar problemas e corrigi-los."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos pedir ao Claude que faça uma análise do projeto antes de modificar qualquer arquivo."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para revisão técnica",
+          "texto": "Quero realizar uma revisão completa da composição O-Futuro-da-Criacao antes da exportação.\nNão modifique nenhum arquivo nesta primeira etapa.\nAnalise os seguintes pontos:\n1. Resolução: 1080x1920.\n2. Taxa de quadros: 30 FPS.\n3. Duração total: 900 quadros.\n4. Ordem e duração das cinco cenas.\n5. Textos, ortografia, legibilidade e margens.\n6. Enquadramento de imagens e filmagens.\n7. Funcionamento das animações e transições.\n8. Carregamento dos arquivos de mídia.\n9. Sincronização dos efeitos sonoros.\n10. Entrada, saída e níveis de áudio.\n11. Primeiro e último quadro da composição.\nVerifique os elementos técnicos diretamente nos arquivos do projeto.\nQuando necessário, utilize quadros renderizados para realizar a inspeção visual.\nApresente um relatório contendo:\n- Cena ou trecho afetado.\n- Momento do problema.\n- Descrição.\n- Gravidade: baixa, média ou alta.\n- Correção recomendada.\nDiferencie erros confirmados de possíveis problemas que precisam de verificação manual.\nNão invente erros.\nNão faça correções ainda."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre o relatório ao aluno e destaque os problemas encontrados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, peça:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para corrigir os problemas",
+          "texto": "Agora vamos corrigir os problemas confirmados na revisão do vídeo O-Futuro-da-Criacao.\nAntes de modificar o projeto, preserve uma cópia da versão atual.\nCorrija somente os erros realmente identificados.\nNão realize melhorias estéticas adicionais nesta etapa.\nPreserve:\n- Os textos aprovados.\n- A identidade visual.\n- A duração de 30 segundos.\n- Os 900 quadros.\n- A música e os efeitos sonoros, exceto se apresentarem problemas confirmados.\nAo finalizar, execute novamente as verificações relevantes e informe quais problemas foram corrigidos.\nNão declare que um problema foi resolvido sem verificar o resultado."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt de revisão no Claude Code, na pasta meu-primeiro-video, lê o relatório separando erros confirmados de possíveis problemas e só então envia o prompt de correção."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Exportando o vídeo em MP4"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que até agora trabalhamos dentro do Remotion Studio, onde conseguimos visualizar e modificar o projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas, para enviar o vídeo a alguém ou publicá-lo, precisamos transformá-lo em um arquivo de vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse processo é chamado de renderização ou exportação."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Configurações de exportação",
+          "linhas": [
+            [
+              "Parâmetro",
+              "Valor"
+            ],
+            [
+              "Formato",
+              "MP4"
+            ],
+            [
+              "Codec de vídeo",
+              "H.264"
+            ],
+            [
+              "Codec de áudio",
+              "AAC"
+            ],
+            [
+              "Resolução",
+              "1080 × 1920"
+            ],
+            [
+              "Taxa de quadros",
+              "30 FPS"
+            ],
+            [
+              "Duração",
+              "30 segundos"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esses parâmetros produzem um arquivo amplamente compatível com dispositivos e plataformas de vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No Remotion Studio, selecione a composição O-Futuro-da-Criacao, clique em Render, confira as configurações e inicie a renderização."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também é possível realizar a exportação diretamente pelo terminal:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx remotion render src/index.ts O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse comando indica o arquivo de entrada do projeto, usa o identificador da composição e salva o vídeo na pasta out."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Executar render real, abrir o MP4, verificar H.264/AAC, FPS e duração. Não declarar sucesso com base apenas no texto do agente."
+          "texto": "Confira o arquivo de entrada do projeto (src/index.ts no modelo em branco do Remotion) e use o identificador da composição exibido no Remotion Studio. Na sintaxe do comando, quando são informados apenas dois argumentos, o primeiro é lido como arquivo de entrada, e não como composição; por isso o arquivo de entrada aparece explicitamente. O H.264 já é o codec padrão e, para MP4, o áudio é gerado em AAC por padrão, então não é preciso acrescentar uma opção de codec de áudio."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele exporta O-Futuro-da-Criacao pelo botão Render do Remotion Studio (ou pelo comando acima) e localiza o arquivo MP4 na pasta out."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Conferindo o arquivo exportado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois da renderização, abra a pasta de saída e execute o MP4 em um reprodutor de vídeo, fora do Remotion."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Confira se o vídeo tem som, se não apresenta quadros pretos inesperados e se a duração e a resolução estão corretas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que um vídeo funcionar dentro do editor não é garantia de que o arquivo exportado estará perfeito. A revisão do arquivo final também faz parte do trabalho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: o aluno terá seu primeiro vídeo completo, revisado e exportado, pronto para utilização."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele assiste ao MP4 do começo ao fim em um reprodutor de vídeo e confere imagem, som, duração e encerramento."
         },
         {
           "tipo": "titulo",
@@ -3183,9 +4710,14 @@
         {
           "tipo": "lista",
           "itens": [
-            "Revisão documentada e problemas corrigidos",
-            "Exportação H.264 com áudio AAC",
-            "Arquivo conferido fora do ambiente de edição"
+            "Reproduziu o vídeo completo e explicou por que revisar antes de exportar",
+            "Apresentou os nove itens do checklist de revisão",
+            "Enviou o prompt de revisão técnica sem permitir modificações nos arquivos",
+            "Leu o relatório com o aluno, separando erros confirmados de possíveis problemas",
+            "Corrigiu somente os problemas confirmados, com cópia da versão anterior e nova verificação",
+            "Confirmou que a composição continua com 900 quadros, 30 FPS e 1080x1920",
+            "Exportou O-Futuro-da-Criacao em MP4, com H.264 e AAC",
+            "Abriu o MP4 fora do Remotion e conferiu som, quadros pretos, duração e resolução"
           ]
         },
         {
@@ -3198,58 +4730,218 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar revisão e exportação. Verificar elementos técnicos, corrigir erros confirmados e exportar MP4 H.264/AAC. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Chegamos a uma das etapas mais importantes do nosso primeiro projeto."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, o vídeo parece pronto, mas ainda pode conter erros."
+          "texto": "Nas aulas anteriores, aprendemos a construir cenas, trabalhar com filmagens, adicionar animações, controlar o ritmo, utilizar efeitos sonoros e melhorar a aparência das imagens."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, textos, mídia, áudio, primeiros e últimos quadros, 900 frames."
+          "texto": "Agora nosso vídeo parece estar pronto."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos pedir relatório por cena, gravidade e tempo; não altere ainda."
+          "texto": "Mas antes de exportar, precisamos realizar uma revisão."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, corrija apenas erros confirmados; mantenha cópia de segurança."
+          "texto": "Mesmo quando uma edição parece concluída, ainda podem existir pequenos erros."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos selecionar composição, escolha Render, revise codec e saída."
+          "texto": "Um texto pode estar muito próximo da margem, uma animação pode terminar antes do esperado ou um efeito sonoro pode estar fora de sincronia."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, vamos observar comando remotion render e o caminho de saída."
+          "texto": "E muitas vezes não percebemos esses problemas enquanto estamos concentrados na criação."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, vamos reproduzir fora do Remotion, confira duração, resolução e áudio."
+          "texto": "Por isso, uma boa prática é revisar o projeto antes de gerar o arquivo final."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Como conclusão, o último desafio será um novo projeto inteiro."
+          "texto": "Vamos começar com uma lista simples de verificações."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Precisamos conferir se os textos estão legíveis, se as filmagens carregam corretamente e se as cenas aparecem na ordem planejada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também precisamos observar as transições, o volume da música e a sincronização dos efeitos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Outro detalhe importante é conferir o primeiro e o último quadro."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo pode apresentar um pequeno quadro preto no início ou terminar de maneira inesperada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também precisamos garantir que nossa composição continua com a resolução de mil e oitenta por mil novecentos e vinte pixels, trinta quadros por segundo e trinta segundos de duração."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos utilizar o Claude Code para ajudar nessa revisão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vou pedir para ele analisar os arquivos e a estrutura da composição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas existe uma regra importante: nesta primeira etapa, não queremos modificar nada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Queremos apenas identificar problemas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Isso evita que o Claude faça alterações desnecessárias em partes do projeto que já estão funcionando corretamente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois da análise, vamos observar o relatório apresentado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se algum problema for encontrado, precisamos confirmar se ele realmente existe."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Então podemos solicitar uma correção específica."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por exemplo, se um título estiver cortado, não precisamos reconstruir a cena inteira."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Basta corrigir seu posicionamento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essa maneira de trabalhar ajuda a preservar o que já está pronto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora que concluímos a revisão, podemos exportar nosso vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas o que significa exportar?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Até agora, nosso projeto estava sendo visualizado dentro do Remotion Studio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Para transformar essa composição em um arquivo que podemos assistir, enviar ou publicar, precisamos realizar a renderização."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos selecionar nossa composição e acessar a opção Render."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui podemos definir o formato e as configurações de saída."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar MP4, com codec de vídeo H.264 e áudio AAC."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos preservar a resolução vertical e os trinta quadros por segundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essas configurações são amplamente utilizadas e oferecem boa compatibilidade para vídeos digitais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de conferir os parâmetros, vamos iniciar a renderização."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando terminar, teremos nosso primeiro arquivo de vídeo completo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas ainda falta uma última verificação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos abrir esse arquivo fora do Remotion, utilizando um reprodutor de vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos assistir do começo ao fim."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Precisamos conferir novamente a imagem, o som, a duração e o encerramento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se tudo estiver correto, nosso primeiro projeto estará concluído."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E perceba tudo o que conseguimos construir até aqui."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Começamos com uma animação simples de texto e agora temos um vídeo completo, com filmagens, identidade visual, transições, música e acabamento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, teremos nosso desafio final."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos iniciar um novo projeto, desta vez utilizando todas as técnicas que aprendemos ao longo do curso."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira o arquivo MP4 exportado antes de afirmar que o vídeo está concluído."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Comando render da CLI do Remotion: https://www.remotion.dev/docs/render-command",
+            "Renderização no Remotion: https://www.remotion.dev/docs/render",
+            "Codecs e codificação no Remotion: https://www.remotion.dev/docs/encoding"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
     {
       "numero": 12,
       "slug": "aula-12",
-      "titulo": "Projeto final: vídeo completo",
+      "titulo": "Projeto final: criando um vídeo completo do zero",
       "subtitulo_ou_tema": "Projeto integrado independente",
       "duracao": "Aproximadamente 10 a 12 minutos (referência editorial)",
       "objetivos": [
-        "Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado."
+        "Planejar um novo vídeo de 30 segundos, Transforme suas Ideias em Realidade, com cinco cenas de durações diferentes e a identidade visual do curso.",
+        "Criar um projeto independente, transformando-ideias, e preparar nele a Skill direcao-de-edicao e as Skills oficiais do Remotion, sem alterar o projeto anterior.",
+        "Pedir ao Claude um inventário das mídias disponíveis antes da montagem, sem inventar arquivos.",
+        "Montar com o Claude Code a composição completa (1080x1920, 30 FPS, 900 quadros) e conferi-la no Remotion Studio.",
+        "Revisar, corrigir apenas erros confirmados, exportar em MP4 e reconhecer o fluxo completo de produção: planejar, criar, revisar e exportar."
       ],
       "blocos": [
         {
@@ -3258,7 +4950,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Desafio de encerramento: produzir um segundo vídeo independente, reunindo todas as competências do módulo."
+          "texto": "Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível iniciante, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: produzir um novo vídeo de 30 segundos chamado Transforme suas Ideias em Realidade, aplicando todas as técnicas apresentadas nas aulas anteriores."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: esta é uma aula de consolidação. O aluno não aprende uma ferramenta completamente nova: ele usa o que já sabe para realizar um projeto com mais autonomia. Explique cada etapa, demonstre e deixe o aluno reproduzir. O projeto meu-primeiro-video não é alterado; o novo trabalho fica na pasta transformando-ideias, para que o aluno guarde os dois e compare sua evolução."
         },
         {
           "tipo": "titulo",
@@ -3267,39 +4967,324 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Retrospectiva: Apresente resultado do primeiro projeto e um teaser do segundo.",
-            "02 Novo desafio: Transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas.",
-            "03 Novo projeto: Crie pasta independente; reutilize Skill personalizada e reinstale Skills Remotion.",
-            "04 Planejamento: Faça Claude inventariar arquivos e propor distribuição sem inventar mídias.",
-            "05 Produção integrada: Peça montagem, textos, animações, cortes, áudio e acabamento em sequência.",
-            "06 Inspeção: Assista no Studio, corrija aspectos pontuais e confirme mídia.",
-            "07 Exportação: Renderize MP4 e confira parâmetros e reprodução.",
-            "08 Encerramento: Recapitule o fluxo planejar -> executar -> revisar -> exportar e introduza módulo intermediário."
+            "01 Desafio final: Reproduza um trecho de O Futuro da Criação e apresente a proposta do novo vídeo.",
+            "02 Planejamento: Apresente o título, a identidade visual e o storyboard de cinco cenas em 30 segundos.",
+            "03 Pasta independente: Crie o projeto transformando-ideias, abra o Claude Code, traga a Skill direcao-de-edicao e instale as Skills oficiais do Remotion.",
+            "04 Inventário: Coloque as mídias em public e peça ao Claude um inventário, sem iniciar a montagem.",
+            "05 Criação: Envie o prompt de criação do projeto final e abra a composição no Remotion Studio.",
+            "06 Revisão e exportação: Peça a revisão final, corrija só erros confirmados, exporte em MP4 e assista fora do Remotion.",
+            "07 Encerramento: Recapitule o fluxo completo de produção: planejar, criar, revisar e exportar."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Crie a composição Transforme-Suas-Ideias, 1080x1920, 30 FPS, 900 frames, preto/branco/laranja e Montserrat. Cenas: 0–4s TUDO COMEÇA COM UMA IDEIA; 4–9s IMAGINE; 9–15s TRANSFORME; 15–22s CRIE SEM LIMITES; 22–30s O PRÓXIMO PASSO É SEU. Analise mídias locais, não invente arquivos, use Skills Remotion e direcao-de-edicao. Monte, anime, sonorize, revise e só então exporte out/Transforme-Suas-Ideias.mp4 com H.264/AAC. Confirme o arquivo produzido."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Pacote final recomendado"
+          "texto": "1. Apresentando o desafio final"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Obrigatórias: Remotion Agent Skills e Direção de Edição. Complementares conforme necessidade: Systematic Debugging, UI UX Pro Max, Taste, GSAP Skills; HyperFrames e serviços de áudio como extensão intermediária."
+          "texto": "Comece reproduzindo um trecho do primeiro projeto, O Futuro da Criação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, apresente a proposta do novo vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que agora o aluno já conhece todas as principais etapas do processo: planejar o conteúdo, organizar os arquivos, utilizar Skills, criar cenas, adicionar animações, trabalhar o áudio, revisar e exportar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O objetivo será repetir esse fluxo, mas em um projeto independente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Planejando o novo vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso projeto terá o título:"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível iniciante)"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O vídeo terá cinco cenas e duração de 30 segundos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar a identidade visual desenvolvida nas aulas anteriores, com tipografia Montserrat, fundo escuro, textos brancos e detalhes em laranja."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Storyboard — Transforme suas Ideias em Realidade — 30 segundos",
+          "linhas": [
+            [
+              "Cena",
+              "Tempo",
+              "Texto",
+              "Função"
+            ],
+            [
+              "01",
+              "4s (0–4s)",
+              "TODA CRIAÇÃO COMEÇA COM UMA IDEIA",
+              "Apresentação do tema"
+            ],
+            [
+              "02",
+              "6s (4–10s)",
+              "IMAGINE",
+              "Introdução da proposta visual"
+            ],
+            [
+              "03",
+              "6s (10–16s)",
+              "CRIE",
+              "Filmagens, imagens e animações"
+            ],
+            [
+              "04",
+              "6s (16–22s)",
+              "TRANSFORME",
+              "Momento de maior intensidade"
+            ],
+            [
+              "05",
+              "8s (22–30s)",
+              "TRANSFORME SUAS IDEIAS EM REALIDADE",
+              "Mensagem final de encerramento"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Total: 30 segundos, ou 900 quadros a 30 FPS. Assim como na montagem reorganizada de O Futuro da Criação (aula 7), as cenas aqui não têm a mesma duração: a primeira é mais curta e a última, mais longa."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse storyboard é um ponto de partida. O aluno poderá adaptar o conteúdo para criar uma versão personalizada do projeto."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele confere as contas do storyboard antes de abrir o Claude Code (4 + 6 + 6 + 6 + 8 = 30 segundos) e, se quiser, adapta os textos para uma versão personalizada, mantendo cinco cenas e 30 segundos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Criando uma pasta independente"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que é importante separar o projeto final do exercício anterior."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Dessa maneira, o aluno poderá guardar os dois trabalhos e comparar sua evolução."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Prompt de Comando e execute:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd /d \"%USERPROFILE%\\CursoClaude\"\nnpx create-video@latest --yes --blank transformando-ideias\ncd transformando-ideias"
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Não instalar todas indiscriminadamente; separar ferramentas externas de Skills e revisar README, licença, permissões e requisitos."
+          "texto": "Execute o create-video fora de qualquer repositório Git: a documentação do Remotion orienta não rodar o comando dentro de um repositório já existente. A pasta CursoClaude deve ser apenas uma pasta comum que guarda os projetos do curso."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, inicie o Claude Code:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "claude"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora precisamos configurar o novo projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que as Skills instaladas somente na pasta do projeto anterior não são transferidas automaticamente. Skills de um projeto ficam dentro da pasta .claude/skills desse projeto, cada uma em sua própria pasta com um arquivo SKILL.md."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça ao Claude para verificar a Skill personalizada anterior e copiar as instruções necessárias para o novo projeto, sem modificar os arquivos originais."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para copiar a Skill personalizada",
+          "texto": "Verifique a Skill direcao-de-edicao do projeto anterior, em ..\\meu-primeiro-video\\.claude\\skills\\direcao-de-edicao\\SKILL.md.\nCopie essa Skill para este projeto, em .claude\\skills\\direcao-de-edicao\\SKILL.md.\nNão modifique os arquivos originais do projeto meu-primeiro-video.\nAo terminar, informe o caminho da cópia e confirme que o conteúdo é o mesmo do original."
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "text",
+          "texto": "transformando-ideias/\n  .claude/\n    skills/\n      direcao-de-edicao/\n        SKILL.md"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Instale as Skills oficiais do Remotion na pasta do novo projeto, caso ainda não estejam disponíveis:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx skills add remotion-dev/skills"
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele cria o projeto transformando-ideias, abre o Claude Code dentro dele, copia a Skill direcao-de-edicao sem alterar o projeto meu-primeiro-video e instala as Skills oficiais do Remotion."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Primeiro passo — Organizar o material disponível"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Antes de criar o vídeo, vamos ensinar uma prática importante: analisar quais arquivos realmente temos disponíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Coloque as mídias que pretende utilizar nas pastas <code>public/videos</code>, <code>public/imagens</code> e <code>public/audios</code>."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, peça ao Claude:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt de organização do projeto",
+          "texto": "Vamos começar nosso projeto final do curso: Transforme suas Ideias em Realidade.\nAntes de criar qualquer animação, analise a estrutura do projeto atual.\nTarefas:\n1. Verifique quais mídias existem nas pastas public/videos, public/imagens e public/audios.\n2. Identifique o nome, o formato e a duração dos arquivos, quando aplicável.\n3. Verifique se as Skills oficiais do Remotion estão disponíveis.\n4. Verifique se nossa Skill direcao-de-edicao está disponível e contém as regras atualizadas de tipografia e animação.\n5. Organize um inventário dos materiais encontrados.\nDepois, apresente uma proposta de distribuição dessas mídias em cinco cenas de um vídeo de 30 segundos.\nNão invente arquivos, filmagens ou fotografias que não existem.\nCaso faltem mídias, informe quais elementos poderão ser produzidos apenas com textos e gráficos.\nNão inicie a montagem ainda."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique ao aluno: antes de começar a criar, precisamos saber com quais materiais podemos trabalhar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Isso evita erros causados por nomes de arquivos incorretos ou mídias inexistentes."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Utilize arquivos próprios ou mídias que tenham permissão de uso."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele coloca suas mídias nas três pastas de public, envia o prompt de organização e lê o inventário apresentado pelo Claude antes de seguir para a montagem."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Segundo passo — Criando o vídeo completo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos solicitar a montagem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A proposta é criar uma composição de 30 segundos, com as mesmas técnicas aprendidas anteriormente."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para criação do projeto final",
+          "texto": "Vamos produzir o vídeo final do curso utilizando o projeto atual.\nTítulo: Transforme suas Ideias em Realidade.\nUtilize as Skills oficiais do Remotion e nossa Skill personalizada direcao-de-edicao.\nConfigurações:\n- Resolução: 1080x1920 pixels.\n- Taxa: 30 FPS.\n- Duração: 30 segundos.\n- Total: 900 quadros.\n- Formato vertical.\nEstrutura:\nCena 1 — 4 segundos\nTexto: \"TODA CRIAÇÃO COMEÇA COM UMA IDEIA\"\nCena 2 — 6 segundos\nTexto: \"IMAGINE\"\nCena 3 — 6 segundos\nTexto: \"CRIE\"\nCena 4 — 6 segundos\nTexto: \"TRANSFORME\"\nCena 5 — 8 segundos\nTexto: \"TRANSFORME SUAS IDEIAS EM REALIDADE\"\nDireção visual:\n- Fonte Montserrat Regular e Bold.\n- Fundo escuro.\n- Textos brancos com detalhes em laranja.\n- Margens de segurança de 80 pixels.\n- Animações suaves e bem sincronizadas.\n- Cortes com intenção.\n- Transições utilizadas com moderação.\n- Elementos visuais consistentes entre as cenas.\nUtilize somente as mídias realmente encontradas no inventário anterior.\nCaso não existam arquivos adequados para alguma cena, utilize elementos gráficos e animações tipográficas.\nNão invente caminhos de arquivos.\nAdicione trilha sonora e efeitos somente quando existirem arquivos disponíveis e apropriados.\nOrganize o trabalho nesta ordem:\n1. Construir as cinco cenas.\n2. Ajustar textos e tipografia.\n3. Adicionar mídias reais.\n4. Refinar cortes e animações.\n5. Adicionar áudio, se disponível.\n6. Realizar acabamento visual.\n7. Verificar resolução, margens e duração.\nPreserve o projeto organizado e não altere outros projetos do curso.\nAo concluir, disponibilize a composição para visualização no Remotion Studio."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O ID da composição aceita apenas letras, números e hifens, sem acentos nem espaços. Um nome adequado é Transforme-suas-Ideias. O título que aparece no vídeo continua com acentos e espaços: TRANSFORME SUAS IDEIAS EM REALIDADE."
+        },
+        {
+          "tipo": "dica",
+          "texto": "CONFERÊNCIA NO STUDIO: a 30 FPS, as cenas ocupam 120, 180, 180, 180 e 240 quadros: cena 1 de 0 a 119, cena 2 de 120 a 299, cena 3 de 300 a 479, cena 4 de 480 a 659 e cena 5 de 660 a 899, somando 900 quadros."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt de criação, espera o Claude terminar e informar o que foi criado, abre o Remotion Studio com npm run dev e reproduz a composição inteira."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "6. Revisando o resultado final"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Remotion Studio e reproduza o vídeo completo."
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npm run dev"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Durante a demonstração, mostre que o processo de revisão será o mesmo que aprendemos na aula 11."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça ao Claude para verificar problemas antes de exportar."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt de revisão final",
+          "texto": "Realize a revisão final do vídeo Transforme suas Ideias em Realidade.\nVerifique:\n- Duração de exatamente 900 quadros.\n- Resolução 1080x1920.\n- Taxa de 30 FPS.\n- Textos legíveis e sem cortes.\n- Transições funcionando.\n- Enquadramento correto das mídias.\n- Áudio sincronizado, quando houver.\n- Primeiro e último quadro.\n- Consistência da identidade visual.\nIdentifique problemas reais e corrija somente os erros confirmados.\nPreserve uma versão de segurança antes de modificar os arquivos.\nDepois da revisão, prepare o projeto para exportação em MP4, utilizando H.264 e AAC quando houver áudio.\nInforme o caminho do arquivo final e os parâmetros utilizados.\nNão declare que a renderização foi concluída se o arquivo não tiver sido realmente gerado.\nAo finalizar, apresente um resumo das etapas realizadas e dos pontos que ainda precisam de verificação manual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A exportação segue o mesmo caminho da aula 11. Pelo terminal, na pasta do projeto, o comando fica assim (troque o ID se a composição tiver outro nome):"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx remotion render src/index.ts Transforme-suas-Ideias out/transforme-suas-ideias.mp4 --codec=h264"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com o codec H.264, o Remotion gera um MP4 e usa AAC como áudio padrão. Quando a renderização terminar, abra o arquivo fora do Remotion e assista ao vídeo completo, conferindo duração, resolução e áudio."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Não considere o vídeo pronto com base apenas na mensagem do Claude. Confira se o arquivo MP4 existe na pasta out e assista a ele do início ao fim."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele envia o prompt de revisão, lê o relatório, aprova só as correções de erros confirmados, exporta o MP4 e assiste ao arquivo final fora do Remotion."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "7. Encerramento — O que o aluno aprendeu?"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Fluxo completo de produção",
+          "linhas": [
+            [
+              "Etapa",
+              "O que fazer"
+            ],
+            [
+              "1. Planejar",
+              "Definir a ideia, as cenas e o material."
+            ],
+            [
+              "2. Criar",
+              "Montar as cenas, animações e efeitos."
+            ],
+            [
+              "3. Revisar",
+              "Conferir a qualidade e corrigir erros."
+            ],
+            [
+              "4. Exportar",
+              "Gerar o arquivo final e conferir a reprodução."
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "As Skills orientam o Claude, mas não garantem um resultado perfeito. A inteligência artificial acelera várias etapas da produção, mas a avaliação final do vídeo continua sendo nossa."
         },
         {
           "tipo": "titulo",
@@ -3308,9 +5293,15 @@
         {
           "tipo": "lista",
           "itens": [
-            "Projeto independente com Skills disponíveis",
-            "Cinco cenas e áudio revisados",
-            "MP4 exportado e verificado"
+            "Reproduziu um trecho de O Futuro da Criação e apresentou a proposta do novo vídeo",
+            "Apresentou o título, a identidade visual (Montserrat, fundo escuro, textos brancos e detalhes em laranja) e o storyboard de cinco cenas em 30 segundos",
+            "Criou o projeto transformando-ideias fora de um repositório Git, sem alterar meu-primeiro-video",
+            "Copiou a Skill direcao-de-edicao para .claude/skills do novo projeto, sem modificar o original, e instalou as Skills oficiais do Remotion",
+            "Pediu o inventário das mídias antes de qualquer montagem e usou apenas arquivos reais, próprios ou com permissão de uso",
+            "Criou a composição com 1080x1920, 30 FPS e 900 quadros, com ID só de letras, números e hifens",
+            "Fez a revisão final, corrigiu somente erros confirmados e preservou uma versão de segurança",
+            "Exportou em MP4 (H.264, com AAC quando houver áudio) e assistiu ao arquivo fora do Remotion",
+            "Recapitulou o fluxo completo: planejar, criar, revisar e exportar"
           ]
         },
         {
@@ -3323,47 +5314,240 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar projeto final: vídeo completo. Produzir Transforme suas ideias em realidade com todas as técnicas em um fluxo integrado. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Chegamos à última aula do nível iniciante do nosso curso de edição de vídeos com Claude."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos apresentar resultado do primeiro projeto e um teaser do segundo."
+          "texto": "E, para encerrar, vamos realizar um desafio especial."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, transforme suas ideias em realidade: vídeo de 30 segundos com cinco cenas."
+          "texto": "Nas aulas anteriores, construímos nosso primeiro projeto aos poucos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos criar pasta independente; reutilize Skill personalizada e reinstale Skills Remotion."
+          "texto": "Começamos preparando o computador, conhecemos as Skills, criamos nossas próprias orientações de edição e aprendemos a trabalhar com animações, imagens, cortes, música e acabamento visual."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, faça Claude inventariar arquivos e propor distribuição sem inventar mídias."
+          "texto": "Agora vamos utilizar tudo isso para criar um novo vídeo do zero."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos pedir montagem, textos, animações, cortes, áudio e acabamento em sequência."
+          "texto": "Nosso projeto final terá o título Transforme suas Ideias em Realidade."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, assista no Studio, corrija aspectos pontuais e confirme mídia."
+          "texto": "Será um vídeo vertical de trinta segundos, dividido em cinco cenas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, renderize MP4 e confira parâmetros e reprodução."
+          "texto": "Mas desta vez vamos trabalhar de uma maneira um pouco diferente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Como conclusão, recapitule o fluxo planejar -> executar -> revisar -> exportar e introduza módulo intermediário."
+          "texto": "Em vez de aprender cada recurso separadamente, vamos utilizar tudo em um único processo de produção."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Com isso, encerramos o nível iniciante. O mais importante é conseguir repetir o processo com autonomia, revisar os resultados e continuar aprimorando as próprias edições."
+          "texto": "E o primeiro passo não será pedir para o Claude criar o vídeo imediatamente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos começar organizando nosso projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Precisamos criar uma pasta independente para não misturar os arquivos do novo trabalho com aqueles utilizados nas aulas anteriores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, vamos preparar nossas ferramentas e conferir se as Skills estão disponíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Lembra da Skill de direção de edição que criamos?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Ela será muito útil agora."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Podemos aproveitar as orientações que definimos anteriormente, como as margens de segurança, a tipografia, as cores e o estilo das animações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos utilizar as Skills oficiais do Remotion."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com isso, nosso novo projeto já começa com uma estrutura de trabalho conhecida."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos organizar as mídias."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Antes de iniciar a montagem, precisamos saber quais vídeos, fotografias e arquivos de áudio estão realmente disponíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos pedir ao Claude para analisar as pastas do projeto e apresentar uma lista dos materiais encontrados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essa etapa é importante porque não queremos que ele utilize arquivos inexistentes ou suponha que determinada filmagem está disponível."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com o inventário concluído, vamos planejar nossas cinco cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A primeira apresentará a ideia central do vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na segunda, vamos destacar a palavra Imagine."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na terceira, trabalharemos com a mensagem Crie."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na quarta, a palavra Transforme será nosso principal destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E na última cena, teremos a mensagem completa: Transforme suas Ideias em Realidade."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos pedir ao Claude para construir essa composição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar a identidade visual que desenvolvemos durante o curso, com fundo escuro, textos brancos e detalhes em laranja."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos orientar o Claude a utilizar animações suaves, cortes bem definidos e transições apenas quando forem necessárias."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se tivermos filmagens e imagens adequadas, elas poderão ser utilizadas nas cenas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Caso contrário, o projeto também poderá funcionar com elementos gráficos e animações tipográficas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois da montagem, vamos cuidar do áudio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar uma trilha sonora, caso tenhamos um arquivo apropriado, e adicionar efeitos pontuais para destacar alguns movimentos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas precisamos lembrar de algo importante: os efeitos sonoros devem acompanhar as animações, e não aparecer aleatoriamente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com a montagem pronta, vamos realizar o acabamento visual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Precisamos conferir se as imagens estão equilibradas, se os textos possuem bom contraste e se todos os elementos estão respeitando as margens de segurança."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora chegou a hora da revisão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos pedir ao Claude para analisar o projeto e identificar possíveis problemas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se algum erro for encontrado, vamos realizar uma correção específica, preservando todo o restante da composição."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de concluir essa etapa, estaremos prontos para exportar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos utilizar o formato MP4, mantendo a resolução vertical e os trinta quadros por segundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando a renderização terminar, vamos abrir o arquivo fora do Remotion e assistir ao vídeo completo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E aqui temos nosso projeto final."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas o mais importante não é apenas o arquivo que conseguimos produzir."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "É perceber que agora conhecemos um processo completo de edição utilizando inteligência artificial."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aprendemos que não basta pedir para uma IA criar um vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Precisamos planejar, fornecer boas instruções, organizar os materiais, avaliar os resultados e realizar correções."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A inteligência artificial pode acelerar várias etapas da produção, mas nosso olhar como editor continua sendo fundamental."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com isso, encerramos o nível iniciante."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A partir de agora, você já possui uma base para desenvolver seus próprios projetos utilizando o Claude Code e o Remotion."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No próximo módulo, poderemos avançar para técnicas mais elaboradas, como composições complexas, motion graphics, animações personalizadas e automações de produção."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O principal objetivo é que você consiga repetir esse processo com cada vez mais autonomia, desenvolvendo seu próprio estilo e aperfeiçoando suas edições."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira o MP4 exportado antes de afirmar que o projeto final ficou pronto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "create-video (criação de projetos Remotion): https://www.remotion.dev/docs/cli/create-video",
+            "Skills oficiais do Remotion: https://www.remotion.dev/docs/ai/skills",
+            "Skills no Claude Code: https://code.claude.com/docs/en/skills",
+            "Comando render do Remotion: https://www.remotion.dev/docs/render-command"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     }
