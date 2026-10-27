@@ -61,7 +61,7 @@
               "03 | Instalando Skills no Claude Code",
               "04 | Criando sua primeira Skill personalizada",
               "05 | Criando seu primeiro vídeo completo com Claude",
-              "06 | Trabalhando com arquivos",
+              "06 | Trabalhando com vídeos, imagens e arquivos",
               "07 | Cortes, ritmo e transições",
               "08 | Textos e animações",
               "09 | Música e efeitos sonoros",
@@ -69,6 +69,27 @@
               "11 | Revisão e exportação",
               "12 | Projeto final: vídeo completo"
             ]
+          },
+          {
+            "tipo": "titulo",
+            "texto": "Progressão das aulas 03–06: um único projeto"
+          },
+          {
+            "tipo": "lista_numerada",
+            "itens": [
+              "Aula 03 — Instalar Skills: o aluno aprende a utilizar orientações especializadas e melhora uma animação existente.",
+              "Aula 04 — Criar sua própria Skill: o aluno estabelece regras de edição e aprende a manter um padrão visual.",
+              "Aula 05 — Criar um vídeo: o aluno utiliza as Skills para construir um vídeo de 30 segundos com cinco cenas.",
+              "Aula 06 — Trabalhar com arquivos: o aluno adiciona filmagens e imagens ao mesmo vídeo, sem perder as animações anteriores."
+            ]
+          },
+          {
+            "tipo": "paragrafo",
+            "texto": "O aluno desenvolve um único projeto (meu-primeiro-video) ao longo das aulas, em vez de exercícios independentes sem conexão. Isso facilita a aprendizagem e mostra a evolução do trabalho: de uma animação simples até um vídeo com cenas, filmagens e elementos gráficos."
+          },
+          {
+            "tipo": "dica",
+            "texto": "Preserve as versões anteriores do projeto (cópias ou gravações de cada etapa) para mostrar comparações visuais entre uma aula e outra."
           },
           {
             "tipo": "paragrafo",
@@ -2176,11 +2197,15 @@
     {
       "numero": 6,
       "slug": "aula-06",
-      "titulo": "Trabalhando com arquivos",
+      "titulo": "Trabalhando com vídeos, imagens e arquivos",
       "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Importar mídias reais preservando a estrutura audiovisual."
+        "Organizar os arquivos de vídeo, imagem e áudio em pastas próprias dentro de public, no projeto meu-primeiro-video.",
+        "Entender, sem programar, que o Remotion encontra cada arquivo da pasta public pelo caminho indicado em staticFile().",
+        "Adicionar com o Claude Code duas filmagens e uma fotografia às cenas 1, 2 e 3 de O-Futuro-da-Criacao, preservando os textos e as animações da aula 5.",
+        "Diferenciar enquadramento correto (com recorte) de imagem distorcida e pedir ao Claude a correção de uma imagem mal enquadrada.",
+        "Confirmar que trilha.mp3 está em public/audios, sem adicioná-la à composição antes da próxima aula."
       ],
       "blocos": [
         {
@@ -2189,7 +2214,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como adicionar mídias reais aos seus projetos. Na aula 5, o aluno criou no projeto meu-primeiro-video a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 30 segundos e cinco cenas de seis segundos (O FUTURO DA CRIAÇÃO, TUDO COMEÇA COM UMA IDEIA, IDEIAS VIRAM MOVIMENTO, SEM LIMITES e COMECE A CRIAR), com fundo escuro e detalhes em roxo. Até aqui, o vídeo usa apenas textos e elementos gráficos. Nesta aula, as três primeiras cenas recebem filmagens e uma fotografia, sem perder o que já foi feito."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: aprender a organizar arquivos de vídeo, imagem e áudio, importá-los para o Remotion e utilizá-los nas cenas criadas anteriormente."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video), e a composição O-Futuro-da-Criacao é a mesma da aula 5. Guarde uma cópia ou uma gravação da versão da aula 5 para mostrar o antes e o depois."
         },
         {
           "tipo": "titulo",
@@ -2198,38 +2231,172 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Antes/depois: Mostre os fundos gráficos sendo substituídos por mídia real.",
-            "02 Estrutura: Organize public/videos, public/imagens e public/audios.",
-            "03 Acesso às mídias: Mostre staticFile() e os componentes de mídia como conceito, sem aprofundar código.",
-            "04 Importação com Claude: Use computador.mp4, criacao.mp4 e tecnologia.jpg nas cenas 1, 2 e 3.",
-            "05 Enquadramento: Compare crop com distorção e preserve o assunto principal.",
-            "06 Arquivo de áudio: Confirme trilha.mp3; não adicione música ainda.",
-            "07 Gancho: Na próxima aula trabalharemos o ritmo."
+            "01 Ponto de partida: Reproduza O-Futuro-da-Criacao como ficou na aula 5 e mostre o que falta: filmagens, imagens e sons.",
+            "02 Organização: Crie em public as pastas videos, imagens e audios e coloque nelas os arquivos com os nomes indicados.",
+            "03 Como o Remotion encontra os arquivos: Mostre staticFile() como conceito, sem ensinar programação.",
+            "04 Importação com o Claude: Envie o prompt que adiciona computador.mp4, criacao.mp4 e tecnologia.jpg às cenas 1, 2 e 3.",
+            "05 Recorte x distorção: Compare enquadramento correto com imagem esticada e peça ao Claude para corrigir um enquadramento.",
+            "06 Áudio: Confirme que trilha.mp3 está em public/audios, sem adicioná-la à composição.",
+            "07 Gancho: Na próxima aula, vamos trabalhar o ritmo da edição."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Atualize O-Futuro-da-Criacao usando arquivos reais: cena 1 public/videos/computador.mp4, cena 2 public/videos/criacao.mp4, cena 3 public/imagens/tecnologia.jpg. Mantenha os fundos das cenas 4 e 5, todos os títulos, 30s, 30 FPS. Não distorça os vídeos, silencie áudios de origem e apenas confirme public/audios/trilha.mp3. Informe arquivos ausentes e não invente mídia."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Opções de edição"
+          "texto": "1. Explicação inicial"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion Agent Skills como referência principal. Video Editor (Gadir Labs): https://github.com/gadirlabs/video-editor — repositório complementar: conferir existência, README, dependências e licença antes de indicar instalação."
+          "texto": "Comece reproduzindo o vídeo da aula anterior."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre que já temos um projeto com textos e animações, mas ainda faltam elementos importantes: filmagens, imagens e sons."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que o Claude consegue trabalhar com arquivos que colocamos à disposição dele na pasta do projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma das maneiras mais simples de organizar esses arquivos é criar pastas específicas para cada tipo de mídia: uma pasta para vídeos, outra para fotografias e outra para áudios. Isso evita confusões e facilita futuras alterações."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Organizando os arquivos"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre a estrutura que vamos utilizar:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "text",
+          "texto": "meu-primeiro-video/\n  public/\n    videos/\n      computador.mp4\n      criacao.mp4\n    imagens/\n      tecnologia.jpg\n    audios/\n      trilha.mp3"
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Use public/videos, public/imagens e public/audios. Verificar se arquivos de exemplo realmente existem."
+          "texto": "Utilize arquivos próprios ou mídias que tenham permissão de uso. Para acompanhar a demonstração, os alunos devem colocar arquivos reais nessas pastas, com os nomes indicados."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele cria as pastas videos, imagens e audios dentro de public, no projeto meu-primeiro-video, e coloca nelas os quatro arquivos com exatamente os nomes da estrutura acima."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Entendendo como o Remotion encontra os arquivos"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique de maneira simples que o Remotion precisa saber onde cada arquivo está localizado. Para isso, ele pode utilizar uma função chamada staticFile(). Por exemplo:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "tsx",
+          "texto": "staticFile(\"videos/computador.mp4\")"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Essa instrução informa o caminho do vídeo dentro da pasta public. Repare que o caminho começa em videos/, e não em public/: o staticFile() já procura dentro de public."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não é necessário ensinar programação nesta aula. Basta mostrar que o Claude pode criar automaticamente as referências corretas, desde que os arquivos estejam disponíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O Remotion oferece componentes próprios para apresentar imagens e vídeos. Para vídeos, a documentação atual recomenda o componente Video, do pacote @remotion/media, em novos usos; para imagens, o componente Img, do próprio remotion."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Se o pacote @remotion/media ainda não estiver instalado no projeto, o Claude Code pode adicioná-lo. O prompt da próxima seção pede que ele confira isso antes de começar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Adicionando mídias ao nosso projeto"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Claude Code na pasta do projeto e envie o seguinte prompt."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para importar mídias",
+          "texto": "Vamos continuar trabalhando na composição O-Futuro-da-Criacao.\nQuero adicionar mídias reais às três primeiras cenas.\nUtilize os arquivos existentes na pasta public:\nCena 1:\nAdicione o arquivo videos/computador.mp4 como vídeo de fundo.\nCena 2:\nAdicione o arquivo videos/criacao.mp4 como vídeo de fundo.\nCena 3:\nUtilize imagens/tecnologia.jpg como imagem principal, criando um movimento suave de aproximação.\nRegras importantes:\n* Preserve todos os textos e animações já criados.\n* Não modifique as cenas 4 e 5.\n* Mantenha o formato vertical de 1080x1920.\n* Ajuste as mídias proporcionalmente, sem esticar ou deformar.\n* Preserve o assunto principal de cada imagem.\n* Se necessário, utilize um recorte adequado.\n* Mantenha os textos legíveis sobre as mídias.\n* Não utilize o áudio original dos vídeos nesta etapa.\n* Não adicione música ainda.\nPara os vídeos, use o componente Video de @remotion/media; se o pacote ainda não estiver instalado no projeto, adicione-o antes. Para a imagem, use o componente Img do remotion.\nVerifique se todos os arquivos existem antes de iniciar. Caso algum esteja ausente, informe qual arquivo está faltando.\nAo finalizar, abra ou indique como visualizar a composição no Remotion Studio."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O QUE CONFERIR NO CÓDIGO (se quiser mostrar): os vídeos devem usar a propriedade muted, que tira o som original, e as mídias devem usar objectFit=\"cover\", que preenche a tela recortando as bordas sem deformar. Não é preciso que o aluno escreva isso: basta saber que essas são as formas documentadas de silenciar e de recortar sem distorção."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois, abra o Remotion Studio com npm run dev, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro. Confira: as cenas 1 e 2 têm filmagens de fundo, a cena 3 mostra a fotografia com aproximação suave, as cenas 4 e 5 não mudaram, os textos continuam legíveis e a duração segue em 30 segundos."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt, lê o que o Claude informou (inclusive se faltou algum arquivo) e reproduz a composição no Remotion Studio."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Demonstração importante: recorte e distorção"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esta é uma excelente oportunidade para ensinar um princípio básico de edição."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Enquadramento correto x imagem distorcida",
+          "linhas": [
+            [
+              "Situação",
+              "O que acontece"
+            ],
+            [
+              "Enquadramento correto",
+              "A imagem mantém suas proporções. Pode ocorrer um recorte nas laterais ou na altura."
+            ],
+            [
+              "Imagem distorcida",
+              "A imagem é esticada para preencher a tela, deformando os elementos."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique que preencher a tela não significa obrigatoriamente esticar a imagem. O editor pode recortar as extremidades ou criar uma composição visual alternativa, sem deformar o conteúdo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça para o Claude corrigir uma imagem mal enquadrada, preservando o objeto principal."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt de correção de enquadramento",
+          "texto": "Na composição O-Futuro-da-Criacao, revise o enquadramento da cena 3.\nA imagem imagens/tecnologia.jpg deve preencher a tela vertical sem esticar ou deformar.\nSe for preciso, recorte as bordas, mantendo o assunto principal da imagem visível e em destaque.\nNão altere os textos, as animações, as outras cenas nem a duração do vídeo."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele compara no Studio a cena antes e depois da correção e aponta se o assunto principal continua aparecendo e se nada ficou esticado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "6. Preparando o áudio para a próxima aula"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mostre que o arquivo trilha.mp3 já está dentro da pasta public/audios. Nesta etapa, o objetivo é apenas verificar se o arquivo está disponível."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não vamos adicioná-lo à composição ainda, porque na próxima aula o aluno começará a estudar ritmo, duração das cenas e sincronização audiovisual."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: o vídeo de 30 segundos agora utiliza duas filmagens e uma fotografia, mantendo os textos e animações anteriores."
+        },
+        {
+          "tipo": "dica",
+          "texto": "As Skills orientam o Claude, mas não garantem um resultado perfeito. Confira cada cena no Remotion Studio antes de considerar a aula concluída."
         },
         {
           "tipo": "titulo",
@@ -2238,9 +2405,14 @@
         {
           "tipo": "lista",
           "itens": [
-            "Pastas e mídias reconhecidas",
-            "Cenas mantêm textos e duração",
-            "Enquadramento sem distorções"
+            "Reproduziu o vídeo da aula 5 e mostrou o que falta: filmagens, imagens e sons",
+            "Criou public/videos, public/imagens e public/audios com os quatro arquivos e os nomes indicados",
+            "Usou apenas arquivos próprios ou com permissão de uso",
+            "Explicou staticFile() como conceito, sem ensinar programação",
+            "Adicionou computador.mp4, criacao.mp4 e tecnologia.jpg às cenas 1, 2 e 3, sem alterar as cenas 4 e 5",
+            "Conferiu que os vídeos estão sem o som original, as mídias não estão esticadas e os textos continuam legíveis",
+            "Comparou enquadramento correto com imagem distorcida e corrigiu um enquadramento com o Claude",
+            "Confirmou que trilha.mp3 está em public/audios, sem adicioná-la à composição"
           ]
         },
         {
@@ -2253,43 +2425,191 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar trabalhando com arquivos. Importar mídias reais preservando a estrutura audiovisual. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Na aula anterior, criamos nosso primeiro vídeo completo, com trinta segundos de duração, cinco cenas e várias animações."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos observar os fundos gráficos sendo substituídos por mídia real."
+          "texto": "Mas até agora utilizamos apenas textos e elementos gráficos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, vamos organizar public/videos, public/imagens e public/audios."
+          "texto": "Nesta aula, vamos aprender a adicionar vídeos e fotografias reais às nossas produções."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos observar staticFile() e os componentes de mídia como conceito, sem aprofundar código."
+          "texto": "Esse é um passo importante porque nem todo projeto precisa ser construído apenas com animações."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, use computador.mp4, criacao.mp4 e tecnologia.jpg nas cenas 1, 2 e 3."
+          "texto": "Podemos combinar filmagens, imagens, textos e efeitos para criar vídeos muito mais interessantes."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos comparar crop com distorção e preserve o assunto principal."
+          "texto": "Mas antes de adicionar esses materiais, precisamos aprender a organizar nossos arquivos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, confirme trilha.mp3; não adicione música ainda."
+          "texto": "Imagine trabalhar em um projeto com dezenas de vídeos, fotografias e músicas, todos misturados na mesma pasta."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, na próxima aula trabalharemos o ritmo."
+          "texto": "Encontrar um arquivo específico seria muito mais complicado."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Por isso, vamos utilizar uma organização simples."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Dentro do nosso projeto, existe uma pasta chamada public. É nela que podemos armazenar os arquivos que utilizaremos nas composições."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos criar três pastas: vídeos, imagens e áudios."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na pasta de vídeos, vamos colocar duas filmagens."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na pasta de imagens, vamos adicionar uma fotografia."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E na pasta de áudios, vamos colocar uma trilha musical que utilizaremos mais adiante."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O importante é que cada arquivo esteja no lugar correto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora você pode estar se perguntando: como o Claude vai encontrar esses arquivos?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No Remotion, podemos utilizar uma função chamada staticFile, que permite indicar onde determinado arquivo está localizado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas você não precisa decorar esse comando."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Como estamos utilizando o Claude Code, podemos simplesmente informar quais arquivos queremos utilizar e em quais cenas eles devem aparecer."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos abrir nosso projeto e selecionar a composição que criamos anteriormente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na primeira cena, quero utilizar uma filmagem de um computador como fundo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na segunda cena, vamos adicionar outro vídeo, relacionado à criação de conteúdo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E na terceira, vamos utilizar uma fotografia com um movimento suave de aproximação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos enviar essas instruções para o Claude."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas precisamos tomar alguns cuidados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso vídeo é vertical, e nem todas as imagens e filmagens que utilizamos terão esse mesmo formato."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por exemplo, podemos ter um vídeo horizontal que precisa ser adaptado para preencher uma tela vertical."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesse caso, não queremos que a imagem fique esticada ou deformada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O ideal é ajustar o enquadramento, preservando as proporções e mantendo o assunto principal em destaque."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos observar a diferença entre uma imagem ajustada corretamente e outra que foi distorcida."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba como um enquadramento inadequado pode prejudicar a qualidade visual do nosso vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por isso, também vamos orientar o Claude a verificar se os elementos importantes continuam aparecendo na tela."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Outro detalhe importante é a leitura dos textos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mesmo utilizando vídeos como fundo, precisamos garantir que os títulos continuem visíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se o fundo tiver muitas informações ou cores muito claras, talvez seja necessário adicionar um escurecimento suave atrás do texto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos abrir o Remotion Studio e conferir o resultado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Observe que continuamos utilizando as mesmas animações e mensagens da aula anterior."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A principal diferença é que agora nosso vídeo possui imagens e filmagens reais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por último, vamos conferir a pasta de áudios."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Já temos uma trilha musical separada, mas ainda não vamos utilizá-la."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Isso porque, na próxima aula, vamos começar a trabalhar o ritmo da edição, entendendo como a música pode influenciar a duração das cenas, os cortes e as animações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com isso, nosso projeto estará preparado para a próxima etapa."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que as mídias foram adicionadas corretamente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "staticFile() no Remotion: https://www.remotion.dev/docs/staticfile",
+            "Componente Video (@remotion/media): https://www.remotion.dev/docs/media/video",
+            "Componente Img: https://www.remotion.dev/docs/img"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
