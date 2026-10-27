@@ -1,24 +1,37 @@
 #!/usr/bin/env node
 /*
-  build.mjs — gera o site estático a partir de content/aulas.json.
+  build.mjs — gera o site estático em duas versões a partir dos mesmos templates:
+    professor  content/aulas.json   → index.html · aulas/aula-NN.html · guia.html
+    aluno      content/alunos.json  → aluno/index.html · aluno/aula-NN.html
 
     node build/build.mjs
 
-  Entradas:  content/aulas.json · aulas/_template.html · build/index.template.html
-  Saídas:    aulas/aula-01.html … aula-12.html · index.html · guia.html
+  Entradas:  content/aulas.json · content/alunos.json · aulas/_template.html · build/index.template.html
+  As duas versões usam as mesmas funções; a diferença fica no objeto "variante" (V)
+  passado a buildLesson/buildHome. A versão do aluno não tem guia.html.
 
   Sem dependências. Contrato de marcação: DESIGN.md §5 e §6.
 */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (p) => readFileSync(join(ROOT, p), "utf8");
-const write = (p, s) => { writeFileSync(join(ROOT, p), s, "utf8"); console.log("  escrito", p); };
+const write = (p, s) => { mkdirSync(dirname(join(ROOT, p)), { recursive: true }); writeFileSync(join(ROOT, p), s, "utf8"); console.log("  escrito", p); };
 
 const data = JSON.parse(read("content/aulas.json"));
 const { curso, aulas } = data;
+const alunoData = existsSync(join(ROOT, "content/alunos.json")) ? JSON.parse(read("content/alunos.json")) : null;
+if (alunoData) {
+  const bad = [];
+  if (!alunoData.curso || !Array.isArray(alunoData.curso.introducao)) bad.push("curso.introducao");
+  if (!Array.isArray(alunoData.aulas)) bad.push("aulas[]");
+  for (const a of alunoData.aulas || []) {
+    for (const k of ["numero", "slug", "titulo", "subtitulo_ou_tema", "objetivos", "blocos"]) if (a[k] == null) bad.push(`aula ${a.numero}: ${k}`);
+  }
+  if (bad.length) throw new Error("content/alunos.json fora do contrato (DESIGN.md §9): " + bad.join(", "));
+}
 const LESSON_TPL = read("aulas/_template.html");
 const HOME_TPL = read("build/index.template.html");
 
@@ -80,16 +93,20 @@ const SHORT = {
 };
 const mapa = (curso.secoes_extras.find((s) => /mapa do curso/i.test(s.titulo))?.blocos || [])
   .find((b) => b.tipo === "tabela")?.linhas || [];
-const modules = [];
-for (const a of aulas) {
-  let m = modules[modules.length - 1];
-  if (!m || m.tema !== a.subtitulo_ou_tema) {
-    const row = mapa.find((r) => r[1] === a.subtitulo_ou_tema);
-    m = { idx: modules.length + 1, tema: a.subtitulo_ou_tema, curto: SHORT[a.subtitulo_ou_tema] || a.subtitulo_ou_tema.split(/[ ,]/)[0], entrega: row ? row[2] : "", aulas: [] };
-    modules.push(m);
+function groupModules(list) {
+  const mods = [];
+  for (const a of list) {
+    let m = mods[mods.length - 1];
+    if (!m || m.tema !== a.subtitulo_ou_tema) {
+      const row = mapa.find((r) => r[1] === a.subtitulo_ou_tema);
+      m = { idx: mods.length + 1, tema: a.subtitulo_ou_tema, curto: SHORT[a.subtitulo_ou_tema] || a.subtitulo_ou_tema.split(/[ ,]/)[0], entrega: row ? row[2] : "", aulas: [] };
+      mods.push(m);
+    }
+    m.aulas.push(a); a._mod = m;
   }
-  m.aulas.push(a); a._mod = m;
+  return mods;
 }
+const modules = groupModules(aulas);
 const rangeLabel = (m) => {
   const f = nn(m.aulas[0].numero), l = nn(m.aulas[m.aulas.length - 1].numero);
   return f === l ? `Aula ${f}` : `Aulas ${f}–${l}`;
@@ -110,8 +127,8 @@ function listItems(itens, ctx) {
   return itens.map((t) => {
     // Índice pedagógico: "01 | Título" vira link para a aula
     const idx = t.match(/^(\d{2})\s*\|\s*(.+)$/);
-    if (idx && aulas.some((a) => nn(a.numero) === idx[1])) {
-      return `<li><a href="${ctx.root}aulas/aula-${idx[1]}.html">Aula ${idx[1]} · ${esc(idx[2])}</a></li>`;
+    if (idx && (ctx.lessons || aulas).some((a) => nn(a.numero) === idx[1])) {
+      return `<li><a href="${ctx.lessonPrefix ?? `${ctx.root}aulas/`}aula-${idx[1]}.html">Aula ${idx[1]} · ${esc(idx[2])}</a></li>`;
     }
     const body = numbered ? t.replace(/^\d{2}\s+/, "") : t; // o <ol> já numera
     return `<li>${inline(body, { label: true })}</li>`;
@@ -206,8 +223,8 @@ ${rows.map((r) => `      <tr>${r.map((c) => `<td>${inline(c)}</td>`).join("")}</
 const indent = (s, pad) => s.split("\n").map((l) => (l ? pad + l : l)).join("\n");
 const tocHtml = (toc, pad) => toc.map((t) => `${pad}<li><a href="#${t.id}">${esc(t.texto)}</a></li>`).join("\n");
 
-function switcherHtml(prefix, pad) {
-  return aulas.map((a) => `${pad}<li><a href="${prefix}aula-${nn(a.numero)}.html" data-aula="${nn(a.numero)}"><span class="switcher__no">${nn(a.numero)}</span><span class="switcher__t">${esc(a.titulo)}</span></a></li>`).join("\n");
+function switcherHtml(prefix, pad, list = aulas) {
+  return list.map((a) => `${pad}<li><a href="${prefix}aula-${nn(a.numero)}.html" data-aula="${nn(a.numero)}"><span class="switcher__no">${nn(a.numero)}</span><span class="switcher__t">${esc(a.titulo)}</span></a></li>`).join("\n");
 }
 
 /* Trechos do template compartilhados por aulas e guia */
@@ -225,18 +242,63 @@ const RE = {
 };
 const stripBuilderComments = (s) => s.replace(/\n?[ \t]*<!-- BUILDER:[\s\S]*?-->/g, "");
 
+/* ------------------------------------------------------------ variantes (DESIGN §9) */
+const VARIANTS = {
+  professor: { key: "professor", curso, aulas, modules, dir: "aulas" },
+};
+if (alunoData) {
+  VARIANTS.aluno = { key: "aluno", curso: alunoData.curso, aulas: alunoData.aulas, modules: groupModules(alunoData.aulas), dir: "aluno" };
+}
+const counterpart = (V) => VARIANTS[V.key === "aluno" ? "professor" : "aluno"];
+const hasLesson = (V, N) => !!V && V.aulas.some((a) => nn(a.numero) === N);
+
+/* Link de alternância professor ⇄ aluno. href relativo à página atual. */
+function versionToggle(toKey, href) {
+  const label = toKey === "aluno" ? "Ver versão do aluno" : "Ver versão do professor";
+  return `<a class="version-toggle" href="${href}" data-version-toggle="${toKey}"><span class="version-toggle__icon" aria-hidden="true">⇄</span>${label}</a>`;
+}
+const BRAND_BADGE = `<span class="brand__badge"><span class="brand__badge-long">Versão do </span>aluno</span>`;
+const RE_NAV = {
+  links: /(<nav class="site-nav__links" aria-label="Principal">)([\s\S]*?)(\n\s*<\/nav>)/,
+  mobile: /(<nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>)([\s\S]*?)(\n\s*<\/nav>)/,
+  footer: /(<nav class="site-footer__nav" aria-label="Rodapé">)([\s\S]*?)(\n\s*<\/nav>)/,
+};
+/* Nav das páginas de aula/guia: o professor só ganha o link de alternância;
+   o aluno troca os links (sem guia do professor) e ganha o selo "Versão do aluno". */
+function lessonChrome(s, V, toggleHref) {
+  const other = counterpart(V);
+  const tg = toggleHref && other ? versionToggle(other.key, toggleHref) : "";
+  if (V.key !== "aluno") {
+    if (!tg) return s;
+    s = replaceOnce(s, RE_NAV.links, (_, o, inner, c) => `${o}${inner}\n        ${tg}${c}`, "nav links");
+    s = replaceOnce(s, RE_NAV.mobile, (_, o, inner, c) => `${o}${inner}\n      ${tg}${c}`, "menu mobile");
+    return s;
+  }
+  s = replaceOnce(s, RE_NAV.links, (_, o, _i, c) => `${o}\n        <a href="index.html#aulas">Todas as aulas</a>${tg ? `\n        ${tg}` : ""}${c}`, "nav links");
+  s = replaceOnce(s, RE_NAV.mobile, (_, o, _i, c) => `${o}\n      <a href="index.html">Início</a>\n      <a href="index.html#aulas">Todas as aulas</a>${tg ? `\n      ${tg}` : ""}${c}`, "menu mobile");
+  s = replaceOnce(s, RE_NAV.footer, (_, o, _i, c) => `${o}\n          <a href="index.html">Início</a>\n          <a href="index.html#aulas">Todas as aulas</a>${c}`, "footer nav");
+  s = replaceOnce(s, /<a class="brand" href="[^"]*" aria-label="[^"]*">([\s\S]*?Claude<\/span>)/,
+    (_, inner) => `<a class="brand" href="index.html" aria-label="Edição com Claude, versão do aluno — início">${inner}${BRAND_BADGE}`, "brand");
+  s = s.replace(/href="\.\.\/index\.html/g, 'href="index.html');
+  s = s.replace("© 2026 Guia do Professor · Edição de Vídeos", "© 2026 Edição de Vídeos · Versão do aluno");
+  if (/guia\.html|#guia"/.test(s)) throw new Error("Página do aluno com link para o guia do professor");
+  return s;
+}
+
 /* ------------------------------------------------------------ aulas */
-function buildLesson(a, i) {
+function buildLesson(a, i, V) {
   const N = nn(a.numero);
-  const ctx = { id: idMaker(), ex: 0, tab: 0, root: "../" };
+  const isA = V.key === "aluno";
+  const list = V.aulas;
+  const ctx = { id: idMaker(), ex: 0, tab: 0, root: "../", lessons: list, lessonPrefix: isA ? "" : "../aulas/" };
   ["obj-title", "conteudo", "switcher-panel", "menu-mobile"].forEach((r) => ctx.id(r)); // ids já usados pelo template
   const { html, toc } = renderBlocks(a.blocos, ctx);
   let s = LESSON_TPL;
 
-  s = replaceOnce(s, RE.title, `<title>Aula ${N} · ${esc(a.titulo)} — Edição de Vídeos com Claude</title>`, "title");
-  s = replaceOnce(s, RE.desc, `<meta name="description" content="${esc(a.subtitulo_ou_tema)} — aula ${N} do guia do professor Edição de Vídeos com Claude: ${esc(a.titulo)}.">`, "description");
-  s = replaceOnce(s, RE.body, `<body class="page-lesson" data-aula="${N}">`, "body");
-  s = replaceOnce(s, RE.switcherGrid, (_, o, c) => `${o}\n${switcherHtml("", "            ")}${c}`, "switcher");
+  s = replaceOnce(s, RE.title, `<title>Aula ${N} · ${esc(a.titulo)} — ${isA ? "Versão do aluno · " : ""}Edição de Vídeos com Claude</title>`, "title");
+  s = replaceOnce(s, RE.desc, `<meta name="description" content="${esc(a.subtitulo_ou_tema)} — aula ${N} ${isA ? "da versão do aluno do curso" : "do guia do professor"} Edição de Vídeos com Claude: ${esc(a.titulo)}.">`, "description");
+  s = replaceOnce(s, RE.body, isA ? `<body class="page-lesson page-aluno" data-aula="${N}" data-versao="aluno">` : `<body class="page-lesson" data-aula="${N}">`, "body");
+  s = replaceOnce(s, RE.switcherGrid, (_, o, c) => `${o}\n${switcherHtml("", "            ", list)}${c}`, "switcher");
   s = replaceOnce(s, RE.switcherCur, `<span class="switcher__current">${N}</span>`, "switcher__current");
 
   // hero da aula: preenche os placeholders do próprio template
@@ -245,7 +307,8 @@ function buildLesson(a, i) {
   s = s.replace(`<span class="sr-only">Aula {{NN}}: </span>{{TITULO}}`, `<span class="sr-only">Aula ${N}: </span>${esc(a.titulo)}`);
   s = replaceOnce(s, /<p class="lesson-hero__theme">[^<]*<\/p>/, `<p class="lesson-hero__theme">${esc(a.subtitulo_ou_tema)}</p>`, "theme");
   const meta = [
-    durShort(a) && `<div><dt>Duração de referência</dt><dd>≈ ${durShort(a)} <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>`,
+    isA && (durShort(a) || a.duracao) && `<div><dt>Duração</dt><dd>${durShort(a) ? `≈ ${durShort(a)}` : esc(a.duracao)}</dd></div>`,
+    !isA && durShort(a) && `<div><dt>Duração de referência</dt><dd>≈ ${durShort(a)} <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>`,
     a._mod.entrega && `<div><dt>Entrega do módulo</dt><dd>${esc(a._mod.entrega)}</dd></div>`,
     nivel && `<div><dt>Nível</dt><dd>${esc(nivel)}</dd></div>`,
   ].filter(Boolean).map((l) => "          " + l).join("\n");
@@ -256,7 +319,7 @@ function buildLesson(a, i) {
   s = replaceOnce(s, RE.toc, (_, o, c) => `${o}\n${tocHtml(toc, "            ")}${c}`, "toc");
   s = replaceOnce(s, RE.article, (_, o, c) => `${o}\n${indent(html, "        ")}${c}`, "article");
 
-  const prev = aulas[i - 1], next = aulas[i + 1];
+  const prev = list[i - 1], next = list[i + 1];
   const prevHtml = prev
     ? `<a class="pager__link pager__link--prev" href="aula-${nn(prev.numero)}.html" rel="prev">
         <span class="pager__dir">← Aula anterior</span>
@@ -278,9 +341,12 @@ function buildLesson(a, i) {
         <span class="pager__title">Voltar a todas as aulas</span>
       </a>`;
   s = replaceOnce(s, RE.pager, (_, o, c) => `${o}\n      ${prevHtml}\n      ${nextHtml}${c}`, "pager");
+  const other = counterpart(V);
+  const toggleHref = !other ? "" : hasLesson(other, N) ? `../${other.dir}/aula-${N}.html` : (isA ? "../index.html" : "../aluno/index.html");
+  s = lessonChrome(s, V, toggleHref);
   s = stripBuilderComments(s);
   if (/\{\{/.test(s)) throw new Error(`Placeholder não preenchido na aula ${N}: ${s.match(/\{\{[^}]*\}\}/)[0]}`);
-  write(`aulas/aula-${N}.html`, s);
+  write(`${V.dir}/aula-${N}.html`, s);
   return { N, toc, ctx };
 }
 
@@ -362,6 +428,7 @@ function buildGuide() {
         <span class="pager__no">${nn(first.numero)}</span>
         <span class="pager__title">${esc(first.titulo)}</span>
       </a>${c}`, "pager");
+  if (VARIANTS.aluno) s = lessonChrome(s, VARIANTS.professor, "aluno/index.html");
   s = stripBuilderComments(s);
   if (/\{\{/.test(s)) throw new Error("Placeholder não preenchido no guia");
   write("guia.html", s);
@@ -372,42 +439,57 @@ function sectionAfter(a, titulo) {
   const i = a.blocos.findIndex((b) => b.tipo === "titulo" && b.texto === titulo);
   return i < 0 ? null : a.blocos[i + 1];
 }
-function computeStats() {
-  const prompts = aulas.reduce((n, a) => n + a.blocos.filter((b) => b.tipo === "prompt").length, 0);
-  const checklist = aulas.reduce((n, a) => n + ((sectionAfter(a, "Checklist do professor") || {}).itens || []).length, 0);
-  const exercicios = aulas.reduce((n, a) => n + a.blocos.filter((b) => b.tipo === "exercicio").length, 0);
+function computeStats(V) {
+  const list = V.aulas;
+  const count = (tipo) => list.reduce((n, a) => n + a.blocos.filter((b) => b.tipo === tipo).length, 0);
+  const prompts = count("prompt"), exercicios = count("exercicio");
   const stats = [
-    ["Aulas", aulas.length],
-    ["Módulos", modules.length],
+    ["Aulas", list.length],
+    ["Módulos", V.modules.length],
     ["Prompts prontos", prompts],
-    ["Itens de checklist do professor", checklist],
   ];
+  // checklist do professor: só na versão do professor
+  if (V.key !== "aluno") stats.push(["Itens de checklist do professor", list.reduce((n, a) => n + ((sectionAfter(a, "Checklist do professor") || {}).itens || []).length, 0)]);
   if (exercicios) stats.push(["Exercícios", exercicios]); // só aparece se o conteúdo tiver exercícios
   return stats;
 }
 
-function buildHome() {
-  const stats = computeStats();
-  const notas = introBy("Notas de produção");
-  const papel = introBy("Papel do professor");
-  const metodo = introBy("Método de cada aula");
-  const prereq = introBy("Pré-requisito");
-  const labelled = [notas, papel, metodo, prereq];
-  const plain = curso.introducao.filter((p) => !labelled.includes(p));
-  const lead = plain.find((p) => /aulas/i.test(p)) || plain[0] || "";
-  const identidade = plain.filter((p) => p !== lead);
+/* Passos fixos da seção "O que você precisa" na home do aluno (texto de interface, não de aula). */
+const STUDENT_STEPS = [
+  "Leia os objetivos antes de começar",
+  "Siga os passos e copie os prompts prontos",
+  "Pratique e marque a aula como concluída",
+];
 
-  const subtitle = esc(curso.subtitulo).replace(" | ", " · ").replace(/(\d+ aulas)/, "<em>$1</em>");
-  const heroTabs = modules.map((m, k) => `          <button class="hero-tab" role="tab" aria-selected="${k === 0}" aria-controls="mod-panel" id="mod-${k + 1}" data-index="${k}"${k ? ' tabindex="-1"' : ""}>
+function buildHome(V) {
+  const isA = V.key === "aluno";
+  const C = V.curso, list = V.aulas, mods = V.modules;
+  const R = isA ? "../" : "", L = isA ? "" : "aulas/";
+  const stats = computeStats(V);
+  const by = (prefix) => C.introducao.find((p) => p.startsWith(prefix)) || "";
+  const notas = isA ? "" : by("Notas de produção");
+  const papel = isA ? "" : by("Papel do professor");
+  const metodo = isA ? "" : by("Método de cada aula");
+  const prereq = isA ? "" : by("Pré-requisito");
+  // aluno: o parágrafo "O que você precisa: …" (ou "Pré-requisito(s): …") alimenta a seção de preparo
+  const precisa = isA ? (C.introducao.find((p) => /^(o que voc[eê] precisa|pr[ée]-requisitos?|voc[eê] vai precisar)\s*:/i.test(p)) || "") : "";
+  const labelled = [notas, papel, metodo, prereq, precisa].filter(Boolean);
+  const plain = C.introducao.filter((p) => !labelled.includes(p));
+  const lead = isA ? (plain[0] || "") : (plain.find((p) => /aulas/i.test(p)) || plain[0] || "");
+  const identidade = isA ? [] : plain.filter((p) => p !== lead);
+  const restAluno = isA ? plain.slice(1) : [];
+
+  const subtitle = esc(C.subtitulo).replace(" | ", " · ").replace(/(\d+ aulas)/, "<em>$1</em>");
+  const heroTabs = mods.map((m, k) => `          <button class="hero-tab" role="tab" aria-selected="${k === 0}" aria-controls="mod-panel" id="mod-${k + 1}" data-index="${k}"${k ? ' tabindex="-1"' : ""}>
             <span class="hero-tab__bar"><span class="hero-tab__fill"></span></span>
             <span class="hero-tab__no">${nn(k + 1)}</span><span class="hero-tab__name">${esc(m.curto)}</span>
           </button>`).join("\n");
-  const panelTexts = modules.map((m) => `${rangeLabel(m)}: ${m.tema}.${m.entrega ? ` Entrega: ${m.entrega.toLowerCase()}.` : ""}`);
+  const panelTexts = mods.map((m) => `${rangeLabel(m)}: ${m.tema}.${m.entrega ? ` Entrega: ${m.entrega.toLowerCase()}.` : ""}`);
 
-  const tracks = modules.map((m) => `          <div class="track-group">
+  const tracks = mods.map((m) => `          <div class="track-group">
             <h3 class="track__label"><span class="track__id">V${m.idx}</span> ${esc(m.curto)}</h3>
             <ol class="track"${m.aulas[0].numero > 1 ? ` start="${m.aulas[0].numero}"` : ""}>
-${m.aulas.map((a) => `              <li><a class="clip reveal" href="aulas/aula-${nn(a.numero)}.html" data-aula="${nn(a.numero)}">
+${m.aulas.map((a) => `              <li><a class="clip reveal" href="${L}aula-${nn(a.numero)}.html" data-aula="${nn(a.numero)}">
                 <span class="clip__no">${nn(a.numero)}</span>
                 <span class="clip__title">${esc(a.titulo)}</span>
                 <span class="clip__meta">${esc(m.curto)}${durShort(a) ? ` · ≈ ${durShort(a)}` : ""}</span>
@@ -416,57 +498,96 @@ ${m.aulas.map((a) => `              <li><a class="clip reveal" href="aulas/aula-
             </ol>
           </div>`).join("\n");
 
-  const steps = [...afterLabel(metodo).matchAll(/\d+\.\s*([^.]+)\./g)].map((m) => m[1].trim());
+  const steps = isA ? STUDENT_STEPS : [...afterLabel(metodo).matchAll(/\d+\.\s*([^.]+)\./g)].map((m) => m[1].trim());
   const guideSteps = steps.map((t, k) => `          <li class="reveal">
             <h3>${esc(t)}</h3>
             <p>Passo ${nn(k + 1)} de ${nn(steps.length)}</p>
           </li>`).join("\n");
 
   // "Em cada aula": seções h2 presentes em todas as aulas
-  const common = aulas[0].blocos.filter((b, i, arr) => b.tipo === "titulo" && !(arr[i - 1] && arr[i - 1].tipo === "titulo"))
+  const common = list[0].blocos.filter((b, i, arr) => b.tipo === "titulo" && !(arr[i - 1] && arr[i - 1].tipo === "titulo"))
     .map((b) => b.texto.replace(/^AULA \d+ \/ /, ""))
-    .filter((t) => aulas.every((a) => a.blocos.some((b) => b.tipo === "titulo" && b.texto.replace(/^AULA \d+ \/ /, "") === t)));
+    .filter((t) => list.every((a) => a.blocos.some((b) => b.tipo === "titulo" && b.texto.replace(/^AULA \d+ \/ /, "") === t)));
   const sw = ["clay", "ink", "neon", "amber"];
-  const kit = ["Objetivo da aula", ...common.map((t) => (t === "NARRAÇÃO" ? "Texto para narração" : t))]
+  const kit = [isA ? "Objetivos da aula" : "Objetivo da aula", ...common.map((t) => (t === "NARRAÇÃO" ? "Texto para narração" : t)),
+    ...(isA ? ["Prompts prontos para copiar", "Marcar como concluída"] : [])]
+    .filter((t, k, arr) => arr.indexOf(t) === k)
     .map((t, k) => `            <li><span class="kit__swatch kit__swatch--${sw[k % 4]}" aria-hidden="true"></span>${esc(t)}</li>`).join("\n");
 
   const statsHtml = stats.map(([l, v]) => `        <div class="stat"><dt>${esc(l)}</dt><dd data-count="${v}">${v}</dd></div>`).join("\n");
   const introHtml = [
     `        <p class="lead">${inline(lead)}</p>`,
     prereq && `        <p>${inline(prereq, { label: true })}</p>`,
+    ...restAluno.map((p) => `        <p>${inline(p, { label: true })}</p>`),
   ].filter(Boolean).join("\n");
 
+  // nav, rodapé e alternância de versão
+  const other = counterpart(V);
+  const tgHref = other ? (isA ? "../index.html" : "aluno/index.html") : "";
+  const tg = other ? versionToggle(other.key, tgHref) : "";
+  const guideId = isA ? "preparo" : "guia";
+  const guideTitle = isA ? "O que você precisa" : "Guia do professor";
+  const navItems = isA
+    ? [["#curso", "Curso"], ["#aulas", "Aulas"], [`#${guideId}`, guideTitle]]
+    : [["#curso", "Curso"], ["#aulas", "Aulas"], ["#guia", "Guia do professor"], ["guia.html", "Referência"]];
+  const navLinks = (pad) => [...navItems.map(([h, t]) => `${pad}<a href="${h}">${t}</a>`), tg && `${pad}${tg}`].filter(Boolean).join("\n");
+  const footerItems = isA
+    ? [["#curso", "O curso"], ["#aulas", `As ${list.length} aulas`], [`#${guideId}`, guideTitle], [`${L}aula-01.html`, "Começar"]]
+    : [["#curso", "O curso"], ["#aulas", `As ${list.length} aulas`], ["#guia", "Guia do professor"], ["guia.html", "Referência"], [`${L}aula-01.html`, "Começar"]];
+  const disclaimer = "Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.";
+  const guideLead = isA
+    ? esc(afterLabel(precisa || by("Pré-requisito") || introBy("Pré-requisito"))) // sem texto próprio: usa o pré-requisito do curso
+    : esc(afterLabel(papel));
+
   const vals = {
-    CURSO_TITULO: esc(curso.titulo),
-    N_AULAS: String(aulas.length),
+    R, L,
+    TITLE_TAIL: isA ? "Versão do aluno" : "Guia do Professor",
+    BODY_ATTRS: isA ? ` class="page-home page-aluno" data-versao="aluno"` : ` class="page-home"`,
+    BRAND_LABEL: isA ? "Edição com Claude, versão do aluno — início" : "Edição com Claude — início",
+    BRAND_BADGE: isA ? BRAND_BADGE : "",
+    NAV_LINKS: navLinks("        "),
+    MOBILE_LINKS: navLinks("      "),
+    STATS_ATTRS: stats.length === 4 ? "" : ` style="--stat-cols: ${stats.length}"`,
+    LESSONS_NOTE: notas ? `<p class="lessons__note">${inline(notas, { label: true })}</p>` : "",
+    GUIDE_ID: guideId,
+    GUIDE_TITLE: guideTitle,
+    GUIDE_LEAD: guideLead,
+    GUIDE_BUTTON: isA ? "" : `          <p><a class="btn btn--ghost" href="guia.html">Mapa, plataformas, Skills e glossário <span class="btn__arrow" aria-hidden="true">→</span></a></p>\n`,
+    GUIDE_STEPS_LABEL: isA ? "Como estudar cada aula" : "Método de cada aula",
+    FOOTER_LINKS: footerItems.map(([h, t]) => `          <a href="${h}">${t}</a>`).join("\n"),
+    LEGAL: isA ? "© 2026 Edição de Vídeos · Versão do aluno" : "© 2026 Guia do Professor · Edição de Vídeos",
+    CURSO_TITULO: esc(C.titulo),
+    N_AULAS: String(list.length),
     META_DESC: esc(lead),
-    H1_SR: `${esc(curso.titulo)}: ${esc(curso.subtitulo.replace(" | ", ", "))}`,
-    HERO_LEAD: `${subtitle}${/[.!?]$/.test(curso.subtitulo) ? "" : "."}`,
+    H1_SR: `${esc(C.titulo)}: ${esc(C.subtitulo.replace(" | ", ", "))}${isA ? " (versão do aluno)" : ""}`,
+    HERO_LEAD: `${subtitle}${/[.!?]$/.test(C.subtitulo) ? "" : "."}`,
     HERO_TABS: heroTabs,
     PANEL_TEXTS: escAttrSingle(JSON.stringify(panelTexts)),
     PANEL_FIRST: esc(panelTexts[0]),
     STATS: statsHtml,
     INTRO_TEXT: introHtml,
     TRACKS: tracks,
-    DURATION_NOTE: inline(notas, { label: true }),
-    GUIDE_LEAD: esc(afterLabel(papel)),
     GUIDE_STEPS: guideSteps,
     KIT: kit,
-    CTA_TITLE: `Comece pela aula 01: ${esc(aulas[0].titulo)}.`,
-    FOOTER_NOTE: [...identidade.map(esc), "Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC."].join(" "),
+    CTA_TITLE: `Comece pela aula 01: ${esc(list[0].titulo)}.`,
+    FOOTER_NOTE: [...identidade.map(esc), disclaimer].join(" "),
   };
   let s = HOME_TPL.replace(/\{\{([A-Z_0-9]+)\}\}/g, (m, k) => {
     if (!(k in vals)) throw new Error(`Placeholder sem valor no index: ${k}`);
     return vals[k];
   });
-  write("index.html", s);
+  if (isA && /guia\.html|#guia"/.test(s)) throw new Error("Home do aluno com link para o guia do professor");
+  write(isA ? `${V.dir}/index.html` : "index.html", s);
   return stats;
 }
 
 /* ------------------------------------------------------------ run */
-console.log("Gerando site a partir de content/aulas.json…");
-aulas.forEach((a, i) => buildLesson(a, i));
-buildGuide();
-const stats = buildHome();
-console.log("Números da home:", stats.map(([l, v]) => `${l}=${v}`).join(", "));
-console.log("Módulos:", modules.map((m) => `${rangeLabel(m)} ${m.curto}`).join(" | "));
+for (const V of Object.values(VARIANTS)) {
+  console.log(`Gerando versão do ${V.key} a partir de content/${V.key === "aluno" ? "alunos" : "aulas"}.json…`);
+  V.aulas.forEach((a, i) => buildLesson(a, i, V));
+  if (V.key === "professor") buildGuide();
+  const stats = buildHome(V);
+  console.log(`  Números da home (${V.key}):`, stats.map(([l, v]) => `${l}=${v}`).join(", "));
+  console.log(`  Módulos (${V.key}):`, V.modules.map((m) => `${rangeLabel(m)} ${m.curto}`).join(" | "));
+}
+if (!VARIANTS.aluno) console.log("Aviso: content/alunos.json não encontrado; versão do aluno não gerada.");

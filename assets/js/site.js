@@ -24,7 +24,10 @@
   function announce(msg) { live.textContent = ""; setTimeout(function () { live.textContent = msg; }, 30); }
 
   /* ------------------------------------------------- storage (safe) */
-  var KEY = "edicao-claude:progresso";
+  // Versão do aluno (body[data-versao="aluno"]) guarda o progresso numa chave própria,
+  // para não misturar com o progresso do professor.
+  var IS_ALUNO = !!(document.body && document.body.getAttribute("data-versao") === "aluno");
+  var KEY = IS_ALUNO ? "edicao-claude:aluno:progresso" : "edicao-claude:progresso";
   function readDone() {
     try { var v = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(v) ? v : []; }
     catch (e) { return []; }

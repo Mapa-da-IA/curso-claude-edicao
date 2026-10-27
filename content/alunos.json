@@ -1,0 +1,249 @@
+{
+  "curso": {
+    "titulo": "Edição de Vídeos com Claude",
+    "subtitulo": "Versão do aluno | Nível iniciante. 12 aulas",
+    "introducao": [
+      "Conteúdo do aluno em preparação."
+    ]
+  },
+  "aulas": [
+    {
+      "numero": 1,
+      "slug": "aula-01",
+      "titulo": "Conhecendo o Claude: navegador x desktop",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Apresentar o Claude, o assistente de IA da Anthropic, e os lugares onde ele pode ser usado.",
+        "Diferenciar o Claude no navegador (claude.ai) do aplicativo Claude Desktop.",
+        "Mostrar como baixar e instalar o Claude Desktop no Windows e no Mac, com os requisitos de cada sistema."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "slug": "aula-02",
+      "titulo": "Preparando o computador para trabalhar com Claude",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Explicar a função do Claude Code, do Node.js e do Remotion antes de instalar cada ferramenta.",
+        "Instalar o Node.js na versão LTS e conferir node, npm e npx no Prompt de Comando.",
+        "Instalar o Claude Code com o instalador nativo oficial e fazer login com um plano compatível.",
+        "Criar o projeto Remotion meu-primeiro-video, abrir o Remotion Studio e pedir ao Claude Code a primeira composição.",
+        "Resolver os problemas de instalação mais comuns no Windows."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "slug": "aula-03",
+      "titulo": "Instalando Skills no Claude Code",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender o que são Skills e qual o papel delas ao lado do Claude Code e do Remotion.",
+        "Conhecer a página oficial de Skills do Remotion e verificar a origem antes de instalar algo de um repositório.",
+        "Instalar as Skills oficiais do Remotion no projeto meu-primeiro-video com o comando oficial.",
+        "Conferir no Claude Code, com /skills, se as Skills instaladas estão disponíveis.",
+        "Usar as instruções do Remotion para melhorar a composição de cinco segundos, preservando a versão original para comparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "slug": "aula-04",
+      "titulo": "Criando sua primeira Skill personalizada",
+      "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender por que repetir as mesmas instruções em todo pedido é cansativo e como uma Skill resolve isso.",
+        "Diferenciar um prompt (pedido de uma tarefa específica) de uma Skill (orientações reutilizáveis).",
+        "Criar, com a ajuda do Claude Code, a Skill direcao-de-edicao em .claude/skills/direcao-de-edicao/SKILL.md, com as regras visuais do curso.",
+        "Conferir a Skill com /skills e usá-la para criar uma versão vertical de 1080x1920, com 30 FPS, preservando as versões anteriores.",
+        "Atualizar a Skill com uma nova regra e aplicá-la à composição atual, sem modificar outros elementos."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "slug": "aula-05",
+      "titulo": "Criando seu primeiro vídeo completo com Claude",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender que um vídeo começa pelo planejamento e pode ser dividido em cenas, cada uma com mensagem, animação e duração.",
+        "Ler e montar um storyboard simples: 30 segundos divididos em cinco cenas de seis segundos.",
+        "Criar com o Claude Code a composição O-Futuro-da-Criacao (1080x1920, 30 FPS, 900 quadros), usando as Skills oficiais do Remotion e a Skill direcao-de-edicao, sem apagar as composições anteriores.",
+        "Conferir no Remotion Studio a duração, a leitura dos textos e as transições.",
+        "Corrigir só a cena 4 com um prompt pontual, sem reconstruir o vídeo."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "slug": "aula-06",
+      "titulo": "Trabalhando com vídeos, imagens e arquivos",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Organizar os arquivos de vídeo, imagem e áudio em pastas próprias dentro de public, no projeto meu-primeiro-video.",
+        "Entender, sem programar, que o Remotion encontra cada arquivo da pasta public pelo caminho indicado em staticFile().",
+        "Adicionar com o Claude Code duas filmagens e uma fotografia às cenas 1, 2 e 3 de O-Futuro-da-Criacao, preservando os textos e as animações da aula 5.",
+        "Diferenciar enquadramento correto (com recorte) de imagem distorcida e pedir ao Claude a correção de uma imagem mal enquadrada.",
+        "Confirmar que trilha.mp3 está em public/audios, sem adicioná-la à composição antes da próxima aula."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "slug": "aula-07",
+      "titulo": "Cortes, ritmo e transições",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender que a duração de cada cena define o ritmo do vídeo e que nem toda informação precisa do mesmo tempo de tela.",
+        "Redistribuir com o Claude Code as cinco cenas de O-Futuro-da-Criacao em 4, 5, 4, 7 e 10 segundos, mantendo 30 segundos, 1080x1920, 30 FPS e 900 quadros.",
+        "Selecionar o trecho mais adequado de uma filmagem mudando o ponto de leitura do arquivo, sem deslocar a cena na montagem e sem acelerar ou desacelerar o vídeo.",
+        "Diferenciar corte seco, dissolvência (fade) e slide, e usar transições sem exageros.",
+        "Aplicar uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto no final, compensando a sobreposição para manter os 900 quadros."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "slug": "aula-08",
+      "titulo": "Textos, tipografia e animações",
+      "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender que tipografia envolve fonte, tamanho, espaçamento, alinhamento, cor e facilidade de leitura, e não só a escolha de uma fonte bonita.",
+        "Definir a identidade tipográfica do projeto: Montserrat Regular e Bold, preto (#171717), branco (#FFFFFF), laranja (#FF8A35) e margem mínima de 80 pixels, com o laranja substituindo os detalhes roxos usados até aqui.",
+        "Criar com o Claude Code a composição de teste Teste-Tipografia, com o título UMA NOVA ERA animado por fade e movimento vertical suave, sem modificar o vídeo principal.",
+        "Diferenciar as três animações básicas de texto (fade, slide e scale) e saber que elas podem ser usadas sozinhas ou combinadas.",
+        "Atualizar a Skill direcao-de-edicao e aplicar a identidade tipográfica às cinco cenas de O-Futuro-da-Criacao, conferindo margens, contraste e legibilidade."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 9,
+      "slug": "aula-09",
+      "titulo": "Música e efeitos sonoros",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Perceber, comparando o mesmo trecho sem som e com música, como a trilha cria o ambiente e os efeitos destacam acontecimentos.",
+        "Organizar trilha.mp3, whoosh.wav e impact.wav em public/audios, usando apenas arquivos próprios ou licenciados.",
+        "Entender volume, fade-in e fade-out e usar 30% apenas como volume de referência.",
+        "Adicionar com o Claude Code a trilha à composição O-Futuro-da-Criacao, com fade-in de 1 segundo e fade-out de 2 segundos.",
+        "Sincronizar o whoosh com os títulos das cenas 1 e 3 e o impact com \"CRIE COM IA\", mantendo os 900 quadros."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 10,
+      "slug": "aula-10",
+      "titulo": "Acabamento visual e correção de cores",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender que corrigir a cor busca primeiro o equilíbrio visual, e não simplesmente clarear as imagens ou aumentar a saturação.",
+        "Reconhecer os conceitos de exposição, contraste, saturação e temperatura de cor.",
+        "Pedir ao Claude Code uma análise das cinco cenas de O-Futuro-da-Criacao antes de qualquer modificação, sem diagnósticos inventados.",
+        "Aplicar com o Claude um acabamento visual moderado, apenas onde a análise indicou necessidade, sem alterar textos, animações, cortes, áudio ou duração.",
+        "Comparar o antes e o depois de pelo menos uma filmagem e reconhecer os limites dos arquivos originais."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 11,
+      "slug": "aula-11",
+      "titulo": "Revisão e exportação do vídeo",
+      "subtitulo_ou_tema": "Áudio, cor, revisão e exportação",
+      "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
+      "objetivos": [
+        "Entender por que um vídeo que parece pronto ainda precisa de uma revisão final antes da exportação.",
+        "Conferir O-Futuro-da-Criacao com um checklist de nove itens: textos, mídias, ordem das cenas, transições, áudio, primeiro e último quadro, 900 quadros a 30 FPS e 1080x1920.",
+        "Pedir ao Claude Code uma revisão técnica sem modificar arquivos e ler o relatório, separando erros confirmados de possíveis problemas.",
+        "Solicitar a correção somente dos erros confirmados, preservando textos, identidade visual, duração, música e efeitos sonoros.",
+        "Exportar o vídeo em MP4 (H.264 e AAC), pelo Remotion Studio ou pelo terminal, e conferir o arquivo final em um reprodutor fora do Remotion."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 12,
+      "slug": "aula-12",
+      "titulo": "Projeto final: criando um vídeo completo do zero",
+      "subtitulo_ou_tema": "Projeto integrado independente",
+      "duracao": "Aproximadamente 10 a 12 minutos (referência editorial)",
+      "objetivos": [
+        "Planejar um novo vídeo de 30 segundos, Transforme suas Ideias em Realidade, com cinco cenas de durações diferentes e a identidade visual do curso.",
+        "Criar um projeto independente, transformando-ideias, e preparar nele a Skill direcao-de-edicao e as Skills oficiais do Remotion, sem alterar o projeto anterior.",
+        "Pedir ao Claude um inventário das mídias disponíveis antes da montagem, sem inventar arquivos.",
+        "Montar com o Claude Code a composição completa (1080x1920, 30 FPS, 900 quadros) e conferi-la no Remotion Studio.",
+        "Revisar, corrigir apenas erros confirmados, exportar em MP4 e reconhecer o fluxo completo de produção: planejar, criar, revisar e exportar."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo do aluno em preparação."
+        }
+      ]
+    }
+  ]
+}

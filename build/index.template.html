@@ -3,45 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/aulas.json. Edite o template, não o index.html. -->
-  <title>{{CURSO_TITULO}} — Guia do Professor, {{N_AULAS}} Aulas</title>
+  <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/aulas.json (professor) ou content/alunos.json (aluno). Edite o template, não o HTML gerado. -->
+  <title>{{CURSO_TITULO}} — {{TITLE_TAIL}}, {{N_AULAS}} Aulas</title>
   <meta name="description" content="{{META_DESC}}">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tokens.css">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="{{R}}assets/css/tokens.css">
+  <link rel="stylesheet" href="{{R}}assets/css/site.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
 </head>
-<body class="page-home">
+<body{{BODY_ATTRS}}>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <!-- ============ NAV (glass pill) ============ -->
   <header class="site-nav" data-nav>
     <div class="site-nav__bar">
-      <a class="brand" href="index.html" aria-label="Edição com Claude — início">
+      <a class="brand" href="index.html" aria-label="{{BRAND_LABEL}}">
         <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>{{BRAND_BADGE}}
       </a>
       <nav class="site-nav__links" aria-label="Principal">
-        <a href="#curso">Curso</a>
-        <a href="#aulas">Aulas</a>
-        <a href="#guia">Guia do professor</a>
-        <a href="guia.html">Referência</a>
+{{NAV_LINKS}}
       </nav>
-      <a class="btn btn--clay btn--sm site-nav__cta" href="aulas/aula-01.html">Começar a aula 01</a>
+      <a class="btn btn--clay btn--sm site-nav__cta" href="{{L}}aula-01.html">Começar a aula 01</a>
       <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
         <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
       </button>
     </div>
     <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
-      <a href="#curso">Curso</a>
-      <a href="#aulas">Aulas</a>
-      <a href="#guia">Guia do professor</a>
-      <a href="guia.html">Referência</a>
-      <a class="btn btn--clay" href="aulas/aula-01.html">Começar a aula 01</a>
+{{MOBILE_LINKS}}
+      <a class="btn btn--clay" href="{{L}}aula-01.html">Começar a aula 01</a>
     </nav>
   </header>
 
@@ -65,7 +59,7 @@
         </h1>
         <p class="hero__lead">{{HERO_LEAD}}</p>
         <div class="hero__actions">
-          <a class="btn btn--clay" href="aulas/aula-01.html">Começar a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--clay" href="{{L}}aula-01.html">Começar a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="#aulas">Ver as {{N_AULAS}} aulas</a>
         </div>
       </div>
@@ -81,7 +75,7 @@
 
     <!-- ============ STATS STRIP (contagens calculadas do aulas.json) ============ -->
     <section class="stats" aria-label="O curso em números">
-      <dl class="stats__list">
+      <dl class="stats__list"{{STATS_ATTRS}}>
 {{STATS}}
       </dl>
     </section>
@@ -125,22 +119,21 @@
           <div class="timeline__playhead" aria-hidden="true" data-playhead></div>
 {{TRACKS}}
         </div>
-        <p class="lessons__note">{{DURATION_NOTE}}</p>
+        {{LESSONS_NOTE}}
       </div>
     </section>
 
     <!-- ============ GUIA DO PROFESSOR ============ -->
-    <section class="guide section" id="guia" aria-labelledby="guia-title">
+    <section class="guide section" id="{{GUIDE_ID}}" aria-labelledby="guia-title">
       <div class="container guide__grid">
         <div class="guide__intro reveal">
-          <h2 class="section-title" id="guia-title">Guia do professor</h2>
+          <h2 class="section-title" id="guia-title">{{GUIDE_TITLE}}</h2>
           <p class="lead">{{GUIDE_LEAD}}</p>
-          <p><a class="btn btn--ghost" href="guia.html">Mapa, plataformas, Skills e glossário <span class="btn__arrow" aria-hidden="true">→</span></a></p>
-        </div>
+{{GUIDE_BUTTON}}        </div>
         <figure class="flow reveal" aria-label="Diagrama: material bruto disperso é condensado pelo Claude e sai como uma linha do tempo ordenada">
           <svg class="flow__svg" data-flow viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true"></svg>
         </figure>
-        <ol class="guide__steps" aria-label="Método de cada aula">
+        <ol class="guide__steps" aria-label="{{GUIDE_STEPS_LABEL}}">
 {{GUIDE_STEPS}}
         </ol>
         <div class="guide__kit reveal">
@@ -156,7 +149,7 @@
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container cta-band__inner reveal">
         <h2 class="cta-band__title" id="cta-title">{{CTA_TITLE}}</h2>
-        <a class="btn btn--dark" href="aulas/aula-01.html">Abrir a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--dark" href="{{L}}aula-01.html">Abrir a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
@@ -167,21 +160,17 @@
       <p class="site-footer__name" aria-hidden="true">EDIÇÃO · CLAUDE</p>
       <div class="site-footer__row">
         <nav class="site-footer__nav" aria-label="Rodapé">
-          <a href="#curso">O curso</a>
-          <a href="#aulas">As {{N_AULAS}} aulas</a>
-          <a href="#guia">Guia do professor</a>
-          <a href="guia.html">Referência</a>
-          <a href="aulas/aula-01.html">Começar</a>
+{{FOOTER_LINKS}}
         </nav>
         <p class="site-footer__note">{{FOOTER_NOTE}}</p>
       </div>
       <div class="site-footer__legal">
-        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <span>{{LEGAL}}</span>
         <a href="#conteudo">Voltar ao topo ↑</a>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/site.js" defer></script>
+  <script src="{{R}}assets/js/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula 02 · Preparando o computador para trabalhar com Claude — Versão do aluno · Edição de Vídeos com Claude</title>
+  <meta name="description" content="Fundamentos, instalações e Skills — aula 02 da versão do aluno do curso Edição de Vídeos com Claude: Preparando o computador para trabalhar com Claude.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-lesson page-aluno" data-aula="02" data-versao="aluno">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
+
+  <!-- ============ NAV com seletor de aulas ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="index.html" aria-label="Edição com Claude, versão do aluno — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span><span class="brand__badge"><span class="brand__badge-long">Versão do </span>aluno</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="index.html#aulas">Todas as aulas</a>
+        <a class="version-toggle" href="../aulas/aula-02.html" data-version-toggle="professor"><span class="version-toggle__icon" aria-hidden="true">⇄</span>Ver versão do professor</a>
+      </nav>
+      <div class="switcher" data-switcher>
+        <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
+          <span class="switcher__label">Aula</span> <span class="switcher__current">02</span><span class="switcher__of">/12</span>
+          <span class="switcher__caret" aria-hidden="true"></span>
+        </button>
+        <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
+          <ol class="switcher__grid">
+            <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Conhecendo o Claude: navegador x desktop</span></a></li>
+            <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Preparando o computador para trabalhar com Claude</span></a></li>
+            <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills no Claude Code</span></a></li>
+            <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill personalizada</span></a></li>
+            <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
+            <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
+            <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
+            <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
+            <li><a href="aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
+            <li><a href="aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação do vídeo</span></a></li>
+            <li><a href="aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="index.html">Início</a>
+      <a href="index.html#aulas">Todas as aulas</a>
+      <a class="version-toggle" href="../aulas/aula-02.html" data-version-toggle="professor"><span class="version-toggle__icon" aria-hidden="true">⇄</span>Ver versão do professor</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ LESSON HERO ============ -->
+    <header class="lesson-hero">
+      <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="container lesson-hero__inner">
+        <div class="lesson-hero__top">
+          <p class="lesson-hero__crumb"><a href="index.html#aulas">Aulas</a> <span aria-hidden="true">/</span> Módulo 1 · Fundamentos</p>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+        </div>
+        <div class="lesson-hero__head">
+          <span class="lesson-hero__no" aria-hidden="true">02</span>
+          <div>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 02: </span>Preparando o computador para trabalhar com Claude</h1>
+            <p class="lesson-hero__theme">Fundamentos, instalações e Skills</p>
+          </div>
+        </div>
+        <dl class="lesson-meta">
+          <div><dt>Duração</dt><dd>≈ 7–10 min</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Aplicativo desktop, ambiente e skill personalizada</dd></div>
+          <div><dt>Nível</dt><dd>Iniciante</dd></div>
+        </dl>
+        <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
+          <span class="done-toggle__box" aria-hidden="true"></span>
+          <span data-done-text>Marcar como concluída</span>
+        </button>
+        <section class="objectives" aria-labelledby="obj-title">
+          <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
+          <ol class="objectives__list">
+            <li>Explicar a função do Claude Code, do Node.js e do Remotion antes de instalar cada ferramenta.</li>
+            <li>Instalar o Node.js na versão LTS e conferir node, npm e npx no Prompt de Comando.</li>
+            <li>Instalar o Claude Code com o instalador nativo oficial e fazer login com um plano compatível.</li>
+            <li>Criar o projeto Remotion meu-primeiro-video, abrir o Remotion Studio e pedir ao Claude Code a primeira composição.</li>
+            <li>Resolver os problemas de instalação mais comuns no Windows.</li>
+          </ol>
+        </section>
+      </div>
+    </header>
+
+    <!-- ============ CORPO: TOC + CONTEÚDO ============ -->
+    <div class="container lesson-layout">
+      <aside class="toc" aria-label="Nesta aula">
+        <nav class="toc__inner" data-toc>
+          <p class="toc__title">Nesta aula</p>
+          <ol class="toc__list">
+
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="lesson-body" data-lesson-body>
+        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+      </article>
+    </div>
+
+    <!-- ============ PREV / NEXT ============ -->
+    <nav class="pager container" aria-label="Navegação entre aulas">
+      <a class="pager__link pager__link--prev" href="aula-01.html" rel="prev">
+        <span class="pager__dir">← Aula anterior</span>
+        <span class="pager__no">01</span>
+        <span class="pager__title">Conhecendo o Claude: navegador x desktop</span>
+      </a>
+      <a class="pager__link pager__link--next" href="aula-03.html" rel="next">
+        <span class="pager__dir">Próxima aula →</span>
+        <span class="pager__no">03</span>
+        <span class="pager__title">Instalando Skills no Claude Code</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container">
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="index.html#aulas">Todas as aulas</a>
+        </nav>
+        <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Edição de Vídeos · Versão do aluno</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

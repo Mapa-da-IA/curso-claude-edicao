@@ -6,7 +6,10 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const pages = ["index.html", "guia.html", ...readdirSync(join(ROOT, "aulas")).filter((f) => /^aula-\d\d\.html$/.test(f)).map((f) => `aulas/${f}`)];
+const lessonsIn = (dir) => existsSync(join(ROOT, dir)) ? readdirSync(join(ROOT, dir)).filter((f) => /^aula-\d\d\.html$/.test(f)).map((f) => `${dir}/${f}`) : [];
+// professor: index, guia, aulas/ · aluno: aluno/index + aluno/aula-NN
+const pages = ["index.html", "guia.html", ...lessonsIn("aulas"),
+  ...(existsSync(join(ROOT, "aluno/index.html")) ? ["aluno/index.html"] : []), ...lessonsIn("aluno")];
 const idsCache = new Map();
 const idsOf = (file) => {
   if (!idsCache.has(file)) idsCache.set(file, new Set([...readFileSync(file, "utf8").matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])));

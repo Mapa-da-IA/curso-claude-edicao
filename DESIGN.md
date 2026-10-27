@@ -10,6 +10,9 @@ site/
   assets/css/site.css        todos os componentes
   assets/js/site.js          canvas do hero, nav, abas, progresso, seletor de aulas, copiar, sumário, reveal
   content/aulas.json         (de outro agente — não editar aqui)
+  content/alunos.json        conteúdo da versão do aluno (§9)
+  aluno/index.html, aluno/aula-NN.html   versão do aluno (gerada)
+  build/build.mjs            gera as duas versões · build/check-links.mjs confere todas as páginas
   _screens/                  screenshots de verificação
 ```
 
@@ -230,3 +233,18 @@ Código inline dentro de parágrafos: `<code>…</code>` (estilizado automaticam
 - **≤420px:** botões do hero em largura total; nav compacta.
 - Verificado sem rolagem horizontal em 1440, 375 e 360px. Tabelas e código rolam dentro do próprio bloco.
 - Foco visível: contorno argila de 2px (`:focus-visible`). Um único `h1` por página, landmarks semânticos, `lang="pt-BR"`, alvos de toque ≥44px nos controles principais, menor texto 13px.
+
+## 9. Versão do aluno (/aluno/)
+
+- **Geração:** `build.mjs` monta um objeto variante `V` (`professor` ← `content/aulas.json`, `aluno` ← `content/alunos.json`) e chama as mesmas `buildLesson(a, i, V)` / `buildHome(V)` com os mesmos templates. O professor continua em `index.html`, `aulas/` e `guia.html`. O aluno sai em `aluno/index.html` e `aluno/aula-NN.html` (assets `../assets/…`, home `index.html`). Sem `alunos.json`, só a versão do professor é gerada.
+- **Diferenças no aluno:** `body[data-versao="aluno"].page-aluno`; selo `.brand__badge` "Versão do aluno" (só "aluno" ≤560px; ≤420px a aula esconde `.brand__text`); a nav não tem guia nem referência (o build falha se uma página do aluno linkar `guia.html`/`#guia`). A home do aluno mostra só Aulas, Módulos e Prompts prontos (+ Exercícios, se houver), com colunas via `--stat-cols`. A seção `#preparo` "O que você precisa" usa o parágrafo `O que você precisa: …` de `curso.introducao` (ou o pré-requisito do curso) e traz passos fixos de estudo.
+- **Alternância:** `a.version-toggle[data-version-toggle]` ("⇄ Ver versão do aluno/professor") é o último item de `.site-nav__links` (com um fio à esquerda e cor mute) e do `#menu-mobile`. Aula ⇄ aula correspondente; home ⇄ home; `guia.html` → `aluno/index.html`.
+- **Progresso:** o aluno usa a chave `edicao-claude:aluno:progresso`, separada da `edicao-claude:progresso` do professor.
+- **Contrato de `content/alunos.json`:**
+```json
+{ "curso": { "titulo": "…", "subtitulo": "…", "introducao": ["…"] },
+  "aulas": [ { "numero": 1, "slug": "aula-01", "titulo": "…",
+               "subtitulo_ou_tema": "<igual ao da aula do professor; agrupa os módulos>",
+               "duracao": "…", "objetivos": ["…"],
+               "blocos": [ /* mesmos tipos e campos da §6 */ ] } ] }
+```

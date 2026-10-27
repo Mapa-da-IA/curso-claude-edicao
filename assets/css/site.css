@@ -274,7 +274,7 @@ html { -webkit-tap-highlight-color: rgba(217, 119, 87, 0.18); }
 .stats { border-block: 1px solid var(--c-line); background: var(--c-ground-2); }
 .stats__list {
   margin: 0 auto; max-width: var(--content-max); padding-inline: var(--gutter);
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(var(--stat-cols, 4), minmax(0, 1fr));
 }
 .stat { padding: var(--s-6) var(--s-5); display: flex; flex-direction: column-reverse; gap: 6px; }
 .stat + .stat { border-left: 1px solid var(--c-line); }
@@ -741,4 +741,28 @@ h3.b-titulo { font-size: var(--t-h3); }
 .guide__steps p { font-size: var(--t-micro); text-transform: uppercase; letter-spacing: var(--tr-caps); font-weight: 600; color: var(--c-ink-mute); }
 @media (max-width: 760px) {
   .hero__tabs { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--s-4); }
+}
+
+/* ======================================= versões professor ⇄ aluno (DESIGN §9) */
+/* selo "Versão do aluno" ao lado da marca */
+.brand__badge {
+  display: inline-block; line-height: 20px; padding: 0 9px; margin-left: 2px;
+  border-radius: var(--r-pill); border: 1px solid rgba(95, 212, 199, 0.45); background: rgba(95, 212, 199, 0.08);
+  color: var(--c-neon); font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap;
+}
+/* link de alternância: discreto, mesmo estilo dos links da nav, separado por um fio */
+.site-nav__links .version-toggle { display: inline-flex; align-items: center; gap: 6px; color: var(--c-ink-mute); padding-left: var(--s-5); margin-left: calc(var(--s-6) * -0.5); border-left: 1px solid var(--c-line-strong); }
+.site-nav__links .version-toggle::after { left: var(--s-5); }
+.site-nav__links .version-toggle:hover { color: var(--c-clay-hi); }
+.version-toggle__icon { font-size: 1rem; line-height: 1; letter-spacing: 0; color: var(--c-clay-hi); }
+.site-nav__mobile .version-toggle { display: flex; align-items: center; gap: 10px; color: var(--c-ink-soft); font-size: 1rem; }
+@media (max-width: 1100px) {
+  .page-home .site-nav__links { gap: var(--s-5); }
+}
+@media (max-width: 560px) {
+  .brand__badge-long { display: none; }
+}
+@media (max-width: 420px) {
+  /* aula do aluno: marca + selo + seletor + menu precisam caber; o quadrado da marca e o selo bastam */
+  .page-aluno.page-lesson .brand__text { display: none; }
 }
