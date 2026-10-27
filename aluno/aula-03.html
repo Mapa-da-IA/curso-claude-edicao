@@ -90,11 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Entender o que são Skills e qual o papel delas ao lado do Claude Code e do Remotion.</li>
-            <li>Conhecer a página oficial de Skills do Remotion e verificar a origem antes de instalar algo de um repositório.</li>
-            <li>Instalar as Skills oficiais do Remotion no projeto meu-primeiro-video com o comando oficial.</li>
-            <li>Conferir no Claude Code, com /skills, se as Skills instaladas estão disponíveis.</li>
-            <li>Usar as instruções do Remotion para melhorar a composição de cinco segundos, preservando a versão original para comparação.</li>
+            <li>Ao final desta aula, você vai entender o que é uma Skill e qual o papel dela ao lado do Claude Code e do Remotion.</li>
+            <li>Ao final desta aula, você vai saber verificar a origem de um repositório antes de instalar algo, a partir da página oficial de Skills do Remotion.</li>
+            <li>Ao final desta aula, você vai ter as Skills oficiais do Remotion instaladas no projeto meu-primeiro-video.</li>
+            <li>Ao final desta aula, você vai conferir com /skills, dentro do Claude Code, se as Skills estão disponíveis.</li>
+            <li>Ao final desta aula, você vai ter uma versão melhorada da composição de cinco segundos, ao lado da original, para comparar.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +106,148 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-o-que-e-uma-skill">1. O que é uma Skill</a></li>
+            <li><a href="#2-instale-as-skills-oficiais-do-remotion">2. Instale as Skills oficiais do Remotion</a></li>
+            <li><a href="#3-confira-se-as-skills-estao-disponiveis">3. Confira se as Skills estão disponíveis</a></li>
+            <li><a href="#4-melhore-a-composicao-de-cinco-segundos">4. Melhore a composição de cinco segundos</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+        <p class="b-paragrafo">Nesta aula, você instala as Skills oficiais do Remotion no projeto meu-primeiro-video e pede ao Claude Code uma versão melhorada da sua animação de cinco segundos, sem apagar a original.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>O projeto meu-primeiro-video criado na aula 2, na pasta %USERPROFILE%\CursoClaude\meu-primeiro-video.</li><li>A composição de 5 segundos em 1920x1080 com o texto &quot;Meu primeiro vídeo com Claude&quot;.</li><li>O Claude Code funcionando no seu computador.</li></ul>
+
+        <h2 class="b-titulo" id="1-o-que-e-uma-skill">1. O que é uma Skill</h2>
+
+        <p class="b-paragrafo">Imagine que o Claude é um editor de vídeos que sabe trabalhar com várias ferramentas. Uma Skill funciona como um manual de técnicas especializado, que ele pode consultar para executar determinados trabalhos seguindo instruções mais específicas. O Claude consegue criar animações mesmo sem Skills adicionais, mas nem sempre conhece os procedimentos mais recomendados para cada ferramenta.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Quem faz o quê</caption>
+            <thead><tr><th scope="col">Peça</th><th scope="col">Papel</th></tr></thead>
+            <tbody>
+              <tr><td>Claude Code</td><td>Executa as tarefas.</td></tr>
+              <tr><td>Remotion</td><td>Permite construir as animações.</td></tr>
+              <tr><td>Skill</td><td>Fornece orientações para realizar essas tarefas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Uma Skill não é um programa de edição nem substitui o Remotion. Normalmente, é um conjunto de instruções armazenadas em arquivos como SKILL.md. O Claude pode consultar essas instruções quando forem relevantes.</p>
+
+        <h2 class="b-titulo" id="2-instale-as-skills-oficiais-do-remotion">2. Instale as Skills oficiais do Remotion</h2>
+
+        <p class="b-paragrafo">Passo 1 — Conheça a documentação: acesse a página de Skills oficiais do Remotion em <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a>. O próprio Remotion disponibiliza instruções para ferramentas de inteligência artificial.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>VERIFIQUE A ORIGEM:</strong> antes de instalar algo de um repositório, confira quem publica. Neste caso, o comando aparece na documentação oficial do Remotion e aponta para o repositório remotion-dev/skills. Desconfie de cópias com nomes parecidos.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Passo 2 — Abra o Prompt de Comando na pasta do projeto criado na aula anterior:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>cd /d &quot;%USERPROFILE%\CursoClaude\meu-primeiro-video&quot;</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Execute o comando oficial:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx skills add remotion-dev/skills</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Se aparecerem opções de instalação, selecione o Claude Code e o projeto atual. Confirme a instalação.</p>
+
+        <h2 class="b-titulo" id="3-confira-se-as-skills-estao-disponiveis">3. Confira se as Skills estão disponíveis</h2>
+
+        <p class="b-paragrafo">Inicie o Claude Code na pasta do projeto:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>claude</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Dentro do Claude Code, digite /skills para listar as Skills disponíveis:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Dentro do Claude Code</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>/skills</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <ul class="b-lista"><li><strong>Claude Code já estava aberto:</strong> Skills adicionadas à pasta .claude/skills do projeto passam a valer na sessão atual, sem reiniciar.</li><li><strong>Exceção:</strong> se a pasta .claude/skills não existia quando a sessão começou, digite /reload-skills ou feche e abra o Claude Code de novo.</li><li><strong>Uso explícito:</strong> uma Skill também pode ser chamada pelo nome, digitando /nome-da-skill.</li><li><strong>Não apareceu:</strong> confira o destino selecionado durante a instalação (o projeto atual, e não outra pasta).</li></ul>
+
+        <h2 class="b-titulo" id="4-melhore-a-composicao-de-cinco-segundos">4. Melhore a composição de cinco segundos</h2>
+
+        <p class="b-paragrafo">Cole este prompt no Claude Code. A composição continua horizontal, em 1920x1080; o formato vertical fica para a próxima etapa do curso.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para demonstração</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Utilize as Skills oficiais do Remotion disponíveis neste projeto para melhorar nossa animação de cinco segundos.&#10;Mantenha o texto &quot;Meu primeiro vídeo com Claude&quot;.&#10;Melhore a tipografia, o alinhamento e a suavidade da animação de entrada.&#10;Preserve a composição original e crie uma nova versão para comparação.&#10;Não altere outros arquivos desnecessariamente.&#10;Ao finalizar, explique resumidamente quais melhorias foram realizadas.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Abra o Remotion Studio e compare a composição original com a nova versão:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Anote pelo menos duas diferenças entre a composição original e a nova versão (por exemplo, tipografia, alinhamento ou suavidade da entrada).</p>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">Você entende o propósito de uma Skill, instalou as instruções oficiais do Remotion e viu uma aplicação real dessas instruções no seu projeto: a composição original e a versão melhorada lado a lado no Remotion Studio.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Skills orientam o trabalho do Claude, mas não garantem um resultado perfeito. A avaliação final da animação continua sendo sua.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Executei npx skills add remotion-dev/skills na pasta meu-primeiro-video, selecionando o Claude Code e o projeto atual</li><li>Conferi com /skills que as Skills estão disponíveis (ou usei /reload-skills ou reiniciei o Claude Code)</li><li>Enviei o prompt de melhoria e a composição original continua no projeto</li><li>Comparei as duas versões no Remotion Studio e anotei pelo menos duas diferenças</li></ul>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li><strong>Skills oficiais do Remotion:</strong> <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li><li><strong>Skills no Claude Code:</strong> <a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li><li><strong>Repositório remotion-dev/skills:</strong> <a href="https://github.com/remotion-dev/skills" rel="noopener">https://github.com/remotion-dev/skills</a></li></ul>
+
+        <p class="b-paragrafo">Próxima aula: em vez de usar apenas Skills prontas, você vai criar sua própria Skill de direção de edição.</p>
       </article>
     </div>
 

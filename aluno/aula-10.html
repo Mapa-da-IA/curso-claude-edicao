@@ -90,11 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Entender que corrigir a cor busca primeiro o equilíbrio visual, e não simplesmente clarear as imagens ou aumentar a saturação.</li>
-            <li>Reconhecer os conceitos de exposição, contraste, saturação e temperatura de cor.</li>
-            <li>Pedir ao Claude Code uma análise das cinco cenas de O-Futuro-da-Criacao antes de qualquer modificação, sem diagnósticos inventados.</li>
-            <li>Aplicar com o Claude um acabamento visual moderado, apenas onde a análise indicou necessidade, sem alterar textos, animações, cortes, áudio ou duração.</li>
-            <li>Comparar o antes e o depois de pelo menos uma filmagem e reconhecer os limites dos arquivos originais.</li>
+            <li>Ao final desta aula, você vai entender que corrigir a cor busca primeiro o equilíbrio visual, e não simplesmente clarear as imagens ou aumentar a saturação.</li>
+            <li>Ao final desta aula, você vai reconhecer os conceitos de exposição, contraste, saturação e temperatura de cor.</li>
+            <li>Ao final desta aula, você vai pedir ao Claude Code uma análise das cinco cenas de O-Futuro-da-Criacao antes de qualquer modificação.</li>
+            <li>Ao final desta aula, você vai aplicar com o Claude um acabamento visual moderado, só onde a análise indicou necessidade, sem alterar textos, animações, cortes, áudio ou duração.</li>
+            <li>Ao final desta aula, você vai comparar o antes e o depois de pelo menos uma filmagem e reconhecer os limites dos arquivos originais.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +106,133 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-o-que-e-acabamento-visual">1. O que é acabamento visual</a></li>
+            <li><a href="#2-conceitos-fundamentais">2. Conceitos fundamentais</a></li>
+            <li><a href="#3-comece-pela-analise">3. Comece pela análise</a></li>
+            <li><a href="#4-fazendo-as-correcoes">4. Fazendo as correções</a></li>
+            <li><a href="#5-comparando-antes-e-depois">5. Comparando antes e depois</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+        <p class="b-paragrafo">Quando usamos filmagens de origens diferentes, é comum uma cena parecer mais escura, mais fria ou mais saturada do que outra. Nesta aula, você vai trabalhar só o acabamento da imagem de O-Futuro-da-Criacao, sem mexer na montagem. A regra é: primeiro analisar, depois modificar.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>Reproduza O-Futuro-da-Criacao como ficou na aula 9, com música e efeitos sonoros, e observe diferenças de luz e cor entre as filmagens.</li><li>Guarde uma cópia ou uma gravação dessa versão para comparar o antes e o depois.</li></ul>
+
+        <h2 class="b-titulo" id="1-o-que-e-acabamento-visual">1. O que é acabamento visual</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Pouca luz x imagem equilibrada</caption>
+            <thead><tr><th scope="col">Exemplo</th><th scope="col">O que se vê</th></tr></thead>
+            <tbody>
+              <tr><td>Imagem com pouca luz</td><td>Pode apresentar detalhes difíceis de visualizar.</td></tr>
+              <tr><td>Imagem mais equilibrada</td><td>Permite perceber melhor os detalhes principais.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Corrigir a cor não significa simplesmente deixar todas as imagens mais claras ou aumentar a saturação. O primeiro objetivo é encontrar um equilíbrio visual. Depois, você pode pensar em uma aparência estética consistente para o projeto.</p>
+
+        <h2 class="b-titulo" id="2-conceitos-fundamentais">2. Conceitos fundamentais</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Conceitos de acabamento visual</caption>
+            <thead><tr><th scope="col">Conceito</th><th scope="col">O que é</th><th scope="col">Cuidado</th></tr></thead>
+            <tbody>
+              <tr><td>Exposição</td><td>A luminosidade. Ajuda a avaliar se a imagem está muito clara ou muito escura.</td><td>Uma cena muito escura ou excessivamente clara dificulta a visualização de detalhes.</td></tr>
+              <tr><td>Contraste</td><td>A diferença entre claros e escuros. Pode deixar a imagem com maior definição visual.</td><td>Em excesso, prejudica os detalhes.</td></tr>
+              <tr><td>Saturação</td><td>A intensidade das cores. Controla a força das cores na imagem.</td><td>Valores exagerados podem produzir um aspecto artificial.</td></tr>
+              <tr><td>Temperatura de cor</td><td>Sensação de quente ou frio. Imagens mais amareladas parecem quentes; imagens mais azuladas parecem frias.</td><td>Diferenças de temperatura entre cenas deixam o vídeo menos consistente.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Esses ajustes dependem de cada imagem: não é necessário aplicar os mesmos valores em todas as cenas.</p>
+
+        <h2 class="b-titulo" id="3-comece-pela-analise">3. Comece pela análise</h2>
+
+        <p class="b-paragrafo">Abra o Claude Code na pasta meu-primeiro-video e cole este prompt. Ele pede só um relatório, sem modificar nada:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para analisar as imagens</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero analisar o acabamento visual da composição O-Futuro-da-Criacao antes de realizar qualquer alteração.&#10;Examine as cinco cenas, utilizando quadros representativos de cada uma.&#10;Avalie:&#10;- Exposição e luminosidade.&#10;- Contraste.&#10;- Saturação.&#10;- Temperatura de cor.&#10;- Consistência visual entre as cenas.&#10;- Enquadramento das filmagens.&#10;- Legibilidade dos títulos sobre as imagens.&#10;Identifique quais cenas realmente precisam de ajustes.&#10;Diferencie problemas das filmagens de problemas dos elementos gráficos.&#10;Não faça nenhuma modificação ainda.&#10;Apresente um relatório simples, indicando o problema identificado e a melhoria sugerida para cada cena.&#10;Se não conseguir inspecionar visualmente os quadros, informe essa limitação e não invente diagnósticos.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Leia o relatório e confira se o Claude informou alguma limitação para inspecionar os quadros.</p>
+
+        <h2 class="b-titulo" id="4-fazendo-as-correcoes">4. Fazendo as correções</h2>
+
+        <p class="b-paragrafo">Agora peça apenas os ajustes realmente necessários. Cole este prompt:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para acabamento visual</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Com base nos problemas realmente identificados na análise anterior, faça um acabamento visual moderado no vídeo O-Futuro-da-Criacao.&#10;Prioridades:&#10;1. Corrigir diferenças excessivas de exposição entre as filmagens.&#10;2. Ajustar contraste e saturação somente quando necessário.&#10;3. Buscar consistência visual entre as cenas.&#10;4. Preservar cores naturais e detalhes importantes.&#10;5. Manter as proporções e o enquadramento correto das mídias.&#10;6. Garantir a legibilidade dos textos.&#10;Evite aplicar o mesmo filtro em todas as cenas.&#10;Não tente recuperar artificialmente detalhes que não existem no arquivo original.&#10;Preserve os arquivos de mídia originais.&#10;Não altere:&#10;- Os textos.&#10;- As animações.&#10;- Os cortes e transições.&#10;- A música e os efeitos sonoros.&#10;- A duração total de 30 segundos.&#10;Ao finalizar, compare os ajustes com o estado anterior e informe exatamente o que foi modificado.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Leia o resumo do que o Claude modificou. Depois, abra o Remotion Studio:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro. Confira se os textos, as animações, os cortes, a música, os efeitos sonoros e a duração de 30 segundos continuam iguais.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>Esse ajuste acontece só na composição:</strong> os arquivos originais em public continuam intactos.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-comparando-antes-e-depois">5. Comparando antes e depois</h2>
+
+        <ol class="b-lista-num"><li>Peça ao Claude para preservar uma versão anterior da composição ou permitir ativar e desativar os ajustes.</li><li>Compare pelo menos uma filmagem antes e depois dos ajustes.</li><li>Observe se os detalhes ficaram mais visíveis e se as cenas ficaram mais consistentes entre si.</li></ol>
+
+        <p class="b-paragrafo">O objetivo é melhorar a qualidade percebida sem destruir a aparência natural da imagem.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Quando uma imagem foi gravada com regiões completamente estouradas ou sem detalhes, nem sempre é possível recuperar essas informações. A inteligência artificial não consegue garantir a recuperação de detalhes que nunca foram registrados. Evite correções exageradas.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">O projeto terá filmagens visualmente mais equilibradas, sem alterações na montagem, nos textos ou no áudio.</p>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Você guardou uma versão da aula 9 para comparar</li><li>Você pediu primeiro a análise das cinco cenas, sem nenhuma modificação</li><li>Os ajustes foram aplicados só onde a análise indicou, sem o mesmo filtro em todas as cenas</li><li>Textos, animações, cortes, música, efeitos sonoros e os 30 segundos não mudaram</li><li>Você comparou pelo menos uma filmagem antes e depois</li></ul>
+
+        <p class="b-paragrafo">Próxima aula: vamos revisar o projeto completo e exportar o vídeo final em MP4.</p>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li><strong>Componente Video (Remotion):</strong> <a href="https://www.remotion.dev/docs/video" rel="noopener">https://www.remotion.dev/docs/video</a></li><li><strong>Componente Img (Remotion):</strong> <a href="https://www.remotion.dev/docs/img" rel="noopener">https://www.remotion.dev/docs/img</a></li><li><strong>Propriedade filter do CSS (MDN):</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/filter</a></li></ul>
       </article>
     </div>
 

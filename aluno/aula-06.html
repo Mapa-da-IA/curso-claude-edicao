@@ -90,11 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Organizar os arquivos de vídeo, imagem e áudio em pastas próprias dentro de public, no projeto meu-primeiro-video.</li>
-            <li>Entender, sem programar, que o Remotion encontra cada arquivo da pasta public pelo caminho indicado em staticFile().</li>
-            <li>Adicionar com o Claude Code duas filmagens e uma fotografia às cenas 1, 2 e 3 de O-Futuro-da-Criacao, preservando os textos e as animações da aula 5.</li>
-            <li>Diferenciar enquadramento correto (com recorte) de imagem distorcida e pedir ao Claude a correção de uma imagem mal enquadrada.</li>
-            <li>Confirmar que trilha.mp3 está em public/audios, sem adicioná-la à composição antes da próxima aula.</li>
+            <li>Ao final desta aula, você vai organizar os arquivos de vídeo, imagem e áudio em pastas próprias dentro de public, no projeto meu-primeiro-video.</li>
+            <li>Ao final desta aula, você vai entender, sem programar, que o Remotion encontra cada arquivo da pasta public pelo caminho indicado em staticFile().</li>
+            <li>Ao final desta aula, você vai ter adicionado com o Claude Code duas filmagens e uma fotografia às cenas 1, 2 e 3 de O-Futuro-da-Criacao, preservando os textos e as animações da aula 5.</li>
+            <li>Ao final desta aula, você vai saber diferenciar enquadramento correto (com recorte) de imagem distorcida e pedir ao Claude a correção de uma imagem mal enquadrada.</li>
+            <li>Ao final desta aula, você vai confirmar que trilha.mp3 está em public/audios, sem adicioná-la à composição antes da aula 9.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +106,155 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-organizando-os-arquivos">1. Organizando os arquivos</a></li>
+            <li><a href="#2-como-o-remotion-encontra-os-arquivos">2. Como o Remotion encontra os arquivos</a></li>
+            <li><a href="#3-adicionando-as-midias-ao-video">3. Adicionando as mídias ao vídeo</a></li>
+            <li><a href="#se-algo-der-errado">Se algo der errado</a></li>
+            <li><a href="#4-recorte-x-distorcao">4. Recorte x distorção</a></li>
+            <li><a href="#5-preparando-o-audio">5. Preparando o áudio</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+        <p class="b-paragrafo">Na aula 5, você criou a composição O-Futuro-da-Criacao, só com textos e elementos gráficos. Nesta aula, as três primeiras cenas recebem filmagens e uma fotografia reais, sem perder o que já foi feito.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>O projeto meu-primeiro-video com a composição O-Futuro-da-Criacao da aula 5.</li><li><strong>Quatro arquivos reais:</strong> duas filmagens (computador.mp4 e criacao.mp4), uma fotografia (tecnologia.jpg) e uma trilha (trilha.mp3), com exatamente esses nomes.</li></ul>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Utilize arquivos próprios ou mídias que tenham permissão de uso.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="1-organizando-os-arquivos">1. Organizando os arquivos</h2>
+
+        <p class="b-paragrafo">O Claude consegue trabalhar com os arquivos que você coloca na pasta do projeto. Para evitar confusões e facilitar alterações futuras, crie uma pasta para cada tipo de mídia dentro de public: videos, imagens e audios. Coloque os arquivos nelas, com exatamente os nomes desta estrutura:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">text</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>meu-primeiro-video/&#10;  public/&#10;    videos/&#10;      computador.mp4&#10;      criacao.mp4&#10;    imagens/&#10;      tecnologia.jpg&#10;    audios/&#10;      trilha.mp3</code></pre>
+        </figure>
+
+        <h2 class="b-titulo" id="2-como-o-remotion-encontra-os-arquivos">2. Como o Remotion encontra os arquivos</h2>
+
+        <p class="b-paragrafo">O Remotion precisa saber onde cada arquivo está. Para isso, ele pode usar uma função chamada staticFile(). Por exemplo:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">tsx</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>staticFile(&quot;videos/computador.mp4&quot;)</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Essa instrução informa o caminho do vídeo dentro da pasta public. Repare que o caminho começa em videos/, e não em public/: o staticFile() já procura dentro de public. Você não precisa decorar isso: o Claude cria as referências corretas, desde que os arquivos estejam no lugar certo.</p>
+
+        <p class="b-paragrafo">Para vídeos, a documentação atual do Remotion recomenda o componente Video, do pacote @remotion/media; para imagens, o componente Img, do próprio remotion. Se o pacote @remotion/media ainda não estiver instalado no projeto, o prompt da próxima seção pede que o Claude confira isso e o adicione.</p>
+
+        <h2 class="b-titulo" id="3-adicionando-as-midias-ao-video">3. Adicionando as mídias ao vídeo</h2>
+
+        <p class="b-paragrafo">Abra o Claude Code na pasta meu-primeiro-video, cole este prompt e envie:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para importar mídias</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Vamos continuar trabalhando na composição O-Futuro-da-Criacao.&#10;Quero adicionar mídias reais às três primeiras cenas.&#10;Utilize os arquivos existentes na pasta public:&#10;Cena 1:&#10;Adicione o arquivo videos/computador.mp4 como vídeo de fundo.&#10;Cena 2:&#10;Adicione o arquivo videos/criacao.mp4 como vídeo de fundo.&#10;Cena 3:&#10;Utilize imagens/tecnologia.jpg como imagem principal, criando um movimento suave de aproximação.&#10;Regras importantes:&#10;* Preserve todos os textos e animações já criados.&#10;* Não modifique as cenas 4 e 5.&#10;* Mantenha o formato vertical de 1080x1920.&#10;* Ajuste as mídias proporcionalmente, sem esticar ou deformar.&#10;* Preserve o assunto principal de cada imagem.&#10;* Se necessário, utilize um recorte adequado.&#10;* Mantenha os textos legíveis sobre as mídias.&#10;* Não utilize o áudio original dos vídeos nesta etapa.&#10;* Não adicione música ainda.&#10;Para os vídeos, use o componente Video de @remotion/media; se o pacote ainda não estiver instalado no projeto, adicione-o antes. Para a imagem, use o componente Img do remotion.&#10;Verifique se todos os arquivos existem antes de iniciar. Caso algum esteja ausente, informe qual arquivo está faltando.&#10;Ao finalizar, abra ou indique como visualizar a composição no Remotion Studio.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Leia o que o Claude informou, inclusive se faltou algum arquivo. Depois abra o Remotion Studio, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <ul class="b-lista"><li>As cenas 1 e 2 têm filmagens de fundo.</li><li>A cena 3 mostra a fotografia com aproximação suave.</li><li>As cenas 4 e 5 não mudaram.</li><li>Os textos continuam legíveis.</li><li>A duração segue em 30 segundos.</li></ul>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>Se quiser conferir no código:</strong> os vídeos devem usar a propriedade muted, que tira o som original, e as mídias devem usar objectFit=&quot;cover&quot;, que preenche a tela recortando as bordas sem deformar. Você não precisa escrever isso, só saber que essas são as formas documentadas de silenciar e de recortar sem distorção.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="se-algo-der-errado">Se algo der errado</h2>
+
+        <ul class="b-lista"><li><strong>O Claude informou que um arquivo está faltando:</strong> confira se ele está na pasta certa dentro de public e se o nome é exatamente o da estrutura (computador.mp4, criacao.mp4, tecnologia.jpg, trilha.mp3).</li><li><strong>O texto ficou difícil de ler sobre a filmagem:</strong> se o fundo tiver muitas informações ou cores muito claras, peça ao Claude um escurecimento suave atrás do texto.</li></ul>
+
+        <h2 class="b-titulo" id="4-recorte-x-distorcao">4. Recorte x distorção</h2>
+
+        <p class="b-paragrafo">Seu vídeo é vertical, e nem todas as filmagens e imagens têm esse formato. Preencher a tela não significa esticar a imagem: dá para recortar as extremidades ou criar uma composição visual alternativa, sem deformar o conteúdo.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Enquadramento correto x imagem distorcida</caption>
+            <thead><tr><th scope="col">Situação</th><th scope="col">O que acontece</th></tr></thead>
+            <tbody>
+              <tr><td>Enquadramento correto</td><td>A imagem mantém suas proporções. Pode ocorrer um recorte nas laterais ou na altura.</td></tr>
+              <tr><td>Imagem distorcida</td><td>A imagem é esticada para preencher a tela, deformando os elementos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Se a cena 3 ficou mal enquadrada, peça a correção ao Claude, preservando o assunto principal:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt de correção de enquadramento</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Na composição O-Futuro-da-Criacao, revise o enquadramento da cena 3.&#10;A imagem imagens/tecnologia.jpg deve preencher a tela vertical sem esticar ou deformar.&#10;Se for preciso, recorte as bordas, mantendo o assunto principal da imagem visível e em destaque.&#10;Não altere os textos, as animações, as outras cenas nem a duração do vídeo.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Compare no Studio a cena antes e depois da correção: o assunto principal continua aparecendo? Algo ficou esticado?</p>
+
+        <h2 class="b-titulo" id="5-preparando-o-audio">5. Preparando o áudio</h2>
+
+        <p class="b-paragrafo">Confira se o arquivo trilha.mp3 está dentro de public/audios. Por enquanto, basta verificar que ele está disponível.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>Não adicione a trilha à composição ainda:</strong> ela fica reservada para a aula 9.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>As Skills orientam o Claude, mas não garantem um resultado perfeito. Confira cada cena no Remotion Studio antes de considerar a aula concluída.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">O vídeo de 30 segundos agora utiliza duas filmagens e uma fotografia, mantendo os textos e animações anteriores.</p>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Criei public/videos, public/imagens e public/audios com os quatro arquivos e os nomes indicados</li><li>Usei apenas arquivos próprios ou com permissão de uso</li><li>Adicionei computador.mp4, criacao.mp4 e tecnologia.jpg às cenas 1, 2 e 3, sem alterar as cenas 4 e 5</li><li>Conferi que os vídeos estão sem o som original, as mídias não estão esticadas e os textos continuam legíveis</li><li>Revisei o enquadramento da cena 3 sem deformar a imagem</li><li>Confirmei que trilha.mp3 está em public/audios, sem adicioná-la à composição</li></ul>
+
+        <p class="b-paragrafo">Próxima aula: você vai trabalhar ritmo, cortes e transições.</p>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li><strong>staticFile() no Remotion:</strong> <a href="https://www.remotion.dev/docs/staticfile" rel="noopener">https://www.remotion.dev/docs/staticfile</a></li><li><strong>Componente Video (@remotion/media):</strong> <a href="https://www.remotion.dev/docs/media/video" rel="noopener">https://www.remotion.dev/docs/media/video</a></li><li><strong>Componente Img:</strong> <a href="https://www.remotion.dev/docs/img" rel="noopener">https://www.remotion.dev/docs/img</a></li></ul>
       </article>
     </div>
 

@@ -90,11 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Entender por que um vídeo que parece pronto ainda precisa de uma revisão final antes da exportação.</li>
-            <li>Conferir O-Futuro-da-Criacao com um checklist de nove itens: textos, mídias, ordem das cenas, transições, áudio, primeiro e último quadro, 900 quadros a 30 FPS e 1080x1920.</li>
-            <li>Pedir ao Claude Code uma revisão técnica sem modificar arquivos e ler o relatório, separando erros confirmados de possíveis problemas.</li>
-            <li>Solicitar a correção somente dos erros confirmados, preservando textos, identidade visual, duração, música e efeitos sonoros.</li>
-            <li>Exportar o vídeo em MP4 (H.264 e AAC), pelo Remotion Studio ou pelo terminal, e conferir o arquivo final em um reprodutor fora do Remotion.</li>
+            <li>Ao final desta aula, você vai entender por que um vídeo que parece pronto ainda precisa de uma revisão final antes da exportação.</li>
+            <li>Ao final desta aula, você vai conferir O-Futuro-da-Criacao com um checklist de nove itens.</li>
+            <li>Ao final desta aula, você vai pedir ao Claude Code uma revisão técnica sem modificar arquivos e separar erros confirmados de possíveis problemas.</li>
+            <li>Ao final desta aula, você vai corrigir somente os erros confirmados, preservando textos, identidade visual, duração, música e efeitos sonoros.</li>
+            <li>Ao final desta aula, você vai exportar o vídeo em MP4 (H.264 e AAC), pelo Remotion Studio ou pelo terminal, e conferir o arquivo final fora do Remotion.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +106,137 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-por-que-revisar-o-video">1. Por que revisar o vídeo?</a></li>
+            <li><a href="#2-confira-o-checklist-de-revisao">2. Confira o checklist de revisão</a></li>
+            <li><a href="#3-primeiro-analise-depois-corrija">3. Primeiro analise, depois corrija</a></li>
+            <li><a href="#4-exporte-o-video-em-mp4">4. Exporte o vídeo em MP4</a></li>
+            <li><a href="#5-confira-o-arquivo-exportado">5. Confira o arquivo exportado</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+        <p class="b-paragrafo">Seu vídeo O-Futuro-da-Criacao parece pronto. Nesta aula, você faz uma revisão final, corrige apenas os problemas confirmados e exporta o vídeo como um arquivo MP4.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>Tenha o projeto meu-primeiro-video com a composição O-Futuro-da-Criacao: 1080x1920, 30 FPS, 900 quadros (30 segundos) e cinco cenas.</li><li>Abra o Prompt de Comando na pasta meu-primeiro-video.</li><li><strong>Regra desta aula:</strong> primeiro analisar, depois corrigir.</li></ul>
+
+        <h2 class="b-titulo" id="1-por-que-revisar-o-video">1. Por que revisar o vídeo?</h2>
+
+        <p class="b-paragrafo">Mesmo quando o resultado parece pronto, ainda podem existir pequenos problemas: um título cortado, um efeito sonoro atrasado ou uma filmagem com enquadramento inadequado. Esses detalhes costumam passar despercebidos enquanto você está concentrado nas animações.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Assim como você revisa um texto antes de publicá-lo, também precisa revisar um vídeo antes de entregá-lo.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="2-confira-o-checklist-de-revisao">2. Confira o checklist de revisão</h2>
+
+        <p class="b-paragrafo">Reproduza O-Futuro-da-Criacao no Remotion Studio do começo ao fim e confira, um a um, os nove itens abaixo. Anote o que parecer errado.</p>
+
+        <ul class="b-lista"><li>Todos os textos estão legíveis e sem cortes.</li><li>Os vídeos e as imagens carregam corretamente.</li><li>As cinco cenas aparecem na ordem planejada.</li><li>As transições estão funcionando.</li><li>A música e os efeitos estão sincronizados.</li><li>Não existem mudanças bruscas de volume.</li><li>O primeiro e o último quadro estão corretos.</li><li>O projeto possui 900 quadros a 30 FPS.</li><li>A resolução continua em 1080x1920.</li></ul>
+
+        <h2 class="b-titulo" id="3-primeiro-analise-depois-corrija">3. Primeiro analise, depois corrija</h2>
+
+        <p class="b-paragrafo">Identificar um problema é diferente de corrigi-lo. Primeiro, peça ao Claude uma análise do projeto sem modificar nenhum arquivo. No Claude Code, dentro da pasta meu-primeiro-video, cole este prompt:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para revisão técnica</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero realizar uma revisão completa da composição O-Futuro-da-Criacao antes da exportação.&#10;Não modifique nenhum arquivo nesta primeira etapa.&#10;Analise os seguintes pontos:&#10;1. Resolução: 1080x1920.&#10;2. Taxa de quadros: 30 FPS.&#10;3. Duração total: 900 quadros.&#10;4. Ordem e duração das cinco cenas.&#10;5. Textos, ortografia, legibilidade e margens.&#10;6. Enquadramento de imagens e filmagens.&#10;7. Funcionamento das animações e transições.&#10;8. Carregamento dos arquivos de mídia.&#10;9. Sincronização dos efeitos sonoros.&#10;10. Entrada, saída e níveis de áudio.&#10;11. Primeiro e último quadro da composição.&#10;Verifique os elementos técnicos diretamente nos arquivos do projeto.&#10;Quando necessário, utilize quadros renderizados para realizar a inspeção visual.&#10;Apresente um relatório contendo:&#10;- Cena ou trecho afetado.&#10;- Momento do problema.&#10;- Descrição.&#10;- Gravidade: baixa, média ou alta.&#10;- Correção recomendada.&#10;Diferencie erros confirmados de possíveis problemas que precisam de verificação manual.&#10;Não invente erros.&#10;Não faça correções ainda.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Leia o relatório com atenção e separe os erros confirmados dos possíveis problemas que precisam de verificação manual. Só então cole o prompt de correção:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para corrigir os problemas</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Agora vamos corrigir os problemas confirmados na revisão do vídeo O-Futuro-da-Criacao.&#10;Antes de modificar o projeto, preserve uma cópia da versão atual.&#10;Corrija somente os erros realmente identificados.&#10;Não realize melhorias estéticas adicionais nesta etapa.&#10;Preserve:&#10;- Os textos aprovados.&#10;- A identidade visual.&#10;- A duração de 30 segundos.&#10;- Os 900 quadros.&#10;- A música e os efeitos sonoros, exceto se apresentarem problemas confirmados.&#10;Ao finalizar, execute novamente as verificações relevantes e informe quais problemas foram corrigidos.&#10;Não declare que um problema foi resolvido sem verificar o resultado.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <h2 class="b-titulo" id="4-exporte-o-video-em-mp4">4. Exporte o vídeo em MP4</h2>
+
+        <p class="b-paragrafo">Até agora você trabalhou dentro do Remotion Studio. Para enviar o vídeo a alguém ou publicá-lo, é preciso transformá-lo em um arquivo de vídeo. Esse processo se chama renderização ou exportação.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Configurações de exportação</caption>
+            <thead><tr><th scope="col">Parâmetro</th><th scope="col">Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Formato</td><td>MP4</td></tr>
+              <tr><td>Codec de vídeo</td><td>H.264</td></tr>
+              <tr><td>Codec de áudio</td><td>AAC</td></tr>
+              <tr><td>Resolução</td><td>1080 × 1920</td></tr>
+              <tr><td>Taxa de quadros</td><td>30 FPS</td></tr>
+              <tr><td>Duração</td><td>30 segundos</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Esses parâmetros produzem um arquivo amplamente compatível com dispositivos e plataformas de vídeo.</p>
+
+        <ol class="b-lista-num"><li>No Remotion Studio, selecione a composição O-Futuro-da-Criacao.</li><li>Clique em Render.</li><li>Confira as configurações e inicie a renderização.</li></ol>
+
+        <p class="b-paragrafo">Se preferir, exporte pelo terminal:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npx remotion render src/index.ts O-Futuro-da-Criacao out/O-Futuro-da-Criacao.mp4 --codec=h264</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Esse comando indica o arquivo de entrada do projeto, usa o identificador da composição e salva o vídeo na pasta out.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Confira o arquivo de entrada do projeto (src/index.ts no modelo em branco do Remotion) e use o identificador da composição exibido no Remotion Studio. Quando são informados apenas dois argumentos, o primeiro é lido como arquivo de entrada, e não como composição; por isso o arquivo de entrada aparece explicitamente no comando. O H.264 já é o codec padrão e, para MP4, o áudio é gerado em AAC por padrão, então não é preciso acrescentar uma opção de codec de áudio.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Ao terminar, localize o arquivo MP4 na pasta out.</p>
+
+        <h2 class="b-titulo" id="5-confira-o-arquivo-exportado">5. Confira o arquivo exportado</h2>
+
+        <p class="b-paragrafo">Abra a pasta de saída e assista ao MP4 do começo ao fim em um reprodutor de vídeo, fora do Remotion. Confira:</p>
+
+        <ul class="b-lista"><li>Se o vídeo tem som.</li><li>Se não há quadros pretos inesperados.</li><li>Se a duração e a resolução estão corretas.</li><li>Se o encerramento aparece como planejado.</li></ul>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Um vídeo funcionar dentro do editor não garante que o arquivo exportado esteja perfeito. A revisão do arquivo final também faz parte do trabalho.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">Seu primeiro vídeo completo, revisado e exportado em MP4, pronto para utilização.</p>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Reproduzi o vídeo completo e conferi os nove itens do checklist.</li><li>Enviei o prompt de revisão técnica sem permitir modificações nos arquivos.</li><li>Separei erros confirmados de possíveis problemas no relatório.</li><li>Corrigi somente os problemas confirmados, com cópia da versão anterior e nova verificação.</li><li>A composição continua com 900 quadros, 30 FPS e 1080x1920.</li><li>Exportei O-Futuro-da-Criacao em MP4, com H.264 e AAC.</li><li>Assisti ao MP4 fora do Remotion e conferi som, quadros pretos, duração e resolução.</li></ul>
+
+        <p class="b-paragrafo">&lt;strong&gt;Próxima aula:&lt;/strong&gt; o desafio final, com um novo projeto criado do zero.</p>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li><strong>Comando render da CLI do Remotion:</strong> <a href="https://www.remotion.dev/docs/render-command" rel="noopener">https://www.remotion.dev/docs/render-command</a></li><li><strong>Renderização no Remotion:</strong> <a href="https://www.remotion.dev/docs/render" rel="noopener">https://www.remotion.dev/docs/render</a></li><li><strong>Codecs e codificação no Remotion:</strong> <a href="https://www.remotion.dev/docs/encoding" rel="noopener">https://www.remotion.dev/docs/encoding</a></li></ul>
       </article>
     </div>
 

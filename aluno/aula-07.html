@@ -90,11 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Entender que a duração de cada cena define o ritmo do vídeo e que nem toda informação precisa do mesmo tempo de tela.</li>
-            <li>Redistribuir com o Claude Code as cinco cenas de O-Futuro-da-Criacao em 4, 5, 4, 7 e 10 segundos, mantendo 30 segundos, 1080x1920, 30 FPS e 900 quadros.</li>
-            <li>Selecionar o trecho mais adequado de uma filmagem mudando o ponto de leitura do arquivo, sem deslocar a cena na montagem e sem acelerar ou desacelerar o vídeo.</li>
-            <li>Diferenciar corte seco, dissolvência (fade) e slide, e usar transições sem exageros.</li>
-            <li>Aplicar uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto no final, compensando a sobreposição para manter os 900 quadros.</li>
+            <li>Ao final desta aula, você vai entender que a duração de cada cena define o ritmo do vídeo e que nem toda informação precisa do mesmo tempo de tela.</li>
+            <li>Ao final desta aula, você vai redistribuir com o Claude Code as cinco cenas de O-Futuro-da-Criacao em 4, 5, 4, 7 e 10 segundos, mantendo 30 segundos, 1080x1920, 30 FPS e 900 quadros.</li>
+            <li>Ao final desta aula, você vai saber selecionar o melhor trecho de uma filmagem mudando o ponto de leitura do arquivo, sem deslocar a cena na montagem e sem acelerar ou desacelerar o vídeo.</li>
+            <li>Ao final desta aula, você vai diferenciar corte seco, dissolvência (fade) e slide, e usar transições sem exageros.</li>
+            <li>Ao final desta aula, você vai aplicar uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto no final, mantendo os 900 quadros.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +106,149 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-o-ritmo-da-edicao">1. O ritmo da edição</a></li>
+            <li><a href="#2-o-novo-ritmo-do-video">2. O novo ritmo do vídeo</a></li>
+            <li><a href="#3-tres-tipos-de-transicao">3. Três tipos de transição</a></li>
+            <li><a href="#4-ajuste-o-ritmo-das-cenas">4. Ajuste o ritmo das cenas</a></li>
+            <li><a href="#5-aplique-a-transicao-sem-mudar-a-duracao">5. Aplique a transição sem mudar a duração</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo do aluno em preparação.</p>
+        <p class="b-paragrafo">Nesta aula, você vai deixar o vídeo O-Futuro-da-Criacao mais dinâmico. Hoje as cinco cenas têm seis segundos cada: isso facilita a montagem, mas deixa o resultado previsível. Você vai mudar a duração das cenas, escolher melhor os trechos das filmagens e aplicar uma transição, sem exageros.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>Abra a pasta do projeto meu-primeiro-video, com a composição O-Futuro-da-Criacao montada até a aula 6 (1080x1920, 30 FPS, 30 segundos, cinco cenas de seis segundos).</li><li>Reproduza o vídeo atual no Remotion Studio e repare no ritmo uniforme das cenas.</li><li>Guarde a versão da aula 6 para comparar o antes e o depois.</li></ul>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <h2 class="b-titulo" id="1-o-ritmo-da-edicao">1. O ritmo da edição</h2>
+
+        <p class="b-paragrafo">Nem todas as informações precisam do mesmo tempo de tela. Uma cena com apenas duas palavras é compreendida rapidamente; outra, com mais informações ou uma animação elaborada, pode precisar de mais tempo. Por isso, a duração de cada cena deve ter uma intenção.</p>
+
+        <p class="b-paragrafo">Editar um vídeo é parecido com contar uma história: em alguns momentos falamos mais rápido para criar empolgação; em outros, fazemos pausas para destacar algo importante. Na edição, essas pausas e mudanças de velocidade vêm principalmente da duração das cenas e do movimento dos elementos.</p>
+
+        <h2 class="b-titulo" id="2-o-novo-ritmo-do-video">2. O novo ritmo do vídeo</h2>
+
+        <p class="b-paragrafo">Você vai manter os 30 segundos, mas distribuir o tempo de outra forma. A 30 FPS, cada segundo tem 30 quadros, e o vídeo inteiro continua com 900 quadros.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Nova distribuição das cenas (total: 30 segundos, 900 quadros)</caption>
+            <thead><tr><th scope="col">Cena</th><th scope="col">Início</th><th scope="col">Fim</th><th scope="col">Duração</th><th scope="col">Quadros</th></tr></thead>
+            <tbody>
+              <tr><td>1 · Abertura</td><td>00:00</td><td>00:04</td><td>4s</td><td>120</td></tr>
+              <tr><td>2 · A ideia</td><td>00:04</td><td>00:09</td><td>5s</td><td>150</td></tr>
+              <tr><td>3 · Movimento</td><td>00:09</td><td>00:13</td><td>4s</td><td>120</td></tr>
+              <tr><td>4 · Sem limites</td><td>00:13</td><td>00:20</td><td>7s</td><td>210</td></tr>
+              <tr><td>5 · Encerramento</td><td>00:20</td><td>00:30</td><td>10s</td><td>300</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Esses tempos são uma escolha para este projeto, não uma regra obrigatória. A quinta cena recebe mais espaço para uma conclusão com maior presença visual.</p>
+
+        <h2 class="b-titulo" id="3-tres-tipos-de-transicao">3. Três tipos de transição</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-2" tabindex="0">
+          <table>
+            <caption id="tab-2">Três tipos de transição</caption>
+            <thead><tr><th scope="col">Transição</th><th scope="col">Como funciona</th><th scope="col">Quando usar</th></tr></thead>
+            <tbody>
+              <tr><td>Corte seco</td><td>Uma imagem substitui a outra instantaneamente.</td><td>É simples, rápido e muito utilizado em vídeos para redes sociais.</td></tr>
+              <tr><td>Fade ou dissolvência</td><td>Uma cena desaparece gradualmente enquanto outra aparece.</td><td>Para criar uma passagem mais suave.</td></tr>
+              <tr><td>Slide ou deslizamento</td><td>A nova cena entra deslizando pela tela.</td><td>Para mudanças de assunto e movimentos mais expressivos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Uma edição profissional não precisa usar uma transição diferente a cada corte. Transições elaboradas em todos os cortes deixam o vídeo visualmente cansativo. Neste projeto, você mantém os cortes secos na maior parte do vídeo e usa só uma dissolvência entre as cenas 4 e 5.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>No Remotion, cenas colocadas uma depois da outra, sem sobreposição, formam um Series: é o corte seco. A dissolvência e o slide vêm do pacote @remotion/transitions (instalado com npx remotion add @remotion/transitions), por meio do TransitionSeries com fade() ou slide(). Você não precisa escrever esse código: o Claude cuida disso.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-ajuste-o-ritmo-das-cenas">4. Ajuste o ritmo das cenas</h2>
+
+        <ol class="b-lista-num"><li>Abra o Claude Code na pasta meu-primeiro-video.</li><li>Cole o prompt abaixo e envie.</li><li>Abra o Remotion Studio, selecione O-Futuro-da-Criacao e reproduza o vídeo.</li><li>Compare o ritmo com a versão anterior.</li></ol>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para ajustar a montagem</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Vamos melhorar o ritmo da composição O-Futuro-da-Criacao.&#10;Atualmente, nosso vídeo possui cinco cenas com duração uniforme.&#10;Quero reorganizar a montagem mantendo exatamente 30 segundos, resolução 1080x1920 e 30 FPS.&#10;Nova distribuição:&#10;- Cena 1: 4 segundos.&#10;- Cena 2: 5 segundos.&#10;- Cena 3: 4 segundos.&#10;- Cena 4: 7 segundos.&#10;- Cena 5: 10 segundos.&#10;Mantenha os textos, as mídias, a identidade visual e as animações já existentes.&#10;Ajuste o tempo das animações para que continuem naturais dentro das novas durações.&#10;Se necessário, selecione um trecho mais adequado das filmagens, modificando o ponto de leitura do arquivo, sem deslocar a posição da cena na montagem.&#10;Não acelere nem desacelere as filmagens apenas para preencher o tempo.&#10;Não adicione transições ainda.&#10;Preserve a versão anterior e confirme que a nova composição possui exatamente 900 quadros.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Se o momento mais interessante de uma filmagem aparece depois dos primeiros segundos, o vídeo pode começar a ser reproduzido a partir daquele ponto. Isso não muda o momento em que a cena aparece na composição: você só escolhe qual parte do arquivo original quer mostrar.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>Se quiser conferir no código:</strong> a propriedade que define a partir de que ponto a filmagem começa é trimBefore, medida em quadros do arquivo original. Os nomes antigos startFrom e endAt estão obsoletos.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">No Studio, confira:</p>
+
+        <ul class="b-lista"><li>As cenas seguem a nova distribuição (4, 5, 4, 7 e 10 segundos).</li><li>Os textos e as mídias continuam os mesmos.</li><li>As filmagens não foram aceleradas nem desaceleradas.</li><li>A composição tem exatamente 900 quadros.</li></ul>
+
+        <h2 class="b-titulo" id="5-aplique-a-transicao-sem-mudar-a-duracao">5. Aplique a transição sem mudar a duração</h2>
+
+        <p class="b-paragrafo">Agora você vai adicionar uma dissolvência de 15 quadros (meio segundo) entre as cenas 4 e 5 e um fade para preto no final.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>No Remotion, uma transição com sobreposição reduz a duração combinada das sequências: a duração total é a soma das sequências menos a duração das transições. Por isso, é preciso compensar essa sobreposição para preservar os 900 quadros do projeto. Aqui, a cena 5 pode começar 15 quadros antes do corte nominal, usando esse trecho adicional para a dissolvência.</p></div>
+        </aside>
+
+        <ol class="b-lista-num"><li>Cole o prompt abaixo no Claude Code e envie.</li><li>No Studio, confira a dissolvência entre 19,5 e 20 segundos e o fade para preto no final.</li><li>Compare o corte seco das outras cenas com a dissolvência.</li><li>Confirme que a composição continua com 900 quadros. Se a duração mudar, peça ao Claude para corrigir a compensação.</li><li>Reproduza os 30 segundos completos.</li></ol>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para criar a transição</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Agora quero adicionar uma transição suave entre as cenas 4 e 5.&#10;Utilize uma dissolvência (crossfade) com duração de 15 quadros.&#10;Mantenha os cortes secos entre as demais cenas.&#10;Compense corretamente a sobreposição. Se utilizar TransitionSeries, ajuste a duração efetiva das sequências para que o resultado final continue com exatamente 900 quadros.&#10;A transição deverá ocorrer entre 19,5 e 20 segundos, sem remover conteúdo importante.&#10;Adicione também um fade visual para preto nos últimos 15 quadros do vídeo, sem aumentar a duração.&#10;Não altere os textos nem substitua as mídias.&#10;Ao concluir, verifique se a composição continua com 30 segundos.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>As Skills orientam o Claude, mas não garantem um resultado perfeito. Nem toda primeira versão estará correta: confira cada cena no Remotion Studio antes de considerar a aula concluída.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">O-Futuro-da-Criacao com cenas de 4, 5, 4, 7 e 10 segundos, cortes secos, uma dissolvência de 15 quadros entre as cenas 4 e 5 e um fade para preto nos últimos 15 quadros, mantendo 30 segundos e 900 quadros. Uma boa edição não depende só de efeitos: muitas vezes, o que melhora um vídeo é saber quando mostrar uma informação e quanto tempo deixá-la na tela.</p>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Reorganizei as cenas em 4, 5, 4, 7 e 10 segundos</li><li>As filmagens não foram aceleradas nem desaceleradas</li><li>A composição tem exatamente 900 quadros</li><li>Apliquei a dissolvência de 15 quadros entre as cenas 4 e 5</li><li>Adicionei o fade para preto nos últimos 15 quadros</li><li>Reproduzi os 30 segundos completos no Remotion Studio</li></ul>
+
+        <p class="b-paragrafo">Próxima aula: tipografia, para transformar textos simples em elementos visuais mais interessantes.</p>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li><strong>Transições no Remotion (@remotion/transitions):</strong> <a href="https://www.remotion.dev/docs/transitions" rel="noopener">https://www.remotion.dev/docs/transitions</a></li><li><strong>TransitionSeries:</strong> <a href="https://www.remotion.dev/docs/transitions/transitionseries" rel="noopener">https://www.remotion.dev/docs/transitions/transitionseries</a></li><li><strong>Series:</strong> <a href="https://www.remotion.dev/docs/series" rel="noopener">https://www.remotion.dev/docs/series</a></li><li><strong>Componente Video:</strong> <a href="https://www.remotion.dev/docs/video" rel="noopener">https://www.remotion.dev/docs/video</a></li></ul>
       </article>
     </div>
 
