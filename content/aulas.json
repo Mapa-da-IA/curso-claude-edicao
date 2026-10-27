@@ -57,7 +57,7 @@
             "tipo": "lista",
             "itens": [
               "01 | Conhecendo o Claude: navegador x desktop",
-              "02 | Instalando as ferramentas",
+              "02 | Preparando o computador para trabalhar com Claude",
               "03 | Instalando Skills",
               "04 | Criando sua primeira Skill",
               "05 | Criando seu primeiro vídeo",
@@ -654,11 +654,15 @@
     {
       "numero": 2,
       "slug": "aula-02",
-      "titulo": "Instalando as ferramentas",
+      "titulo": "Preparando o computador para trabalhar com Claude",
       "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Preparar Claude Code, Node.js e Remotion em um computador Windows."
+        "Explicar a função do Claude Code, do Node.js e do Remotion antes de instalar cada ferramenta.",
+        "Instalar o Node.js na versão LTS e conferir node, npm e npx no Prompt de Comando.",
+        "Instalar o Claude Code com o instalador nativo oficial e fazer login com um plano compatível.",
+        "Criar o projeto Remotion meu-primeiro-video, abrir o Remotion Studio e pedir ao Claude Code a primeira composição.",
+        "Resolver os problemas de instalação mais comuns no Windows."
       ],
       "blocos": [
         {
@@ -667,7 +671,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Nível iniciante · Windows 10/11. Na aula anterior, o aluno conheceu o Claude no navegador e no aplicativo desktop. Agora ele prepara o computador com três ferramentas: Claude Code, Node.js e Remotion. Ao final, terá um projeto Remotion aberto no Remotion Studio e o Claude Code criando a primeira composição dentro dele."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique primeiro por que cada ferramenta está sendo instalada e só depois mostre os comandos. Isso ajuda quem nunca usou programação a entender o que está fazendo."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: mostre o resultado primeiro, explique a função de cada ferramenta e só depois faça a instalação. Assim, o aluno entende por que está copiando os comandos, sem precisar aprender programação previamente. Deixe o resultado da seção 6 pronto antes de gravar a abertura."
         },
         {
           "tipo": "titulo",
@@ -676,39 +688,294 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Retomada: Relembre o título da aula anterior e a necessidade de um ambiente de trabalho.",
-            "02 Três ferramentas: Claude Code recebe instruções e altera arquivos; Node.js executa o ecossistema; Remotion compõe e renderiza.",
-            "03 Instalação Node.js: Acesse nodejs.org, instale a versão LTS e verifique node -v e npm -v.",
-            "04 Claude Code: Use o instalador nativo oficial do Claude para Windows; autentique uma conta com acesso.",
-            "05 Criar projeto Remotion: Crie o projeto em branco chamado meu-primeiro-video.",
-            "06 Primeira visualização: Abra npm run dev e localize o Remotion Studio; projeto em branco não é erro.",
-            "07 Gancho: Nas próximas aulas instalaremos Skills."
+            "01 Resultado primeiro: Abra o Remotion Studio já preparado e mostre a composição \"Meu primeiro vídeo com Claude\" criada pelo Claude Code.",
+            "02 Retomada: Na aula anterior conhecemos o Claude no navegador e no desktop; agora vamos preparar o computador.",
+            "03 Três ferramentas: Apresente a tabela diretor, motor e estúdio antes de qualquer comando.",
+            "04 Instalação do motor: Instale o Node.js na versão LTS e confira node -v, npm -v e npx --version no Prompt de Comando.",
+            "05 Claude Code: Instale pelo PowerShell com o comando oficial, confira claude --version e faça login.",
+            "06 Projeto Remotion: Crie a pasta CursoClaude, gere o projeto em branco meu-primeiro-video e rode npm run dev.",
+            "07 Primeiro teste: Em uma segunda janela, abra o Claude Code na pasta do projeto e envie o prompt da composição.",
+            "08 Problemas comuns: Mostre como resolver os quatro erros mais frequentes.",
+            "09 Gancho: Na próxima aula, vamos conhecer e instalar as Skills."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "codigo",
-          "linguagem": "shell",
-          "texto": "Verificar: node -v ; npm -v ; claude --version.\nInstalar Claude Code: irm https://claude.ai/install.ps1 | iex\nCriar Remotion: npx create-video@latest --yes --blank meu-primeiro-video\nEntrar na pasta: cd meu-primeiro-video\nAbrir Studio: npm run dev"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Escolha do ambiente"
+          "texto": "1. O que é Node.js e por que precisamos dele?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Claude Code local é o caminho principal. Para Chrome/claude.ai ou Chat do Desktop, use Personalizar > Skills: não execute comandos de instalação diretamente na conversa."
+          "texto": "O Node.js é um programa que permite executar JavaScript diretamente no computador, sem depender de um navegador."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No nosso curso, ele será utilizado principalmente para instalar e executar o Remotion, ferramenta que permite criar vídeos, animações, textos animados e motion graphics por meio de código."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "As três ferramentas da aula",
+          "linhas": [
+            [
+              "Ferramenta",
+              "Papel",
+              "O que faz"
+            ],
+            [
+              "Claude Code",
+              "O diretor",
+              "Interpreta suas instruções e cria ou modifica os arquivos do projeto."
+            ],
+            [
+              "Node.js",
+              "O motor",
+              "Executa o ambiente de programação e permite usar ferramentas como npm e npx."
+            ],
+            [
+              "Remotion",
+              "O estúdio",
+              "Transforma código em composições audiovisuais que podem ser visualizadas e renderizadas."
+            ]
+          ]
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Validar node -v, npm -v, claude --version e npm run dev. Uma conta Claude no navegador não substitui esta configuração."
+          "texto": "INFORMAÇÃO IMPORTANTE: a instalação nativa atual do Claude Code não exige Node.js. Estamos instalando o Node.js porque ele será necessário para executar os projetos do Remotion e diversas ferramentas adicionais que utilizaremos no curso."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Instalando o Node.js no Windows"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Demonstração prática: mostre cada etapa na gravação."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Passo 1 — Acesse o site oficial: Abra https://nodejs.org/pt-br/download e selecione a versão identificada como LTS, recomendada para maior estabilidade.",
+            "Passo 2 — Execute o instalador: Baixe o instalador para Windows, abra o arquivo .msi, aceite a licença e mantenha as configurações padrão. Clique em Install e depois em Finish.",
+            "Passo 3 — Abra o Prompt de Comando: Pressione Win + R, digite cmd e pressione Enter. Uma janela preta aparecerá. É nela que vamos testar a instalação."
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "A versão LTS muda com o tempo. Na gravação, diga apenas \"a versão LTS\", sem citar um número de versão."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Como saber se o Node.js foi instalado corretamente?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Digite os três comandos a seguir, um por vez, pressionando Enter depois de cada um."
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "node -v: Mostra a versão instalada do Node.js.",
+            "npm -v: Mostra a versão do npm, o gerenciador de pacotes instalado com o Node.js.",
+            "npx --version: Mostra a versão do npx, que permite executar ferramentas disponibilizadas por pacotes."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "node -v\nnpm -v\nnpx --version"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se os três comandos retornarem números de versão, a instalação foi reconhecida pelo sistema. Os números não precisam ser iguais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resumo: o Node.js fornece o ambiente de execução, o npm gerencia os pacotes e o npx permite executar ferramentas desses pacotes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Instalando o Claude Code"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora que o computador está preparado, vamos instalar o Claude Code."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Passo 1: No menu Iniciar do Windows, procure por PowerShell e abra-o.",
+            "Passo 2: Cole o comando oficial de instalação (abaixo). Esse comando baixa e executa o instalador oficial. Utilize-o apenas com a URL oficial.",
+            "Passo 3: Depois da instalação, feche o PowerShell, abra novamente e execute claude --version. Se aparecer uma versão, o Claude Code está instalado.",
+            "Passo 4: Para iniciar o programa, execute claude. Na primeira execução, siga as instruções de autenticação."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "powershell",
+          "texto": "irm https://claude.ai/install.ps1 | iex"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Alternativa pelo Prompt de Comando (cmd), também oficial:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Conferir a instalação e iniciar o Claude Code (em um terminal novo):"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "powershell",
+          "texto": "claude --version\nclaude"
+        },
+        {
+          "tipo": "atencao",
+          "texto": "PLANO NECESSÁRIO: o login no Claude Code exige um plano Pro, Max, Team ou Enterprise, ou uma conta do Claude Console (API). O plano Free NÃO inclui o Claude Code. Instalar o programa não libera automaticamente o seu uso."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O Git for Windows é opcional. Com ele instalado, o Claude Code pode usar o Bash; sem ele, o Claude Code usa o PowerShell."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Instalando o Remotion e criando nosso primeiro projeto"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui é onde o aluno entende, na prática, a importância do Node.js. Abra o Prompt de Comando (cmd) e execute os comandos abaixo, na sequência."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Criar uma pasta para os projetos:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd /d \"%USERPROFILE%\"\nmkdir CursoClaude\ncd CursoClaude"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Criar um novo projeto Remotion:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx create-video@latest --yes --blank meu-primeiro-video"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na primeira utilização, pode ser necessário baixar pacotes. Confirme a instalação se solicitado."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Rode o create-video a partir de uma pasta comum, como a CursoClaude, e não dentro de um repositório Git já existente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Entrar na pasta do projeto:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd meu-primeiro-video"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abrir o ambiente de visualização (Remotion Studio):"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npm run dev"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O Remotion Studio será iniciado e normalmente abrirá uma página local no navegador, em geral http://localhost:3000. Se essa porta estiver ocupada, ele usa a próxima livre: use sempre o endereço que aparecer no terminal. O projeto estará inicialmente vazio, porque escolhemos o modelo blank. Isso é esperado."
+        },
+        {
+          "tipo": "dica",
+          "texto": "LICENÇA DO REMOTION: o Remotion é gratuito para pessoas físicas, organizações sem fins lucrativos e empresas com até 3 funcionários; empresas com fins lucrativos maiores precisam de uma Company License. Detalhes em https://www.remotion.dev/license."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "6. Primeiro teste: Claude criando conteúdo no Remotion"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mantenha o terminal do Remotion aberto. Abra uma segunda janela do Prompt de Comando e execute:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd /d \"%USERPROFILE%\\CursoClaude\\meu-primeiro-video\"\nclaude"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Após entrar no Claude Code, envie esta instrução:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Primeiro teste no Claude Code",
+          "texto": "Crie uma composição de vídeo no Remotion com duração de 5 segundos, resolução 1920x1080 e fundo escuro. No centro da tela, adicione o texto \"Meu primeiro vídeo com Claude\" em uma tipografia moderna, com uma animação suave de entrada.\nUtilize o projeto existente, sem criar outro. Quero visualizar a animação no Remotion Studio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O aluno poderá acompanhar os arquivos sendo modificados pelo Claude e visualizar a composição no Remotion Studio. Isso prepara o ambiente para as próximas aulas, em que serão adicionadas as Skills."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "7. Problemas mais comuns durante a instalação"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Erro 1 — 'node' não é reconhecido: Feche o terminal e abra uma nova janela. Depois, rode o comando abaixo para localizar o Node.js. Se nada for encontrado, reinstale o Node.js LTS e abra um novo terminal."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "where.exe node"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Erro 2 — O PowerShell bloqueia o npm ou o npx: A mensagem diz que npm.ps1 ou npx.ps1 não pode ser carregado. Use o Prompt de Comando (cmd) em vez do PowerShell, ou rode npm.cmd e npx.cmd no lugar de npm e npx. Outra opção: no PowerShell, rode o comando abaixo (não precisa de administrador) e abra um novo PowerShell."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "powershell",
+          "texto": "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Erro 3 — 'claude' não é reconhecido: Feche e abra o terminal. Se continuar, confirme no PowerShell se o instalador criou o arquivo, com o primeiro comando abaixo. O instalador coloca o claude.exe em %USERPROFILE%\\.local\\bin e pode não adicionar essa pasta ao PATH. Se o resultado for True, adicione a pasta ao PATH do usuário com o segundo comando (trecho oficial da documentação) e abra um novo terminal."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "powershell",
+          "texto": "Test-Path \"$env:USERPROFILE\\.local\\bin\\claude.exe\""
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "powershell",
+          "texto": "$currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')\n[Environment]::SetEnvironmentVariable('PATH', \"$currentPath;$env:USERPROFILE\\.local\\bin\", 'User')"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Erro 4 — O Remotion não abre no navegador: Abra manualmente o endereço mostrado no terminal (por exemplo, http://localhost:3000). Se a porta estiver ocupada, o Remotion usa outra: use a que aparecer. Para escolher a porta, rode o comando abaixo dentro da pasta do projeto."
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx remotion studio --port=3001"
         },
         {
           "tipo": "titulo",
@@ -717,9 +984,15 @@
         {
           "tipo": "lista",
           "itens": [
-            "Node.js e npm disponíveis",
-            "Claude Code autenticado",
-            "Projeto Remotion e Studio funcionando"
+            "Mostrou o resultado final antes de começar as instalações",
+            "Explicou o papel do Claude Code, do Node.js e do Remotion com a analogia diretor, motor e estúdio",
+            "Avisou que a instalação nativa do Claude Code não exige Node.js",
+            "Instalou o Node.js LTS a partir de nodejs.org e conferiu node -v, npm -v e npx --version",
+            "Instalou o Claude Code com o comando oficial e conferiu claude --version",
+            "Avisou que o Claude Code exige plano Pro, Max, Team, Enterprise ou conta do Claude Console",
+            "Criou o projeto meu-primeiro-video fora de um repositório Git e abriu o Remotion Studio",
+            "Executou o primeiro teste com o Claude Code e conferiu a composição no Studio",
+            "Mostrou as soluções dos problemas mais comuns"
           ]
         },
         {
@@ -732,43 +1005,103 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar instalando as ferramentas. Preparar Claude Code, Node.js e Remotion em um computador Windows. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Na aula anterior, conhecemos o Claude e vimos a diferença entre usá-lo no navegador e no aplicativo desktop. Mas antes de começar a produzir nossas primeiras animações, precisamos preparar o computador com algumas ferramentas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, relembre o título da aula anterior e a necessidade de um ambiente de trabalho."
+          "texto": "E a primeira delas é o Node.js."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, claude Code recebe instruções e altera arquivos; Node.js executa o ecossistema; Remotion compõe e renderiza."
+          "texto": "Talvez você nunca tenha ouvido falar dele, mas não se preocupe. Você não precisa saber programação para entender sua importância."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos acessar nodejs.org, instale a versão LTS e verifique node -v e npm -v."
+          "texto": "O Node.js permite executar programas feitos em JavaScript diretamente no computador. E por que isso interessa para quem trabalha com edição de vídeos?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, use o instalador nativo oficial do Claude para Windows; autentique uma conta com acesso."
+          "texto": "Porque ao longo deste curso vamos utilizar o Remotion, uma ferramenta capaz de transformar código em vídeos, animações e motion graphics."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos criar o projeto em branco chamado meu-primeiro-video."
+          "texto": "Pense da seguinte maneira: o Claude será nosso diretor, responsável por interpretar o que pedimos e criar as instruções necessárias. O Node.js será o motor que permite executar nosso projeto. E o Remotion será nosso estúdio, onde poderemos visualizar as animações e transformar nossas composições em vídeos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, vamos abrir npm run dev e localize o Remotion Studio; projeto em branco não é erro."
+          "texto": "Uma informação importante: o Node.js não é necessário para instalar a versão nativa atual do Claude Code. Estamos instalando essa ferramenta porque ela será fundamental para trabalhar com o Remotion e outras extensões que utilizaremos futuramente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, nas próximas aulas instalaremos Skills."
+          "texto": "Para começar, vamos acessar o site oficial do Node.js. Aqui, vamos escolher a versão LTS, que é indicada para quem procura estabilidade."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Depois de baixar, basta executar o instalador e seguir as etapas, mantendo as opções recomendadas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando a instalação terminar, vamos confirmar se tudo está funcionando."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Prompt de Comando do Windows. Para isso, pressione as teclas Windows e R, digite CMD e pressione Enter."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos executar três comandos: node menos v, npm menos v e npx traço traço version."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se aparecerem os números das versões, significa que nosso computador reconheceu as ferramentas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mas o que são npm e npx?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O npm permite instalar e gerenciar ferramentas de programação. Já o npx facilita a execução dessas ferramentas. É exatamente isso que vamos utilizar para preparar nosso primeiro projeto de vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na sequência, vamos instalar o Claude Code, seguindo o procedimento oficial. Depois, criaremos uma pasta de trabalho e utilizaremos o npx para gerar um projeto Remotion."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por fim, vamos executar o projeto com npm run dev e abrir o Remotion Studio, onde poderemos acompanhar nossas futuras animações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Com essas ferramentas funcionando, teremos o ambiente preparado para dar os primeiros comandos de criação de vídeo ao Claude."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos conhecer as Skills, que permitem adicionar instruções e capacidades especializadas ao nosso processo de trabalho."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira os comandos e os planos nas páginas oficiais antes de gravar, porque eles mudam com frequência."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Instalação do Claude Code: https://code.claude.com/docs/en/setup",
+            "Problemas de instalação do Claude Code: https://code.claude.com/docs/en/troubleshoot-install",
+            "Download do Node.js: https://nodejs.org/pt-br/download",
+            "Documentação do npm: https://docs.npmjs.com/",
+            "Remotion create-video: https://www.remotion.dev/docs/cli/create-video",
+            "Licença do Remotion: https://www.remotion.dev/license",
+            "Set-ExecutionPolicy (PowerShell): https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
