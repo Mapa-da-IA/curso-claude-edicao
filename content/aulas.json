@@ -416,7 +416,7 @@
             "03 Onde usar: Mostre as três portas de entrada: navegador, aplicativo para computador e aplicativo para celular.",
             "04 Navegador x Desktop: Percorra a tabela comparativa e destaque o que só existe no aplicativo.",
             "05 Instalação: Mostre o caminho de download em claude.com/download e os passos no Windows e no Mac.",
-            "06 Gancho: A partir da próxima aula, o curso trabalha com o Claude Desktop instalado."
+            "06 Gancho: Na próxima aula, o curso instala o Claude Code no PowerShell, com Node.js e Remotion."
           ]
         },
         {
@@ -625,7 +625,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, vamos usar o Claude Desktop instalado para preparar o ambiente de trabalho do curso."
+          "texto": "Na próxima aula, a gente instala o Claude Code no PowerShell, junto com o Node.js e o Remotion, para editar os vídeos."
         },
         {
           "tipo": "dica",
