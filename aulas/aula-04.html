@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 04 · Criando sua primeira Skill — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Fundamentos, instalações e Skills — aula 04 do guia do professor Edição de Vídeos com Claude: Criando sua primeira Skill.">
+  <title>Aula 04 · Criando sua primeira Skill personalizada — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Fundamentos, instalações e Skills — aula 04 do guia do professor Edição de Vídeos com Claude: Criando sua primeira Skill personalizada.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
             <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Conhecendo o Claude: navegador x desktop</span></a></li>
             <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Preparando o computador para trabalhar com Claude</span></a></li>
             <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills no Claude Code</span></a></li>
-            <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill</span></a></li>
+            <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill personalizada</span></a></li>
             <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
@@ -75,7 +75,7 @@
         <div class="lesson-hero__head">
           <span class="lesson-hero__no" aria-hidden="true">04</span>
           <div>
-            <h1 class="lesson-hero__title"><span class="sr-only">Aula 04: </span>Criando sua primeira Skill</h1>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 04: </span>Criando sua primeira Skill personalizada</h1>
             <p class="lesson-hero__theme">Fundamentos, instalações e Skills</p>
           </div>
         </div>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas.</li>
+            <li>Entender por que repetir as mesmas instruções em todo pedido é cansativo e como uma Skill resolve isso.</li>
+            <li>Diferenciar um prompt (pedido de uma tarefa específica) de uma Skill (orientações reutilizáveis).</li>
+            <li>Criar, com a ajuda do Claude Code, a Skill direcao-de-edicao em .claude/skills/direcao-de-edicao/SKILL.md, com as regras visuais do curso.</li>
+            <li>Conferir a Skill com /skills e usá-la para criar uma versão vertical de 1080x1920, com 30 FPS, preservando as versões anteriores.</li>
+            <li>Atualizar a Skill com uma nova regra e aplicá-la à composição atual, sem modificar outros elementos.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,13 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-explicacao-para-o-aluno">1. Explicação para o aluno</a></li>
+            <li><a href="#2-vamos-criar-nossa-skill">2. Vamos criar nossa Skill</a></li>
+            <li><a href="#3-aplicando-a-skill">3. Aplicando a Skill</a></li>
+            <li><a href="#4-mostrando-como-melhorar-uma-skill">4. Mostrando como melhorar uma Skill</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-04-narracao">AULA 04 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,67 +123,244 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+        <p class="b-paragrafo">Tema: ensinando o Claude a seguir seu estilo de edição. Na aula 2, o aluno criou no projeto meu-primeiro-video uma composição de 5 segundos em 1920x1080. Na aula 3, instalou as Skills oficiais do Remotion e criou uma versão horizontal melhorada, ao lado da original. Nesta aula, ele cria a própria Skill, direcao-de-edicao, com regras visuais para todos os vídeos do curso, e a usa para gerar uma NOVA versão vertical, de 1080x1920 com 30 FPS. As versões anteriores continuam no projeto.</p>
+
+        <p class="b-paragrafo">Objetivo: criar a Skill direcao-de-edicao, contendo regras visuais para todos os vídeos desenvolvidos durante o curso.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video): a composição da aula 2 e a versão melhorada da aula 3 continuam no projeto, e a versão vertical desta aula fica ao lado delas, para comparação.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Problema:</strong> O aluno repete margens, formatos e estilos em todos os prompts.</li><li><strong>O manual:</strong> Apresente nome, descrição e conteúdo de um SKILL.md.</li><li><strong>Criação:</strong> Solicite ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md.</li><li><strong>Regras:</strong> 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais.</li><li><strong>Teste:</strong> Revise a composição de cinco segundos da aula 03 com a nova Skill.</li><li><strong>Refinamento:</strong> Adicione uma regra após perceber um texto perto da margem.</li><li><strong>Gancho:</strong> A próxima etapa é criar um vídeo de verdade.</li></ol>
+        <ol class="b-lista-num"><li><strong>O problema:</strong> Mostre como seria repetir, em todo pedido, formato vertical, textos centralizados, margens seguras, animações suaves e fontes legíveis.</li><li><strong>Prompt x Skill:</strong> Explique a diferença entre o pedido de uma tarefa e um conjunto reutilizável de orientações.</li><li><strong>Estrutura:</strong> Mostre a pasta direcao-de-edicao e o arquivo SKILL.md, com nome, descrição e regras.</li><li><strong>Criação:</strong> Envie ao Claude Code o prompt que cria a Skill e mostre onde o arquivo foi salvo.</li><li><strong>Conferência:</strong> Digite /skills e confirme que direcao-de-edicao aparece na lista.</li><li><strong>Aplicação:</strong> Chame /direcao-de-edicao e peça a versão vertical de 1080x1920, com 30 FPS, preservando as anteriores.</li><li><strong>Resultado:</strong> Abra o Remotion Studio e compare a versão vertical com as versões horizontais.</li><li><strong>Melhoria:</strong> Aponte um texto muito perto da borda, atualize a Skill com a nova regra e corrija só esse ponto.</li><li><strong>Gancho:</strong> Na próxima aula, vamos criar nosso primeiro vídeo completo, com várias cenas e uma narrativa visual.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-explicacao-para-o-aluno">1. Explicação para o aluno</h2>
+
+        <p class="b-paragrafo">Comece apresentando um problema comum. Imagine precisar escrever estas instruções toda vez que pedir um novo vídeo: formato vertical, textos centralizados, margens seguras, animações suaves e fontes legíveis.</p>
+
+        <p class="b-paragrafo">Isso seria repetitivo. Uma Skill personalizada permite guardar essas orientações em um arquivo que poderá ser reutilizado.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Prompt x Skill</caption>
+            <thead><tr><th scope="col">Conceito</th><th scope="col">O que é</th></tr></thead>
+            <tbody>
+              <tr><td>Prompt</td><td>É o pedido de uma tarefa específica.</td></tr>
+              <tr><td>Skill</td><td>É um conjunto reutilizável de orientações para executar determinadas tarefas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Na aula 3, o aluno instalou Skills prontas, escritas pela equipe do Remotion. Agora ele escreve as próprias regras, com a ajuda do Claude.</p>
+
+        <h2 class="b-titulo" id="2-vamos-criar-nossa-skill">2. Vamos criar nossa Skill</h2>
+
+        <p class="b-paragrafo">Primeiro, explique rapidamente a estrutura do arquivo. Skills de um projeto ficam dentro da pasta .claude/skills, cada uma em sua própria pasta:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">text</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>meu-primeiro-video&#10;  .claude&#10;    skills&#10;      direcao-de-edicao&#10;        SKILL.md</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">SKILL.md é o arquivo que contém o nome, a descrição e as regras da Skill. Ele começa com um pequeno cabeçalho de metadados entre duas linhas com três hifens (---). A descrição é recomendada, porque ajuda o Claude a reconhecer quando a Skill é relevante. Se o nome não for informado, vale o nome da pasta. Use letras minúsculas, sem acentos, com hifens no lugar dos espaços: direcao-de-edicao.</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">text</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>---&#10;name: direcao-de-edicao&#10;description: Regras visuais para criar e revisar vídeos no Remotion...&#10;---&#10;&#10;(regras da Skill, em português)</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Esse exemplo serve só para o aluno reconhecer o formato. Para manter a aula simples, peça ao próprio Claude para criar esse arquivo. Abra o Claude Code na pasta do projeto:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>cd /d &quot;%USERPROFILE%\CursoClaude\meu-primeiro-video&quot;&#10;claude</code></pre>
+        </figure>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para criar a Skill</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Crie .claude/skills/direcao-de-edicao/SKILL.md com metadados name e description. Oriente edição no Remotion: padrão vertical 1080x1920, 30 FPS, tipografia legível, margem mínima de 80 px, animações suaves, preservação de mídias originais e relatório de arquivos modificados. Escreva em português e teste na composição anterior.</p>
+            <p class="b-prompt__text" data-copy-source>Quero criar minha primeira Skill personalizada para o Claude Code.&#10;Crie a pasta .claude/skills/direcao-de-edicao dentro do projeto atual e adicione um arquivo SKILL.md válido.&#10;Nome: direcao-de-edicao&#10;Objetivo: orientar a criação e revisão de vídeos com um padrão visual consistente no Remotion.&#10;A Skill deve conter as seguintes regras:&#10;* Formato vertical de 1080x1920 pixels.&#10;* Taxa de 30 FPS.&#10;* Margens de segurança de pelo menos 80 pixels.&#10;* Textos legíveis e com bom contraste.&#10;* Animações suaves, sem movimentos exagerados.&#10;* Elementos visuais organizados.&#10;* Não distorcer imagens ou vídeos.&#10;* Preservar arquivos e composições originais.&#10;* Alterar somente o que for solicitado.&#10;Escreva as instruções em português, com linguagem simples e objetiva.&#10;Depois de criar a Skill, mostre onde o arquivo foi salvo e explique como utilizá-lo.&#10;O arquivo deve conter metadados no início, incluindo uma descrição que ajude o Claude a reconhecer quando a Skill é relevante.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <p class="b-paragrafo">Ao final, abra o SKILL.md criado e confira com a turma: o arquivo começa com os metadados (name e description), a descrição explica quando usar a Skill e todas as regras pedidas aparecem no texto. A estrutura .claude/skills/nome/SKILL.md está prevista na documentação oficial do Claude Code.</p>
 
-        <h3 class="b-titulo" id="skill-propria">Skill própria</h3>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt e confere se o arquivo foi salvo em .claude/skills/direcao-de-edicao/SKILL.md, com nome, descrição e as nove regras.</p></div>
+        </aside>
 
-        <p class="b-paragrafo">Direção de Edição: .claude/skills/direcao-de-edicao/SKILL.md. Alternativa no Chat/Cowork: ZIP da pasta da Skill via Personalizar &gt; Skills &gt; Criar Skill &gt; Enviar.</p>
+        <h2 class="b-titulo" id="3-aplicando-a-skill">3. Aplicando a Skill</h2>
 
-        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
-          <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Campos name e description, diretório correto, invocação e teste. Não presumir sincronização entre a Skill local e a Skill enviada à conta.</p></div>
+        <p class="b-paragrafo">Agora que a Skill existe, vamos utilizá-la. Digite /skills para verificar se ela está disponível:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Dentro do Claude Code</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>/skills</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <ul class="b-lista"><li>Normalmente, a Skill aparece na hora, sem reiniciar: a pasta .claude/skills já existe desde a instalação da aula 3, e o Claude Code percebe as Skills novas na sessão atual.</li><li>Se ela não aparecer, digite /reload-skills ou feche e abra o Claude Code de novo.</li><li>Para chamar a Skill de forma explícita, digite /direcao-de-edicao no início da mensagem.</li></ul>
+
+        <p class="b-paragrafo">Em seguida, faça o teste:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para demonstração</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>/direcao-de-edicao&#10;Revise a animação de cinco segundos criada anteriormente.&#10;Crie uma versão vertical de 1080x1920, com 30 FPS, aplicando as regras da nossa Skill.&#10;Mantenha o texto e o estilo geral.&#10;Preserve a versão anterior e mostre o resultado no Remotion Studio.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Abra o Remotion Studio e selecione a nova composição na lista lateral:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Confira com a turma: a nova composição é vertical (1080x1920), roda a 30 FPS e continua com cinco segundos (150 quadros). A composição da aula 2 e a versão melhorada da aula 3 continuam na lista, em 1920x1080, para comparação.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele digita /skills, chama /direcao-de-edicao com o prompt de demonstração e confere no Remotion Studio o tamanho, os FPS e a duração da versão vertical. Depois, confirma que as duas versões horizontais anteriores continuam no projeto.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-mostrando-como-melhorar-uma-skill">4. Mostrando como melhorar uma Skill</h2>
+
+        <p class="b-paragrafo">Faça uma demonstração intencionalmente simples: observe um texto posicionado muito perto da borda da tela. Explique que uma Skill também pode ser atualizada; não é preciso criar outra.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para atualizar a Skill</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Atualize a Skill direcao-de-edicao para incluir esta regra:&#10;Antes de finalizar qualquer composição, verificar se todos os textos estão dentro da margem de segurança e se nenhuma palavra está cortada.&#10;Depois, aplique essa regra à composição atual, sem modificar outros elementos.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Abra o SKILL.md e mostre a nova regra no arquivo. No Remotion Studio, confira se o texto se afastou da borda e se o resto da composição ficou igual.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele envia o prompt de atualização, confirma que a nova regra entrou no SKILL.md e verifica no Remotion Studio se todos os textos estão dentro da margem e sem palavras cortadas.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Resultado esperado: o aluno terá sua própria Skill e entenderá que ela pode ser modificada conforme suas necessidades. Não é necessário decorar códigos para criar esse tipo de instrução.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>A Skill orienta o Claude, mas não garante um resultado perfeito. A avaliação final da composição continua sendo nossa.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>SKILL.md possui nome e descrição</li><li>Regras são claras e específicas</li><li>Skill testada e revisada</li></ul>
+        <ul class="b-lista"><li>Apresentou o problema de repetir as mesmas instruções em todo pedido</li><li>Explicou a diferença entre prompt e Skill com a tabela</li><li>Mostrou a estrutura .claude/skills/direcao-de-edicao/SKILL.md e os metadados no início do arquivo</li><li>Criou a Skill pelo Claude Code e conferiu o arquivo salvo, com descrição e todas as regras</li><li>Conferiu com /skills que direcao-de-edicao está disponível (ou usou /reload-skills ou reiniciou quando necessário)</li><li>Criou a versão vertical de 1080x1920, com 30 FPS, preservando as versões das aulas 2 e 3</li><li>Atualizou a Skill com a regra da margem de segurança e corrigiu só o texto perto da borda</li></ul>
 
         <h2 class="b-titulo" id="aula-04-narracao">AULA 04 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar criando sua primeira skill. Criar a Skill personalizada direcao-de-edicao para padronizar as próximas aulas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Na última aula, aprendemos a instalar Skills que ajudam o Claude a trabalhar melhor com o Remotion.</p>
 
-        <p class="b-paragrafo">Primeiro, o aluno repete margens, formatos e estilos em todos os prompts.</p>
+        <p class="b-paragrafo">Mas existe algo ainda mais interessante: nós também podemos criar nossas próprias Skills.</p>
 
-        <p class="b-paragrafo">Agora, vamos apresentar nome, descrição e conteúdo de um SKILL.md.</p>
+        <p class="b-paragrafo">E é isso que vamos aprender agora.</p>
 
-        <p class="b-paragrafo">Em seguida, vamos solicitar ao Claude a pasta .claude/skills/direcao-de-edicao e um SKILL.md.</p>
+        <p class="b-paragrafo">Imagine que você está criando vários vídeos e precisa repetir as mesmas orientações: use o formato vertical, deixe os textos centralizados, mantenha uma margem de segurança e utilize animações suaves.</p>
 
-        <p class="b-paragrafo">Na prática, 1080x1920, 30 FPS; organização; fontes legíveis; 80 px de margem; animações discretas; preservar originais.</p>
+        <p class="b-paragrafo">Fazer esse pedido uma vez é simples. Mas repetir tudo em cada projeto pode ser cansativo.</p>
 
-        <p class="b-paragrafo">Depois disso, vamos revisar a composição de cinco segundos da aula 03 com a nova Skill.</p>
+        <p class="b-paragrafo">E se pudéssemos guardar essas orientações para reutilizar sempre que precisássemos?</p>
 
-        <p class="b-paragrafo">Para conferir, vamos adicionar uma regra após perceber um texto perto da margem.</p>
+        <p class="b-paragrafo">É exatamente para isso que vamos criar nossa primeira Skill personalizada.</p>
 
-        <p class="b-paragrafo">Por fim, a próxima etapa é criar um vídeo de verdade.</p>
+        <p class="b-paragrafo">Ela terá o nome de direção de edição e será responsável por estabelecer algumas regras visuais para nossos vídeos.</p>
 
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">Vamos definir, por exemplo, que os vídeos devem ter resolução de mil e oitenta por mil novecentos e vinte pixels, com trinta quadros por segundo.</p>
+
+        <p class="b-paragrafo">Também vamos orientar o Claude a utilizar textos legíveis, respeitar as margens da tela e evitar animações exageradas.</p>
+
+        <p class="b-paragrafo">E uma regra muito importante: preservar os arquivos originais, para não perdermos trabalhos anteriores.</p>
+
+        <p class="b-paragrafo">Mas como vamos criar essa Skill?</p>
+
+        <p class="b-paragrafo">É mais simples do que parece.</p>
+
+        <p class="b-paragrafo">Uma Skill normalmente utiliza um arquivo chamado SKILL.md. É nesse arquivo que ficam as orientações que o Claude poderá seguir.</p>
+
+        <p class="b-paragrafo">E nós nem precisamos escrever esse arquivo manualmente.</p>
+
+        <p class="b-paragrafo">Vamos abrir o Claude Code e pedir para ele criar nossa Skill, informando o nome e todas as regras que queremos utilizar.</p>
+
+        <p class="b-paragrafo">Depois de concluir, vamos conferir onde o arquivo foi salvo e verificar se a Skill está disponível.</p>
+
+        <p class="b-paragrafo">Agora vem a parte mais interessante: vamos testar.</p>
+
+        <p class="b-paragrafo">Vou pedir para o Claude revisar nossa animação anterior, mas desta vez utilizando as regras de direção de edição.</p>
+
+        <p class="b-paragrafo">Vamos abrir o Remotion Studio e observar o resultado.</p>
+
+        <p class="b-paragrafo">Perceba que agora temos uma maneira organizada de reaproveitar nosso padrão visual.</p>
+
+        <p class="b-paragrafo">Mas e se descobrirmos que falta alguma orientação importante?</p>
+
+        <p class="b-paragrafo">Não precisamos criar outra Skill.</p>
+
+        <p class="b-paragrafo">Podemos simplesmente pedir para o Claude atualizar o arquivo existente.</p>
+
+        <p class="b-paragrafo">Por exemplo, vamos adicionar uma regra para impedir que os textos fiquem muito próximos das bordas.</p>
+
+        <p class="b-paragrafo">Depois disso, vamos corrigir nossa composição utilizando essa nova orientação.</p>
+
+        <p class="b-paragrafo">E pronto! Criamos nossa primeira Skill personalizada.</p>
+
+        <p class="b-paragrafo">Agora sabemos como instalar orientações prontas e também como desenvolver nossas próprias regras de trabalho.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos utilizar tudo isso para criar nosso primeiro vídeo completo, com várias cenas e uma narrativa visual.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira o SKILL.md e a composição criados antes de afirmar que funcionaram.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Skills no Claude Code:</strong> <a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li><li><strong>Composições no Remotion:</strong> <a href="https://www.remotion.dev/docs/composition" rel="noopener">https://www.remotion.dev/docs/composition</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
