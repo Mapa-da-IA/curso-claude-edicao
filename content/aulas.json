@@ -58,7 +58,7 @@
             "itens": [
               "01 | Conhecendo o Claude: navegador x desktop",
               "02 | Preparando o computador para trabalhar com Claude",
-              "03 | Instalando Skills",
+              "03 | Instalando Skills no Claude Code",
               "04 | Criando sua primeira Skill",
               "05 | Criando seu primeiro vídeo",
               "06 | Trabalhando com arquivos",
@@ -1108,11 +1108,15 @@
     {
       "numero": 3,
       "slug": "aula-03",
-      "titulo": "Instalando Skills",
+      "titulo": "Instalando Skills no Claude Code",
       "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Explicar o conceito de Skills e instalar instruções oficiais do Remotion no projeto."
+        "Entender o que são Skills e qual o papel delas ao lado do Claude Code e do Remotion.",
+        "Conhecer a página oficial de Skills do Remotion e verificar a origem antes de instalar algo de um repositório.",
+        "Instalar as Skills oficiais do Remotion no projeto meu-primeiro-video com o comando oficial.",
+        "Conferir no Claude Code, com /skills, se as Skills instaladas estão disponíveis.",
+        "Usar as instruções do Remotion para melhorar a composição de cinco segundos, preservando a versão original para comparação."
       ],
       "blocos": [
         {
@@ -1121,7 +1125,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: como ensinar novas técnicas ao Claude. Na aula anterior, o aluno preparou o computador e criou, no projeto meu-primeiro-video, uma composição de 5 segundos em 1920x1080 com o texto \"Meu primeiro vídeo com Claude\". Nesta aula, ele instala as Skills oficiais do Remotion nesse mesmo projeto e pede ao Claude Code uma versão melhorada da animação, sem apagar a original."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Comece a aula mostrando a animação de texto criada na aula anterior. Explique que o Claude consegue desenvolver animações mesmo sem Skills adicionais. Entretanto, nem sempre conhece os procedimentos específicos mais recomendados para cada ferramenta. É nesse momento que apresentamos as Skills."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video): a composição da aula 2 continua no projeto e a nova versão fica ao lado dela, para que o aluno compare o antes e o depois."
         },
         {
           "tipo": "titulo",
@@ -1130,46 +1142,141 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 A pergunta: Se Claude cria vídeos, por que instalar Skills?",
-            "02 Definição útil: Skills são orientações especializadas armazenadas em arquivos, como SKILL.md; não substituem os softwares nem garantem qualidade.",
-            "03 Onde buscar: Demonstre a documentação oficial remotion.dev/docs/ai/skills e verifique a origem dos repositórios.",
-            "04 Instalação: Na pasta do projeto, execute o comando oficial npx skills add remotion-dev/skills; confira os arquivos e reinicie a sessão do Claude Code quando necessário.",
-            "05 Teste: Consulte /skills, peça um título com boas práticas e abra a composição no Studio.",
-            "06 Gancho: Agora criaremos regras próprias de edição."
+            "01 Resultado anterior: Abra o Remotion Studio e mostre a composição de cinco segundos criada na aula 2.",
+            "02 A pergunta: Se o Claude já cria animações, por que instalar Skills?",
+            "03 Conceito: Apresente a comparação do editor de vídeos com um manual de técnicas e a divisão Claude Code, Remotion e Skill.",
+            "04 Documentação oficial: Abra a página de Skills do Remotion e explique a importância de verificar a origem antes de instalar.",
+            "05 Instalação: No Prompt de Comando, na pasta do projeto, execute npx skills add remotion-dev/skills.",
+            "06 Conferência: Abra o Claude Code e digite /skills para ver as Skills disponíveis.",
+            "07 Primeiro teste: Envie o prompt de demonstração e peça uma nova versão da composição.",
+            "08 Comparação: No Remotion Studio, compare a versão original com a nova e comente as diferenças.",
+            "09 Gancho: Na próxima aula, vamos criar nossa própria Skill de direção de edição."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "codigo",
-          "linguagem": "shell",
-          "texto": "No diretório do projeto: npx skills add remotion-dev/skills"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "No Claude Code, consulte /skills."
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Teste: “Use as Skills oficiais do Remotion para criar um título vertical de 5 segundos. Informe quais orientações foram consultadas e quais arquivos foram alterados.”"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skill obrigatória"
+          "texto": "1. Como explicar o conceito para iniciantes"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion Agent Skills: https://github.com/remotion-dev/skills. Comando principal: npx skills add remotion-dev/skills. Dentro do Claude Code, verificar remotion-best-practices."
+          "texto": "Use uma comparação simples: imagine que o Claude é um editor de vídeos que sabe trabalhar com várias ferramentas. Uma Skill funciona como um manual de técnicas especializado, que ele pode consultar para executar determinados trabalhos seguindo instruções mais específicas."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Quem faz o quê",
+          "linhas": [
+            [
+              "Peça",
+              "Papel"
+            ],
+            [
+              "Claude Code",
+              "Executa as tarefas."
+            ],
+            [
+              "Remotion",
+              "Permite construir as animações."
+            ],
+            [
+              "Skill",
+              "Fornece orientações para realizar essas tarefas."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma Skill não é um programa de edição nem substitui o Remotion. Normalmente, é um conjunto de instruções armazenadas em arquivos como SKILL.md. O Claude pode consultar essas instruções quando forem relevantes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Demonstração prática: instalando as Skills oficiais"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Passo 1 — Conhecer a documentação: acesse a página de Skills oficiais do Remotion em https://www.remotion.dev/docs/ai/skills. Mostre que o próprio Remotion disponibiliza instruções para ferramentas de inteligência artificial."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: No Chat/Cowork, instalar uma Skill pela conta é outra operação. Evite colar comandos npm como se fossem instruções da interface web."
+          "texto": "VERIFIQUE A ORIGEM: antes de instalar algo de um repositório, confira quem publica. Neste caso, o comando aparece na documentação oficial do Remotion e aponta para o repositório remotion-dev/skills. Desconfie de cópias com nomes parecidos."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Passo 2 — Instalar as Skills: abra o Prompt de Comando na pasta do projeto criado na aula anterior:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd /d \"%USERPROFILE%\\CursoClaude\\meu-primeiro-video\""
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Execute o comando oficial:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npx skills add remotion-dev/skills"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se aparecerem opções de instalação, selecione o Claude Code e o projeto atual. Confirme a instalação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Passo 3 — Conferir se funcionou: inicie o Claude Code na pasta do projeto e digite /skills para listar as Skills disponíveis."
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "claude"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Dentro do Claude Code",
+          "texto": "/skills"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Claude Code já estava aberto: Skills adicionadas à pasta .claude/skills do projeto passam a valer na sessão atual, sem reiniciar.",
+            "Exceção: se a pasta .claude/skills não existia quando a sessão começou, digite /reload-skills ou feche e abra o Claude Code de novo.",
+            "Uso explícito: uma Skill também pode ser chamada pelo nome, digitando /nome-da-skill.",
+            "Não apareceu: confira o destino selecionado durante a instalação (o projeto atual, e não outra pasta)."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Primeiro teste prático"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Peça ao Claude para melhorar a composição de cinco segundos criada anteriormente, utilizando as instruções do Remotion. A composição continua horizontal, em 1920x1080; o formato vertical fica para a próxima etapa do curso."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para demonstração",
+          "texto": "Utilize as Skills oficiais do Remotion disponíveis neste projeto para melhorar nossa animação de cinco segundos.\nMantenha o texto \"Meu primeiro vídeo com Claude\".\nMelhore a tipografia, o alinhamento e a suavidade da animação de entrada.\nPreserve a composição original e crie uma nova versão para comparação.\nNão altere outros arquivos desnecessariamente.\nAo finalizar, explique resumidamente quais melhorias foram realizadas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Remotion Studio, compare o resultado antigo com o novo e explique as diferenças percebidas:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npm run dev"
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele repete os passos 2 e 3 no próprio computador, envia o prompt de demonstração e anota pelo menos duas diferenças entre a composição original e a nova versão (por exemplo, tipografia, alinhamento ou suavidade da entrada)."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: o aluno compreende o propósito de uma Skill, consegue instalar instruções oficiais e observa uma aplicação real dessas instruções no projeto."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Skills orientam o trabalho do Claude, mas não garantem um resultado perfeito. A avaliação final da animação continua sendo nossa."
         },
         {
           "tipo": "titulo",
@@ -1178,9 +1285,13 @@
         {
           "tipo": "lista",
           "itens": [
-            "Skill instalada em local reconhecido",
-            "Claude Code reconhece ou acessa a Skill",
-            "O resultado foi conferido no Studio"
+            "Mostrou a composição de cinco segundos da aula anterior antes de falar de Skills",
+            "Explicou a diferença entre Claude Code, Remotion e Skill com a comparação do manual de técnicas",
+            "Abriu a página oficial de Skills do Remotion e falou sobre verificar a origem",
+            "Executou npx skills add remotion-dev/skills na pasta meu-primeiro-video, selecionando o Claude Code e o projeto atual",
+            "Conferiu com /skills que as Skills estão disponíveis (ou usou /reload-skills ou reiniciou a sessão quando necessário)",
+            "Enviou o prompt de demonstração e preservou a composição original",
+            "Comparou as duas versões no Remotion Studio e comentou as diferenças"
           ]
         },
         {
@@ -1193,39 +1304,111 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar instalando skills. Explicar o conceito de Skills e instalar instruções oficiais do Remotion no projeto. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Na aula anterior, preparamos nosso computador e criamos nossa primeira animação utilizando o Claude Code e o Remotion."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, se Claude cria vídeos, por que instalar Skills?"
+          "texto": "Agora vamos conhecer um recurso muito importante para melhorar a maneira como o Claude trabalha: as Skills."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, skills são orientações especializadas armazenadas em arquivos, como SKILL.md; não substituem os softwares nem garantem qualidade."
+          "texto": "Mas afinal, o que é uma Skill?"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos demonstrar a documentação oficial remotion.dev/docs/ai/skills e verifique a origem dos repositórios."
+          "texto": "Imagine que você contratou um editor de vídeos. Ele já conhece várias ferramentas, mas você quer que ele siga determinadas técnicas de edição, animação e organização."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, na pasta do projeto, execute o comando oficial npx skills add remotion-dev/skills; confira os arquivos e reinicie a sessão do Claude Code quando necessário."
+          "texto": "Para isso, você entrega um manual com orientações específicas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, consulte /skills, peça um título com boas práticas e abra a composição no Studio."
+          "texto": "Uma Skill funciona de maneira parecida. Ela fornece instruções que o Claude pode consultar para realizar determinadas tarefas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, agora criaremos regras próprias de edição."
+          "texto": "Por exemplo, podemos instalar uma Skill com orientações sobre como criar animações no Remotion, organizar elementos na tela e trabalhar com vídeos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Isso não significa que o Claude vai produzir vídeos perfeitos automaticamente. Mas ele passa a ter acesso a orientações especializadas que podem ajudar a melhorar os resultados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E o mais interessante é que não precisamos criar tudo do zero."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O próprio Remotion disponibiliza Skills oficiais para ferramentas como o Claude Code."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos abrir o site do Remotion e acessar a página dedicada às Skills."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui podemos encontrar as instruções disponíveis e o comando para instalá-las."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora, vamos abrir o Prompt de Comando na pasta do nosso projeto e executar o comando mostrado na tela."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Durante a instalação, vamos selecionar o Claude Code e instalar as Skills no projeto em que estamos trabalhando."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando o processo terminar, vamos abrir o Claude Code e verificar se as novas Skills estão disponíveis."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Pronto! Agora podemos pedir ao Claude que utilize essas orientações para melhorar nossas animações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos fazer um teste com o vídeo de cinco segundos que criamos anteriormente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vou pedir para melhorar a tipografia, o posicionamento do texto e a suavidade da animação, sem apagar a versão original."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora vamos abrir o Remotion Studio e comparar os dois resultados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba que continuamos utilizando o mesmo programa. A diferença é que o Claude tem acesso a orientações mais específicas sobre como trabalhar com ele."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E aqui está o ponto principal desta aula: as Skills ajudam a orientar o trabalho do Claude, mas nós continuamos responsáveis por avaliar o resultado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos dar um passo além. Em vez de utilizar apenas Skills criadas por outras pessoas, vamos desenvolver nossa própria Skill de direção de edição."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira o comando e as opções do instalador na página oficial antes de gravar, porque eles podem mudar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Skills oficiais do Remotion: https://www.remotion.dev/docs/ai/skills",
+            "Skills no Claude Code: https://code.claude.com/docs/en/skills",
+            "Repositório remotion-dev/skills: https://github.com/remotion-dev/skills"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },
