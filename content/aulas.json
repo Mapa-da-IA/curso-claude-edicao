@@ -60,7 +60,7 @@
               "02 | Preparando o computador para trabalhar com Claude",
               "03 | Instalando Skills no Claude Code",
               "04 | Criando sua primeira Skill personalizada",
-              "05 | Criando seu primeiro vídeo",
+              "05 | Criando seu primeiro vídeo completo com Claude",
               "06 | Trabalhando com arquivos",
               "07 | Cortes, ritmo e transições",
               "08 | Textos e animações",
@@ -1778,11 +1778,15 @@
     {
       "numero": 5,
       "slug": "aula-05",
-      "titulo": "Criando seu primeiro vídeo",
+      "titulo": "Criando seu primeiro vídeo completo com Claude",
       "subtitulo_ou_tema": "Composição, arquivos, cortes e tipografia",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas."
+        "Entender que um vídeo começa pelo planejamento e pode ser dividido em cenas, cada uma com mensagem, animação e duração.",
+        "Ler e montar um storyboard simples: 30 segundos divididos em cinco cenas de seis segundos.",
+        "Criar com o Claude Code a composição O-Futuro-da-Criacao (1080x1920, 30 FPS, 900 quadros), usando as Skills oficiais do Remotion e a Skill direcao-de-edicao, sem apagar as composições anteriores.",
+        "Conferir no Remotion Studio a duração, a leitura dos textos e as transições.",
+        "Corrigir só a cena 4 com um prompt pontual, sem reconstruir o vídeo."
       ],
       "blocos": [
         {
@@ -1791,7 +1795,15 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo."
+          "texto": "Tema: transformando uma ideia em um vídeo de 30 segundos. Nas aulas 2 a 4, o aluno criou no projeto meu-primeiro-video uma animação de 5 segundos em 1920x1080, uma versão melhorada com as Skills oficiais do Remotion e uma versão vertical de 1080x1920 com a Skill direcao-de-edicao. Nesta aula, ele cria o primeiro vídeo completo: O Futuro da Criação, com 30 segundos e cinco cenas animadas, numa composição nova ao lado das anteriores."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Objetivo: criar um vídeo chamado O Futuro da Criação, composto por cinco cenas animadas, utilizando as Skills instaladas nas aulas anteriores."
+        },
+        {
+          "tipo": "dica",
+          "texto": "DIDÁTICA DA AULA: explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video): as composições das aulas 2, 3 e 4 continuam no projeto, e O-Futuro-da-Criacao fica ao lado delas, para comparação."
         },
         {
           "tipo": "titulo",
@@ -1800,38 +1812,172 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Revelação: Mostre o storyboard e um corte rápido do resultado.",
-            "02 Planejar antes de executar: Explique a lógica de cinco mensagens de seis segundos.",
-            "03 Abrir o mesmo projeto: Mantenha Skills e composições anteriores.",
-            "04 Prompt principal: Forneça resolução, FPS, duração, textos e cores.",
-            "05 Visualização: Selecione O-Futuro-da-Criacao no Studio, reveja todas as cenas.",
-            "06 Correção: Peça ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo.",
-            "07 Gancho: Na próxima aula adicionaremos filmagens, fotografias e áudio."
+            "01 Revelação: Mostre um exemplo do resultado que a turma vai criar.",
+            "02 Planejamento: Explique que, antes de pedir um vídeo ao Claude, precisamos organizar a ideia em cenas, cada uma com mensagem, animação e duração.",
+            "03 Storyboard: Apresente as cinco cenas de seis segundos de O Futuro da Criação.",
+            "04 Criação: Abra o Claude Code na pasta meu-primeiro-video e envie o prompt de criação do vídeo.",
+            "05 Conferência: Abra o Remotion Studio com npm run dev, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro.",
+            "06 Correção pontual: Ajuste só a cena 4 (SEM LIMITES), sem reconstruir o vídeo.",
+            "07 Gancho: Na próxima aula, vamos adicionar filmagens e fotografias reais ao projeto."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Crie uma composição O-Futuro-da-Criacao, 1080x1920, 30 FPS e 900 quadros. Cinco cenas de 6s: 1 UMA NOVA ERA; 2 SUAS IDEIAS; 3 SEM LIMITES; 4 CRIE COM IA; 5 O FUTURO COMEÇA AGORA. Fundo gráfico preto, branco e laranja. Use as Skills instaladas; animações simples; preserve composições anteriores. Não adicione mídias externas ou áudio."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills aplicadas"
+          "texto": "1. Explicando como um vídeo é construído"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion: remotion-create, remotion-markup, remotion-studio e remotion-best-practices; Direção de Edição para regras visuais."
+          "texto": "Comece mostrando um exemplo do resultado que pretende criar."
         },
         {
-          "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Manter 900 quadros, cinco cenas e nenhum arquivo inventado."
+          "tipo": "paragrafo",
+          "texto": "Explique que, antes de pedir um vídeo ao Claude, precisamos organizar nossa ideia. Para facilitar, vamos dividir o vídeo em partes menores, chamadas cenas."
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Cada cena tem uma mensagem: o texto que aparece na tela.",
+            "Cada cena tem uma animação: a forma como esse texto e os elementos gráficos entram e se movem.",
+            "Cada cena tem uma duração: quanto tempo ela fica na tela."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não precisamos começar com algo complexo. Nosso primeiro vídeo terá apenas textos, elementos gráficos e movimentos simples."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Planejando nosso primeiro vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O vídeo terá 30 segundos. Vamos dividi-lo em cinco cenas de seis segundos."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Storyboard — O Futuro da Criação — 30 segundos",
+          "linhas": [
+            [
+              "Cena",
+              "Tempo",
+              "Texto",
+              "Animação"
+            ],
+            [
+              "1",
+              "0–6s",
+              "O FUTURO DA CRIAÇÃO",
+              "Abertura com título grande e animação suave"
+            ],
+            [
+              "2",
+              "6–12s",
+              "TUDO COMEÇA COM UMA IDEIA",
+              "Texto com animação de entrada"
+            ],
+            [
+              "3",
+              "12–18s",
+              "IDEIAS VIRAM MOVIMENTO",
+              "Formas geométricas em movimento"
+            ],
+            [
+              "4",
+              "18–24s",
+              "SEM LIMITES",
+              "Animação mais expressiva, com leitura confortável"
+            ],
+            [
+              "5",
+              "24–30s",
+              "COMECE A CRIAR",
+              "Encerramento simples e elegante"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Explique ao aluno que isso é um storyboard: um planejamento simples da sequência visual do vídeo. Na prática, ele serve para mostrar ao Claude o que precisamos produzir."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele lê o storyboard e confere as contas antes de abrir o Claude Code: cinco cenas de seis segundos somam 30 segundos, e cada cena tem seu texto e sua animação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Vamos criar o vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o Claude Code na pasta do projeto:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "cd /d \"%USERPROFILE%\\CursoClaude\\meu-primeiro-video\"\nclaude"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Envie o prompt abaixo. Ele cita as Skills oficiais do Remotion instaladas na aula 3 e a Skill direcao-de-edicao criada na aula 4. Por isso, não é preciso repetir as regras de margem e organização. Se quiser chamar a Skill de forma explícita, comece a mensagem com /direcao-de-edicao."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para criação do vídeo",
+          "texto": "Crie um vídeo utilizando o Remotion, seguindo as Skills oficiais instaladas e nossa Skill personalizada direcao-de-edicao.\nTítulo do projeto: O Futuro da Criação.\nEspecificações:\n* Resolução: 1080x1920 pixels.\n* Formato: vertical, 9:16.\n* Taxa: 30 FPS.\n* Duração: 30 segundos.\n* Cinco cenas com seis segundos cada.\nConteúdo das cenas:\nCena 1: \"O FUTURO DA CRIAÇÃO\"\nUma abertura com título grande e animação suave.\nCena 2: \"TUDO COMEÇA COM UMA IDEIA\"\nApresente o texto com uma animação de entrada.\nCena 3: \"IDEIAS VIRAM MOVIMENTO\"\nCrie uma composição com formas geométricas em movimento.\nCena 4: \"SEM LIMITES\"\nDestaque o texto com uma animação mais expressiva, mantendo a leitura confortável.\nCena 5: \"COMECE A CRIAR\"\nFinalize com uma animação simples e elegante.\nDireção visual:\n* Fundo escuro.\n* Tipografia moderna e legível.\n* Detalhes em roxo.\n* Transições discretas.\n* Margens de segurança respeitadas.\n* Todos os textos devem permanecer na tela tempo suficiente para leitura.\nCrie uma nova composição chamada O-Futuro-da-Criacao.\nNão apague as composições anteriores.\nNão adicione vídeos, fotografias ou áudio nesta etapa.\nAo finalizar, verifique a duração, o enquadramento e a legibilidade de todas as cenas."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O nome da composição é O-Futuro-da-Criacao, sem acentos e com hifens no lugar dos espaços, porque o ID de uma composição no Remotion aceita apenas letras, números e hifens. O título que aparece no vídeo continua com acento: O FUTURO DA CRIAÇÃO."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt de criação e espera o Claude terminar e informar o que foi criado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Conferindo o resultado no Remotion Studio"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o projeto e selecione a composição O-Futuro-da-Criacao na lista lateral:"
+        },
+        {
+          "tipo": "codigo",
+          "linguagem": "cmd",
+          "texto": "npm run dev"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Reproduza o vídeo inteiro. Mostre ao aluno a importância de conferir a duração, a leitura dos textos e as transições."
+        },
+        {
+          "tipo": "dica",
+          "texto": "CONFERÊNCIA NO STUDIO: a composição O-Futuro-da-Criacao deve ter 1080x1920, 30 FPS e 900 quadros no total (30 segundos). Cada cena ocupa 180 quadros (6 segundos): cena 1 de 0 a 179, cena 2 de 180 a 359, cena 3 de 360 a 539, cena 4 de 540 a 719 e cena 5 de 720 a 899. As composições das aulas 2, 3 e 4 continuam na lista."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta etapa, faça uma alteração simples para demonstrar que não precisamos reconstruir todo o vídeo por causa de um detalhe."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt de correção",
+          "texto": "Na composição O-Futuro-da-Criacao, ajuste somente a cena 4.\nQuero que o texto \"SEM LIMITES\" fique mais destacado, com tamanho maior e uma entrada mais suave.\nMantenha a duração da cena em seis segundos.\nNão altere as outras cenas, os textos ou a duração total do vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois da alteração, reproduza o vídeo de novo e confira: a cena 4 ficou com o texto maior e uma entrada mais suave, continua com seis segundos, e as outras cenas e a duração total não mudaram."
+        },
+        {
+          "tipo": "dica",
+          "texto": "AGORA É A VEZ DO ALUNO: ele abre o Remotion Studio, reproduz O-Futuro-da-Criacao do início ao fim, confere os 900 quadros e a leitura de cada cena, envia o prompt de correção da cena 4 e compara o antes e o depois."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Resultado esperado: um vídeo gráfico de 30 segundos, com cinco cenas, pronto para receber imagens, filmagens e áudio nas próximas aulas."
+        },
+        {
+          "tipo": "dica",
+          "texto": "As Skills orientam o Claude, mas não garantem um resultado perfeito. Quanto mais claras forem as instruções, mais fácil será orientar o Claude e revisar o trabalho. A avaliação final do vídeo continua sendo nossa."
         },
         {
           "tipo": "titulo",
@@ -1840,9 +1986,13 @@
         {
           "tipo": "lista",
           "itens": [
-            "Cinco cenas na ordem",
-            "Exatos 900 quadros",
-            "Composição funcional no Studio"
+            "Mostrou um exemplo do resultado e explicou que um vídeo começa pelo planejamento",
+            "Explicou que cada cena tem mensagem, animação e duração",
+            "Apresentou o storyboard de cinco cenas de seis segundos",
+            "Criou a composição O-Futuro-da-Criacao sem apagar as composições das aulas 2, 3 e 4",
+            "Conferiu no Remotion Studio 1080x1920, 30 FPS e 900 quadros, com a leitura dos textos e as transições",
+            "Corrigiu só a cena 4, mantendo seis segundos e sem alterar as outras cenas",
+            "Confirmou que não há vídeos, fotografias ou áudio nesta etapa"
           ]
         },
         {
@@ -1855,43 +2005,171 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar criando seu primeiro vídeo. Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Nas últimas aulas, aprendemos a instalar Skills e também criamos nossa primeira Skill personalizada de direção de edição."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos observar o storyboard e um corte rápido do resultado."
+          "texto": "Agora chegou o momento de colocar tudo isso em prática."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, vamos entender a lógica de cinco mensagens de seis segundos."
+          "texto": "Nesta aula, vamos criar nosso primeiro vídeo completo utilizando o Claude Code e o Remotion."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, mantenha Skills e composições anteriores."
+          "texto": "E não se preocupe se você nunca trabalhou com programação. Nossa ideia é aprender a construir vídeos através de instruções simples, sem precisar escrever o código manualmente."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, forneça resolução, FPS, duração, textos e cores."
+          "texto": "O primeiro passo é entender que um vídeo não começa pela animação. Ele começa pelo planejamento."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, vamos selecionar O-Futuro-da-Criacao no Studio, reveja todas as cenas."
+          "texto": "Antes de pedir qualquer coisa ao Claude, precisamos definir o que queremos mostrar, quanto tempo o vídeo terá e como as informações serão apresentadas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, vamos pedir ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo."
+          "texto": "Para nosso primeiro projeto, vamos criar um vídeo chamado O Futuro da Criação."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Por fim, na próxima aula adicionaremos filmagens, fotografias e áudio."
+          "texto": "Ele terá trinta segundos de duração, divididos em cinco cenas de seis segundos cada."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Essa divisão facilita bastante o trabalho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Em vez de pedir para o Claude criar um vídeo inteiro sem nenhuma orientação, vamos dizer exatamente o que deve acontecer em cada parte."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na primeira cena, vamos apresentar o título principal."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na segunda, vamos mostrar a mensagem: Tudo começa com uma ideia."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na terceira, vamos trabalhar com formas geométricas e textos em movimento."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na quarta cena, queremos destacar a expressão: Sem limites."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E, para finalizar, vamos utilizar a mensagem: Comece a criar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Perceba que não estamos criando nada muito complicado. A ideia é construir um vídeo simples, mas visualmente organizado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora precisamos definir algumas características."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nosso vídeo será vertical, ideal para plataformas como TikTok, Instagram Reels e YouTube Shorts."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos utilizar trinta quadros por segundo, um fundo escuro, detalhes em roxo e uma tipografia moderna."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E como já criamos nossa Skill de direção de edição, não precisamos explicar novamente todas as regras de margem e organização."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos abrir o Claude Code e enviar as instruções do projeto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O Claude vai utilizar o Remotion para construir as cenas e aplicar as animações solicitadas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando o processo terminar, vamos abrir o Remotion Studio."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Aqui podemos visualizar nosso vídeo, reproduzir as cenas e verificar se tudo está funcionando corretamente."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Observe o tempo de cada mensagem na tela e a maneira como as animações acontecem."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E agora vamos aprender algo muito importante: como corrigir um detalhe sem refazer o projeto inteiro."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Imagine que gostamos do vídeo, mas queremos melhorar apenas a quarta cena, onde aparece o texto Sem limites."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não precisamos pedir um novo vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Basta informar ao Claude qual cena queremos modificar e explicar o que deve mudar."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Neste exemplo, vamos solicitar um título maior, com mais destaque e uma animação de entrada mais suave."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Também vamos deixar claro que as demais cenas devem permanecer como estão."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois da alteração, vamos conferir novamente o resultado."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Esse processo é muito parecido com a revisão de um vídeo em um editor tradicional: criamos uma primeira versão, avaliamos e fazemos ajustes pontuais."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "E esse é o principal aprendizado de hoje."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quanto mais claras forem nossas instruções, mais fácil será orientar o Claude e revisar o trabalho."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora temos nosso primeiro vídeo completo, com trinta segundos e cinco cenas animadas."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na próxima aula, vamos começar a transformar esse projeto gráfico em uma produção audiovisual, adicionando filmagens e fotografias reais."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que o vídeo ficou pronto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Composições no Remotion: https://www.remotion.dev/docs/composition",
+            "Skills oficiais do Remotion: https://www.remotion.dev/docs/ai/skills",
+            "Skills no Claude Code: https://code.claude.com/docs/en/skills"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },

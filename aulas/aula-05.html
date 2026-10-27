@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 05 · Criando seu primeiro vídeo — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Composição, arquivos, cortes e tipografia — aula 05 do guia do professor Edição de Vídeos com Claude: Criando seu primeiro vídeo.">
+  <title>Aula 05 · Criando seu primeiro vídeo completo com Claude — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Composição, arquivos, cortes e tipografia — aula 05 do guia do professor Edição de Vídeos com Claude: Criando seu primeiro vídeo completo com Claude.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
             <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Preparando o computador para trabalhar com Claude</span></a></li>
             <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills no Claude Code</span></a></li>
             <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill personalizada</span></a></li>
-            <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo</span></a></li>
+            <li><a href="aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo com Claude</span></a></li>
             <li><a href="aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com arquivos</span></a></li>
             <li><a href="aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
             <li><a href="aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos e animações</span></a></li>
@@ -75,7 +75,7 @@
         <div class="lesson-hero__head">
           <span class="lesson-hero__no" aria-hidden="true">05</span>
           <div>
-            <h1 class="lesson-hero__title"><span class="sr-only">Aula 05: </span>Criando seu primeiro vídeo</h1>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 05: </span>Criando seu primeiro vídeo completo com Claude</h1>
             <p class="lesson-hero__theme">Composição, arquivos, cortes e tipografia</p>
           </div>
         </div>
@@ -91,7 +91,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas.</li>
+            <li>Entender que um vídeo começa pelo planejamento e pode ser dividido em cenas, cada uma com mensagem, animação e duração.</li>
+            <li>Ler e montar um storyboard simples: 30 segundos divididos em cinco cenas de seis segundos.</li>
+            <li>Criar com o Claude Code a composição O-Futuro-da-Criacao (1080x1920, 30 FPS, 900 quadros), usando as Skills oficiais do Remotion e a Skill direcao-de-edicao, sem apagar as composições anteriores.</li>
+            <li>Conferir no Remotion Studio a duração, a leitura dos textos e as transições.</li>
+            <li>Corrigir só a cena 4 com um prompt pontual, sem reconstruir o vídeo.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +109,13 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#1-explicando-como-um-video-e-construido">1. Explicando como um vídeo é construído</a></li>
+            <li><a href="#2-planejando-nosso-primeiro-video">2. Planejando nosso primeiro vídeo</a></li>
+            <li><a href="#3-vamos-criar-o-video">3. Vamos criar o vídeo</a></li>
+            <li><a href="#4-conferindo-o-resultado-no-remotion-studio">4. Conferindo o resultado no Remotion Studio</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-05-narracao">AULA 05 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,67 +123,229 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Continuidade da aula anterior: utilizar o projeto e os conhecimentos já construídos, sem recomeçar o processo.</p>
+        <p class="b-paragrafo">Tema: transformando uma ideia em um vídeo de 30 segundos. Nas aulas 2 a 4, o aluno criou no projeto meu-primeiro-video uma animação de 5 segundos em 1920x1080, uma versão melhorada com as Skills oficiais do Remotion e uma versão vertical de 1080x1920 com a Skill direcao-de-edicao. Nesta aula, ele cria o primeiro vídeo completo: O Futuro da Criação, com 30 segundos e cinco cenas animadas, numa composição nova ao lado das anteriores.</p>
+
+        <p class="b-paragrafo">Objetivo: criar um vídeo chamado O Futuro da Criação, composto por cinco cenas animadas, utilizando as Skills instaladas nas aulas anteriores.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> explique para que serve, depois demonstre e por fim deixe o aluno reproduzir. O projeto é sempre o mesmo (meu-primeiro-video): as composições das aulas 2, 3 e 4 continuam no projeto, e O-Futuro-da-Criacao fica ao lado delas, para comparação.</p></div>
+        </aside>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Revelação:</strong> Mostre o storyboard e um corte rápido do resultado.</li><li><strong>Planejar antes de executar:</strong> Explique a lógica de cinco mensagens de seis segundos.</li><li><strong>Abrir o mesmo projeto:</strong> Mantenha Skills e composições anteriores.</li><li><strong>Prompt principal:</strong> Forneça resolução, FPS, duração, textos e cores.</li><li><strong>Visualização:</strong> Selecione O-Futuro-da-Criacao no Studio, reveja todas as cenas.</li><li><strong>Correção:</strong> Peça ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo.</li><li><strong>Gancho:</strong> Na próxima aula adicionaremos filmagens, fotografias e áudio.</li></ol>
+        <ol class="b-lista-num"><li><strong>Revelação:</strong> Mostre um exemplo do resultado que a turma vai criar.</li><li><strong>Planejamento:</strong> Explique que, antes de pedir um vídeo ao Claude, precisamos organizar a ideia em cenas, cada uma com mensagem, animação e duração.</li><li><strong>Storyboard:</strong> Apresente as cinco cenas de seis segundos de O Futuro da Criação.</li><li><strong>Criação:</strong> Abra o Claude Code na pasta meu-primeiro-video e envie o prompt de criação do vídeo.</li><li><strong>Conferência:</strong> Abra o Remotion Studio com npm run dev, selecione O-Futuro-da-Criacao e reproduza o vídeo inteiro.</li><li><strong>Correção pontual:</strong> Ajuste só a cena 4 (SEM LIMITES), sem reconstruir o vídeo.</li><li><strong>Gancho:</strong> Na próxima aula, vamos adicionar filmagens e fotografias reais ao projeto.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="1-explicando-como-um-video-e-construido">1. Explicando como um vídeo é construído</h2>
+
+        <p class="b-paragrafo">Comece mostrando um exemplo do resultado que pretende criar.</p>
+
+        <p class="b-paragrafo">Explique que, antes de pedir um vídeo ao Claude, precisamos organizar nossa ideia. Para facilitar, vamos dividir o vídeo em partes menores, chamadas cenas.</p>
+
+        <ul class="b-lista"><li><strong>Cada cena tem uma mensagem:</strong> o texto que aparece na tela.</li><li><strong>Cada cena tem uma animação:</strong> a forma como esse texto e os elementos gráficos entram e se movem.</li><li><strong>Cada cena tem uma duração:</strong> quanto tempo ela fica na tela.</li></ul>
+
+        <p class="b-paragrafo">Não precisamos começar com algo complexo. Nosso primeiro vídeo terá apenas textos, elementos gráficos e movimentos simples.</p>
+
+        <h2 class="b-titulo" id="2-planejando-nosso-primeiro-video">2. Planejando nosso primeiro vídeo</h2>
+
+        <p class="b-paragrafo">O vídeo terá 30 segundos. Vamos dividi-lo em cinco cenas de seis segundos.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Storyboard — O Futuro da Criação — 30 segundos</caption>
+            <thead><tr><th scope="col">Cena</th><th scope="col">Tempo</th><th scope="col">Texto</th><th scope="col">Animação</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>0–6s</td><td>O FUTURO DA CRIAÇÃO</td><td>Abertura com título grande e animação suave</td></tr>
+              <tr><td>2</td><td>6–12s</td><td>TUDO COMEÇA COM UMA IDEIA</td><td>Texto com animação de entrada</td></tr>
+              <tr><td>3</td><td>12–18s</td><td>IDEIAS VIRAM MOVIMENTO</td><td>Formas geométricas em movimento</td></tr>
+              <tr><td>4</td><td>18–24s</td><td>SEM LIMITES</td><td>Animação mais expressiva, com leitura confortável</td></tr>
+              <tr><td>5</td><td>24–30s</td><td>COMECE A CRIAR</td><td>Encerramento simples e elegante</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Explique ao aluno que isso é um storyboard: um planejamento simples da sequência visual do vídeo. Na prática, ele serve para mostrar ao Claude o que precisamos produzir.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele lê o storyboard e confere as contas antes de abrir o Claude Code: cinco cenas de seis segundos somam 30 segundos, e cada cena tem seu texto e sua animação.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="3-vamos-criar-o-video">3. Vamos criar o vídeo</h2>
+
+        <p class="b-paragrafo">Abra o Claude Code na pasta do projeto:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>cd /d &quot;%USERPROFILE%\CursoClaude\meu-primeiro-video&quot;&#10;claude</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Envie o prompt abaixo. Ele cita as Skills oficiais do Remotion instaladas na aula 3 e a Skill direcao-de-edicao criada na aula 4. Por isso, não é preciso repetir as regras de margem e organização. Se quiser chamar a Skill de forma explícita, comece a mensagem com /direcao-de-edicao.</p>
 
         <figure class="b-prompt">
           <figcaption class="b-prompt__head">
             <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
+            <span class="b-prompt__label">Prompt para criação do vídeo</span>
             <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
           </figcaption>
           <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Crie uma composição O-Futuro-da-Criacao, 1080x1920, 30 FPS e 900 quadros. Cinco cenas de 6s: 1 UMA NOVA ERA; 2 SUAS IDEIAS; 3 SEM LIMITES; 4 CRIE COM IA; 5 O FUTURO COMEÇA AGORA. Fundo gráfico preto, branco e laranja. Use as Skills instaladas; animações simples; preserve composições anteriores. Não adicione mídias externas ou áudio.</p>
+            <p class="b-prompt__text" data-copy-source>Crie um vídeo utilizando o Remotion, seguindo as Skills oficiais instaladas e nossa Skill personalizada direcao-de-edicao.&#10;Título do projeto: O Futuro da Criação.&#10;Especificações:&#10;* Resolução: 1080x1920 pixels.&#10;* Formato: vertical, 9:16.&#10;* Taxa: 30 FPS.&#10;* Duração: 30 segundos.&#10;* Cinco cenas com seis segundos cada.&#10;Conteúdo das cenas:&#10;Cena 1: &quot;O FUTURO DA CRIAÇÃO&quot;&#10;Uma abertura com título grande e animação suave.&#10;Cena 2: &quot;TUDO COMEÇA COM UMA IDEIA&quot;&#10;Apresente o texto com uma animação de entrada.&#10;Cena 3: &quot;IDEIAS VIRAM MOVIMENTO&quot;&#10;Crie uma composição com formas geométricas em movimento.&#10;Cena 4: &quot;SEM LIMITES&quot;&#10;Destaque o texto com uma animação mais expressiva, mantendo a leitura confortável.&#10;Cena 5: &quot;COMECE A CRIAR&quot;&#10;Finalize com uma animação simples e elegante.&#10;Direção visual:&#10;* Fundo escuro.&#10;* Tipografia moderna e legível.&#10;* Detalhes em roxo.&#10;* Transições discretas.&#10;* Margens de segurança respeitadas.&#10;* Todos os textos devem permanecer na tela tempo suficiente para leitura.&#10;Crie uma nova composição chamada O-Futuro-da-Criacao.&#10;Não apague as composições anteriores.&#10;Não adicione vídeos, fotografias ou áudio nesta etapa.&#10;Ao finalizar, verifique a duração, o enquadramento e a legibilidade de todas as cenas.</p>
           </div>
           <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
         </figure>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>O nome da composição é O-Futuro-da-Criacao, sem acentos e com hifens no lugar dos espaços, porque o ID de uma composição no Remotion aceita apenas letras, números e hifens. O título que aparece no vídeo continua com acento: O FUTURO DA CRIAÇÃO.</p></div>
+        </aside>
 
-        <h3 class="b-titulo" id="skills-aplicadas">Skills aplicadas</h3>
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele abre o Claude Code na pasta meu-primeiro-video, envia o mesmo prompt de criação e espera o Claude terminar e informar o que foi criado.</p></div>
+        </aside>
 
-        <p class="b-paragrafo">Remotion: remotion-create, remotion-markup, remotion-studio e remotion-best-practices; Direção de Edição para regras visuais.</p>
+        <h2 class="b-titulo" id="4-conferindo-o-resultado-no-remotion-studio">4. Conferindo o resultado no Remotion Studio</h2>
 
-        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
-          <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Manter 900 quadros, cinco cenas e nenhum arquivo inventado.</p></div>
+        <p class="b-paragrafo">Abra o projeto e selecione a composição O-Futuro-da-Criacao na lista lateral:</p>
+
+        <figure class="b-codigo">
+          <figcaption class="b-codigo__head">
+            <span class="b-codigo__lang">cmd</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <pre class="b-codigo__pre"><code data-copy-source>npm run dev</code></pre>
+        </figure>
+
+        <p class="b-paragrafo">Reproduza o vídeo inteiro. Mostre ao aluno a importância de conferir a duração, a leitura dos textos e as transições.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>CONFERÊNCIA NO STUDIO:</strong> a composição O-Futuro-da-Criacao deve ter 1080x1920, 30 FPS e 900 quadros no total (30 segundos). Cada cena ocupa 180 quadros (6 segundos): cena 1 de 0 a 179, cena 2 de 180 a 359, cena 3 de 360 a 539, cena 4 de 540 a 719 e cena 5 de 720 a 899. As composições das aulas 2, 3 e 4 continuam na lista.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Nesta etapa, faça uma alteração simples para demonstrar que não precisamos reconstruir todo o vídeo por causa de um detalhe.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt de correção</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Na composição O-Futuro-da-Criacao, ajuste somente a cena 4.&#10;Quero que o texto &quot;SEM LIMITES&quot; fique mais destacado, com tamanho maior e uma entrada mais suave.&#10;Mantenha a duração da cena em seis segundos.&#10;Não altere as outras cenas, os textos ou a duração total do vídeo.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Depois da alteração, reproduza o vídeo de novo e confira: a cena 4 ficou com o texto maior e uma entrada mais suave, continua com seis segundos, e as outras cenas e a duração total não mudaram.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele abre o Remotion Studio, reproduz O-Futuro-da-Criacao do início ao fim, confere os 900 quadros e a leitura de cada cena, envia o prompt de correção da cena 4 e compara o antes e o depois.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Resultado esperado: um vídeo gráfico de 30 segundos, com cinco cenas, pronto para receber imagens, filmagens e áudio nas próximas aulas.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>As Skills orientam o Claude, mas não garantem um resultado perfeito. Quanto mais claras forem as instruções, mais fácil será orientar o Claude e revisar o trabalho. A avaliação final do vídeo continua sendo nossa.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Cinco cenas na ordem</li><li>Exatos 900 quadros</li><li>Composição funcional no Studio</li></ul>
+        <ul class="b-lista"><li>Mostrou um exemplo do resultado e explicou que um vídeo começa pelo planejamento</li><li>Explicou que cada cena tem mensagem, animação e duração</li><li>Apresentou o storyboard de cinco cenas de seis segundos</li><li>Criou a composição O-Futuro-da-Criacao sem apagar as composições das aulas 2, 3 e 4</li><li>Conferiu no Remotion Studio 1080x1920, 30 FPS e 900 quadros, com a leitura dos textos e as transições</li><li>Corrigiu só a cena 4, mantendo seis segundos e sem alterar as outras cenas</li><li>Confirmou que não há vídeos, fotografias ou áudio nesta etapa</li></ul>
 
         <h2 class="b-titulo" id="aula-05-narracao">AULA 05 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar criando seu primeiro vídeo. Criar o esqueleto de O Futuro da Criação: 30 segundos, cinco cenas gráficas. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Nas últimas aulas, aprendemos a instalar Skills e também criamos nossa primeira Skill personalizada de direção de edição.</p>
 
-        <p class="b-paragrafo">Primeiro, vamos observar o storyboard e um corte rápido do resultado.</p>
+        <p class="b-paragrafo">Agora chegou o momento de colocar tudo isso em prática.</p>
 
-        <p class="b-paragrafo">Agora, vamos entender a lógica de cinco mensagens de seis segundos.</p>
+        <p class="b-paragrafo">Nesta aula, vamos criar nosso primeiro vídeo completo utilizando o Claude Code e o Remotion.</p>
 
-        <p class="b-paragrafo">Em seguida, mantenha Skills e composições anteriores.</p>
+        <p class="b-paragrafo">E não se preocupe se você nunca trabalhou com programação. Nossa ideia é aprender a construir vídeos através de instruções simples, sem precisar escrever o código manualmente.</p>
 
-        <p class="b-paragrafo">Na prática, forneça resolução, FPS, duração, textos e cores.</p>
+        <p class="b-paragrafo">O primeiro passo é entender que um vídeo não começa pela animação. Ele começa pelo planejamento.</p>
 
-        <p class="b-paragrafo">Depois disso, vamos selecionar O-Futuro-da-Criacao no Studio, reveja todas as cenas.</p>
+        <p class="b-paragrafo">Antes de pedir qualquer coisa ao Claude, precisamos definir o que queremos mostrar, quanto tempo o vídeo terá e como as informações serão apresentadas.</p>
 
-        <p class="b-paragrafo">Para conferir, vamos pedir ajuste pontual do título SEM LIMITES, sem reconstruir o vídeo.</p>
+        <p class="b-paragrafo">Para nosso primeiro projeto, vamos criar um vídeo chamado O Futuro da Criação.</p>
 
-        <p class="b-paragrafo">Por fim, na próxima aula adicionaremos filmagens, fotografias e áudio.</p>
+        <p class="b-paragrafo">Ele terá trinta segundos de duração, divididos em cinco cenas de seis segundos cada.</p>
 
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">Essa divisão facilita bastante o trabalho.</p>
+
+        <p class="b-paragrafo">Em vez de pedir para o Claude criar um vídeo inteiro sem nenhuma orientação, vamos dizer exatamente o que deve acontecer em cada parte.</p>
+
+        <p class="b-paragrafo">Na primeira cena, vamos apresentar o título principal.</p>
+
+        <p class="b-paragrafo">Na segunda, vamos mostrar a mensagem: Tudo começa com uma ideia.</p>
+
+        <p class="b-paragrafo">Na terceira, vamos trabalhar com formas geométricas e textos em movimento.</p>
+
+        <p class="b-paragrafo">Na quarta cena, queremos destacar a expressão: Sem limites.</p>
+
+        <p class="b-paragrafo">E, para finalizar, vamos utilizar a mensagem: Comece a criar.</p>
+
+        <p class="b-paragrafo">Perceba que não estamos criando nada muito complicado. A ideia é construir um vídeo simples, mas visualmente organizado.</p>
+
+        <p class="b-paragrafo">Agora precisamos definir algumas características.</p>
+
+        <p class="b-paragrafo">Nosso vídeo será vertical, ideal para plataformas como TikTok, Instagram Reels e YouTube Shorts.</p>
+
+        <p class="b-paragrafo">Também vamos utilizar trinta quadros por segundo, um fundo escuro, detalhes em roxo e uma tipografia moderna.</p>
+
+        <p class="b-paragrafo">E como já criamos nossa Skill de direção de edição, não precisamos explicar novamente todas as regras de margem e organização.</p>
+
+        <p class="b-paragrafo">Vamos abrir o Claude Code e enviar as instruções do projeto.</p>
+
+        <p class="b-paragrafo">O Claude vai utilizar o Remotion para construir as cenas e aplicar as animações solicitadas.</p>
+
+        <p class="b-paragrafo">Quando o processo terminar, vamos abrir o Remotion Studio.</p>
+
+        <p class="b-paragrafo">Aqui podemos visualizar nosso vídeo, reproduzir as cenas e verificar se tudo está funcionando corretamente.</p>
+
+        <p class="b-paragrafo">Observe o tempo de cada mensagem na tela e a maneira como as animações acontecem.</p>
+
+        <p class="b-paragrafo">E agora vamos aprender algo muito importante: como corrigir um detalhe sem refazer o projeto inteiro.</p>
+
+        <p class="b-paragrafo">Imagine que gostamos do vídeo, mas queremos melhorar apenas a quarta cena, onde aparece o texto Sem limites.</p>
+
+        <p class="b-paragrafo">Não precisamos pedir um novo vídeo.</p>
+
+        <p class="b-paragrafo">Basta informar ao Claude qual cena queremos modificar e explicar o que deve mudar.</p>
+
+        <p class="b-paragrafo">Neste exemplo, vamos solicitar um título maior, com mais destaque e uma animação de entrada mais suave.</p>
+
+        <p class="b-paragrafo">Também vamos deixar claro que as demais cenas devem permanecer como estão.</p>
+
+        <p class="b-paragrafo">Depois da alteração, vamos conferir novamente o resultado.</p>
+
+        <p class="b-paragrafo">Esse processo é muito parecido com a revisão de um vídeo em um editor tradicional: criamos uma primeira versão, avaliamos e fazemos ajustes pontuais.</p>
+
+        <p class="b-paragrafo">E esse é o principal aprendizado de hoje.</p>
+
+        <p class="b-paragrafo">Quanto mais claras forem nossas instruções, mais fácil será orientar o Claude e revisar o trabalho.</p>
+
+        <p class="b-paragrafo">Agora temos nosso primeiro vídeo completo, com trinta segundos e cinco cenas animadas.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos começar a transformar esse projeto gráfico em uma produção audiovisual, adicionando filmagens e fotografias reais.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada e confira a composição no Remotion Studio antes de afirmar que o vídeo ficou pronto.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Composições no Remotion:</strong> <a href="https://www.remotion.dev/docs/composition" rel="noopener">https://www.remotion.dev/docs/composition</a></li><li><strong>Skills oficiais do Remotion:</strong> <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li><li><strong>Skills no Claude Code:</strong> <a href="https://code.claude.com/docs/en/skills" rel="noopener">https://code.claude.com/docs/en/skills</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
