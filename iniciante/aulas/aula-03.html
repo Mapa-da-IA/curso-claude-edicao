@@ -84,7 +84,6 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Em preparação</dd></div>
           <div><dt>Nível</dt><dd>Iniciante · Claude Cowork</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -94,7 +93,10 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Conteúdo em preparação.</li>
+            <li>Explicar o que é uma Skill com a comparação do manual especializado que o Claude consulta durante o trabalho.</li>
+            <li>Diferenciar os papéis do Claude, do Remotion e das Skills.</li>
+            <li>Mostrar como localizar Skills e Plugins no diretório do Claude Desktop e verificar origem, compatibilidade e permissões antes de instalar.</li>
+            <li>Pedir ao Cowork que use as orientações oficiais do Remotion para melhorar a animação de cinco segundos, preservando a versão original.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +108,169 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
+            <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
+            <li><a href="#1-comecando-pelo-conceito">1. Começando pelo conceito</a></li>
+            <li><a href="#2-antes-de-instalar-ative-a-execucao-de-codigo">2. Antes de instalar: ative a execução de código</a></li>
+            <li><a href="#3-instalando-pelo-aplicativo">3. Instalando pelo aplicativo</a></li>
+            <li><a href="#4-pedindo-a-configuracao-pelo-cowork">4. Pedindo a configuração pelo Cowork</a></li>
+            <li><a href="#checklist-do-professor">Checklist do professor</a></li>
+            <li><a href="#aula-03-narracao">AULA 03 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo em preparação.</p>
+        <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
+
+        <p class="b-paragrafo">Tema: como adicionar conhecimentos especializados ao Claude. Na aula anterior, o aluno preparou o ambiente de criação e produziu a primeira animação de cinco segundos. Agora ele vai entender o que são Skills, localizar recursos confiáveis pela interface visual do Claude Desktop e pedir ao Cowork que use as orientações oficiais do Remotion para melhorar essa animação.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>DIDÁTICA DA AULA:</strong> a tela principal é a conversa no Claude Desktop, não o terminal. Mostre três momentos: o pedido enviado ao Claude, a execução do trabalho e a comparação visual do resultado. Vale a regra principal do curso: Sempre que uma tarefa precisar de instalação, configuração ou acesso ao computador, peça ao Claude que verifique as ferramentas disponíveis, execute o que for possível com as permissões concedidas e explique apenas as etapas que realmente exigirem intervenção do aluno.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
+
+        <ol class="b-lista-num"><li><strong>Resultado anterior:</strong> Mostre a animação de cinco segundos criada na aula 2.</li><li><strong>Conceito:</strong> Apresente a comparação do editor de vídeos que recebe um manual especializado e a divisão entre Claude, Remotion e Skills.</li><li><strong>Pré-requisito:</strong> Mostre onde fica a opção Code execution and file creation, necessária para usar Skills.</li><li><strong>Diretório:</strong> Abra Customize (Personalizar) &gt; Discover e pesquise por Remotion.</li><li><strong>Verificação:</strong> Confira com a turma a origem, a compatibilidade com o Cowork e as permissões antes de adicionar qualquer recurso.</li><li><strong>Pedido ao Cowork:</strong> Envie o prompt de configuração e acompanhe a execução.</li><li><strong>Comparação:</strong> Mostre a animação original e a nova versão lado a lado. Explique que a Skill orienta a execução, mas não garante resultados perfeitos.</li><li><strong>Gancho:</strong> Na próxima aula, vamos criar nossa própria Skill com o padrão visual do curso.</li></ol>
+
+        <h2 class="b-titulo" id="1-comecando-pelo-conceito">1. Começando pelo conceito</h2>
+
+        <p class="b-paragrafo">Apresente a seguinte comparação: imagine que você contratou um editor de vídeos. Ele já sabe trabalhar com várias ferramentas, mas você quer que ele siga determinadas técnicas de animação e organização. Uma Skill funciona como um manual especializado que o Claude pode consultar durante o trabalho.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Quem faz o quê</caption>
+            <thead><tr><th scope="col">Peça</th><th scope="col">Papel</th></tr></thead>
+            <tbody>
+              <tr><td>Claude</td><td>Realiza as tarefas.</td></tr>
+              <tr><td>Remotion</td><td>Permite construir os vídeos.</td></tr>
+              <tr><td>Skills</td><td>Fornecem orientações especializadas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Uma Skill não substitui o programa de edição.</p>
+
+        <h2 class="b-titulo" id="2-antes-de-instalar-ative-a-execucao-de-codigo">2. Antes de instalar: ative a execução de código</h2>
+
+        <p class="b-paragrafo">As Skills só funcionam com o recurso Code execution and file creation (Execução de código e criação de arquivos) ativado. Mostre onde ele fica antes de abrir o diretório:</p>
+
+        <ul class="b-lista"><li><strong>Planos Free, Pro e Max:</strong> abra Settings (Configurações) &gt; Capabilities (Capacidades) e ative Code execution and file creation (Execução de código e criação de arquivos).</li><li><strong>Planos Team e Enterprise:</strong> quem administra a conta (owner) ativa o recurso em Organization settings (Configurações da organização) &gt; Plugins &amp; skills.</li></ul>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Os nomes dos menus aparecem aqui em inglês, como na interface oficial, com a tradução entre parênteses. Se o seu aplicativo estiver em português, os rótulos podem ser um pouco diferentes. Confira os rótulos no aplicativo antes de gravar.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="3-instalando-pelo-aplicativo">3. Instalando pelo aplicativo</h2>
+
+        <ol class="b-lista-num"><li><strong>Passo 1:</strong> abra o Claude Desktop e selecione Customize (Personalizar).</li><li><strong>Passo 2:</strong> abra Discover (Descobrir), o diretório que reúne Skills, conectores e plugins, e pesquise por Remotion. O mesmo diretório também abre por Customize &gt; Skills &gt; &quot;+&quot; &gt; Browse skills (Explorar skills).</li><li><strong>Passo 3:</strong> confira a origem, a compatibilidade com Cowork e as permissões antes de adicionar o recurso.</li></ol>
+
+        <p class="b-paragrafo">O diretório oficial permite instalar Skills e Plugins pela interface e está disponível nos planos Pro, Max, Team e Enterprise. O Remotion mantém um plugin oficial para Claude Code (publicado como remotion-dev/claude-code-plugin), instalado no Claude Desktop pela aba Code, em Customize &gt; Plugins &gt; Discover, pesquisando &quot;remotion&quot;.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>O funcionamento do plugin do Remotion no Cowork não está documentado. Se o plugin não oferecer a função de criação de vídeos no Cowork, utilizaremos a documentação oficial do Remotion como referência e pediremos ao Claude para configurar o projeto com as ferramentas disponíveis. Teste no seu ambiente antes de gravar.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-pedindo-a-configuracao-pelo-cowork">4. Pedindo a configuração pelo Cowork</h2>
+
+        <p class="b-paragrafo">Envie o pedido abaixo no Cowork. Ele cobre os dois caminhos: usar um recurso compatível, se existir, ou seguir a documentação oficial do Remotion.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para demonstração</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero utilizar as orientações oficiais do Remotion para criar e editar meus vídeos.&#10;Pesquise os recursos oficiais disponibilizados por remotion.dev.&#10;Verifique se existe uma Skill ou Plugin compatível com o Claude Cowork.&#10;Se houver uma opção confiável e compatível, explique o que será instalado e me ajude a habilitá-la.&#10;Caso não seja compatível, utilize a documentação oficial do Remotion como referência para nosso projeto.&#10;Depois, utilize essas orientações para melhorar a animação de cinco segundos que criamos.&#10;Melhore a tipografia e a suavidade do movimento.&#10;Preserve a versão original para comparação.&#10;Ao finalizar, mostre o resultado e explique as melhorias em linguagem simples.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Mostre a diferença entre a animação original e a nova versão. Explique que a Skill ajuda a orientar a execução, mas não garante resultados perfeitos.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>AGORA É A VEZ DO ALUNO:</strong> ele ativa a execução de código, procura o Remotion no diretório, envia o mesmo prompt no próprio Cowork e compara a animação original com a nova versão, anotando pelo menos duas diferenças (por exemplo, tipografia ou suavidade do movimento).</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Resultado esperado: o aluno saberá localizar Skills e Plugins confiáveis, verificar a instalação e solicitar o uso dessas orientações em uma tarefa real.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Skills orientam o trabalho do Claude, mas não substituem o nosso olhar como editor. A avaliação final da animação continua sendo nossa.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
+
+        <ul class="b-lista"><li>Mostrou a animação de cinco segundos da aula anterior antes de falar de Skills</li><li>Explicou a diferença entre Claude, Remotion e Skills com a comparação do manual especializado</li><li>Mostrou onde ativar Code execution and file creation</li><li>Abriu Customize &gt; Discover, pesquisou por Remotion e conferiu origem, compatibilidade com Cowork e permissões</li><li>Enviou o prompt de demonstração no Cowork e preservou a versão original</li><li>Comparou as duas versões e explicou que a Skill não garante resultados perfeitos</li></ul>
+
+        <h2 class="b-titulo" id="aula-03-narracao">AULA 03 / NARRAÇÃO</h2>
+
+        <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
+
+        <p class="b-paragrafo">Na última aula, preparamos nosso ambiente de criação e produzimos nossa primeira animação.</p>
+
+        <p class="b-paragrafo">Agora vamos conhecer um recurso que pode ajudar o Claude a trabalhar de maneira mais especializada.</p>
+
+        <p class="b-paragrafo">Esse recurso se chama Skill.</p>
+
+        <p class="b-paragrafo">Mas o que é uma Skill?</p>
+
+        <p class="b-paragrafo">Imagine que você está trabalhando com um editor de vídeos e quer ensinar a ele algumas técnicas específicas.</p>
+
+        <p class="b-paragrafo">Você poderia entregar um manual explicando como organizar cenas, trabalhar com textos e criar animações.</p>
+
+        <p class="b-paragrafo">Uma Skill funciona de maneira parecida.</p>
+
+        <p class="b-paragrafo">Ela reúne instruções que o Claude pode consultar quando estiver realizando uma determinada tarefa.</p>
+
+        <p class="b-paragrafo">E o mais interessante é que não precisamos criar todas essas orientações.</p>
+
+        <p class="b-paragrafo">Existem Skills e Plugins disponibilizados por desenvolvedores e empresas.</p>
+
+        <p class="b-paragrafo">Vamos abrir o Claude Desktop e acessar a área Personalizar.</p>
+
+        <p class="b-paragrafo">Aqui podemos encontrar recursos que ajudam a ampliar as possibilidades do Claude.</p>
+
+        <p class="b-paragrafo">Como estamos aprendendo a criar vídeos, vamos procurar por Remotion.</p>
+
+        <p class="b-paragrafo">É importante conferir quem desenvolveu cada recurso e se ele funciona no ambiente que estamos utilizando.</p>
+
+        <p class="b-paragrafo">Não devemos instalar qualquer ferramenta simplesmente porque ela promete resultados interessantes.</p>
+
+        <p class="b-paragrafo">Agora vamos pedir ao Claude que verifique as orientações oficiais do Remotion e identifique a opção compatível com nosso projeto.</p>
+
+        <p class="b-paragrafo">Depois disso, vamos realizar um teste prático.</p>
+
+        <p class="b-paragrafo">Quero melhorar a animação de cinco segundos criada na aula anterior.</p>
+
+        <p class="b-paragrafo">Vamos solicitar uma tipografia mais organizada e uma entrada de texto mais suave.</p>
+
+        <p class="b-paragrafo">Também vamos pedir para preservar a primeira versão, porque queremos comparar os dois resultados.</p>
+
+        <p class="b-paragrafo">Agora observe a diferença.</p>
+
+        <p class="b-paragrafo">O objetivo das Skills não é substituir nosso olhar como editor.</p>
+
+        <p class="b-paragrafo">Elas fornecem orientações que podem ajudar o Claude a realizar tarefas com mais consistência.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos aprender a criar nossa própria Skill, para ensinar ao Claude um padrão visual que utilizaremos durante todo o curso.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada. A área Personalizar pode aparecer como Customize no aplicativo; confira também, antes de gravar, se o plugin do Remotion aparece no diretório e se funciona no Cowork.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Usar Skills no Claude (Central de Ajuda):</strong> <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" rel="noopener">https://support.claude.com/en/articles/12512180-use-skills-in-claude</a></li><li><strong>Diretório de Skills, conectores e plugins:</strong> <a href="https://support.claude.com/en/articles/14328846-browse-skills-connectors-and-plugins-in-one-directory" rel="noopener">https://support.claude.com/en/articles/14328846-browse-skills-connectors-and-plugins-in-one-directory</a></li><li><strong>Plugin oficial do Remotion para Claude Code:</strong> <a href="https://www.remotion.dev/docs/ai/claude-code-plugin" rel="noopener">https://www.remotion.dev/docs/ai/claude-code-plugin</a></li><li><strong>Skills oficiais do Remotion:</strong> <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 

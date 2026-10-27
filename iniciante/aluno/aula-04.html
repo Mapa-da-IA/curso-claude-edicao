@@ -81,7 +81,6 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração</dt><dd>≈ 7–10 min</dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Em preparação</dd></div>
           <div><dt>Nível</dt><dd>Iniciante · Claude Cowork</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +90,9 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Conteúdo em preparação.</li>
+            <li>Ao final desta aula, você vai ter uma Skill chamada direcao-de-edicao com o padrão visual do curso.</li>
+            <li>Você vai pedir ao Claude que prepare os arquivos e o ZIP da Skill, sem editar código.</li>
+            <li>Você vai adicionar a Skill à sua conta pela interface do Claude Desktop e testá-la na animação de cinco segundos.</li>
           </ol>
         </section>
       </div>
@@ -103,13 +104,115 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-por-que-criar-uma-skill">1. Por que criar uma Skill</a></li>
+            <li><a href="#2-o-padrao-de-edicao-do-curso">2. O padrão de edição do curso</a></li>
+            <li><a href="#3-peca-ao-claude-para-criar-a-skill">3. Peça ao Claude para criar a Skill</a></li>
+            <li><a href="#4-adicione-a-skill-a-sua-conta">4. Adicione a Skill à sua conta</a></li>
+            <li><a href="#5-teste-a-skill">5. Teste a Skill</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo em preparação.</p>
+        <p class="b-paragrafo">Nesta aula, você vai criar a Skill direcao-de-edicao, que guarda o padrão visual do curso. Assim, o Claude passa a seguir as mesmas regras em todos os vídeos, sem que você precise repeti-las em cada pedido.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>Code execution and file creation (Execução de código e criação de arquivos) ativado, como na aula 3.</li><li>A animação de cinco segundos criada na aula 2.</li></ul>
+
+        <h2 class="b-titulo" id="1-por-que-criar-uma-skill">1. Por que criar uma Skill</h2>
+
+        <p class="b-paragrafo">Sempre que criamos um vídeo, precisamos informar resolução, formato, fontes, cores, margens e estilo de animação. Repetir tudo isso em cada pedido não é prático. Uma Skill armazena essas orientações e pode ser reutilizada.</p>
+
+        <h2 class="b-titulo" id="2-o-padrao-de-edicao-do-curso">2. O padrão de edição do curso</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Padrão de edição do curso</caption>
+            <thead><tr><th scope="col">Item</th><th scope="col">Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Formato vertical</td><td>1080 × 1920</td></tr>
+              <tr><td>Quadros por segundo</td><td>30 FPS</td></tr>
+              <tr><td>Margens mínimas</td><td>80 px</td></tr>
+              <tr><td>Fonte principal</td><td>Montserrat</td></tr>
+              <tr><td>Cores da identidade</td><td>Preto, branco e laranja</td></tr>
+              <tr><td>Estilo de animação</td><td>Movimentos suaves</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Regra fundamental: preservar os arquivos originais e modificar apenas o que foi solicitado.</p>
+
+        <h2 class="b-titulo" id="3-peca-ao-claude-para-criar-a-skill">3. Peça ao Claude para criar a Skill</h2>
+
+        <p class="b-paragrafo">Envie este pedido no Cowork:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para o Cowork</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero criar uma Skill personalizada chamada direcao-de-edicao.&#10;Sou iniciante e gostaria que você preparasse todos os arquivos necessários.&#10;Essa Skill deve orientar a criação de vídeos com as seguintes regras:&#10;- Formato vertical de 1080x1920.&#10;- Taxa de 30 FPS.&#10;- Margens de segurança de pelo menos 80 pixels.&#10;- Fonte Montserrat Regular e Bold.&#10;- Cores principais: preto, branco e laranja.&#10;- Textos sempre legíveis.&#10;- Animações suaves e organizadas.&#10;- Preservar as proporções das imagens.&#10;- Não modificar ou apagar arquivos originais.&#10;- Corrigir somente o que eu solicitar.&#10;Crie uma Skill válida, com nome, descrição e instruções organizadas.&#10;Prepare também o arquivo ZIP adequado para que eu possa adicioná-la à minha conta Claude.&#10;Explique como ativá-la na interface, sem exigir que eu edite código manualmente.&#10;Depois, verifique a estrutura dos arquivos produzidos.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>O Claude prepara o pacote para você. Para conferir se ele está correto: o arquivo direcao-de-edicao.zip deve conter uma pasta direcao-de-edicao e, dentro dela, o arquivo SKILL.md. No início do SKILL.md ficam dois campos: name (o nome da Skill, só com letras minúsculas, números e hífens, até 64 caracteres e igual ao nome da pasta) e description (o que a Skill faz e quando deve ser usada). O nome direcao-de-edicao segue essas regras.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="4-adicione-a-skill-a-sua-conta">4. Adicione a Skill à sua conta</h2>
+
+        <ol class="b-lista-num"><li>No Claude Desktop, abra Customize (Personalizar) &gt; Skills.</li><li>Clique em &quot;+&quot; e escolha &quot;+ Create skill&quot; (Criar skill).</li><li>Selecione Upload a skill (Fazer upload de uma skill).</li><li>Escolha o arquivo ZIP preparado pelo Claude.</li><li>Confira se a Skill direcao-de-edicao aparece na lista de Skills e se está ativada.</li></ol>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Os nomes dos menus aparecem aqui em inglês, como na interface oficial, com a tradução entre parênteses. Se o seu aplicativo estiver em português, os rótulos podem ser um pouco diferentes.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-teste-a-skill">5. Teste a Skill</h2>
+
+        <p class="b-paragrafo">Agora faça um teste:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt de teste</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Utilize minha Skill direcao-de-edicao para revisar a animação de cinco segundos.&#10;Crie uma nova versão aplicando as regras de margens, tipografia, cores e animação.&#10;Não apague a versão anterior.&#10;Entregue uma prévia para que eu possa comparar os resultados.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Compare a nova versão com a anterior e confira margens, tipografia, cores e animação.</p>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">A Skill direcao-de-edicao está ativada na sua conta e o Claude aplicou o padrão do curso em uma nova versão da animação, sem apagar a anterior. Você não precisou repetir os detalhes do padrão visual no pedido.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Se quiser mudar alguma regra no futuro, peça ao Claude uma versão atualizada da Skill e adicione o novo ZIP.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Enviei o prompt de criação e recebi o ZIP com a pasta direcao-de-edicao e o arquivo SKILL.md</li><li>Adicionei o ZIP em Customize (Personalizar) &gt; Skills e a Skill aparece ativada</li><li>Enviei o prompt de teste e recebi uma prévia da nova versão</li><li>A versão anterior continua preservada para comparação</li></ul>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li>Como criar Skills personalizadas (Central de Ajuda): <a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" rel="noopener">https://support.claude.com/en/articles/12512198-how-to-create-custom-skills</a></li><li><strong>Usar Skills no Claude (Central de Ajuda):</strong> <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" rel="noopener">https://support.claude.com/en/articles/12512180-use-skills-in-claude</a></li><li><strong>Guia de Skills:</strong> <a href="https://claude.com/docs/skills/how-to" rel="noopener">https://claude.com/docs/skills/how-to</a></li></ul>
+
+        <p class="b-paragrafo">Próxima aula: você vai usar essas orientações para criar seu primeiro vídeo completo de trinta segundos.</p>
       </article>
     </div>
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/<nível>/aulas.json (professor) ou alunos.json (aluno). Edite o template, não o HTML gerado. -->
   <title>Edição de Vídeos com Claude — Iniciante (Claude Cowork) · Versão do aluno, 12 aulas</title>
-  <meta name="description" content="Edição de Vídeos com Claude — Iniciante (Claude Cowork). Em 12 aulas de nível iniciante, você aprende a editar vídeos conversando com o Claude no Claude Desktop, com o Claude Cowork: sem terminal e sem programação. O conteúdo das aulas está em preparação.">
+  <meta name="description" content="Edição de Vídeos com Claude — Iniciante (Claude Cowork). Em 12 aulas de nível iniciante, você aprende a editar vídeos com inteligência artificial sem experiência com programação: em vez de digitar comandos, você conversa com o Claude, orienta o trabalho e avalia os resultados.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,9 +63,9 @@
         <p class="hero__kicker">Nível Iniciante · Claude Cowork · Versão do aluno</p>
         <h1 class="hero__title" id="hero-title">
           <span class="wordmark" aria-hidden="true" data-wordmark>EDIÇÃO</span>
-          <span class="sr-only">Edição de Vídeos com Claude — Iniciante (Claude Cowork): Versão do aluno, Nível iniciante. 12 aulas com o Claude Cowork, sem terminal nem programação</span>
+          <span class="sr-only">Edição de Vídeos com Claude — Iniciante (Claude Cowork): Versão do aluno · Nível iniciante · 12 aulas sem terminal</span>
         </h1>
-        <p class="hero__lead">Versão do aluno · Nível iniciante. <em>12 aulas</em> com o Claude Cowork, sem terminal nem programação.</p>
+        <p class="hero__lead">Versão do aluno · Nível iniciante · <em>12 aulas</em> sem terminal.</p>
         <div class="hero__actions">
           <a class="btn btn--clay" href="aula-01.html">Começar a aula 01 <span class="btn__arrow" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="#aulas">Ver as 12 aulas</a>
@@ -88,15 +88,16 @@
             <span class="hero-tab__no">03</span><span class="hero-tab__name">Finalização</span>
           </button>
         </div>
-        <p class="hero__panel" id="mod-panel" role="tabpanel" aria-labelledby="mod-1" data-panel-texts='[&quot;Aulas 01–04: Primeiros passos. Entrega: em preparação.&quot;,&quot;Aulas 05–08: Criação e edição. Entrega: em preparação.&quot;,&quot;Aulas 09–12: Finalização. Entrega: em preparação.&quot;]'>Aulas 01–04: Primeiros passos. Entrega: em preparação.</p>
+        <p class="hero__panel" id="mod-panel" role="tabpanel" aria-labelledby="mod-1" data-panel-texts='[&quot;Aulas 01–04: Primeiros passos.&quot;,&quot;Aulas 05–08: Criação e edição.&quot;,&quot;Aulas 09–12: Finalização.&quot;]'>Aulas 01–04: Primeiros passos.</p>
       </div>
     </section>
 
     <!-- ============ STATS STRIP (contagens calculadas do aulas.json) ============ -->
     <section class="stats" aria-label="O curso em números">
-      <dl class="stats__list" style="--stat-cols: 2">
+      <dl class="stats__list" style="--stat-cols: 3">
         <div class="stat"><dt>Aulas</dt><dd data-count="12">12</dd></div>
         <div class="stat"><dt>Módulos</dt><dd data-count="3">3</dd></div>
+        <div class="stat"><dt>Prompts prontos</dt><dd data-count="22">22</dd></div>
       </dl>
     </section>
 
@@ -116,7 +117,8 @@
         </div>
       </div>
       <div class="intro__text reveal">
-        <p class="lead">Em 12 aulas de nível iniciante, você aprende a editar vídeos conversando com o Claude no Claude Desktop, com o Claude Cowork: sem terminal e sem programação. O conteúdo das aulas está em preparação.</p>
+        <p class="lead">Em 12 aulas de nível iniciante, você aprende a editar vídeos com inteligência artificial sem experiência com programação: em vez de digitar comandos, você conversa com o Claude, orienta o trabalho e avalia os resultados.</p>
+        <p>O próprio Claude fica responsável pelas etapas técnicas que conseguir executar com as ferramentas e permissões disponíveis. Ao final, você terá produzido dois vídeos verticais de 30 segundos, exportados em MP4.</p>
       </div>
     </section>
 
@@ -219,7 +221,7 @@
               <li><a class="clip reveal" href="aula-12.html" data-aula="12">
                 <span class="clip__no">12</span>
                 <span class="clip__title">Projeto final: criando um vídeo completo do zero</span>
-                <span class="clip__meta">Finalização · ≈ 7–10 min</span>
+                <span class="clip__meta">Finalização · ≈ 10–12 min</span>
                 <span class="clip__done" aria-hidden="true"></span><span class="sr-only" data-done-label></span>
               </a></li>
             </ol>
@@ -234,7 +236,7 @@
       <div class="container guide__grid">
         <div class="guide__intro reveal">
           <h2 class="section-title" id="guia-title">O que você precisa</h2>
-          <p class="lead">Claude Desktop instalado e uma conta com acesso ao Claude Cowork. Os detalhes de instalação e de plano estão em preparação.</p>
+          <p class="lead">Claude Desktop (Windows ou macOS) e um plano pago do Claude com o Cowork (Pro, Max, Team ou Enterprise). O uso do computador é opcional: é um recurso em beta, disponível nos planos Pro e Max.</p>
         </div>
         <figure class="flow reveal" aria-label="Diagrama: material bruto disperso é condensado pelo Claude e sai como uma linha do tempo ordenada">
           <svg class="flow__svg" data-flow viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true"></svg>
@@ -257,8 +259,11 @@
           <h3>Em cada aula</h3>
           <ul class="kit">
             <li><span class="kit__swatch kit__swatch--clay" aria-hidden="true"></span>Objetivos da aula</li>
-            <li><span class="kit__swatch kit__swatch--ink" aria-hidden="true"></span>Prompts prontos para copiar</li>
-            <li><span class="kit__swatch kit__swatch--neon" aria-hidden="true"></span>Marcar como concluída</li>
+            <li><span class="kit__swatch kit__swatch--ink" aria-hidden="true"></span>Resultado esperado</li>
+            <li><span class="kit__swatch kit__swatch--neon" aria-hidden="true"></span>Checklist da aula</li>
+            <li><span class="kit__swatch kit__swatch--amber" aria-hidden="true"></span>Links da aula</li>
+            <li><span class="kit__swatch kit__swatch--clay" aria-hidden="true"></span>Prompts prontos para copiar</li>
+            <li><span class="kit__swatch kit__swatch--ink" aria-hidden="true"></span>Marcar como concluída</li>
           </ul>
         </div>
       </div>

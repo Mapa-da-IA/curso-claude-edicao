@@ -81,7 +81,6 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração</dt><dd>≈ 7–10 min</dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Em preparação</dd></div>
           <div><dt>Nível</dt><dd>Iniciante · Claude Cowork</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +90,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Conteúdo em preparação.</li>
+            <li>Ao final desta aula, você vai entender por que um vídeo aparentemente finalizado ainda precisa de revisão antes da exportação.</li>
+            <li>Ao final desta aula, você vai conferir o vídeo O Futuro da Criação com um checklist de nove itens.</li>
+            <li>Ao final desta aula, você vai pedir ao Claude um relatório de revisão e corrigir somente os problemas confirmados, preservando uma versão de segurança.</li>
+            <li>Ao final desta aula, você vai solicitar a exportação em MP4 (H.264 e AAC, 1080x1920, 30 FPS, 30 segundos) sem digitar comandos.</li>
+            <li>Ao final desta aula, você vai assistir ao MP4 final fora da prévia de edição e conferir imagem, áudio e encerramento.</li>
           </ol>
         </section>
       </div>
@@ -103,13 +106,109 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#antes-de-comecar">Antes de começar</a></li>
+            <li><a href="#1-por-que-revisar">1. Por que revisar?</a></li>
+            <li><a href="#2-checklist-de-revisao">2. Checklist de revisão</a></li>
+            <li><a href="#3-peca-a-revisao-ao-claude">3. Peça a revisão ao Claude</a></li>
+            <li><a href="#4-solicite-a-exportacao">4. Solicite a exportação</a></li>
+            <li><a href="#5-confira-o-arquivo-exportado">5. Confira o arquivo exportado</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-da-aula">Checklist da aula</a></li>
+            <li><a href="#links-da-aula">Links da aula</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo em preparação.</p>
+        <p class="b-paragrafo">Seu vídeo O Futuro da Criação parece pronto. Nesta aula, você faz uma revisão final, pede ao Claude para corrigir apenas os problemas confirmados e solicita a exportação em MP4, sem digitar nenhum comando.</p>
+
+        <h2 class="b-titulo" id="antes-de-comecar">Antes de começar</h2>
+
+        <ul class="b-lista"><li>Tenha no Cowork o projeto do vídeo O Futuro da Criação, com as cenas, filmagens, textos, cortes, áudio e acabamento das aulas anteriores.</li><li><strong>Mantenha o Claude Desktop aberto durante a aula:</strong> o Cowork só acessa suas pastas locais pelo aplicativo, enquanto ele estiver aberto.</li></ul>
+
+        <h2 class="b-titulo" id="1-por-que-revisar">1. Por que revisar?</h2>
+
+        <p class="b-paragrafo">Um vídeo aparentemente finalizado ainda pode apresentar problemas: um texto pode estar cortado, uma transição pode não funcionar corretamente ou um efeito sonoro pode estar fora de sincronia. Por isso, confira o projeto antes de exportá-lo.</p>
+
+        <h2 class="b-titulo" id="2-checklist-de-revisao">2. Checklist de revisão</h2>
+
+        <p class="b-paragrafo">Assista ao vídeo do começo ao fim e confira, um a um, os itens abaixo antes de exportar:</p>
+
+        <ul class="b-lista"><li>Todos os textos estão legíveis.</li><li>As filmagens aparecem corretamente.</li><li>Nenhuma imagem está distorcida.</li><li>Os cortes e transições estão funcionando.</li><li>A música começa e termina suavemente.</li><li>Os efeitos sonoros estão sincronizados.</li><li>O vídeo possui 30 segundos.</li><li>O formato é vertical, 1080x1920.</li><li>O primeiro e o último quadro estão corretos.</li></ul>
+
+        <h2 class="b-titulo" id="3-peca-a-revisao-ao-claude">3. Peça a revisão ao Claude</h2>
+
+        <p class="b-paragrafo">Antes de qualquer alteração, peça ao Claude que analise o projeto completo e apresente um relatório. Ele ainda não deve corrigir nada.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Pedido de revisão final</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero realizar a revisão final do vídeo O Futuro da Criação.&#10;Antes de fazer qualquer alteração, analise o projeto completo.&#10;Verifique:&#10;- Textos e ortografia.&#10;- Margens de segurança.&#10;- Imagens e enquadramentos.&#10;- Cortes e transições.&#10;- Animações.&#10;- Música e efeitos sonoros.&#10;- Primeiro e último quadro.&#10;- Duração total de 30 segundos.&#10;- Resolução 1080x1920 e taxa de 30 FPS.&#10;Identifique erros confirmados e possíveis problemas que precisam de verificação manual.&#10;Mostre um relatório simples, indicando em qual cena cada problema aparece.&#10;Não faça correções ainda.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <p class="b-paragrafo">Leia o relatório e veja em qual cena cada problema aparece. Depois, peça ao Claude para corrigir somente os problemas confirmados, preservando uma versão de segurança.</p>
+
+        <h2 class="b-titulo" id="4-solicite-a-exportacao">4. Solicite a exportação</h2>
+
+        <p class="b-paragrafo">Você não precisa digitar comandos de renderização. Basta pedir o arquivo final ao Claude, com estas configurações:</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Configurações de exportação</caption>
+            <thead><tr><th scope="col">Parâmetro</th><th scope="col">Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Formato</td><td>MP4</td></tr>
+              <tr><td>Codec de vídeo</td><td>H.264</td></tr>
+              <tr><td>Codec de áudio</td><td>AAC</td></tr>
+              <tr><td>Resolução</td><td>1080 × 1920</td></tr>
+              <tr><td>Taxa de quadros</td><td>30 FPS</td></tr>
+              <tr><td>Duração</td><td>30 segundos</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Pedido de exportação</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Nosso vídeo O Futuro da Criação está aprovado.&#10;Quero exportar a versão final.&#10;Configurações:&#10;- Arquivo MP4.&#10;- Codec de vídeo H.264.&#10;- Codec de áudio AAC.&#10;- Resolução 1080x1920.&#10;- Taxa de 30 FPS.&#10;- Duração de 30 segundos.&#10;Utilize as ferramentas de renderização disponíveis no ambiente de trabalho.&#10;Se não conseguir realizar a renderização no ambiente atual, informe exatamente o que está faltando, sem declarar que o arquivo foi gerado.&#10;Quando finalizar, verifique se o arquivo MP4 realmente existe.&#10;Entregue o arquivo final e informe onde ele foi salvo.&#10;Não exclua os arquivos do projeto.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Só considere o vídeo exportado quando o Claude confirmar que o arquivo MP4 realmente existe e informar onde ele foi salvo. Se ele não conseguir renderizar no ambiente atual, deve dizer exatamente o que está faltando.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="5-confira-o-arquivo-exportado">5. Confira o arquivo exportado</h2>
+
+        <p class="b-paragrafo">Abra o MP4 final e assista fora da prévia de edição, do começo ao fim. Confira se a imagem está correta, se o áudio funciona e se o encerramento acontece da maneira esperada.</p>
+
+        <p class="b-paragrafo">Se o Claude puder conferir automaticamente a duração, a resolução e as características do arquivo, peça que apresente o resultado da verificação.</p>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">Seu primeiro MP4 exportado e revisado, pronto para compartilhar.</p>
+
+        <h2 class="b-titulo" id="checklist-da-aula">Checklist da aula</h2>
+
+        <ul class="b-lista"><li>Conferi os nove itens do checklist de revisão.</li><li>Pedi ao Claude o relatório de revisão antes de qualquer correção.</li><li>Pedi a correção somente dos problemas confirmados, com uma versão de segurança.</li><li>Solicitei a exportação em MP4 com H.264, AAC, 1080x1920, 30 FPS e 30 segundos.</li><li>Confirmei que o arquivo MP4 existe e sei onde ele foi salvo.</li><li>Assisti ao MP4 fora da prévia de edição, do começo ao fim.</li></ul>
+
+        <p class="b-paragrafo">&lt;strong&gt;Próxima aula:&lt;/strong&gt; um novo projeto, criado do zero com todas as técnicas do curso.</p>
+
+        <h2 class="b-titulo" id="links-da-aula">Links da aula</h2>
+
+        <ul class="b-lista"><li>Codecs e codificação no Remotion (MP4 com vídeo H.264 e áudio AAC): <a href="https://www.remotion.dev/docs/encoding" rel="noopener">https://www.remotion.dev/docs/encoding</a></li><li><strong>Primeiros passos com o Claude Cowork:</strong> <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" rel="noopener">https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork</a></li></ul>
       </article>
     </div>
 

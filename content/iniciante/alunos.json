@@ -1,10 +1,11 @@
 {
   "curso": {
     "titulo": "Edição de Vídeos com Claude",
-    "subtitulo": "Versão do aluno | Nível iniciante. 12 aulas com o Claude Cowork, sem terminal nem programação",
+    "subtitulo": "Versão do aluno · Nível iniciante · 12 aulas sem terminal",
     "introducao": [
-      "Em 12 aulas de nível iniciante, você aprende a editar vídeos conversando com o Claude no Claude Desktop, com o Claude Cowork: sem terminal e sem programação. O conteúdo das aulas está em preparação.",
-      "O que você precisa: Claude Desktop instalado e uma conta com acesso ao Claude Cowork. Os detalhes de instalação e de plano estão em preparação."
+      "Em 12 aulas de nível iniciante, você aprende a editar vídeos com inteligência artificial sem experiência com programação: em vez de digitar comandos, você conversa com o Claude, orienta o trabalho e avalia os resultados.",
+      "O próprio Claude fica responsável pelas etapas técnicas que conseguir executar com as ferramentas e permissões disponíveis. Ao final, você terá produzido dois vídeos verticais de 30 segundos, exportados em MP4.",
+      "O que você precisa: Claude Desktop (Windows ou macOS) e um plano pago do Claude com o Cowork (Pro, Max, Team ou Enterprise). O uso do computador é opcional: é um recurso em beta, disponível nos planos Pro e Max."
     ]
   },
   "aulas": [
@@ -15,12 +16,123 @@
       "subtitulo_ou_tema": "Primeiros passos",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai saber o que é o Claude Cowork e como ele pode ajudar na edição de vídeos.",
+        "Ao final desta aula, você vai saber abrir o Claude Desktop, iniciar uma tarefa no Cowork e acompanhar o trabalho.",
+        "Ao final desta aula, você vai ter feito seu primeiro pedido ao Claude: o planejamento visual de uma animação de cinco segundos."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você conhece o Claude Cowork, abre sua primeira tarefa e pede ao Claude o planejamento de uma animação de cinco segundos. Você não vai programar nem instalar nada além do aplicativo: o objetivo do curso é aprender a orientar uma inteligência artificial para realizar tarefas de produção audiovisual."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Um computador com Windows ou macOS.",
+            "Uma conta Claude em um plano pago: Pro, Max, Team ou Enterprise."
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "O Cowork está disponível apenas nos planos pagos do Claude: Pro, Max, Team e Enterprise. Com uma conta gratuita, você não conseguirá acompanhar as atividades práticas do curso. Baixe o Claude Desktop (Windows ou macOS) somente em https://claude.com/download."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é o Claude Cowork"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O Claude Cowork permite solicitar trabalhos em linguagem natural, acompanhar as ações realizadas e receber os resultados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Por exemplo, em vez de aprender como criar uma animação programando cada movimento, você descreve o resultado esperado. O Claude pode planejar as etapas, produzir arquivos e utilizar ferramentas disponíveis. O resultado ainda precisa ser conferido por você."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "As tarefas do Cowork são executadas nos servidores da Anthropic, em um ambiente isolado. As pastas do seu computador só ficam acessíveis por meio do aplicativo Claude Desktop, enquanto ele estiver aberto, e apenas as pastas que você autorizar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Conheça a interface"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Abra o Claude Desktop: acesse o download oficial em https://claude.com/download e instale o aplicativo para Windows ou macOS.",
+            "Inicie uma tarefa: selecione \"Cowork\" no canto inferior esquerdo da caixa de mensagem. Alguns layouts mostram a escolha entre Chat e Cowork; nas versões com interface unificada, basta iniciar uma tarefa a partir da página inicial.",
+            "Acompanhe o trabalho: observe o plano de execução, as solicitações de autorização e os arquivos produzidos."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A interface pode variar conforme a versão, mas o funcionamento básico é o mesmo."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Baixe o aplicativo somente no endereço oficial https://claude.com/download. Evite sites de terceiros."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Faça sua primeira instrução"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Nesta aula, você ainda não precisa criar um projeto. Inicie uma tarefa no Cowork, cole o prompt abaixo e veja como o Claude interpreta o pedido."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt da aula",
+          "texto": "Estou começando a aprender edição de vídeos com inteligência artificial.\nQuero criar uma animação vertical de cinco segundos com a mensagem \"Meu primeiro vídeo com Claude\".\nA animação deverá ter fundo escuro, texto branco, destaque em laranja e um movimento suave de entrada.\nPrimeiro, explique em linguagem simples como você pretende criar essa animação.\nNão utilize termos técnicos sem explicar seu significado.\nNesta etapa, faça apenas o planejamento visual. Não instale programas nem modifique arquivos do computador."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Repare que o pedido informa o formato, as cores e o tipo de movimento, e que você não precisou escrever nenhum código. A última linha limita o Claude ao planejamento: ele não deve instalar programas nem modificar arquivos do computador."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Leia a resposta com atenção. Se algum termo técnico aparecer sem explicação, peça ao Claude que explique. Sua função é orientar, avaliar e corrigir: esse será o método de todo o curso, pedir, acompanhar e revisar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você entende como fazer um pedido claro e como o Claude transforma suas instruções em um plano de trabalho para a animação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Confirmei que minha conta está em um plano pago (Pro, Max, Team ou Enterprise)",
+            "Baixei o Claude Desktop apenas em claude.com/download e abri o aplicativo",
+            "Iniciei uma tarefa no Cowork",
+            "Enviei o prompt da aula e li o planejamento proposto pelo Claude",
+            "Identifiquei onde aparecem o plano de execução, as autorizações e os arquivos produzidos"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Download do Claude: https://claude.com/download",
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai preparar o ambiente de criação com a ajuda do próprio Claude e transformar esse planejamento em um vídeo real."
         }
       ]
     },
@@ -31,12 +143,173 @@
       "subtitulo_ou_tema": "Primeiros passos",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender o papel do Claude Cowork, do Node.js e do Remotion no curso.",
+        "Ao final desta aula, você vai ter a pasta Curso Claude criada e autorizada para o Claude, e somente ela.",
+        "Ao final desta aula, você vai ter pedido ao Claude que prepare o projeto meu-primeiro-video, sem digitar comandos técnicos.",
+        "Ao final desta aula, você vai ter uma prévia reproduzível da sua primeira animação de cinco segundos."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você pede ao Claude que prepare o ambiente para criar vídeos com o Remotion e, em seguida, que transforme em vídeo a animação de cinco segundos planejada na aula 1. Você não precisa digitar comandos técnicos: o Claude faz o que estiver ao alcance dele e explica só o que depender de você."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "O Claude Desktop instalado e aberto, com uma conta em plano pago (Pro, Max, Team ou Enterprise).",
+            "O planejamento da animação \"Meu primeiro vídeo com Claude\", feito na aula 1."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. As ferramentas do curso"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "As três ferramentas do curso",
+          "linhas": [
+            [
+              "Ferramenta",
+              "Papel",
+              "O que faz"
+            ],
+            [
+              "Claude Cowork",
+              "O assistente",
+              "Recebe os pedidos, planeja o trabalho e executa as etapas disponíveis."
+            ],
+            [
+              "Node.js",
+              "O ambiente de execução",
+              "Permite executar ferramentas utilizadas em projetos de vídeo baseados em JavaScript."
+            ],
+            [
+              "Remotion",
+              "A ferramenta de criação",
+              "Permite desenvolver, visualizar e renderizar vídeos a partir de composições programadas."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O Node.js é necessário para o projeto local do Remotion, mas não para usar o Cowork em si. Você não precisa decorar esse nome nem memorizar comandos de instalação: o importante é entender por que ele está sendo utilizado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Prepare a pasta do curso"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Crie uma pasta chamada Curso Claude pelo Explorador de Arquivos, ou peça ao Cowork que a crie em um local autorizado.",
+            "Autorize o Claude a trabalhar com essa pasta. Conceda acesso somente às pastas necessárias."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "As tarefas do Cowork são executadas nos servidores da Anthropic, em um ambiente isolado. As pastas do seu computador só ficam acessíveis por meio do aplicativo Claude Desktop, enquanto ele estiver aberto, e apenas as pastas que você autorizar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Ative o uso do computador (se estiver disponível)"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O uso do computador permite que o Claude interaja com aplicativos instalados no seu computador. Ele está em beta e só existe nos planos Pro e Max (não em Team nem Enterprise)."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Abra Settings (Configurações) > Capabilities (Recursos), ou Settings (Configurações) > System (Sistema) > This computer (Este computador).",
+            "Ative \"Enable computer use\" (ativar o uso do computador).",
+            "Quando o Claude pedir permissão para usar um aplicativo, leia o pedido e autorize apenas o que for necessário."
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Para usar esse recurso, o computador precisa estar ligado, fora do modo de suspensão, e o Claude Desktop precisa estar aberto. Se o seu plano não tiver o uso do computador, siga a aula normalmente: o Claude vai informar o que conseguiu fazer no ambiente dele."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Peça ao Claude para preparar o ambiente"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Inicie uma tarefa no Cowork e envie esta instrução:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para configuração",
+          "texto": "Quero preparar meu ambiente para criar vídeos com Claude Cowork e Remotion.\nSou iniciante e não sei utilizar terminal ou programação.\nVerifique se temos acesso ao Node.js, ao Remotion e às ferramentas necessárias para produzir vídeos.\nOrganize um projeto chamado meu-primeiro-video dentro da pasta Curso Claude, à qual concedi acesso.\nFaça as configurações que estiverem ao seu alcance, usando somente fontes oficiais.\nSe precisar instalar algo no meu Windows, verifique primeiro se você tem permissão e capacidade para interagir com o computador.\nSe não conseguir realizar alguma etapa, explique de maneira simples o que está impedindo e qual intervenção mínima será necessária.\nAo finalizar, faça um teste real do ambiente e informe o que está funcionando.\nNão declare que um programa foi instalado no Windows sem verificar a instalação local.\nNão modifique arquivos fora da pasta autorizada."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "O Cowork tem um ambiente próprio de execução, separado do seu Windows. Pedir uma instalação não garante que o programa foi instalado no seu computador. Confira na resposta em qual ambiente cada ferramenta está funcionando e não considere nada instalado no Windows sem a verificação local."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se o Claude não conseguir realizar alguma etapa, ele deve explicar o que está impedindo e qual é a intervenção mínima necessária. Siga só essa orientação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Faça o primeiro teste de criação"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando o Claude confirmar o ambiente de execução, envie:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Primeiro teste de criação",
+          "texto": "Agora crie a animação de cinco segundos que planejamos na primeira aula.\nTexto: \"Meu primeiro vídeo com Claude\".\nFormato vertical 1080x1920, 30 quadros por segundo, fundo escuro e título branco com detalhe laranja.\nUtilize o Remotion para criar a composição.\nQuero visualizar o resultado e receber uma prévia reproduzível.\nSe o Remotion Studio puder ser aberto no ambiente autorizado, utilize-o. Caso contrário, gere uma prévia em vídeo e disponibilize o resultado.\nPreserve todos os arquivos do projeto."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Se o Remotion Studio não puder ser aberto, uma prévia em vídeo (MP4) serve muito bem para conferir o resultado, sem que você precise navegar por uma interface de desenvolvimento."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você tem o projeto meu-primeiro-video dentro da pasta Curso Claude e uma prévia reproduzível da sua primeira animação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Entendi o papel do Claude Cowork, do Node.js e do Remotion",
+            "Criei a pasta Curso Claude e autorizei o Claude a trabalhar somente com ela",
+            "Ativei o uso do computador, se o meu plano oferece o recurso",
+            "Enviei o prompt de configuração e conferi em qual ambiente cada ferramenta está funcionando",
+            "Enviei o pedido do primeiro teste e assisti à prévia da animação",
+            "Os arquivos do projeto meu-primeiro-video foram preservados"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+            "Uso do computador no Cowork: https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork",
+            "Remotion: https://www.remotion.dev",
+            "Documentação do Remotion: https://www.remotion.dev/docs"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai conhecer as Skills, que ajudam o Claude a seguir instruções mais específicas durante a edição."
         }
       ]
     },
@@ -47,12 +320,161 @@
       "subtitulo_ou_tema": "Primeiros passos",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender o que é uma Skill e qual é o papel do Claude, do Remotion e das Skills.",
+        "Você vai localizar Skills e Plugins no diretório do Claude Desktop e verificar origem, compatibilidade e permissões antes de instalar.",
+        "Você vai pedir ao Cowork que use as orientações oficiais do Remotion para melhorar sua animação de cinco segundos, preservando a versão original."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você vai conhecer as Skills, procurar o Remotion no diretório do Claude Desktop e pedir ao Cowork uma versão melhorada da sua animação de cinco segundos, sem apagar a original."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "O Claude Desktop instalado, com uma conta em plano pago (o Cowork está disponível nos planos pagos).",
+            "A animação de cinco segundos criada na aula 2."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é uma Skill"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Imagine que você contratou um editor de vídeos. Ele já sabe trabalhar com várias ferramentas, mas você quer que ele siga determinadas técnicas de animação e organização. Uma Skill funciona como um manual especializado que o Claude pode consultar durante o trabalho."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Quem faz o quê",
+          "linhas": [
+            [
+              "Peça",
+              "Papel"
+            ],
+            [
+              "Claude",
+              "Realiza as tarefas."
+            ],
+            [
+              "Remotion",
+              "Permite construir os vídeos."
+            ],
+            [
+              "Skills",
+              "Fornecem orientações especializadas."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma Skill não substitui o programa de edição."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Ative a execução de código"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "As Skills só funcionam com o recurso Code execution and file creation (Execução de código e criação de arquivos) ativado:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Planos Free, Pro e Max: abra Settings (Configurações) > Capabilities (Capacidades) e ative Code execution and file creation (Execução de código e criação de arquivos).",
+            "Planos Team e Enterprise: quem administra a conta (owner) ativa o recurso em Organization settings (Configurações da organização) > Plugins & skills."
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Os nomes dos menus aparecem aqui em inglês, como na interface oficial, com a tradução entre parênteses. Se o seu aplicativo estiver em português, os rótulos podem ser um pouco diferentes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Procure o Remotion no diretório"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Abra o Claude Desktop e selecione Customize (Personalizar).",
+            "Abra Discover (Descobrir), o diretório que reúne Skills, conectores e plugins, e pesquise por Remotion. O mesmo diretório também abre por Customize > Skills > \"+\" > Browse skills (Explorar skills).",
+            "Confira a origem, a compatibilidade com Cowork e as permissões antes de adicionar o recurso."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O diretório está disponível nos planos Pro, Max, Team e Enterprise. O Remotion mantém um plugin oficial para Claude Code (publicado como remotion-dev/claude-code-plugin), que aparece na aba Code, em Customize > Plugins > Discover, ao pesquisar \"remotion\"."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Não instale uma ferramenta só porque ela promete bons resultados: confira quem a publicou. O funcionamento do plugin do Remotion no Cowork não está documentado. Se ele não for compatível, o Claude usará a documentação oficial do Remotion como referência, como pede o prompt abaixo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Peça a configuração ao Cowork"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Envie este pedido no Cowork:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para o Cowork",
+          "texto": "Quero utilizar as orientações oficiais do Remotion para criar e editar meus vídeos.\nPesquise os recursos oficiais disponibilizados por remotion.dev.\nVerifique se existe uma Skill ou Plugin compatível com o Claude Cowork.\nSe houver uma opção confiável e compatível, explique o que será instalado e me ajude a habilitá-la.\nCaso não seja compatível, utilize a documentação oficial do Remotion como referência para nosso projeto.\nDepois, utilize essas orientações para melhorar a animação de cinco segundos que criamos.\nMelhore a tipografia e a suavidade do movimento.\nPreserve a versão original para comparação.\nAo finalizar, mostre o resultado e explique as melhorias em linguagem simples."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Compare as versões"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra a animação original e a nova versão e anote pelo menos duas diferenças (por exemplo, tipografia ou suavidade do movimento)."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você sabe localizar Skills e Plugins confiáveis, verificar a instalação e pedir o uso dessas orientações em uma tarefa real: a animação original e a versão melhorada estão prontas para comparação."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Skills orientam o trabalho do Claude, mas não garantem resultados perfeitos nem substituem o seu olhar como editor. A avaliação final continua sendo sua."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Ativei Code execution and file creation (ou confirmei que já estava ativado)",
+            "Pesquisei por Remotion no diretório e conferi origem, compatibilidade com Cowork e permissões",
+            "Enviei o prompt no Cowork e a versão original foi preservada",
+            "Comparei as duas versões e anotei pelo menos duas diferenças"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Usar Skills no Claude (Central de Ajuda): https://support.claude.com/en/articles/12512180-use-skills-in-claude",
+            "Diretório de Skills, conectores e plugins: https://support.claude.com/en/articles/14328846-browse-skills-connectors-and-plugins-in-one-directory",
+            "Plugin oficial do Remotion para Claude Code: https://www.remotion.dev/docs/ai/claude-code-plugin",
+            "Skills oficiais do Remotion: https://www.remotion.dev/docs/ai/skills"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai criar sua própria Skill, com o padrão visual que será usado durante todo o curso."
         }
       ]
     },
@@ -63,12 +485,168 @@
       "subtitulo_ou_tema": "Primeiros passos",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai ter uma Skill chamada direcao-de-edicao com o padrão visual do curso.",
+        "Você vai pedir ao Claude que prepare os arquivos e o ZIP da Skill, sem editar código.",
+        "Você vai adicionar a Skill à sua conta pela interface do Claude Desktop e testá-la na animação de cinco segundos."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você vai criar a Skill direcao-de-edicao, que guarda o padrão visual do curso. Assim, o Claude passa a seguir as mesmas regras em todos os vídeos, sem que você precise repeti-las em cada pedido."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Code execution and file creation (Execução de código e criação de arquivos) ativado, como na aula 3.",
+            "A animação de cinco segundos criada na aula 2."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. Por que criar uma Skill"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Sempre que criamos um vídeo, precisamos informar resolução, formato, fontes, cores, margens e estilo de animação. Repetir tudo isso em cada pedido não é prático. Uma Skill armazena essas orientações e pode ser reutilizada."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. O padrão de edição do curso"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Padrão de edição do curso",
+          "linhas": [
+            [
+              "Item",
+              "Valor"
+            ],
+            [
+              "Formato vertical",
+              "1080 × 1920"
+            ],
+            [
+              "Quadros por segundo",
+              "30 FPS"
+            ],
+            [
+              "Margens mínimas",
+              "80 px"
+            ],
+            [
+              "Fonte principal",
+              "Montserrat"
+            ],
+            [
+              "Cores da identidade",
+              "Preto, branco e laranja"
+            ],
+            [
+              "Estilo de animação",
+              "Movimentos suaves"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Regra fundamental: preservar os arquivos originais e modificar apenas o que foi solicitado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Peça ao Claude para criar a Skill"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Envie este pedido no Cowork:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para o Cowork",
+          "texto": "Quero criar uma Skill personalizada chamada direcao-de-edicao.\nSou iniciante e gostaria que você preparasse todos os arquivos necessários.\nEssa Skill deve orientar a criação de vídeos com as seguintes regras:\n- Formato vertical de 1080x1920.\n- Taxa de 30 FPS.\n- Margens de segurança de pelo menos 80 pixels.\n- Fonte Montserrat Regular e Bold.\n- Cores principais: preto, branco e laranja.\n- Textos sempre legíveis.\n- Animações suaves e organizadas.\n- Preservar as proporções das imagens.\n- Não modificar ou apagar arquivos originais.\n- Corrigir somente o que eu solicitar.\nCrie uma Skill válida, com nome, descrição e instruções organizadas.\nPrepare também o arquivo ZIP adequado para que eu possa adicioná-la à minha conta Claude.\nExplique como ativá-la na interface, sem exigir que eu edite código manualmente.\nDepois, verifique a estrutura dos arquivos produzidos."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O Claude prepara o pacote para você. Para conferir se ele está correto: o arquivo direcao-de-edicao.zip deve conter uma pasta direcao-de-edicao e, dentro dela, o arquivo SKILL.md. No início do SKILL.md ficam dois campos: name (o nome da Skill, só com letras minúsculas, números e hífens, até 64 caracteres e igual ao nome da pasta) e description (o que a Skill faz e quando deve ser usada). O nome direcao-de-edicao segue essas regras."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Adicione a Skill à sua conta"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "No Claude Desktop, abra Customize (Personalizar) > Skills.",
+            "Clique em \"+\" e escolha \"+ Create skill\" (Criar skill).",
+            "Selecione Upload a skill (Fazer upload de uma skill).",
+            "Escolha o arquivo ZIP preparado pelo Claude.",
+            "Confira se a Skill direcao-de-edicao aparece na lista de Skills e se está ativada."
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Os nomes dos menus aparecem aqui em inglês, como na interface oficial, com a tradução entre parênteses. Se o seu aplicativo estiver em português, os rótulos podem ser um pouco diferentes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Teste a Skill"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Agora faça um teste:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt de teste",
+          "texto": "Utilize minha Skill direcao-de-edicao para revisar a animação de cinco segundos.\nCrie uma nova versão aplicando as regras de margens, tipografia, cores e animação.\nNão apague a versão anterior.\nEntregue uma prévia para que eu possa comparar os resultados."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Compare a nova versão com a anterior e confira margens, tipografia, cores e animação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "A Skill direcao-de-edicao está ativada na sua conta e o Claude aplicou o padrão do curso em uma nova versão da animação, sem apagar a anterior. Você não precisou repetir os detalhes do padrão visual no pedido."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Se quiser mudar alguma regra no futuro, peça ao Claude uma versão atualizada da Skill e adicione o novo ZIP."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Enviei o prompt de criação e recebi o ZIP com a pasta direcao-de-edicao e o arquivo SKILL.md",
+            "Adicionei o ZIP em Customize (Personalizar) > Skills e a Skill aparece ativada",
+            "Enviei o prompt de teste e recebi uma prévia da nova versão",
+            "A versão anterior continua preservada para comparação"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Como criar Skills personalizadas (Central de Ajuda): https://support.claude.com/en/articles/12512198-how-to-create-custom-skills",
+            "Usar Skills no Claude (Central de Ajuda): https://support.claude.com/en/articles/12512180-use-skills-in-claude",
+            "Guia de Skills: https://claude.com/docs/skills/how-to"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai usar essas orientações para criar seu primeiro vídeo completo de trinta segundos."
         }
       ]
     },
@@ -79,12 +657,172 @@
       "subtitulo_ou_tema": "Criação e edição",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender o que é um storyboard: a ordem das cenas, as mensagens e a duração de cada uma.",
+        "Ao final desta aula, você vai ter planejado o vídeo O Futuro da Criação: cinco cenas de seis segundos, 30 segundos no total.",
+        "Ao final desta aula, você vai ter criado esse vídeo pelo Cowork, sem abrir ou editar código.",
+        "Ao final desta aula, você vai saber corrigir apenas uma cena com um pedido específico, preservando o restante do vídeo."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você produz seu primeiro vídeo completo: O Futuro da Criação, com cinco cenas e 30 segundos no total. Ele terá apenas textos e animações gráficas, sem filmagens ou música nesta etapa."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "O Claude Desktop aberto, com o Cowork.",
+            "O ambiente Remotion preparado nas aulas anteriores, na pasta do projeto que você autorizou.",
+            "A Skill direcao-de-edicao, criada na aula 4."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é um storyboard"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Antes de pedir que o Claude produza o vídeo, planeje o que você quer mostrar. O storyboard é um planejamento que mostra a ordem das cenas, as mensagens e a duração de cada uma."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo é formado por uma sequência de cenas. Cada cena apresenta uma informação e possui uma determinada duração."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. O storyboard do projeto"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Cinco cenas de seis segundos somam 30 segundos (5 × 6s = 30s). Repare que todo o conteúdo foi planejado sem escrever nenhum código."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Storyboard — O Futuro da Criação — 30 segundos",
+          "linhas": [
+            [
+              "Cena",
+              "Texto",
+              "Função",
+              "Duração"
+            ],
+            [
+              "1",
+              "O FUTURO DA CRIAÇÃO",
+              "Abertura e título principal",
+              "6s"
+            ],
+            [
+              "2",
+              "TUDO COMEÇA COM UMA IDEIA",
+              "Apresentação da mensagem",
+              "6s"
+            ],
+            [
+              "3",
+              "IDEIAS VIRAM MOVIMENTO",
+              "Animações de formas geométricas",
+              "6s"
+            ],
+            [
+              "4",
+              "SEM LIMITES",
+              "Momento de destaque",
+              "6s"
+            ],
+            [
+              "5",
+              "COMECE A CRIAR",
+              "Mensagem final",
+              "6s"
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Criando o vídeo pelo Cowork"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O estilo visual será: fundo escuro, textos brancos, detalhes em laranja e animações suaves. Como você já criou a Skill direcao-de-edicao, o Claude pode seguir essas orientações."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "No Claude Desktop, com o Cowork, cole o pedido abaixo e envie. O Claude cuida das etapas técnicas; você acompanha o resultado."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de criação do vídeo",
+          "texto": "Vamos criar nosso primeiro vídeo completo utilizando o Remotion e as orientações da Skill direcao-de-edicao.\nTítulo: O Futuro da Criação.\nQuero um vídeo vertical de 30 segundos, dividido em cinco cenas de seis segundos.\nCena 1: O FUTURO DA CRIAÇÃO.\nCena 2: TUDO COMEÇA COM UMA IDEIA.\nCena 3: IDEIAS VIRAM MOVIMENTO.\nCena 4: SEM LIMITES.\nCena 5: COMECE A CRIAR.\nUse fundo escuro, textos brancos, detalhes em laranja e animações suaves.\nTrabalhe apenas com textos e elementos gráficos nesta etapa.\nCrie o projeto ou uma nova composição no ambiente Remotion já preparado.\nNão apague a animação anterior.\nVerifique as cinco cenas e gere uma prévia reproduzível dos 30 segundos.\nQuero acompanhar o resultado visual sem precisar abrir ou editar código."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Mantenha o Claude Desktop aberto enquanto o Claude trabalha: as pastas do seu computador só ficam acessíveis ao Cowork por meio do aplicativo aberto."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Quando o Claude terminar, assista à prévia. Observe como as cenas aparecem e se os textos permanecem visíveis por tempo suficiente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Corrigindo apenas uma cena"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você não precisa refazer todo o vídeo por causa de um detalhe. Diga ao Claude qual trecho mudar, o que deve mudar e o que deve ficar como está. Cole este pedido:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de correção",
+          "texto": "Gostei do vídeo, mas quero melhorar apenas a quarta cena.\nAumente o destaque do título SEM LIMITES e deixe a animação de entrada mais suave.\nNão altere os outros textos, as demais cenas ou a duração total.\nEntregue uma nova prévia para comparação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Compare a nova prévia com a anterior: o título SEM LIMITES ganhou destaque e entra de forma mais suave, e o restante do vídeo continua igual."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Dê instruções específicas e preserve as partes que já estão funcionando. Esse é um princípio importante quando você trabalha com inteligência artificial."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo gráfico de 30 segundos, com cinco cenas e possibilidade de revisão por comandos em linguagem natural."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Entendi o storyboard: cinco cenas de seis segundos, 30 segundos no total",
+            "Enviei o pedido de criação pelo Cowork, sem apagar a animação anterior",
+            "Assisti à prévia e conferi se os textos ficam tempo suficiente na tela",
+            "Corrigi só a quarta cena e comparei as duas prévias",
+            "Confirmei que o vídeo ainda não tem filmagens nem música"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai adicionar filmagens e imagens reais ao projeto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Remotion: https://www.remotion.dev",
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+          ]
         }
       ]
     },
@@ -95,12 +833,167 @@
       "subtitulo_ou_tema": "Criação e edição",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai saber organizar seus arquivos em pastas para vídeos, imagens e áudio, com a ajuda do Cowork.",
+        "Ao final desta aula, você vai saber disponibilizar arquivos para o Claude pela pasta do projeto autorizada no Claude Desktop.",
+        "Ao final desta aula, você vai ter adicionado duas filmagens e uma fotografia ao vídeo O Futuro da Criação.",
+        "Ao final desta aula, você vai entender a diferença entre preencher a tela por recorte e esticar a imagem."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Até agora, o vídeo O Futuro da Criação usa apenas textos e elementos gráficos. Nesta aula, você deixa as cenas mais interessantes com fotografias e filmagens reais. Para isso, o Claude precisa ter acesso aos arquivos corretos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "O vídeo O Futuro da Criação, criado na aula 5.",
+            "O Claude Desktop aberto, com o Cowork.",
+            "Os quatro arquivos da aula, listados abaixo."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. Os materiais da aula"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você vai utilizar quatro arquivos:"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Materiais da aula",
+          "linhas": [
+            [
+              "Arquivo",
+              "Uso"
+            ],
+            [
+              "computador.mp4",
+              "Filmagem para a primeira cena"
+            ],
+            [
+              "criacao.mp4",
+              "Filmagem para a segunda cena"
+            ],
+            [
+              "tecnologia.jpg",
+              "Fotografia para a terceira cena"
+            ],
+            [
+              "trilha.mp3",
+              "Música que será utilizada na aula 09"
+            ]
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Use apenas arquivos fornecidos pelo professor ou arquivos seus, com autorização de uso."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Coloque os arquivos na pasta do projeto e conceda acesso a ela pelo Claude Desktop. Se o fluxo permitir, você também pode anexá-los na conversa."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Mantenha o Claude Desktop aberto enquanto o Claude trabalha: as pastas do seu computador só ficam acessíveis ao Cowork por meio do aplicativo aberto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Organizando os arquivos"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um projeto com vídeos, fotografias e músicas misturados na mesma pasta fica difícil de usar. Você não precisa organizar tudo manualmente: peça ao Cowork. Cole este pedido:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de organização dos arquivos",
+          "texto": "Quero organizar os materiais do nosso vídeo O Futuro da Criação.\nVerifique os arquivos disponíveis na pasta do projeto à qual concedi acesso.\nProcure por:\n- computador.mp4\n- criacao.mp4\n- tecnologia.jpg\n- trilha.mp3\nOrganize os materiais em pastas separadas para vídeos, imagens e áudio.\nPreserve todos os arquivos originais.\nSe algum arquivo não existir, informe qual está faltando.\nNão crie arquivos fictícios nem substitua os materiais por conteúdos diferentes sem minha autorização.\nDepois, mostre um resumo da organização realizada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Leia o resumo do Claude: as pastas criadas, onde ficou cada arquivo e se algum está faltando. A música trilha.mp3 fica apenas guardada; ela será usada na aula 09."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Adicionando os materiais ao vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você continua trabalhando com o mesmo vídeo. Não é preciso começar outro projeto: basta pedir as mudanças necessárias."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido para adicionar os materiais ao vídeo",
+          "texto": "Agora vamos melhorar o vídeo O Futuro da Criação utilizando os arquivos disponíveis.\nNa cena 1, utilize computador.mp4 como fundo.\nNa cena 2, utilize criacao.mp4 como fundo.\nNa cena 3, utilize tecnologia.jpg como imagem principal, com um movimento suave de aproximação.\nMantenha as cenas 4 e 5 como estão.\nAjuste os arquivos ao formato vertical sem esticar ou deformar as imagens.\nPreserve o assunto principal no enquadramento.\nMantenha todos os títulos legíveis.\nNão adicione a música ainda.\nNão altere a duração de 30 segundos.\nAo finalizar, gere uma prévia atualizada do vídeo."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Assista à prévia atualizada e confira: filmagens nas cenas 1 e 2, fotografia com aproximação suave na cena 3, cenas 4 e 5 sem mudanças, títulos legíveis, sem música e com os mesmos 30 segundos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Enquadramento: recortar, nunca esticar"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O vídeo é vertical, e alguns arquivos podem ter sido gravados na horizontal. Nesse caso, a imagem precisa ser ajustada para preencher a tela."
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Preencher por recorte: a imagem mantém as proporções originais e uma parte das laterais fica fora da tela. O assunto principal continua no enquadramento.",
+            "Esticar: a imagem é forçada a ocupar a tela e fica deformada."
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Nunca estique uma imagem. Esticar deforma pessoas, objetos e cenários. Uma imagem horizontal pode ser recortada para o vídeo vertical, mas nunca deformada."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Se alguma imagem parecer esticada ou o assunto principal sair da tela, peça ao Claude uma correção só para a cena afetada, como você fez na aula 5."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo com filmagens e fotografias reais, mantendo as animações originais."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Coloquei os quatro arquivos na pasta do projeto, com autorização de uso",
+            "Pedi a organização em pastas para vídeos, imagens e áudio e li o resumo",
+            "Adicionei as filmagens às cenas 1 e 2 e a fotografia à cena 3",
+            "Conferi que nenhuma imagem ficou esticada e que os títulos estão legíveis",
+            "Confirmei que a música ainda não foi adicionada e que o vídeo continua com 30 segundos"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: você vai melhorar o ritmo da edição utilizando cortes e transições."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Remotion: https://www.remotion.dev",
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+          ]
         }
       ]
     },
@@ -111,12 +1004,177 @@
       "subtitulo_ou_tema": "Criação e edição",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender que o ritmo é a maneira como distribuímos o tempo dentro do vídeo.",
+        "Ao final desta aula, você vai redistribuir com o Claude as cinco cenas de O Futuro da Criação em 4, 5, 4, 7 e 10 segundos, mantendo os 30 segundos.",
+        "Ao final desta aula, você vai saber diferenciar corte seco, dissolvência e deslizamento.",
+        "Ao final desta aula, você vai aplicar uma dissolvência de meio segundo e um desaparecimento suave para preto no final, sem alterar a duração total."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você vai deixar o vídeo O Futuro da Criação mais dinâmico. Hoje todas as cenas têm seis segundos: isso facilita o planejamento inicial, mas nem sempre proporciona o ritmo mais interessante."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é ritmo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Ritmo é a maneira como distribuímos o tempo dentro do vídeo. Uma frase curta pode precisar de menos tempo. Uma cena com mais detalhes ou uma conclusão importante pode precisar de uma duração maior. O ritmo da edição deve acompanhar o conteúdo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. O novo ritmo do vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você vai manter os 30 segundos (de 00:00 a 00:30), mas distribuir o tempo de outra forma."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Nova duração das cenas (total: 30 segundos, 900 quadros)",
+          "linhas": [
+            [
+              "Cena",
+              "Duração",
+              "Quadros"
+            ],
+            [
+              "1",
+              "4s",
+              "120"
+            ],
+            [
+              "2",
+              "5s",
+              "150"
+            ],
+            [
+              "3",
+              "4s",
+              "120"
+            ],
+            [
+              "4",
+              "7s",
+              "210"
+            ],
+            [
+              "5",
+              "10s",
+              "300"
+            ],
+            [
+              "Total",
+              "30s",
+              "900"
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Três tipos de transição"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Três tipos de transição",
+          "linhas": [
+            [
+              "Transição",
+              "O que acontece",
+              "No nosso vídeo"
+            ],
+            [
+              "Corte seco",
+              "A mudança imediata entre duas imagens.",
+              "Entre as primeiras cenas. Muitas vezes é a melhor escolha."
+            ],
+            [
+              "Dissolvência",
+              "Uma imagem desaparece enquanto a próxima começa a surgir.",
+              "Somente entre as cenas 4 e 5, com meio segundo."
+            ],
+            [
+              "Deslizamento",
+              "A nova cena se movimenta para dentro da tela.",
+              "Apenas mostrado como exemplo; não será aplicado."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não é preciso usar uma transição diferente em cada corte. Neste vídeo, você mantém cortes secos entre as primeiras cenas e aplica uma dissolvência somente entre as cenas 4 e 5."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Peça as alterações ao Claude"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Abra a conversa do projeto no Cowork.",
+            "Copie o prompt abaixo e envie.",
+            "Assista à prévia gerada pelo Claude e compare com a montagem anterior."
+          ]
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para ajustar o ritmo e a transição",
+          "texto": "Quero melhorar o ritmo do vídeo O Futuro da Criação.\n\nMantenha a duração total de 30 segundos, mas altere o tempo das cenas:\n\nCena 1: 4 segundos.\nCena 2: 5 segundos.\nCena 3: 4 segundos.\nCena 4: 7 segundos.\nCena 5: 10 segundos.\n\nAjuste as animações para que funcionem naturalmente com as novas durações.\n\nSe necessário, selecione trechos mais interessantes das filmagens, sem alterar a ordem das cenas.\n\nMantenha cortes secos entre as primeiras cenas.\n\nEntre as cenas 4 e 5, aplique uma dissolvência de meio segundo.\n\nCompense a sobreposição da transição para manter exatamente 30 segundos e 900 quadros no vídeo final.\n\nNos últimos 15 quadros, faça a imagem desaparecer suavemente para preto.\n\nPreserve os textos, as mídias e a identidade visual.\n\nCrie uma versão revisada e gere uma prévia para comparação com a montagem anterior."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Na dissolvência, as duas cenas aparecem juntas por meio segundo. Se essa sobreposição não for compensada, o vídeo fica mais curto. Por isso o prompt pede ao Claude para manter exatamente 30 segundos e 900 quadros."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Avalie o resultado"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "As cenas mais curtas criam agilidade?",
+            "As cenas mais longas destacam as mensagens importantes?",
+            "Os cortes e a transição não prejudicaram a leitura dos textos?"
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo com maior variação de ritmo e uma transição suave, preservando os 30 segundos. Não é preciso adicionar vários efeitos para criar um vídeo interessante: é preciso entender como utilizar o tempo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Reorganizei as cenas em 4, 5, 4, 7 e 10 segundos",
+            "Mantive cortes secos entre as primeiras cenas",
+            "Apliquei uma dissolvência de meio segundo entre as cenas 4 e 5",
+            "O vídeo termina com a imagem desaparecendo suavemente para preto",
+            "O vídeo final continua com 30 segundos e 900 quadros",
+            "Os textos, as mídias e a identidade visual foram preservados",
+            "Comparei a nova versão com a montagem anterior"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: transformar textos simples em títulos com uma apresentação visual mais profissional."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Transições no Remotion: https://www.remotion.dev/docs/transitions"
+          ]
         }
       ]
     },
@@ -127,12 +1185,150 @@
       "subtitulo_ou_tema": "Criação e edição",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender que tipografia envolve fonte, tamanho, cores, alinhamento e a maneira como as palavras são apresentadas.",
+        "Ao final desta aula, você vai saber diferenciar um título básico de um título com hierarquia visual.",
+        "Ao final desta aula, você vai conhecer três animações básicas de texto: fade, slide e scale.",
+        "Ao final desta aula, você vai criar uma animação tipográfica de demonstração e melhorar os títulos das cinco cenas de O Futuro da Criação."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Nesta aula, você vai melhorar os textos do vídeo O Futuro da Criação com hierarquia visual e animações, criando títulos mais bonitos e fáceis de ler."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é tipografia?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Tipografia não significa apenas escolher uma fonte. Também envolve o tamanho, as cores, o alinhamento e a maneira como as palavras são apresentadas."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Título básico x Título com hierarquia",
+          "linhas": [
+            [
+              "Versão",
+              "Como aparece",
+              "Destaque"
+            ],
+            [
+              "Título básico",
+              "Uma nova era",
+              "Todas as palavras possuem o mesmo destaque."
+            ],
+            [
+              "Título com hierarquia",
+              "UMA NOVA / ERA (maior)",
+              "A palavra mais importante recebe maior destaque."
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Três animações básicas"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Três animações básicas",
+          "linhas": [
+            [
+              "Animação",
+              "O que acontece"
+            ],
+            [
+              "Fade",
+              "O texto aparece ou desaparece suavemente."
+            ],
+            [
+              "Slide",
+              "O texto entra em movimento de um dos lados da tela."
+            ],
+            [
+              "Scale",
+              "O texto aumenta ou diminui de tamanho."
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você pode combinar movimentos, mas sempre respeitando a legibilidade. O objetivo da animação é ajudar a apresentar a mensagem, e não atrapalhar a leitura."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Crie uma demonstração"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Abra a conversa do projeto no Cowork.",
+            "Copie o prompt abaixo e envie.",
+            "Assista à prévia da animação."
+          ]
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para a demonstração tipográfica",
+          "texto": "Quero aprender a criar uma animação tipográfica no Remotion.\n\nCrie uma composição separada de cinco segundos com a mensagem:\n\nUMA NOVA\nERA\n\nUtilize fundo preto, fonte Montserrat e textos brancos.\n\nA palavra ERA deve aparecer em laranja, com tamanho maior.\n\nFaça o texto entrar com um movimento suave de baixo para cima e uma aparição gradual.\n\nPreserve as margens de segurança e mantenha o título tempo suficiente para leitura.\n\nNão altere o vídeo principal.\n\nGere uma prévia para que eu possa observar a animação."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Montserrat é a fonte que você escolheu para a identidade visual do projeto, e o laranja é a cor de destaque."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Aplique ao vídeo principal"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Na mesma conversa, copie o prompt abaixo e envie.",
+            "Assista à nova versão do vídeo.",
+            "Confira se os textos continuam legíveis sobre as filmagens."
+          ]
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para aplicar a tipografia ao vídeo",
+          "texto": "Agora quero melhorar a tipografia das cinco cenas do vídeo O Futuro da Criação.\n\nUtilize nossa Skill direcao-de-edicao.\n\nPadronize as fontes, os alinhamentos, as margens e as cores.\n\nDestaque palavras importantes em laranja, sem exageros.\n\nUtilize animações suaves e consistentes.\n\nVerifique se os textos continuam legíveis sobre as filmagens.\n\nNa última cena, mantenha \"COMECE A CRIAR\" e acrescente a frase secundária \"CRIE COM IA\".\n\nPreserve todas as mídias, os cortes e os 30 segundos de duração.\n\nAo finalizar, mostre a nova versão do vídeo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Uma animação tipográfica de demonstração e um vídeo principal com títulos visualmente mais consistentes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Criei a demonstração UMA NOVA ERA em uma composição separada",
+            "A palavra ERA aparece em laranja e maior",
+            "O vídeo principal não foi alterado pela demonstração",
+            "As fontes, os alinhamentos, as margens e as cores das cinco cenas estão padronizados",
+            "Os textos continuam legíveis sobre as filmagens",
+            "A última cena mostra \"COMECE A CRIAR\" e \"CRIE COM IA\"",
+            "As mídias, os cortes e os 30 segundos foram preservados"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: música e efeitos sonoros para complementar a edição."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Montserrat no Google Fonts: https://fonts.google.com/specimen/Montserrat"
+          ]
         }
       ]
     },
@@ -143,12 +1339,192 @@
       "subtitulo_ou_tema": "Finalização",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai perceber como a música muda a sensação das imagens e como os efeitos sonoros destacam acontecimentos.",
+        "Ao final desta aula, você vai preparar trilha.mp3, whoosh.wav e impact.wav na pasta autorizada do projeto.",
+        "Ao final desta aula, você vai pedir ao Claude a música de fundo com volume de referência de 30%, fade-in de 1 segundo e fade-out de 2 segundos.",
+        "Ao final desta aula, você vai sincronizar efeitos sonoros com as animações, mantendo os 30 segundos do vídeo."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "O vídeo O Futuro da Criação já tem animações, filmagens, cortes e títulos. Nesta aula, você vai adicionar música, controlar o volume e sincronizar efeitos sonoros com as animações, tudo conversando com o Claude no Claude Desktop. Você não precisa abrir o terminal nem escrever código: o Claude cuida das etapas técnicas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Coloque os três arquivos de áudio na pasta autorizada do projeto, com exatamente estes nomes.",
+            "Se puder, use fones de ouvido para conferir o áudio."
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Arquivos de áudio da aula",
+          "linhas": [
+            [
+              "Arquivo",
+              "Função"
+            ],
+            [
+              "trilha.mp3",
+              "Música de fundo"
+            ],
+            [
+              "whoosh.wav",
+              "Acompanhar movimentos de texto"
+            ],
+            [
+              "impact.wav",
+              "Destacar uma mensagem importante"
+            ]
+          ]
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Use somente músicas e efeitos que você tenha autorização para usar. Coloque os arquivos reais na pasta antes de enviar os pedidos: o Claude vai verificar se eles existem antes de utilizá-los."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. Por que o áudio faz diferença"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Assista a um trecho do vídeo sem som e, depois, à mesma sequência com música. O áudio pode mudar completamente a sensação transmitida pelas imagens."
+        },
+        {
+          "tipo": "dica",
+          "texto": "Pense assim: a trilha sonora ajuda a construir o clima; os efeitos sonoros destacam acontecimentos específicos, como movimentos, transições e palavras importantes."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Controlando o volume"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Volume: a intensidade do som durante a reprodução.",
+            "Fade-in: faz o volume aumentar gradualmente no início.",
+            "Fade-out: faz o volume diminuir suavemente no final."
+          ]
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Comportamento do volume da música",
+          "linhas": [
+            [
+              "Trecho",
+              "Comportamento"
+            ],
+            [
+              "Início",
+              "Fade-in de 1s"
+            ],
+            [
+              "Meio",
+              "Volume constante"
+            ],
+            [
+              "Final",
+              "Fade-out de 2s"
+            ]
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Vamos começar com o volume em 30% como referência inicial. Esse valor pode ser alterado depois de escutar o resultado."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Adicionando a música"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Na conversa do Cowork, no Claude Desktop, envie este pedido:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para adicionar a música",
+          "texto": "Quero adicionar música ao vídeo O Futuro da Criação.\nVerifique se o arquivo trilha.mp3 está disponível.\nUtilize essa música durante os 30 segundos do vídeo.\nComece com volume de referência de 30%.\nAdicione um aumento gradual do volume durante o primeiro segundo e uma diminuição gradual nos últimos dois segundos.\nNão utilize o áudio original das filmagens nesta etapa.\nNão altere as cenas, os textos ou as animações.\nDepois de adicionar a música, gere uma prévia com áudio para que eu possa escutar o resultado.\nSe a música não tiver duração suficiente, informe antes de decidir como ajustá-la."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Leia o que o Claude informou, inclusive se o arquivo não foi encontrado ou se a música não tem duração suficiente.",
+            "Escute a prévia com áudio.",
+            "Confira se a música começa e termina suavemente, sem cortes bruscos."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Adicionando efeitos sonoros"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Os efeitos precisam estar sincronizados com as animações: não adianta colocar o som antes ou depois do movimento. Você vai usar um whoosh para acompanhar a entrada de títulos e um impacto discreto na mensagem \"CRIE COM IA\". Envie este pedido:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para os efeitos sonoros",
+          "texto": "Agora vamos adicionar efeitos sonoros ao vídeo.\nVerifique se temos os arquivos whoosh.wav e impact.wav.\nAdicione um efeito whoosh na entrada do título da cena 1.\nUtilize outro whoosh na entrada do título da cena 3.\nNa cena final, adicione um impacto discreto quando a expressão \"CRIE COM IA\" aparecer.\nSincronize os efeitos com o quadro correto de cada animação.\nMantenha o volume equilibrado em relação à música.\nEvite distorções ou sons muito altos.\nPreserve a duração de 30 segundos.\nGere uma versão com áudio e informe se encontrou algum problema de sincronização."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Leia se o Claude encontrou algum problema de sincronização.",
+            "Assista à nova versão e confira se cada efeito toca junto com a entrada do título ou da expressão \"CRIE COM IA\"."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Conferindo o áudio"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Reproduza o vídeo inteiro com fones de ouvido. Observe se os efeitos estão sincronizados, se a música começa e termina suavemente e se não existem mudanças desagradáveis de volume. Nenhum som deve ficar excessivamente alto ou causar desconforto."
+        },
+        {
+          "tipo": "dica",
+          "texto": "O valor de 30% é apenas uma referência. Se a música estiver alta ou baixa demais, peça ao Claude para ajustar o volume e escute de novo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo com música e efeitos sonoros sincronizados."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "trilha.mp3, whoosh.wav e impact.wav estão na pasta autorizada do projeto e você tem autorização para usá-los",
+            "A música tem fade-in de 1 segundo e fade-out de 2 segundos, sem o áudio original das filmagens",
+            "O whoosh toca nos títulos das cenas 1 e 3 e o impacto discreto em \"CRIE COM IA\"",
+            "O vídeo continua com 30 segundos, sem mudanças nas cenas, nos textos e nas animações",
+            "Você conferiu o vídeo inteiro com fones de ouvido"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: vamos trabalhar o acabamento visual, ajustando as imagens para que o vídeo tenha uma aparência mais equilibrada."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Áudio no Remotion: https://www.remotion.dev/docs/audio",
+            "Remotion (site oficial): https://www.remotion.dev"
+          ]
         }
       ]
     },
@@ -159,12 +1535,147 @@
       "subtitulo_ou_tema": "Finalização",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai reconhecer exposição, contraste, saturação e temperatura de cor.",
+        "Ao final desta aula, você vai pedir ao Claude uma análise das cinco cenas antes de qualquer alteração.",
+        "Ao final desta aula, você vai pedir ajustes visuais moderados, preservando textos, cortes, animações e áudio.",
+        "Ao final desta aula, você vai comparar o antes e o depois no mesmo quadro de uma filmagem."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "O vídeo O Futuro da Criação já tem cenas organizadas, animações, filmagens, textos, música e efeitos sonoros. Quando usamos imagens de fontes diferentes, é comum perceber diferenças de iluminação e de cor entre as cenas. Nesta aula, você vai trabalhar apenas o acabamento visual, conversando com o Claude no Claude Desktop."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. O que é corrigir as cores"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Corrigir as cores não significa simplesmente aumentar o brilho ou aplicar filtros. O objetivo é deixar as imagens agradáveis de assistir e manter uma aparência consistente entre as cenas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Quatro conceitos importantes"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Quatro conceitos de acabamento visual",
+          "linhas": [
+            [
+              "Conceito",
+              "O que é"
+            ],
+            [
+              "Exposição",
+              "Controla a luminosidade da imagem. Uma cena pode estar clara ou escura demais."
+            ],
+            [
+              "Contraste",
+              "É a diferença visual entre as partes claras e escuras."
+            ],
+            [
+              "Saturação",
+              "Determina a intensidade das cores."
+            ],
+            [
+              "Temperatura de cor",
+              "Influencia a aparência quente ou fria da imagem."
+            ]
+          ]
+        },
+        {
+          "tipo": "dica",
+          "texto": "Você não precisa aumentar todos esses controles para melhorar uma imagem. Muitas vezes, os melhores resultados aparecem com ajustes discretos."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Primeiro, analise"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Não peça correções antes de identificar os problemas. O Claude pode examinar quadros extraídos das filmagens e apontar possíveis inconsistências. Envie este pedido na conversa do Cowork:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para analisar o acabamento visual",
+          "texto": "Quero analisar o acabamento visual do vídeo O Futuro da Criação.\nAntes de modificar qualquer coisa, examine quadros representativos das cinco cenas.\nObserve a luminosidade, o contraste, a saturação, a temperatura de cor e o enquadramento.\nVerifique também se os títulos estão legíveis sobre as filmagens.\nIdentifique quais cenas precisam de ajustes.\nApresente um relatório simples, explicando o problema e a correção recomendada.\nNão faça alterações ainda.\nSe não conseguir analisar as imagens diretamente, informe essa limitação em vez de inventar problemas."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Leia o relatório com calma, cena por cena: qual é o problema e qual correção o Claude recomenda.",
+            "Se o Claude informar que não conseguiu analisar as imagens, isso é uma resposta válida: não peça correções baseadas em problemas inventados."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Fazendo os ajustes"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de entender o relatório, envie este pedido:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Prompt para fazer os ajustes",
+          "texto": "Agora quero melhorar o acabamento visual do vídeo O Futuro da Criação.\nUtilize os problemas realmente identificados na análise anterior.\nAjuste a exposição, o contraste e as cores somente quando necessário.\nProcure manter uma aparência consistente entre as filmagens.\nNão aplique o mesmo filtro em todas as cenas indiscriminadamente.\nPreserve os detalhes e as proporções originais.\nMantenha os títulos legíveis.\nNão altere os textos, cortes, animações, música ou efeitos sonoros.\nPreserve a versão anterior para comparação.\nDepois, gere uma prévia atualizada e mostre quais ajustes foram realizados."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Nem toda imagem pode ser totalmente recuperada. Se uma região foi gravada sem informações suficientes, não existe garantia de que o Claude conseguirá recuperar seus detalhes originais. Por isso, evite correções exageradas."
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Leia a lista de ajustes que o Claude realizou.",
+            "Confirme que a versão anterior foi preservada.",
+            "Assista à prévia atualizada."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Comparando o antes e o depois"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Compare o mesmo quadro de uma filmagem nas duas versões. Observe se as imagens estão mais equilibradas e se os detalhes continuam naturais. A correção deve melhorar a imagem sem produzir uma aparência artificial."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "O vídeo terá imagens mais equilibradas, preservando a montagem e os efeitos das aulas anteriores."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Você pediu a análise das cinco cenas antes de qualquer alteração",
+            "Você leu o relatório e entendeu o que realmente precisava de correção",
+            "Os ajustes foram feitos só onde necessário, sem o mesmo filtro em todas as cenas",
+            "Os títulos continuam legíveis e os textos, cortes, animações, música e efeitos sonoros não mudaram",
+            "A versão anterior foi preservada para comparação",
+            "Você comparou o antes e o depois no mesmo quadro e as imagens não parecem artificiais"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Próxima aula: vamos realizar a revisão final e exportar o primeiro vídeo do curso."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Remotion (site oficial): https://www.remotion.dev"
+          ]
         }
       ]
     },
@@ -175,12 +1686,175 @@
       "subtitulo_ou_tema": "Finalização",
       "duracao": "≈ 7–10 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai entender por que um vídeo aparentemente finalizado ainda precisa de revisão antes da exportação.",
+        "Ao final desta aula, você vai conferir o vídeo O Futuro da Criação com um checklist de nove itens.",
+        "Ao final desta aula, você vai pedir ao Claude um relatório de revisão e corrigir somente os problemas confirmados, preservando uma versão de segurança.",
+        "Ao final desta aula, você vai solicitar a exportação em MP4 (H.264 e AAC, 1080x1920, 30 FPS, 30 segundos) sem digitar comandos.",
+        "Ao final desta aula, você vai assistir ao MP4 final fora da prévia de edição e conferir imagem, áudio e encerramento."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Seu vídeo O Futuro da Criação parece pronto. Nesta aula, você faz uma revisão final, pede ao Claude para corrigir apenas os problemas confirmados e solicita a exportação em MP4, sem digitar nenhum comando."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Tenha no Cowork o projeto do vídeo O Futuro da Criação, com as cenas, filmagens, textos, cortes, áudio e acabamento das aulas anteriores.",
+            "Mantenha o Claude Desktop aberto durante a aula: o Cowork só acessa suas pastas locais pelo aplicativo, enquanto ele estiver aberto."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. Por que revisar?"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um vídeo aparentemente finalizado ainda pode apresentar problemas: um texto pode estar cortado, uma transição pode não funcionar corretamente ou um efeito sonoro pode estar fora de sincronia. Por isso, confira o projeto antes de exportá-lo."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Checklist de revisão"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Assista ao vídeo do começo ao fim e confira, um a um, os itens abaixo antes de exportar:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Todos os textos estão legíveis.",
+            "As filmagens aparecem corretamente.",
+            "Nenhuma imagem está distorcida.",
+            "Os cortes e transições estão funcionando.",
+            "A música começa e termina suavemente.",
+            "Os efeitos sonoros estão sincronizados.",
+            "O vídeo possui 30 segundos.",
+            "O formato é vertical, 1080x1920.",
+            "O primeiro e o último quadro estão corretos."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Peça a revisão ao Claude"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Antes de qualquer alteração, peça ao Claude que analise o projeto completo e apresente um relatório. Ele ainda não deve corrigir nada."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de revisão final",
+          "texto": "Quero realizar a revisão final do vídeo O Futuro da Criação.\nAntes de fazer qualquer alteração, analise o projeto completo.\nVerifique:\n- Textos e ortografia.\n- Margens de segurança.\n- Imagens e enquadramentos.\n- Cortes e transições.\n- Animações.\n- Música e efeitos sonoros.\n- Primeiro e último quadro.\n- Duração total de 30 segundos.\n- Resolução 1080x1920 e taxa de 30 FPS.\nIdentifique erros confirmados e possíveis problemas que precisam de verificação manual.\nMostre um relatório simples, indicando em qual cena cada problema aparece.\nNão faça correções ainda."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Leia o relatório e veja em qual cena cada problema aparece. Depois, peça ao Claude para corrigir somente os problemas confirmados, preservando uma versão de segurança."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Solicite a exportação"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Você não precisa digitar comandos de renderização. Basta pedir o arquivo final ao Claude, com estas configurações:"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Configurações de exportação",
+          "linhas": [
+            [
+              "Parâmetro",
+              "Valor"
+            ],
+            [
+              "Formato",
+              "MP4"
+            ],
+            [
+              "Codec de vídeo",
+              "H.264"
+            ],
+            [
+              "Codec de áudio",
+              "AAC"
+            ],
+            [
+              "Resolução",
+              "1080 × 1920"
+            ],
+            [
+              "Taxa de quadros",
+              "30 FPS"
+            ],
+            [
+              "Duração",
+              "30 segundos"
+            ]
+          ]
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de exportação",
+          "texto": "Nosso vídeo O Futuro da Criação está aprovado.\nQuero exportar a versão final.\nConfigurações:\n- Arquivo MP4.\n- Codec de vídeo H.264.\n- Codec de áudio AAC.\n- Resolução 1080x1920.\n- Taxa de 30 FPS.\n- Duração de 30 segundos.\nUtilize as ferramentas de renderização disponíveis no ambiente de trabalho.\nSe não conseguir realizar a renderização no ambiente atual, informe exatamente o que está faltando, sem declarar que o arquivo foi gerado.\nQuando finalizar, verifique se o arquivo MP4 realmente existe.\nEntregue o arquivo final e informe onde ele foi salvo.\nNão exclua os arquivos do projeto."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Só considere o vídeo exportado quando o Claude confirmar que o arquivo MP4 realmente existe e informar onde ele foi salvo. Se ele não conseguir renderizar no ambiente atual, deve dizer exatamente o que está faltando."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "5. Confira o arquivo exportado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Abra o MP4 final e assista fora da prévia de edição, do começo ao fim. Confira se a imagem está correta, se o áudio funciona e se o encerramento acontece da maneira esperada."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Se o Claude puder conferir automaticamente a duração, a resolução e as características do arquivo, peça que apresente o resultado da verificação."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Seu primeiro MP4 exportado e revisado, pronto para compartilhar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Conferi os nove itens do checklist de revisão.",
+            "Pedi ao Claude o relatório de revisão antes de qualquer correção.",
+            "Pedi a correção somente dos problemas confirmados, com uma versão de segurança.",
+            "Solicitei a exportação em MP4 com H.264, AAC, 1080x1920, 30 FPS e 30 segundos.",
+            "Confirmei que o arquivo MP4 existe e sei onde ele foi salvo.",
+            "Assisti ao MP4 fora da prévia de edição, do começo ao fim."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "<strong>Próxima aula:</strong> um novo projeto, criado do zero com todas as técnicas do curso."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Codecs e codificação no Remotion (MP4 com vídeo H.264 e áudio AAC): https://www.remotion.dev/docs/encoding",
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+          ]
         }
       ]
     },
@@ -189,14 +1863,187 @@
       "slug": "aula-12",
       "titulo": "Projeto final: criando um vídeo completo do zero",
       "subtitulo_ou_tema": "Finalização",
-      "duracao": "≈ 7–10 min",
+      "duracao": "≈ 10–12 min",
       "objetivos": [
-        "Conteúdo em preparação."
+        "Ao final desta aula, você vai planejar um vídeo independente, Transforme suas Ideias em Realidade, com cinco cenas e 30 segundos.",
+        "Ao final desta aula, você vai pedir ao Claude um novo projeto, Transformando Ideias, separado do vídeo O Futuro da Criação.",
+        "Ao final desta aula, você vai solicitar um inventário dos materiais disponíveis antes da montagem, sem arquivos inventados.",
+        "Ao final desta aula, você vai orientar o Claude a criar o vídeo completo, etapa por etapa.",
+        "Ao final desta aula, você vai revisar, corrigir somente erros confirmados e exportar em MP4."
       ],
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Conteúdo em preparação."
+          "texto": "Este é o projeto final do curso. Você vai repetir o processo que aprendeu, agora em um vídeo novo, criado do zero, com o Claude Cowork como assistente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Antes de começar"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Tenha o vídeo O Futuro da Criação finalizado e exportado na aula 11.",
+            "Tenha a Skill personalizada direcao-de-edicao, criada nas aulas anteriores.",
+            "Coloque na pasta autorizada do Cowork os vídeos, fotografias e arquivos de áudio que pretende usar.",
+            "Mantenha o Claude Desktop aberto durante a aula: o Cowork só acessa suas pastas locais pelo aplicativo, enquanto ele estiver aberto."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "1. Planeje o novo vídeo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Título: <strong>TRANSFORME SUAS IDEIAS EM REALIDADE</strong>. O vídeo terá cinco cenas, com duração total de 30 segundos."
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Storyboard — Transforme suas Ideias em Realidade — 30 segundos",
+          "linhas": [
+            [
+              "Cena",
+              "Mensagem",
+              "Duração"
+            ],
+            [
+              "1",
+              "Toda criação começa com uma ideia",
+              "4s"
+            ],
+            [
+              "2",
+              "Imagine",
+              "6s"
+            ],
+            [
+              "3",
+              "Crie",
+              "6s"
+            ],
+            [
+              "4",
+              "Transforme",
+              "6s"
+            ],
+            [
+              "5",
+              "Transforme suas ideias em realidade",
+              "8s"
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "2. Peça ao Claude para preparar o novo projeto"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Mantenha o novo trabalho separado do vídeo anterior: assim, você guarda os dois projetos e pode comparar sua evolução. Antes de montar qualquer cena, peça ao Claude um inventário dos materiais disponíveis."
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de preparação do novo projeto",
+          "texto": "Vamos começar o projeto final do curso de edição de vídeos com Claude Cowork.\nCrie um novo projeto chamado Transformando Ideias.\nQuero manter esse projeto separado do vídeo O Futuro da Criação.\nUtilize nossa Skill personalizada direcao-de-edicao e as orientações oficiais do Remotion disponíveis.\nOrganize as pastas necessárias.\nVerifique quais vídeos, fotografias e arquivos de áudio estão disponíveis na pasta autorizada.\nPrepare um inventário dos materiais encontrados.\nNão invente arquivos que não existem.\nCom base nos materiais disponíveis, proponha como podemos utilizá-los nas cinco cenas do projeto.\nNão inicie a montagem até concluir essa organização."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "3. Crie o vídeo completo"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois que o Claude apresentar o inventário, envie o pedido de criação:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de criação do vídeo completo",
+          "texto": "Agora quero produzir o vídeo final do curso.\nTítulo: Transforme suas Ideias em Realidade.\nConfigurações:\n- Formato vertical 1080x1920.\n- Taxa de 30 FPS.\n- Duração de 30 segundos.\n- Fonte Montserrat.\n- Fundo escuro, textos brancos e detalhes em laranja.\n- Margens de segurança de 80 pixels.\nEstrutura:\nCena 1 — 4 segundos:\n\"TODA CRIAÇÃO COMEÇA COM UMA IDEIA\"\nCena 2 — 6 segundos:\n\"IMAGINE\"\nCena 3 — 6 segundos:\n\"CRIE\"\nCena 4 — 6 segundos:\n\"TRANSFORME\"\nCena 5 — 8 segundos:\n\"TRANSFORME SUAS IDEIAS EM REALIDADE\"\nUtilize somente as mídias reais disponíveis no inventário anterior.\nSe faltar material para alguma cena, utilize textos e elementos gráficos.\nQuero que você execute as etapas técnicas em sequência:\n1. Criar as cinco cenas.\n2. Aplicar a identidade visual.\n3. Adicionar mídias adequadas.\n4. Criar animações e transições.\n5. Ajustar o ritmo.\n6. Adicionar música e efeitos, se houver arquivos apropriados.\n7. Realizar o acabamento visual.\n8. Verificar o projeto completo.\n9. Gerar uma prévia reproduzível.\nNão modifique o projeto anterior.\nFaça as correções necessárias dentro do escopo definido, preservando os arquivos originais.\nAo concluir, apresente o vídeo para revisão e informe os pontos que precisam de minha avaliação antes da exportação."
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Confira o resultado e avalie cada cena. Trabalhar com inteligência artificial não significa aceitar automaticamente a primeira versão: explique com clareza o que você quer modificar."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "4. Revise e exporte"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Depois de visualizar o vídeo, peça correções pontuais e a exportação. Por exemplo:"
+        },
+        {
+          "tipo": "prompt",
+          "rotulo": "Pedido de revisão e exportação",
+          "texto": "Quero revisar o vídeo Transforme suas Ideias em Realidade antes da exportação.\nVerifique o enquadramento, a legibilidade dos textos, a duração das cenas, as animações e o áudio.\nCorrija somente os erros confirmados, sem modificar o conceito aprovado.\nDepois, exporte o vídeo em MP4 com resolução 1080x1920, 30 FPS e codec H.264, com áudio AAC quando houver trilha.\nVerifique se o arquivo foi realmente gerado e se sua duração está correta.\nEntregue o resultado final e preserve os arquivos editáveis do projeto."
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Só considere o vídeo pronto quando o Claude confirmar que o arquivo MP4 foi realmente gerado. Depois, assista ao vídeo completo e confira se tudo está funcionando corretamente."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Resultado esperado"
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Um segundo vídeo vertical de 30 segundos, Transforme suas Ideias em Realidade, exportado em MP4, com os arquivos editáveis preservados e o projeto O Futuro da Criação intacto."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "O que você aprendeu"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Fluxo completo de produção",
+          "linhas": [
+            [
+              "Etapa",
+              "O que significa"
+            ],
+            [
+              "Planejar",
+              "Definir o objetivo, as mensagens e a sequência das cenas."
+            ],
+            [
+              "Criar",
+              "Orientar o Claude para produzir animações, vídeos e composições."
+            ],
+            [
+              "Revisar",
+              "Conferir os resultados e realizar correções específicas."
+            ],
+            [
+              "Exportar",
+              "Transformar o projeto em um arquivo pronto para assistir e compartilhar."
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Checklist da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Planejei as cinco cenas, com 30 segundos no total.",
+            "Pedi ao Claude o projeto Transformando Ideias, separado do projeto anterior.",
+            "Conferi o inventário dos materiais antes da montagem.",
+            "Enviei o pedido de criação e avaliei cada cena.",
+            "Pedi correções somente dos erros confirmados.",
+            "Confirmei que o MP4 foi gerado e assisti ao vídeo completo."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Links da aula"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Primeiros passos com o Claude Cowork: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+            "Skills oficiais do Remotion: https://www.remotion.dev/docs/ai/skills",
+            "Codecs e codificação no Remotion (MP4 com vídeo H.264 e áudio AAC): https://www.remotion.dev/docs/encoding"
+          ]
         }
       ]
     }

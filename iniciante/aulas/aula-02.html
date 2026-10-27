@@ -84,7 +84,6 @@
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Em preparação</dd></div>
           <div><dt>Nível</dt><dd>Iniciante · Claude Cowork</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -94,7 +93,11 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Conteúdo em preparação.</li>
+            <li>Apresentar as três ferramentas do curso: Claude Cowork, Node.js e Remotion.</li>
+            <li>Mostrar como conceder acesso apenas à pasta do curso, Curso Claude.</li>
+            <li>Pedir ao Claude que verifique as ferramentas e organize o projeto meu-primeiro-video, sem que o aluno digite comandos técnicos.</li>
+            <li>Conferir se cada ferramenta funciona no ambiente correto, sem declarar uma instalação no Windows que não foi verificada.</li>
+            <li>Criar a animação de cinco segundos planejada na aula 1 e obter uma prévia reproduzível.</li>
           </ol>
         </section>
       </div>
@@ -106,13 +109,170 @@
         <nav class="toc__inner" data-toc>
           <p class="toc__title">Nesta aula</p>
           <ol class="toc__list">
-
+            <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
+            <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
+            <li><a href="#1-explicando-as-ferramentas">1. Explicando as ferramentas</a></li>
+            <li><a href="#2-como-preparar-o-computador">2. Como preparar o computador</a></li>
+            <li><a href="#3-primeiro-teste-de-criacao">3. Primeiro teste de criação</a></li>
+            <li><a href="#resultado-esperado">Resultado esperado</a></li>
+            <li><a href="#checklist-do-professor">Checklist do professor</a></li>
+            <li><a href="#aula-02-narracao">AULA 02 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
 
       <article class="lesson-body" data-lesson-body>
-        <p class="b-paragrafo">Conteúdo em preparação.</p>
+        <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
+
+        <p class="b-paragrafo">Tema: como pedir ao Claude para configurar as ferramentas de edição. Na aula anterior, o aluno conheceu o Cowork e pediu o planejamento de uma animação vertical de cinco segundos com a mensagem &quot;Meu primeiro vídeo com Claude&quot;. Nesta aula, o objetivo é preparar o ambiente para criar vídeos com Remotion, sem exigir que o aluno digite comandos técnicos manualmente, e transformar aquele planejamento na primeira animação real.</p>
+
+        <p class="b-paragrafo">O projeto criado aqui, meu-primeiro-video, dentro da pasta Curso Claude, será usado nas próximas aulas, a começar pela aula 3, em que o aluno conhece as Skills.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>REGRA PEDAGÓGICA PRINCIPAL:</strong> sempre que uma tarefa precisar de instalação, configuração ou acesso ao computador, peça ao Claude que verifique as ferramentas disponíveis, execute o que for possível com as permissões concedidas e explique apenas as etapas que realmente exigirem intervenção do aluno.</p></div>
+        </aside>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>UMA DIFERENÇA TÉCNICA IMPORTANTE:</strong> as tarefas do Cowork são executadas nos servidores da Anthropic, em um ambiente isolado. As pastas locais só ficam acessíveis pelo Claude Desktop, enquanto ele estiver aberto, e apenas as pastas autorizadas. Por isso, pedir uma instalação pelo Cowork não garante que o programa será instalado diretamente no Windows: o Claude precisa verificar se consegue executar a tarefa no computador ou apenas no ambiente isolado. A documentação oficial não informa se o Cowork consegue instalar programas como o Node.js diretamente no Windows.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
+
+        <ol class="b-lista-num"><li><strong>Retomada:</strong> Lembre o planejamento da animação de cinco segundos feito na aula 1.</li><li><strong>Ferramentas:</strong> Apresente Claude Cowork, Node.js e Remotion com a tabela das três ferramentas. Explique que o aluno não precisa memorizar comandos de instalação.</li><li><strong>Pasta do curso:</strong> Crie a pasta Curso Claude pelo Explorador de Arquivos (ou peça ao Cowork que a crie em um local autorizado) e mostre como conceder acesso apenas a ela.</li><li><strong>Uso do computador:</strong> Se a turma tiver acesso (planos Pro e Max), mostre onde ativar o recurso nas configurações do Claude Desktop e a autorização por aplicativo.</li><li><strong>Configuração:</strong> Envie o prompt de configuração e acompanhe o plano, as autorizações e o teste final do ambiente.</li><li><strong>Conferência:</strong> Leia com a turma o que o Claude informou como funcionando e em qual ambiente (computador do aluno ou ambiente isolado do Cowork).</li><li><strong>Primeiro teste:</strong> Envie o pedido de criação da animação e mostre a prévia reproduzível (Remotion Studio, se puder ser aberto, ou uma prévia em vídeo).</li><li><strong>Gancho:</strong> Na próxima aula, vamos conhecer as Skills, que ajudam o Claude a seguir instruções mais específicas durante a edição.</li></ol>
+
+        <h2 class="b-titulo" id="1-explicando-as-ferramentas">1. Explicando as ferramentas</h2>
+
+        <p class="b-paragrafo">Apresente três elementos que serão utilizados durante o curso.</p>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">As três ferramentas do curso</caption>
+            <thead><tr><th scope="col">Ferramenta</th><th scope="col">Papel</th><th scope="col">O que faz</th></tr></thead>
+            <tbody>
+              <tr><td>Claude Cowork</td><td>O assistente</td><td>Recebe os pedidos, planeja o trabalho e executa as etapas disponíveis.</td></tr>
+              <tr><td>Node.js</td><td>O ambiente de execução</td><td>Permite executar ferramentas utilizadas em projetos de vídeo baseados em JavaScript.</td></tr>
+              <tr><td>Remotion</td><td>A ferramenta de criação</td><td>Permite desenvolver, visualizar e renderizar vídeos a partir de composições programadas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="b-paragrafo">Explique que o Node.js é necessário para o fluxo de projeto local tradicional do Remotion, mas não para utilizar o Cowork em si. O aluno não precisa memorizar comandos de instalação.</p>
+
+        <h2 class="b-titulo" id="2-como-preparar-o-computador">2. Como preparar o computador</h2>
+
+        <p class="b-paragrafo">Antes do exercício, mostre como conceder acesso apenas à pasta do curso.</p>
+
+        <p class="b-paragrafo">Crie uma pasta chamada Curso Claude pelo Explorador de Arquivos, ou peça ao Cowork que a crie em um local autorizado.</p>
+
+        <p class="b-paragrafo">Se a turma tiver acesso ao recurso Uso do computador, ele pode ser ativado nas configurações do Claude Desktop. O recurso pede autorização para interagir com aplicativos.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p><strong>USO DO COMPUTADOR:</strong> o recurso está em beta e só existe nos planos Pro e Max (não em Team nem Enterprise). Para ativá-lo, abra Settings (Configurações) &gt; Capabilities (Recursos) ou Settings (Configurações) &gt; System (Sistema) &gt; This computer (Este computador) e ligue &quot;Enable computer use&quot; (ativar o uso do computador). O Claude pede permissão para cada aplicativo que for usar, e o computador precisa estar ligado, fora do modo de suspensão, com o Claude Desktop aberto.</p></div>
+        </aside>
+
+        <p class="b-paragrafo">Agora envie a instrução.</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Prompt para configuração</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Quero preparar meu ambiente para criar vídeos com Claude Cowork e Remotion.&#10;Sou iniciante e não sei utilizar terminal ou programação.&#10;Verifique se temos acesso ao Node.js, ao Remotion e às ferramentas necessárias para produzir vídeos.&#10;Organize um projeto chamado meu-primeiro-video dentro da pasta Curso Claude, à qual concedi acesso.&#10;Faça as configurações que estiverem ao seu alcance, usando somente fontes oficiais.&#10;Se precisar instalar algo no meu Windows, verifique primeiro se você tem permissão e capacidade para interagir com o computador.&#10;Se não conseguir realizar alguma etapa, explique de maneira simples o que está impedindo e qual intervenção mínima será necessária.&#10;Ao finalizar, faça um teste real do ambiente e informe o que está funcionando.&#10;Não declare que um programa foi instalado no Windows sem verificar a instalação local.&#10;Não modifique arquivos fora da pasta autorizada.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Acompanhe a resposta com a turma e confira em qual ambiente cada ferramenta foi verificada. Se o Claude disser que algo foi instalado no Windows, confirme que ele verificou a instalação local antes de seguir.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="3-primeiro-teste-de-criacao">3. Primeiro teste de criação</h2>
+
+        <p class="b-paragrafo">Quando o Claude confirmar o ambiente de execução, peça:</p>
+
+        <figure class="b-prompt">
+          <figcaption class="b-prompt__head">
+            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
+            <span class="b-prompt__label">Primeiro teste de criação</span>
+            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
+          </figcaption>
+          <div class="b-prompt__bubble">
+            <p class="b-prompt__text" data-copy-source>Agora crie a animação de cinco segundos que planejamos na primeira aula.&#10;Texto: &quot;Meu primeiro vídeo com Claude&quot;.&#10;Formato vertical 1080x1920, 30 quadros por segundo, fundo escuro e título branco com detalhe laranja.&#10;Utilize o Remotion para criar a composição.&#10;Quero visualizar o resultado e receber uma prévia reproduzível.&#10;Se o Remotion Studio puder ser aberto no ambiente autorizado, utilize-o. Caso contrário, gere uma prévia em vídeo e disponibilize o resultado.&#10;Preserve todos os arquivos do projeto.</p>
+          </div>
+          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
+        </figure>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Recursos como uso do computador, execução local de ferramentas e abertura do Remotion Studio podem variar conforme as permissões e o plano. Para um curso de iniciantes, uma prévia MP4 reproduzível pode ser tão didática quanto o Studio, sem exigir que o aluno navegue por uma interface de desenvolvimento. Teste o ambiente antes da gravação.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="resultado-esperado">Resultado esperado</h2>
+
+        <p class="b-paragrafo">O aluno terá um projeto inicial e uma prévia reproduzível da sua primeira animação.</p>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Se o Cowork não conseguir instalar ou executar as dependências no ambiente disponível, o professor deverá demonstrar a alternativa compatível, em vez de apresentar a instalação como concluída.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
+
+        <ul class="b-lista"><li>Apresentou Claude Cowork, Node.js e Remotion e explicou o papel de cada um</li><li>Explicou que o Node.js é necessário para o projeto local do Remotion, mas não para usar o Cowork</li><li>Criou a pasta Curso Claude e concedeu acesso apenas a ela</li><li>Mostrou como ativar o uso do computador, quando disponível (Pro e Max), e a autorização por aplicativo</li><li>Enviou o prompt de configuração e conferiu em qual ambiente cada ferramenta está funcionando</li><li>Não apresentou como concluída nenhuma instalação no Windows que não tenha sido verificada</li><li>Criou a animação de cinco segundos no projeto meu-primeiro-video e mostrou uma prévia reproduzível</li><li>Testou o ambiente antes da gravação e preparou a alternativa compatível, caso a instalação não seja possível</li></ul>
+
+        <h2 class="b-titulo" id="aula-02-narracao">AULA 02 / NARRAÇÃO</h2>
+
+        <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
+
+        <p class="b-paragrafo">Na última aula, conhecemos o Claude Cowork e aprendemos a descrever o que queremos criar.</p>
+
+        <p class="b-paragrafo">Agora vamos preparar as ferramentas necessárias para transformar nossas ideias em vídeos reais.</p>
+
+        <p class="b-paragrafo">Durante o curso, vamos utilizar uma ferramenta chamada Remotion. O Remotion permite criar vídeos e animações a partir de instruções programadas.</p>
+
+        <p class="b-paragrafo">Mas não se preocupe: nosso objetivo não é ensinar programação. Vamos utilizar o Claude para realizar as etapas técnicas sempre que o ambiente permitir.</p>
+
+        <p class="b-paragrafo">Outra ferramenta importante é o Node.js. Ele permite executar vários programas utilizados nesse tipo de projeto, incluindo ferramentas que ajudam a criar e renderizar vídeos com Remotion.</p>
+
+        <p class="b-paragrafo">Você não precisa decorar esse nome nem aprender seus comandos. O importante é entender por que ele está sendo utilizado.</p>
+
+        <p class="b-paragrafo">Agora vamos preparar nossa pasta de trabalho. Quero manter todos os arquivos do curso organizados em um único lugar.</p>
+
+        <p class="b-paragrafo">Depois de selecionar a pasta, vamos autorizar o Claude a trabalhar com ela. É importante conceder acesso somente às pastas necessárias.</p>
+
+        <p class="b-paragrafo">Agora vamos pedir ao Claude que verifique as ferramentas disponíveis e prepare o ambiente. Ele poderá realizar várias etapas automaticamente.</p>
+
+        <p class="b-paragrafo">Caso alguma instalação dependa de uma autorização ou de uma ação específica no Windows, vamos acompanhar a orientação apresentada.</p>
+
+        <p class="b-paragrafo">Precisamos lembrar que o Cowork também possui um ambiente próprio de execução. Por isso, devemos conferir se os programas estão funcionando no ambiente correto.</p>
+
+        <p class="b-paragrafo">Quando a preparação terminar, vamos fazer nosso primeiro teste.</p>
+
+        <p class="b-paragrafo">Vou pedir ao Claude para criar aquela animação de cinco segundos que planejamos na aula anterior. Quero um vídeo vertical, com texto centralizado e uma entrada suave.</p>
+
+        <p class="b-paragrafo">Depois, vamos conferir o resultado.</p>
+
+        <p class="b-paragrafo">Pronto! Nosso objetivo não foi aprender comandos de computador, mas descobrir como orientar o Claude para preparar as ferramentas e criar nossa primeira animação.</p>
+
+        <p class="b-paragrafo">Na próxima aula, vamos conhecer as Skills, que ajudam o Claude a seguir instruções mais específicas durante a edição.</p>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Antes de gravar, confira os nomes dos planos e dos recursos nas páginas oficiais, porque eles mudam com frequência.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Primeiros passos com o Claude Cowork:</strong> <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" rel="noopener">https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork</a></li><li><strong>Uso do computador no Cowork:</strong> <a href="https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork" rel="noopener">https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork</a></li><li><strong>Remotion:</strong> <a href="https://www.remotion.dev" rel="noopener">https://www.remotion.dev</a></li><li><strong>Documentação do Remotion:</strong> <a href="https://www.remotion.dev/docs" rel="noopener">https://www.remotion.dev/docs</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
