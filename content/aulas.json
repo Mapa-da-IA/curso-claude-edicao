@@ -25,7 +25,7 @@
               [
                 "01–04",
                 "Fundamentos, instalações e Skills",
-                "Ambiente e skill personalizada"
+                "Aplicativo desktop, ambiente e skill personalizada"
               ],
               [
                 "05–08",
@@ -56,7 +56,7 @@
           {
             "tipo": "lista",
             "itens": [
-              "01 | Introdução à edição com Claude",
+              "01 | Conhecendo o Claude: navegador x desktop",
               "02 | Instalando as ferramentas",
               "03 | Instalando Skills",
               "04 | Criando sua primeira Skill",
@@ -387,11 +387,13 @@
     {
       "numero": 1,
       "slug": "aula-01",
-      "titulo": "Introdução à edição com Claude",
+      "titulo": "Conhecendo o Claude: navegador x desktop",
       "subtitulo_ou_tema": "Fundamentos, instalações e Skills",
       "duracao": "Aproximadamente 7 a 10 minutos (referência editorial)",
       "objetivos": [
-        "Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional."
+        "Apresentar o Claude, o assistente de IA da Anthropic, e os lugares onde ele pode ser usado.",
+        "Diferenciar o Claude no navegador (claude.ai) do aplicativo Claude Desktop.",
+        "Mostrar como baixar e instalar o Claude Desktop no Windows e no Mac, com os requisitos de cada sistema."
       ],
       "blocos": [
         {
@@ -400,7 +402,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Início do curso: apresentar a promessa pedagógica e mostrar um resultado alcançável."
+          "texto": "Esta é uma aula de apresentação. O aluno vai entender o que é o Claude, onde ele pode ser usado, qual a diferença entre o Claude no navegador e o Claude Desktop e como instalar o aplicativo. Não há demonstração de prompts nem de edição: a parte prática do curso começa nas próximas aulas."
         },
         {
           "tipo": "titulo",
@@ -409,37 +411,170 @@
         {
           "tipo": "lista_numerada",
           "itens": [
-            "01 Abertura e resultado: Apresente uma prévia do vídeo de 30 segundos. Compare a experiência de editar manualmente e dirigir uma composição com linguagem natural.",
-            "02 O desafio da série: Mostre a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação.",
-            "03 Como o fluxo funciona: Explique que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização.",
-            "04 Primeiro teste: Peça um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja.",
-            "05 O papel das Skills: Antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão.",
-            "06 Gancho: Na próxima aula instalaremos o ambiente."
+            "01 Abertura: Conte o que a aula vai mostrar: o que é o Claude, onde usar, navegador x desktop e a instalação do aplicativo.",
+            "02 O que é o Claude: Apresente o assistente de IA da Anthropic e o que ele faz no dia a dia.",
+            "03 Onde usar: Mostre as três portas de entrada: navegador, aplicativo para computador e aplicativo para celular.",
+            "04 Navegador x Desktop: Percorra a tabela comparativa e destaque o que só existe no aplicativo.",
+            "05 Instalação: Mostre o caminho de download em claude.com/download e os passos no Windows e no Mac.",
+            "06 Gancho: A partir da próxima aula, o curso trabalha com o Claude Desktop instalado."
           ]
         },
         {
           "tipo": "titulo",
-          "texto": "Comando de demonstração"
-        },
-        {
-          "tipo": "prompt",
-          "texto": "Crie uma composição Remotion vertical 1080x1920 de 5 segundos a 30 FPS. Fundo preto; título “MEU PRIMEIRO VÍDEO COM IA”, branco, detalhe laranja; entrada suave. Organize os componentes e apresente o resultado para revisão."
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Skills e repositórios nesta aula"
-        },
-        {
-          "tipo": "titulo",
-          "texto": "Panorama"
+          "texto": "O que é o Claude"
         },
         {
           "tipo": "paragrafo",
-          "texto": "Remotion Agent Skills (oficial) — https://www.remotion.dev/docs/ai/skills. Cite a direcao-de-edicao como skill que será construída, não como pacote externo."
+          "texto": "O Claude é o assistente de inteligência artificial da Anthropic. Com ele é possível conversar, escrever, analisar documentos e, quando há ferramentas conectadas, executar tarefas nelas."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Onde usar o Claude"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Navegador: pelo site claude.ai, sem instalar nada.",
+            "Computador: pelo aplicativo Claude Desktop, para Windows e macOS.",
+            "Celular: pelos aplicativos para dispositivos móveis."
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Os planos são Free, Pro, Max, Team e Enterprise. O Free já inclui o aplicativo para computador, projetos e memória. O Max oferece mais uso que o Pro. Team e Enterprise são planos para empresas, com administração centralizada. Alguns recursos dependem do plano: o Claude Code e o Cowork estão nos planos pagos, e o uso do computador fica restrito ao Pro e ao Max."
         },
         {
           "tipo": "atencao",
-          "texto": "NOTA DE COMPATIBILIDADE E VERIFICAÇÃO: Mostre que Skill fornece instruções; não concede controle de computador por si mesma."
+          "texto": "Recursos e planos mudam com frequência e variam de conta para conta. Antes de gravar, confira https://claude.com/pricing e a central de ajuda em https://support.claude.com. Não cite preços na aula: eles também mudam."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Navegador x Desktop"
+        },
+        {
+          "tipo": "tabela",
+          "titulo": "Claude no navegador e Claude Desktop",
+          "linhas": [
+            [
+              "Aspecto",
+              "Navegador (claude.ai)",
+              "Claude Desktop"
+            ],
+            [
+              "Instalação",
+              "Nenhuma: basta abrir claude.ai e entrar na conta",
+              "Aplicativo baixado em claude.com/download"
+            ],
+            [
+              "Onde funciona",
+              "Em qualquer computador com navegador",
+              "Windows e macOS"
+            ],
+            [
+              "Conversas e projetos",
+              "Sim",
+              "Sim"
+            ],
+            [
+              "Plano Free",
+              "Sim",
+              "Sim, o aplicativo está incluído no Free"
+            ],
+            [
+              "Aba Code (Claude Code)",
+              "Não",
+              "Sim, nos planos pagos"
+            ],
+            [
+              "Uso do computador",
+              "Não",
+              "Pro e Max, em prévia de pesquisa; precisa ser ativado em Configurações"
+            ],
+            [
+              "Extensões locais (MCP)",
+              "Não",
+              "Sim, em Configurações > Extensões"
+            ],
+            [
+              "Entrada rápida",
+              "Não",
+              "Só no Mac (toque duplo na tecla Option)"
+            ],
+            [
+              "Extensão Claude in Chrome",
+              "Sim, nos planos pagos",
+              "Não se aplica"
+            ]
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "O que só o Desktop tem"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Aba Code: o Claude Code dentro do aplicativo, com sessões em paralelo, terminal, editor e revisão das alterações (diff).",
+            "Cowork: disponível no macOS e no Windows desde 9 de abril de 2026.",
+            "Uso do computador: só nos planos Pro e Max, em prévia de pesquisa. Precisa ser ativado em Configurações e exige o computador ligado e o aplicativo aberto.",
+            "Extensões locais (MCP): instaladas em Configurações > Extensões.",
+            "Entrada rápida: no Mac, um toque duplo na tecla Option abre o Claude por cima de qualquer janela. A captura de tela pela entrada rápida também é só do Mac."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Quando usar cada um"
+        },
+        {
+          "tipo": "dica",
+          "texto": "Use o navegador para conversar, escrever e analisar documentos em qualquer computador, sem instalar nada. Use o Desktop quando precisar dos recursos que só existem no aplicativo, como a aba Code, o Cowork e as extensões locais.\n\nNas próximas aulas, o curso usa o aplicativo Claude Desktop. Peça aos alunos que saiam desta aula com ele instalado e com a conta conectada."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Como instalar no Windows"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Acesse o site oficial https://claude.com/download.",
+            "Escolha Windows e o instalador do seu processador: x64 (Intel ou AMD) ou ARM64. Para descobrir qual é o seu, abra Configurações > Sistema > Sobre e veja o Tipo de sistema. O aplicativo também aparece na Microsoft Store.",
+            "Execute o instalador baixado.",
+            "Abra o Claude pelo menu Iniciar.",
+            "Entre com a sua conta Claude."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Como instalar no Mac"
+        },
+        {
+          "tipo": "lista_numerada",
+          "itens": [
+            "Acesse o site oficial https://claude.com/download.",
+            "Baixe o arquivo DMG universal, que serve para todos os Macs.",
+            "Abra o DMG e arraste o Claude para a pasta Aplicativos.",
+            "Abra o Claude e entre com a sua conta."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Requisitos"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Windows: Windows 10 ou posterior. A documentação para empresas pede o build 19041 ou superior, em x64 ou Arm64.",
+            "Mac: recomenda-se o macOS 14 ou posterior.",
+            "Conta: uma conta Claude. O plano Free já permite usar o aplicativo."
+          ]
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Cuidados comuns"
+        },
+        {
+          "tipo": "atencao",
+          "texto": "Baixe o aplicativo apenas em https://claude.com/download ou na Microsoft Store. Evite sites de terceiros.\n\nNão é preciso ter conta paga para instalar: o plano Free inclui o Claude Desktop.\n\nNem todo recurso está em todo plano. Aba Code, Cowork e uso do computador dependem da assinatura.\n\nRecursos documentados só para Mac, como a entrada rápida, não aparecem no Windows."
         },
         {
           "tipo": "titulo",
@@ -448,9 +583,12 @@
         {
           "tipo": "lista",
           "itens": [
-            "Definiu corretamente o que Claude faz e o que Remotion faz",
-            "Mostrou um resultado concreto",
-            "Evitou prometer edição perfeita ou geração automática de filmagens"
+            "Explicou o que é o Claude e onde ele pode ser usado",
+            "Diferenciou o Claude no navegador do Claude Desktop sem prometer recursos que dependem do plano",
+            "Indicou apenas claude.com/download ou a Microsoft Store como origem do instalador",
+            "Mostrou a instalação no Windows e no Mac, com os requisitos",
+            "Conferiu planos e recursos em claude.com/pricing antes de gravar",
+            "Não fez demonstrações de prompts ou de edição nesta aula"
           ]
         },
         {
@@ -463,39 +601,53 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nesta aula, vamos trabalhar introdução à edição com claude. Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto."
+          "texto": "Nesta primeira aula, vamos conhecer o Claude. Você vai ver o que ele é, onde pode ser usado, qual a diferença entre usar o Claude no navegador e no aplicativo para computador e, no fim, como instalar o Claude Desktop."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Primeiro, vamos apresentar uma prévia do vídeo de 30 segundos. Vamos comparar a experiência de editar manualmente e dirigir uma composição com linguagem natural."
+          "texto": "O Claude é o assistente de inteligência artificial da Anthropic. Ele conversa, escreve, analisa documentos e, quando está conectado a outras ferramentas, consegue executar tarefas nelas."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Agora, vamos observar a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação."
+          "texto": "Você pode usar o Claude de três formas: pelo navegador, no site claude.ai; pelo aplicativo para Windows e Mac; e pelo aplicativo de celular."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Em seguida, vamos entender que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização."
+          "texto": "No navegador, não é preciso instalar nada. Basta entrar na sua conta, em qualquer computador, e você já tem as conversas e os projetos."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Na prática, vamos pedir um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja."
+          "texto": "O aplicativo para computador vai além. Ele tem a aba Code, o Cowork, as extensões locais e, nos planos Pro e Max, o uso do computador. Alguns desses recursos dependem do plano, então confira o que a sua conta oferece."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Depois disso, antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão."
+          "texto": "Para instalar, entre no site oficial, claude.com/download. No Windows, escolha o instalador, execute e abra o Claude pelo menu Iniciar. No Mac, baixe o DMG e arraste o Claude para a pasta Aplicativos. Depois, é só entrar com a sua conta. O plano gratuito já inclui o aplicativo."
         },
         {
           "tipo": "paragrafo",
-          "texto": "Para conferir, na próxima aula instalaremos o ambiente."
-        },
-        {
-          "tipo": "paragrafo",
-          "texto": "Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído."
+          "texto": "Na próxima aula, vamos usar o Claude Desktop instalado para preparar o ambiente de trabalho do curso."
         },
         {
           "tipo": "dica",
-          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir."
+          "texto": "USO DA LOCUÇÃO: Este é um texto-base de narração para leitura e adaptação pelo professor. Antes de gravar, confira os nomes dos planos e dos recursos nas páginas oficiais, porque eles mudam com frequência."
+        },
+        {
+          "tipo": "titulo",
+          "texto": "Fontes"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "Download do Claude: https://claude.com/download",
+            "Instalar o Claude Desktop: https://support.claude.com/en/articles/10065433-install-claude-desktop",
+            "Planos e preços: https://claude.com/pricing",
+            "Claude Code no Desktop: https://code.claude.com/docs/en/desktop",
+            "Uso do computador no Cowork: https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork"
+          ]
+        },
+        {
+          "tipo": "paragrafo",
+          "texto": "Fontes oficiais consultadas em 27/10/2026."
         }
       ]
     },

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 01 · Introdução à edição com Claude — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Fundamentos, instalações e Skills — aula 01 do guia do professor Edição de Vídeos com Claude: Introdução à edição com Claude.">
+  <title>Aula 01 · Conhecendo o Claude: navegador x desktop — Edição de Vídeos com Claude</title>
+  <meta name="description" content="Fundamentos, instalações e Skills — aula 01 do guia do professor Edição de Vídeos com Claude: Conhecendo o Claude: navegador x desktop.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
         </button>
         <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
           <ol class="switcher__grid">
-            <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Introdução à edição com Claude</span></a></li>
+            <li><a href="aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Conhecendo o Claude: navegador x desktop</span></a></li>
             <li><a href="aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Instalando as ferramentas</span></a></li>
             <li><a href="aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills</span></a></li>
             <li><a href="aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill</span></a></li>
@@ -75,13 +75,13 @@
         <div class="lesson-hero__head">
           <span class="lesson-hero__no" aria-hidden="true">01</span>
           <div>
-            <h1 class="lesson-hero__title"><span class="sr-only">Aula 01: </span>Introdução à edição com Claude</h1>
+            <h1 class="lesson-hero__title"><span class="sr-only">Aula 01: </span>Conhecendo o Claude: navegador x desktop</h1>
             <p class="lesson-hero__theme">Fundamentos, instalações e Skills</p>
           </div>
         </div>
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 7–10 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
-          <div><dt>Entrega do módulo</dt><dd>Ambiente e skill personalizada</dd></div>
+          <div><dt>Entrega do módulo</dt><dd>Aplicativo desktop, ambiente e skill personalizada</dd></div>
           <div><dt>Nível</dt><dd>Iniciante</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
@@ -91,7 +91,9 @@
         <section class="objectives" aria-labelledby="obj-title">
           <h2 class="objectives__title" id="obj-title">Objetivos da aula</h2>
           <ol class="objectives__list">
-            <li>Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional.</li>
+            <li>Apresentar o Claude, o assistente de IA da Anthropic, e os lugares onde ele pode ser usado.</li>
+            <li>Diferenciar o Claude no navegador (claude.ai) do aplicativo Claude Desktop.</li>
+            <li>Mostrar como baixar e instalar o Claude Desktop no Windows e no Mac, com os requisitos de cada sistema.</li>
           </ol>
         </section>
       </div>
@@ -105,10 +107,18 @@
           <ol class="toc__list">
             <li><a href="#contexto-narrativo">Contexto narrativo</a></li>
             <li><a href="#roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</a></li>
-            <li><a href="#comando-de-demonstracao">Comando de demonstração</a></li>
-            <li><a href="#skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</a></li>
+            <li><a href="#o-que-e-o-claude">O que é o Claude</a></li>
+            <li><a href="#onde-usar-o-claude">Onde usar o Claude</a></li>
+            <li><a href="#navegador-x-desktop">Navegador x Desktop</a></li>
+            <li><a href="#o-que-so-o-desktop-tem">O que só o Desktop tem</a></li>
+            <li><a href="#quando-usar-cada-um">Quando usar cada um</a></li>
+            <li><a href="#como-instalar-no-windows">Como instalar no Windows</a></li>
+            <li><a href="#como-instalar-no-mac">Como instalar no Mac</a></li>
+            <li><a href="#requisitos">Requisitos</a></li>
+            <li><a href="#cuidados-comuns">Cuidados comuns</a></li>
             <li><a href="#checklist-do-professor">Checklist do professor</a></li>
             <li><a href="#aula-01-narracao">AULA 01 / NARRAÇÃO</a></li>
+            <li><a href="#fontes">Fontes</a></li>
           </ol>
         </nav>
       </aside>
@@ -116,65 +126,109 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Início do curso: apresentar a promessa pedagógica e mostrar um resultado alcançável.</p>
+        <p class="b-paragrafo">Esta é uma aula de apresentação. O aluno vai entender o que é o Claude, onde ele pode ser usado, qual a diferença entre o Claude no navegador e o Claude Desktop e como instalar o aplicativo. Não há demonstração de prompts nem de edição: a parte prática do curso começa nas próximas aulas.</p>
 
         <h2 class="b-titulo" id="roteiro-de-cenas-e-conducao">Roteiro de cenas e condução</h2>
 
-        <ol class="b-lista-num"><li><strong>Abertura e resultado:</strong> Apresente uma prévia do vídeo de 30 segundos. Compare a experiência de editar manualmente e dirigir uma composição com linguagem natural.</li><li><strong>O desafio da série:</strong> Mostre a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação.</li><li><strong>Como o fluxo funciona:</strong> Explique que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização.</li><li><strong>Primeiro teste:</strong> Peça um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja.</li><li><strong>O papel das Skills:</strong> Antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão.</li><li><strong>Gancho:</strong> Na próxima aula instalaremos o ambiente.</li></ol>
+        <ol class="b-lista-num"><li><strong>Abertura:</strong> Conte o que a aula vai mostrar: o que é o Claude, onde usar, navegador x desktop e a instalação do aplicativo.</li><li><strong>O que é o Claude:</strong> Apresente o assistente de IA da Anthropic e o que ele faz no dia a dia.</li><li><strong>Onde usar:</strong> Mostre as três portas de entrada: navegador, aplicativo para computador e aplicativo para celular.</li><li><strong>Navegador x Desktop:</strong> Percorra a tabela comparativa e destaque o que só existe no aplicativo.</li><li><strong>Instalação:</strong> Mostre o caminho de download em claude.com/download e os passos no Windows e no Mac.</li><li><strong>Gancho:</strong> A partir da próxima aula, o curso trabalha com o Claude Desktop instalado.</li></ol>
 
-        <h2 class="b-titulo" id="comando-de-demonstracao">Comando de demonstração</h2>
+        <h2 class="b-titulo" id="o-que-e-o-claude">O que é o Claude</h2>
 
-        <figure class="b-prompt">
-          <figcaption class="b-prompt__head">
-            <span class="b-prompt__avatar" aria-hidden="true">Você</span>
-            <span class="b-prompt__label">Prompt para o Claude</span>
-            <button class="copy-btn" type="button" data-copy><span class="copy-btn__text">Copiar</span></button>
-          </figcaption>
-          <div class="b-prompt__bubble">
-            <p class="b-prompt__text" data-copy-source>Crie uma composição Remotion vertical 1080x1920 de 5 segundos a 30 FPS. Fundo preto; título “MEU PRIMEIRO VÍDEO COM IA”, branco, detalhe laranja; entrada suave. Organize os componentes e apresente o resultado para revisão.</p>
-          </div>
-          <div class="b-prompt__composer" aria-hidden="true"><span>Responder ao Claude…</span><span class="b-prompt__send"></span></div>
-        </figure>
+        <p class="b-paragrafo">O Claude é o assistente de inteligência artificial da Anthropic. Com ele é possível conversar, escrever, analisar documentos e, quando há ferramentas conectadas, executar tarefas nelas.</p>
 
-        <h2 class="b-titulo" id="skills-e-repositorios-nesta-aula">Skills e repositórios nesta aula</h2>
+        <h2 class="b-titulo" id="onde-usar-o-claude">Onde usar o Claude</h2>
 
-        <h3 class="b-titulo" id="panorama">Panorama</h3>
+        <ul class="b-lista"><li><strong>Navegador:</strong> pelo site claude.ai, sem instalar nada.</li><li><strong>Computador:</strong> pelo aplicativo Claude Desktop, para Windows e macOS.</li><li><strong>Celular:</strong> pelos aplicativos para dispositivos móveis.</li></ul>
 
-        <p class="b-paragrafo">Remotion Agent Skills (oficial) — <a href="https://www.remotion.dev/docs/ai/skills" rel="noopener">https://www.remotion.dev/docs/ai/skills</a>. Cite a direcao-de-edicao como skill que será construída, não como pacote externo.</p>
+        <p class="b-paragrafo">Os planos são Free, Pro, Max, Team e Enterprise. O Free já inclui o aplicativo para computador, projetos e memória. O Max oferece mais uso que o Pro. Team e Enterprise são planos para empresas, com administração centralizada. Alguns recursos dependem do plano: o Claude Code e o Cowork estão nos planos pagos, e o uso do computador fica restrito ao Pro e ao Max.</p>
 
         <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
           <p class="b-callout__title">Atenção</p>
-          <div class="b-callout__body"><p><strong>NOTA DE COMPATIBILIDADE E VERIFICAÇÃO:</strong> Mostre que Skill fornece instruções; não concede controle de computador por si mesma.</p></div>
+          <div class="b-callout__body"><p>Recursos e planos mudam com frequência e variam de conta para conta. Antes de gravar, confira <a href="https://claude.com/pricing" rel="noopener">https://claude.com/pricing</a> e a central de ajuda em <a href="https://support.claude.com" rel="noopener">https://support.claude.com</a>. Não cite preços na aula: eles também mudam.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="navegador-x-desktop">Navegador x Desktop</h2>
+
+        <div class="b-tabela" role="region" aria-labelledby="tab-1" tabindex="0">
+          <table>
+            <caption id="tab-1">Claude no navegador e Claude Desktop</caption>
+            <thead><tr><th scope="col">Aspecto</th><th scope="col">Navegador (claude.ai)</th><th scope="col">Claude Desktop</th></tr></thead>
+            <tbody>
+              <tr><td>Instalação</td><td>Nenhuma: basta abrir claude.ai e entrar na conta</td><td>Aplicativo baixado em claude.com/download</td></tr>
+              <tr><td>Onde funciona</td><td>Em qualquer computador com navegador</td><td>Windows e macOS</td></tr>
+              <tr><td>Conversas e projetos</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Plano Free</td><td>Sim</td><td>Sim, o aplicativo está incluído no Free</td></tr>
+              <tr><td>Aba Code (Claude Code)</td><td>Não</td><td>Sim, nos planos pagos</td></tr>
+              <tr><td>Uso do computador</td><td>Não</td><td>Pro e Max, em prévia de pesquisa; precisa ser ativado em Configurações</td></tr>
+              <tr><td>Extensões locais (MCP)</td><td>Não</td><td>Sim, em Configurações &gt; Extensões</td></tr>
+              <tr><td>Entrada rápida</td><td>Não</td><td>Só no Mac (toque duplo na tecla Option)</td></tr>
+              <tr><td>Extensão Claude in Chrome</td><td>Sim, nos planos pagos</td><td>Não se aplica</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="b-titulo" id="o-que-so-o-desktop-tem">O que só o Desktop tem</h2>
+
+        <ul class="b-lista"><li><strong>Aba Code:</strong> o Claude Code dentro do aplicativo, com sessões em paralelo, terminal, editor e revisão das alterações (diff).</li><li><strong>Cowork:</strong> disponível no macOS e no Windows desde 9 de abril de 2026.</li><li><strong>Uso do computador:</strong> só nos planos Pro e Max, em prévia de pesquisa. Precisa ser ativado em Configurações e exige o computador ligado e o aplicativo aberto.</li><li><strong>Extensões locais (MCP):</strong> instaladas em Configurações &gt; Extensões.</li><li><strong>Entrada rápida:</strong> no Mac, um toque duplo na tecla Option abre o Claude por cima de qualquer janela. A captura de tela pela entrada rápida também é só do Mac.</li></ul>
+
+        <h2 class="b-titulo" id="quando-usar-cada-um">Quando usar cada um</h2>
+
+        <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
+          <p class="b-callout__title">Dica</p>
+          <div class="b-callout__body"><p>Use o navegador para conversar, escrever e analisar documentos em qualquer computador, sem instalar nada. Use o Desktop quando precisar dos recursos que só existem no aplicativo, como a aba Code, o Cowork e as extensões locais.</p><p>Nas próximas aulas, o curso usa o aplicativo Claude Desktop. Peça aos alunos que saiam desta aula com ele instalado e com a conta conectada.</p></div>
+        </aside>
+
+        <h2 class="b-titulo" id="como-instalar-no-windows">Como instalar no Windows</h2>
+
+        <ol class="b-lista-num"><li>Acesse o site oficial <a href="https://claude.com/download" rel="noopener">https://claude.com/download</a>.</li><li>Escolha Windows e o instalador do seu processador: x64 (Intel ou AMD) ou ARM64. Para descobrir qual é o seu, abra Configurações &gt; Sistema &gt; Sobre e veja o Tipo de sistema. O aplicativo também aparece na Microsoft Store.</li><li>Execute o instalador baixado.</li><li>Abra o Claude pelo menu Iniciar.</li><li>Entre com a sua conta Claude.</li></ol>
+
+        <h2 class="b-titulo" id="como-instalar-no-mac">Como instalar no Mac</h2>
+
+        <ol class="b-lista-num"><li>Acesse o site oficial <a href="https://claude.com/download" rel="noopener">https://claude.com/download</a>.</li><li>Baixe o arquivo DMG universal, que serve para todos os Macs.</li><li>Abra o DMG e arraste o Claude para a pasta Aplicativos.</li><li>Abra o Claude e entre com a sua conta.</li></ol>
+
+        <h2 class="b-titulo" id="requisitos">Requisitos</h2>
+
+        <ul class="b-lista"><li><strong>Windows:</strong> Windows 10 ou posterior. A documentação para empresas pede o build 19041 ou superior, em x64 ou Arm64.</li><li><strong>Mac:</strong> recomenda-se o macOS 14 ou posterior.</li><li><strong>Conta:</strong> uma conta Claude. O plano Free já permite usar o aplicativo.</li></ul>
+
+        <h2 class="b-titulo" id="cuidados-comuns">Cuidados comuns</h2>
+
+        <aside class="b-callout b-callout--atencao" role="note" aria-label="Atenção">
+          <p class="b-callout__title">Atenção</p>
+          <div class="b-callout__body"><p>Baixe o aplicativo apenas em <a href="https://claude.com/download" rel="noopener">https://claude.com/download</a> ou na Microsoft Store. Evite sites de terceiros.</p><p><strong>Não é preciso ter conta paga para instalar:</strong> o plano Free inclui o Claude Desktop.</p><p>Nem todo recurso está em todo plano. Aba Code, Cowork e uso do computador dependem da assinatura.</p><p>Recursos documentados só para Mac, como a entrada rápida, não aparecem no Windows.</p></div>
         </aside>
 
         <h2 class="b-titulo" id="checklist-do-professor">Checklist do professor</h2>
 
-        <ul class="b-lista"><li>Definiu corretamente o que Claude faz e o que Remotion faz</li><li>Mostrou um resultado concreto</li><li>Evitou prometer edição perfeita ou geração automática de filmagens</li></ul>
+        <ul class="b-lista"><li>Explicou o que é o Claude e onde ele pode ser usado</li><li>Diferenciou o Claude no navegador do Claude Desktop sem prometer recursos que dependem do plano</li><li>Indicou apenas claude.com/download ou a Microsoft Store como origem do instalador</li><li>Mostrou a instalação no Windows e no Mac, com os requisitos</li><li>Conferiu planos e recursos em claude.com/pricing antes de gravar</li><li>Não fez demonstrações de prompts ou de edição nesta aula</li></ul>
 
         <h2 class="b-titulo" id="aula-01-narracao">AULA 01 / NARRAÇÃO</h2>
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Nesta aula, vamos trabalhar introdução à edição com claude. Demonstrar a proposta do curso e a diferença entre orientar uma IA e utilizar um editor tradicional. Ao final, você terá um resultado concreto que pode ser conferido diretamente no projeto.</p>
+        <p class="b-paragrafo">Nesta primeira aula, vamos conhecer o Claude. Você vai ver o que ele é, onde pode ser usado, qual a diferença entre usar o Claude no navegador e no aplicativo para computador e, no fim, como instalar o Claude Desktop.</p>
 
-        <p class="b-paragrafo">Primeiro, vamos apresentar uma prévia do vídeo de 30 segundos. Vamos comparar a experiência de editar manualmente e dirigir uma composição com linguagem natural.</p>
+        <p class="b-paragrafo">O Claude é o assistente de inteligência artificial da Anthropic. Ele conversa, escreve, analisa documentos e, quando está conectado a outras ferramentas, consegue executar tarefas nelas.</p>
 
-        <p class="b-paragrafo">Agora, vamos observar a montagem ainda simples e explique que evoluiremos o mesmo projeto em etapas, até a exportação.</p>
+        <p class="b-paragrafo">Você pode usar o Claude de três formas: pelo navegador, no site claude.ai; pelo aplicativo para Windows e Mac; e pelo aplicativo de celular.</p>
 
-        <p class="b-paragrafo">Em seguida, vamos entender que Claude Code interpreta instruções e modifica o projeto; Remotion fornece a composição e renderização.</p>
+        <p class="b-paragrafo">No navegador, não é preciso instalar nada. Basta entrar na sua conta, em qualquer computador, e você já tem as conversas e os projetos.</p>
 
-        <p class="b-paragrafo">Na prática, vamos pedir um título animado de cinco segundos: fundo preto, letras brancas, detalhe laranja.</p>
+        <p class="b-paragrafo">O aplicativo para computador vai além. Ele tem a aba Code, o Cowork, as extensões locais e, nos planos Pro e Max, o uso do computador. Alguns desses recursos dependem do plano, então confira o que a sua conta oferece.</p>
 
-        <p class="b-paragrafo">Depois disso, antecipe que são instruções especializadas que orientam o trabalho, mas não substituem revisão.</p>
+        <p class="b-paragrafo">Para instalar, entre no site oficial, claude.com/download. No Windows, escolha o instalador, execute e abra o Claude pelo menu Iniciar. No Mac, baixe o DMG e arraste o Claude para a pasta Aplicativos. Depois, é só entrar com a sua conta. O plano gratuito já inclui o aplicativo.</p>
 
-        <p class="b-paragrafo">Para conferir, na próxima aula instalaremos o ambiente.</p>
-
-        <p class="b-paragrafo">Na próxima aula, continuaremos aprimorando a produção, aproveitando o que já foi construído.</p>
+        <p class="b-paragrafo">Na próxima aula, vamos usar o Claude Desktop instalado para preparar o ambiente de trabalho do curso.</p>
 
         <aside class="b-callout b-callout--dica" role="note" aria-label="Dica">
           <p class="b-callout__title">Dica</p>
-          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Ajuste as frases à demonstração realmente gravada; não afirme que uma renderização ou análise funcionou antes de conferir.</p></div>
+          <div class="b-callout__body"><p><strong>USO DA LOCUÇÃO:</strong> Este é um texto-base de narração para leitura e adaptação pelo professor. Antes de gravar, confira os nomes dos planos e dos recursos nas páginas oficiais, porque eles mudam com frequência.</p></div>
         </aside>
+
+        <h2 class="b-titulo" id="fontes">Fontes</h2>
+
+        <ul class="b-lista"><li><strong>Download do Claude:</strong> <a href="https://claude.com/download" rel="noopener">https://claude.com/download</a></li><li><strong>Instalar o Claude Desktop:</strong> <a href="https://support.claude.com/en/articles/10065433-install-claude-desktop" rel="noopener">https://support.claude.com/en/articles/10065433-install-claude-desktop</a></li><li><strong>Planos e preços:</strong> <a href="https://claude.com/pricing" rel="noopener">https://claude.com/pricing</a></li><li><strong>Claude Code no Desktop:</strong> <a href="https://code.claude.com/docs/en/desktop" rel="noopener">https://code.claude.com/docs/en/desktop</a></li><li><strong>Uso do computador no Cowork:</strong> <a href="https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork" rel="noopener">https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork</a></li></ul>
+
+        <p class="b-paragrafo">Fontes oficiais consultadas em 27/10/2026.</p>
       </article>
     </div>
 
