@@ -373,13 +373,13 @@ function sectionAfter(a, titulo) {
   return i < 0 ? null : a.blocos[i + 1];
 }
 function computeStats() {
-  const comandos = aulas.filter((a) => a.blocos.some((b) => b.tipo === "titulo" && b.texto === "Comando de demonstração")).length;
+  const prompts = aulas.reduce((n, a) => n + a.blocos.filter((b) => b.tipo === "prompt").length, 0);
   const checklist = aulas.reduce((n, a) => n + ((sectionAfter(a, "Checklist do professor") || {}).itens || []).length, 0);
   const exercicios = aulas.reduce((n, a) => n + a.blocos.filter((b) => b.tipo === "exercicio").length, 0);
   const stats = [
     ["Aulas", aulas.length],
     ["Módulos", modules.length],
-    ["Comandos de demonstração", comandos],
+    ["Prompts prontos", prompts],
     ["Itens de checklist do professor", checklist],
   ];
   if (exercicios) stats.push(["Exercícios", exercicios]); // só aparece se o conteúdo tiver exercícios
