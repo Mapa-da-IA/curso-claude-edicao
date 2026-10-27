@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de referência — Edição de Vídeos com Claude — Iniciante (Claude Cowork)</title>
+  <meta name="description" content="Referência do guia do professor de Edição de Vídeos com Claude — Iniciante (Claude Cowork): Mapa do curso, Índice pedagógico.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-lesson page-guide" data-nivel="iniciante" data-versao="professor">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
+
+  <!-- ============ NAV com seletor de aulas ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="index.html" aria-label="Edição com Claude, nível iniciante, versão do professor — início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span><span class="brand__badge brand__badge--professor"><span class="brand__badge-lvl">Iniciante</span><span class="brand__badge-sep" aria-hidden="true"> · </span><span class="brand__badge-ver">Professor</span></span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+        <a href="index.html#aulas">Todas as aulas</a>
+        <a href="index.html#guia">Guia do professor</a>
+        <a href="guia.html" aria-current="page">Referência</a>
+        <a class="version-toggle" href="aluno/index.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span><span><span class="version-toggle__ver">Ver </span>versão do aluno</span></a>
+      </nav>
+      <div class="switcher" data-switcher>
+        <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
+          <span class="switcher__label">Aula</span> <span class="switcher__current">—</span><span class="switcher__of">/12</span>
+          <span class="switcher__caret" aria-hidden="true"></span>
+        </button>
+        <nav class="switcher__panel" id="switcher-panel" aria-label="Escolher aula" hidden>
+          <ol class="switcher__grid">
+            <li><a href="aulas/aula-01.html" data-aula="01"><span class="switcher__no">01</span><span class="switcher__t">Conhecendo o Claude Cowork</span></a></li>
+            <li><a href="aulas/aula-02.html" data-aula="02"><span class="switcher__no">02</span><span class="switcher__t">Preparando o ambiente com a ajuda do Claude</span></a></li>
+            <li><a href="aulas/aula-03.html" data-aula="03"><span class="switcher__no">03</span><span class="switcher__t">Instalando Skills pelo Claude Desktop</span></a></li>
+            <li><a href="aulas/aula-04.html" data-aula="04"><span class="switcher__no">04</span><span class="switcher__t">Criando sua primeira Skill personalizada</span></a></li>
+            <li><a href="aulas/aula-05.html" data-aula="05"><span class="switcher__no">05</span><span class="switcher__t">Criando seu primeiro vídeo completo</span></a></li>
+            <li><a href="aulas/aula-06.html" data-aula="06"><span class="switcher__no">06</span><span class="switcher__t">Trabalhando com vídeos, imagens e arquivos</span></a></li>
+            <li><a href="aulas/aula-07.html" data-aula="07"><span class="switcher__no">07</span><span class="switcher__t">Cortes, ritmo e transições</span></a></li>
+            <li><a href="aulas/aula-08.html" data-aula="08"><span class="switcher__no">08</span><span class="switcher__t">Textos, tipografia e animações</span></a></li>
+            <li><a href="aulas/aula-09.html" data-aula="09"><span class="switcher__no">09</span><span class="switcher__t">Música e efeitos sonoros</span></a></li>
+            <li><a href="aulas/aula-10.html" data-aula="10"><span class="switcher__no">10</span><span class="switcher__t">Acabamento visual e correção de cores</span></a></li>
+            <li><a href="aulas/aula-11.html" data-aula="11"><span class="switcher__no">11</span><span class="switcher__t">Revisão e exportação</span></a></li>
+            <li><a href="aulas/aula-12.html" data-aula="12"><span class="switcher__no">12</span><span class="switcher__t">Projeto final: criando um vídeo completo do zero</span></a></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+      <a href="index.html#aulas">Todas as aulas</a>
+      <a href="index.html#guia">Guia do professor</a>
+      <a href="guia.html" aria-current="page">Referência</a>
+      <a class="version-toggle" href="aluno/index.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span><span><span class="version-toggle__ver">Ver </span>versão do aluno</span></a>
+      <a href="../index.html" data-level-link>Trocar de nível</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ LESSON HERO ============ -->
+    <header class="lesson-hero">
+      <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="container lesson-hero__inner">
+        <div class="lesson-hero__top">
+          <p class="lesson-hero__crumb"><a href="index.html">Início</a> <span aria-hidden="true">/</span> Referência do professor</p>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+        </div>
+        <div class="lesson-hero__head">
+          <span class="lesson-hero__no" aria-hidden="true">§</span>
+          <div>
+            <h1 class="lesson-hero__title">Guia de referência</h1>
+            <p class="lesson-hero__theme">Edição de Vídeos com Claude: Guia do professor · Nível iniciante. 12 aulas com o Claude Cowork, sem terminal nem programação.</p>
+          </div>
+        </div>
+        <dl class="lesson-meta">
+          <div><dt>Seções</dt><dd>3</dd></div>
+          
+          <div><dt>Nível</dt><dd>Iniciante · Claude Cowork</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ============ CORPO: TOC + CONTEÚDO ============ -->
+    <div class="container lesson-layout">
+      <aside class="toc" aria-label="Nesta página">
+        <nav class="toc__inner" data-toc>
+          <p class="toc__title">Nesta página</p>
+          <ol class="toc__list">
+            <li><a href="#sobre-este-guia">Sobre este guia</a></li>
+            <li><a href="#mapa-do-curso">Mapa do curso</a></li>
+            <li><a href="#indice-pedagogico">Índice pedagógico</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="lesson-body" data-lesson-body>
+        <h2 class="b-titulo" id="sobre-este-guia">Sobre este guia</h2>
+
+        <p class="b-paragrafo">Este guia reúne as 12 aulas do nível iniciante de edição de vídeos com o Claude Cowork, conduzidas em conversa com o Claude Desktop, sem terminal e sem programação. O conteúdo das aulas está em preparação.</p>
+
+        <p class="b-paragrafo"><strong>Papel do professor:</strong> Demonstrar cada etapa no Claude Desktop, explicar o raciocínio das decisões de edição e conferir o resultado junto com a turma.</p>
+
+        <p class="b-paragrafo"><strong>Método de cada aula:</strong></p>
+
+        <ol class="b-lista-num"><li>Mostrar o resultado esperado</li><li>Conversar com o Claude</li><li>Conferir o resultado</li></ol>
+
+        <p class="b-paragrafo"><strong>Pré-requisito:</strong> Claude Desktop instalado e uma conta com acesso ao Claude Cowork. Os detalhes de instalação e de plano estão em preparação.</p>
+
+        <h2 class="b-titulo" id="mapa-do-curso">Mapa do curso</h2>
+
+        <div class="b-tabela" role="region" aria-label="Tabela: Mapa do curso" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Aulas</th><th scope="col">Foco</th><th scope="col">Entrega</th></tr></thead>
+            <tbody>
+              <tr><td>01–04</td><td>Primeiros passos</td><td>Em preparação</td></tr>
+              <tr><td>05–08</td><td>Criação e edição</td><td>Em preparação</td></tr>
+              <tr><td>09–12</td><td>Finalização</td><td>Em preparação</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="b-titulo" id="indice-pedagogico">Índice pedagógico</h2>
+
+        <ul class="b-lista"><li><a href="aulas/aula-01.html">Aula 01 · Conhecendo o Claude Cowork</a></li><li><a href="aulas/aula-02.html">Aula 02 · Preparando o ambiente com a ajuda do Claude</a></li><li><a href="aulas/aula-03.html">Aula 03 · Instalando Skills pelo Claude Desktop</a></li><li><a href="aulas/aula-04.html">Aula 04 · Criando sua primeira Skill personalizada</a></li><li><a href="aulas/aula-05.html">Aula 05 · Criando seu primeiro vídeo completo</a></li><li><a href="aulas/aula-06.html">Aula 06 · Trabalhando com vídeos, imagens e arquivos</a></li><li><a href="aulas/aula-07.html">Aula 07 · Cortes, ritmo e transições</a></li><li><a href="aulas/aula-08.html">Aula 08 · Textos, tipografia e animações</a></li><li><a href="aulas/aula-09.html">Aula 09 · Música e efeitos sonoros</a></li><li><a href="aulas/aula-10.html">Aula 10 · Acabamento visual e correção de cores</a></li><li><a href="aulas/aula-11.html">Aula 11 · Revisão e exportação</a></li><li><a href="aulas/aula-12.html">Aula 12 · Projeto final: criando um vídeo completo do zero</a></li></ul>
+      </article>
+    </div>
+
+    <!-- ============ PREV / NEXT ============ -->
+    <nav class="pager container" aria-label="Continuar">
+      <a class="pager__link pager__link--prev" href="index.html#aulas">
+        <span class="pager__dir">← Início</span>
+        <span class="pager__title">Todas as aulas</span>
+      </a>
+      <a class="pager__link pager__link--next" href="aulas/aula-01.html">
+        <span class="pager__dir">Começar →</span>
+        <span class="pager__no">01</span>
+        <span class="pager__title">Conhecendo o Claude Cowork</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container">
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="index.html#aulas">Todas as aulas</a>
+          <a href="index.html#guia">Guia do professor</a>
+          <a href="guia.html" aria-current="page">Referência</a>
+          <a href="../index.html" data-level-link>Trocar de nível</a>
+        </nav>
+        <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Edição de Vídeos com Claude · Iniciante · Guia do professor</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

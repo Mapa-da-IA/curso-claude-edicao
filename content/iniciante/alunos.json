@@ -1,0 +1,204 @@
+{
+  "curso": {
+    "titulo": "Edição de Vídeos com Claude",
+    "subtitulo": "Versão do aluno | Nível iniciante. 12 aulas com o Claude Cowork, sem terminal nem programação",
+    "introducao": [
+      "Em 12 aulas de nível iniciante, você aprende a editar vídeos conversando com o Claude no Claude Desktop, com o Claude Cowork: sem terminal e sem programação. O conteúdo das aulas está em preparação.",
+      "O que você precisa: Claude Desktop instalado e uma conta com acesso ao Claude Cowork. Os detalhes de instalação e de plano estão em preparação."
+    ]
+  },
+  "aulas": [
+    {
+      "numero": 1,
+      "slug": "aula-01",
+      "titulo": "Conhecendo o Claude Cowork",
+      "subtitulo_ou_tema": "Primeiros passos",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "slug": "aula-02",
+      "titulo": "Preparando o ambiente com a ajuda do Claude",
+      "subtitulo_ou_tema": "Primeiros passos",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "slug": "aula-03",
+      "titulo": "Instalando Skills pelo Claude Desktop",
+      "subtitulo_ou_tema": "Primeiros passos",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "slug": "aula-04",
+      "titulo": "Criando sua primeira Skill personalizada",
+      "subtitulo_ou_tema": "Primeiros passos",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "slug": "aula-05",
+      "titulo": "Criando seu primeiro vídeo completo",
+      "subtitulo_ou_tema": "Criação e edição",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "slug": "aula-06",
+      "titulo": "Trabalhando com vídeos, imagens e arquivos",
+      "subtitulo_ou_tema": "Criação e edição",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "slug": "aula-07",
+      "titulo": "Cortes, ritmo e transições",
+      "subtitulo_ou_tema": "Criação e edição",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "slug": "aula-08",
+      "titulo": "Textos, tipografia e animações",
+      "subtitulo_ou_tema": "Criação e edição",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 9,
+      "slug": "aula-09",
+      "titulo": "Música e efeitos sonoros",
+      "subtitulo_ou_tema": "Finalização",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 10,
+      "slug": "aula-10",
+      "titulo": "Acabamento visual e correção de cores",
+      "subtitulo_ou_tema": "Finalização",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 11,
+      "slug": "aula-11",
+      "titulo": "Revisão e exportação",
+      "subtitulo_ou_tema": "Finalização",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    },
+    {
+      "numero": 12,
+      "slug": "aula-12",
+      "titulo": "Projeto final: criando um vídeo completo do zero",
+      "subtitulo_ou_tema": "Finalização",
+      "duracao": "≈ 7–10 min",
+      "objetivos": [
+        "Conteúdo em preparação."
+      ],
+      "blocos": [
+        {
+          "tipo": "paragrafo",
+          "texto": "Conteúdo em preparação."
+        }
+      ]
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aula 12 · Projeto final: criando um vídeo completo do zero — Edição de Vídeos com Claude</title>
-  <meta name="description" content="Projeto integrado independente — aula 12 do guia do professor Edição de Vídeos com Claude: Projeto final: criando um vídeo completo do zero.">
+  <title>Aula 12 · Projeto final: criando um vídeo completo do zero — Avançado · Edição de Vídeos com Claude</title>
+  <meta name="description" content="Projeto integrado independente — aula 12 do guia do professor do nível avançado (Claude Code) do curso Edição de Vídeos com Claude: Projeto final: criando um vídeo completo do zero.">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
 </head>
-<body class="page-lesson" data-aula="12">
+<body class="page-lesson" data-aula="12" data-nivel="avancado" data-versao="professor">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="read-progress" aria-hidden="true"><span data-read-progress></span></div>
 
   <!-- ============ NAV com seletor de aulas ============ -->
   <header class="site-nav" data-nav>
     <div class="site-nav__bar">
-      <a class="brand" href="../index.html" aria-label="Edição com Claude — início">
+      <a class="brand" href="../avancado.html" aria-label="Edição com Claude, nível avançado, versão do professor — início">
         <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span><span class="brand__badge brand__badge--professor"><span class="brand__badge-lvl">Avançado</span><span class="brand__badge-sep" aria-hidden="true"> · </span><span class="brand__badge-ver">Professor</span></span>
       </a>
       <nav class="site-nav__links" aria-label="Principal">
-        <a href="../index.html#aulas">Todas as aulas</a>
-        <a href="../index.html#guia">Guia do professor</a>
+        <a href="../avancado.html#aulas">Todas as aulas</a>
+        <a href="../avancado.html#guia">Guia do professor</a>
         <a href="../guia.html">Referência</a>
-        <a class="version-toggle" href="../aluno/aula-12.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span>Ver versão do aluno</a>
+        <a class="version-toggle" href="../aluno/aula-12.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span><span><span class="version-toggle__ver">Ver </span>versão do aluno</span></a>
       </nav>
       <div class="switcher" data-switcher>
         <button class="switcher__btn" type="button" aria-expanded="false" aria-controls="switcher-panel" data-switcher-toggle>
@@ -58,10 +58,11 @@
       </button>
     </div>
     <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
-      <a href="../index.html#aulas">Todas as aulas</a>
-      <a href="../index.html#guia">Guia do professor</a>
+      <a href="../avancado.html#aulas">Todas as aulas</a>
+      <a href="../avancado.html#guia">Guia do professor</a>
       <a href="../guia.html">Referência</a>
-      <a class="version-toggle" href="../aluno/aula-12.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span>Ver versão do aluno</a>
+      <a class="version-toggle" href="../aluno/aula-12.html" data-version-toggle="aluno"><span class="version-toggle__icon" aria-hidden="true">⇄</span><span><span class="version-toggle__ver">Ver </span>versão do aluno</span></a>
+      <a href="../index.html" data-level-link>Trocar de nível</a>
     </nav>
   </header>
 
@@ -71,7 +72,7 @@
       <canvas class="hero__canvas hero__canvas--quiet" data-hero-canvas aria-hidden="true"></canvas>
       <div class="container lesson-hero__inner">
         <div class="lesson-hero__top">
-          <p class="lesson-hero__crumb"><a href="../index.html#aulas">Aulas</a> <span aria-hidden="true">/</span> Módulo 4 · Projeto final</p>
+          <p class="lesson-hero__crumb"><a href="../avancado.html#aulas">Aulas</a> <span aria-hidden="true">/</span> Módulo 4 · Projeto final</p>
           <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
         </div>
         <div class="lesson-hero__head">
@@ -84,7 +85,7 @@
         <dl class="lesson-meta">
           <div><dt>Duração de referência</dt><dd>≈ 10–12 min <span class="lesson-meta__note">(estimativa editorial do guia)</span></dd></div>
           <div><dt>Entrega do módulo</dt><dd>Segundo vídeo independente</dd></div>
-          <div><dt>Nível</dt><dd>Iniciante</dd></div>
+          <div><dt>Nível</dt><dd>Avançado · Claude Code</dd></div>
         </dl>
         <button class="done-toggle" type="button" aria-pressed="false" data-done-toggle>
           <span class="done-toggle__box" aria-hidden="true"></span>
@@ -128,7 +129,7 @@
       <article class="lesson-body" data-lesson-body>
         <h2 class="b-titulo" id="contexto-narrativo">Contexto narrativo</h2>
 
-        <p class="b-paragrafo">Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível iniciante, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia.</p>
+        <p class="b-paragrafo">Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível avançado, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia.</p>
 
         <p class="b-paragrafo">Objetivo: produzir um novo vídeo de 30 segundos chamado Transforme suas Ideias em Realidade, aplicando todas as técnicas apresentadas nas aulas anteriores.</p>
 
@@ -155,7 +156,7 @@
 
         <p class="b-paragrafo">Nosso projeto terá o título:</p>
 
-        <p class="b-paragrafo">“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível iniciante)</p>
+        <p class="b-paragrafo">“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível avançado)</p>
 
         <p class="b-paragrafo">O vídeo terá cinco cenas e duração de 30 segundos.</p>
 
@@ -401,7 +402,7 @@
 
         <h3 class="b-titulo" id="texto-continuo-para-locucao">Texto contínuo para locução</h3>
 
-        <p class="b-paragrafo">Chegamos à última aula do nível iniciante do nosso curso de edição de vídeos com Claude.</p>
+        <p class="b-paragrafo">Chegamos à última aula do nível avançado do nosso curso de edição de vídeos com Claude.</p>
 
         <p class="b-paragrafo">E, para encerrar, vamos realizar um desafio especial.</p>
 
@@ -501,7 +502,7 @@
 
         <p class="b-paragrafo">A inteligência artificial pode acelerar várias etapas da produção, mas nosso olhar como editor continua sendo fundamental.</p>
 
-        <p class="b-paragrafo">Com isso, encerramos o nível iniciante.</p>
+        <p class="b-paragrafo">Com isso, encerramos o nível avançado.</p>
 
         <p class="b-paragrafo">A partir de agora, você já possui uma base para desenvolver seus próprios projetos utilizando o Claude Code e o Remotion.</p>
 
@@ -529,8 +530,8 @@
         <span class="pager__no">11</span>
         <span class="pager__title">Revisão e exportação do vídeo</span>
       </a>
-      <a class="pager__link pager__link--next" href="../index.html#aulas">
-        <span class="pager__dir">Fim do curso →</span>
+      <a class="pager__link pager__link--next" href="../avancado.html#aulas">
+        <span class="pager__dir">Fim do nível →</span>
         <span class="pager__title">Voltar a todas as aulas</span>
       </a>
     </nav>
@@ -540,15 +541,16 @@
     <div class="container">
       <div class="site-footer__row">
         <nav class="site-footer__nav" aria-label="Rodapé">
-          <a href="../index.html">Início</a>
-          <a href="../index.html#aulas">Todas as aulas</a>
-          <a href="../index.html#guia">Guia do professor</a>
+          <a href="../avancado.html">Início</a>
+          <a href="../avancado.html#aulas">Todas as aulas</a>
+          <a href="../avancado.html#guia">Guia do professor</a>
           <a href="../guia.html">Referência</a>
+          <a href="../index.html" data-level-link>Trocar de nível</a>
         </nav>
         <p class="site-footer__note">Curso independente sobre o uso do Claude na edição de vídeos. Não é um produto oficial nem afiliado à Anthropic. Claude é uma marca da Anthropic, PBC.</p>
       </div>
       <div class="site-footer__legal">
-        <span>© 2026 Guia do Professor · Edição de Vídeos</span>
+        <span>© 2026 Edição de Vídeos com Claude · Avançado · Guia do professor</span>
         <a href="#conteudo">Voltar ao topo ↑</a>
       </div>
     </div>

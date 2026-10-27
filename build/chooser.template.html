@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- GERADO por build/build.mjs a partir de build/chooser.template.html (escolha do nível). Edite o template, não o HTML gerado. -->
+  <title>Edição de Vídeos com Claude — escolha o seu nível</title>
+  <meta name="description" content="Edição de Vídeos com Claude, em dois níveis: Iniciante, com o Claude Cowork (sem terminal nem programação), e Avançado, com o Claude Code, Node.js e Remotion. Cada nível tem versão do professor e versão do aluno.">
+  <meta name="theme-color" content="#0c0b0a">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0b0a'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23d97757'/%3E%3C/svg%3E">
+</head>
+<body class="page-home page-chooser">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ NAV (glass pill) ============ -->
+  <header class="site-nav" data-nav>
+    <div class="site-nav__bar">
+      <a class="brand" href="index.html" aria-label="Edição de Vídeos com Claude — escolha do nível">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>
+      </a>
+      <nav class="site-nav__links" aria-label="Principal">
+{{NAV_LINKS}}
+      </nav>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+        <span class="sr-only">Abrir menu</span><span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="site-nav__mobile" id="menu-mobile" aria-label="Menu" hidden>
+{{MOBILE_LINKS}}
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--chooser" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__meta">
+        <span class="rec" aria-hidden="true"><span class="rec__dot"></span>REC</span>
+        <span class="timecode" aria-hidden="true" data-timecode>00:00:00:00</span>
+        <span class="hero__fps" aria-hidden="true">2 NÍVEIS · 24 AULAS</span>
+        <button class="motion-toggle" type="button" data-motion-toggle hidden><span data-motion-text>Pausar animação</span></button>
+      </div>
+
+      <div class="hero__inner">
+        <p class="hero__kicker">Curso em dois níveis</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="wordmark" aria-hidden="true" data-wordmark>EDIÇÃO</span>
+          <span class="sr-only">Edição de Vídeos com Claude</span>
+        </h1>
+        <p class="hero__lead">Edição de Vídeos com Claude. Escolha o seu nível: comece <em>conversando</em> com o Claude ou vá direto ao <em>código</em>.</p>
+      </div>
+    </section>
+
+    <!-- ============ NÍVEIS ============ -->
+    <section class="levels" id="niveis" aria-label="Níveis do curso">
+      <div class="container levels__grid">
+{{LEVEL_CARDS}}
+      </div>
+      <p class="container levels__note">As duas versões de cada nível têm as mesmas aulas. A do professor traz roteiro, narração e checklists; a do aluno traz o passo a passo e os prompts prontos para copiar.</p>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__name" aria-hidden="true">EDIÇÃO · CLAUDE</p>
+      <div class="site-footer__row">
+        <nav class="site-footer__nav" aria-label="Rodapé">
+{{FOOTER_LINKS}}
+        </nav>
+        <p class="site-footer__note">{{DISCLAIMER}}</p>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Edição de Vídeos com Claude</span>
+        <a href="#conteudo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

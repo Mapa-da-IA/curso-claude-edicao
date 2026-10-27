@@ -1,9 +1,9 @@
 {
   "curso": {
     "titulo": "Edição de Vídeos com Claude",
-    "subtitulo": "Versão do aluno | Nível iniciante. 12 aulas, passo a passo e prompts prontos",
+    "subtitulo": "Versão do aluno | Nível avançado. 12 aulas, passo a passo e prompts prontos",
     "introducao": [
-      "Em 12 aulas de nível iniciante, você aprende a editar vídeos com Claude Code e Remotion: do primeiro contato com o Claude até um vídeo completo, revisado e exportado.",
+      "Em 12 aulas de nível avançado, você aprende a editar vídeos com Claude Code e Remotion: do primeiro contato com o Claude até um vídeo completo, revisado e exportado.",
       "Da aula 2 à aula 11, você trabalha sempre no mesmo projeto, o meu-primeiro-video, onde cria e aprimora o vídeo O Futuro da Criação: cenas, arquivos, cortes, tipografia, áudio, cor, revisão e exportação. Na aula 12, você aplica tudo em um projeto final novo, criado do zero.",
       "O que você precisa: computador com Windows 10/11, Claude Code, Node.js e Remotion (instalados na aula 2). A partir da aula 2, é preciso um plano do Claude que inclua o Claude Code: Pro, Max, Team, Enterprise ou uma conta do Claude Console. O plano Free não inclui o Claude Code."
     ]
@@ -2623,7 +2623,7 @@
       "blocos": [
         {
           "tipo": "paragrafo",
-          "texto": "Este é o desafio final do nível iniciante. Você vai criar um vídeo novo, do zero, em uma pasta separada, usando tudo o que aprendeu: planejar o conteúdo, organizar os arquivos, usar Skills, criar cenas e animações, trabalhar o áudio, revisar e exportar."
+          "texto": "Este é o desafio final do nível avançado. Você vai criar um vídeo novo, do zero, em uma pasta separada, usando tudo o que aprendeu: planejar o conteúdo, organizar os arquivos, usar Skills, criar cenas e animações, trabalhar o áudio, revisar e exportar."
         },
         {
           "tipo": "titulo",

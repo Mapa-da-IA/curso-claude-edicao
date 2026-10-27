@@ -1,18 +1,21 @@
-# DESIGN.md — Guia do Professor · Claude: Edição de Vídeos (12 aulas)
+# DESIGN.md — Edição de Vídeos com Claude (dois níveis × duas versões, 12 aulas cada)
 
-Static site: plain HTML + CSS + vanilla JS, no build step. Works opened from disk (`file://`) and from any static server. All links are relative.
+Static site: plain HTML + CSS + vanilla JS. As páginas são GERADAS por `node build/build.mjs` (depois `node build/check-links.mjs`); não edite o HTML gerado. Works opened from disk (`file://`) and from any static server. All links are relative.
 
 ```
 site/
-  index.html                 home (hero, números, intro, linha do tempo das 12 aulas, guia, CTA, rodapé)
+  index.html                 escolha do nível (raiz; gerada de build/chooser.template.html) — §10
+  avancado.html              home do professor, nível avançado (hero, números, intro, linha do tempo, guia, CTA, rodapé)
+  iniciante/…                nível iniciante (mesma estrutura, um nível abaixo) — §10
   aulas/_template.html       template da página de aula (o builder gera aula-01.html … aula-12.html a partir dele)
   assets/css/tokens.css      custom properties (cores, tipo, espaço, raios, sombras, motion)
   assets/css/site.css        todos os componentes
   assets/js/site.js          canvas do hero, nav, abas, progresso, seletor de aulas, copiar, sumário, reveal
-  content/aulas.json         (de outro agente — não editar aqui)
-  content/alunos.json        conteúdo da versão do aluno (§9)
-  aluno/index.html, aluno/aula-NN.html   versão do aluno (gerada)
-  build/build.mjs            gera as duas versões · build/check-links.mjs confere todas as páginas
+  content/avancado/aulas.json · alunos.json     conteúdo do nível avançado (professor · aluno)
+  content/iniciante/aulas.json · alunos.json    conteúdo do nível iniciante (professor · aluno)
+  aluno/index.html, aluno/aula-NN.html   versão do aluno, nível avançado (gerada)
+  build/build.mjs            gera níveis × versões · build/index.template.html (homes) · build/chooser.template.html (raiz)
+  build/check-links.mjs      confere links/âncoras de todas as páginas e o bloqueio aluno → guia
   _screens/                  screenshots de verificação
 ```
 
@@ -220,7 +223,7 @@ Código inline dentro de parágrafos: `<code>…</code>` (estilizado automaticam
 ## 7. Comportamento do JS (assets/js/site.js)
 
 - `html.js` é adicionado por um script inline no `<head>`. Sem JS, todo o conteúdo continua visível.
-- **Progresso:** chave `localStorage` `edicao-claude:progresso` = array de `"NN"`. Todas as leituras e escritas usam try/catch.
+- **Progresso:** `localStorage`, array de `"NN"`, uma chave por nível × versão (lidas de `body[data-nivel]` + `body[data-versao]`): avançado/professor `edicao-claude:progresso`, avançado/aluno `edicao-claude:aluno:progresso` (chaves anteriores à divisão em níveis, mantidas), iniciante/professor `edicao-claude:iniciante:professor:progresso`, iniciante/aluno `edicao-claude:iniciante:aluno:progresso`. Todas as leituras e escritas usam try/catch.
 - **Copiar:** qualquer `[data-copy]` copia o `innerText` do `[data-copy-source]` dentro do mesmo `figure`. Usa a Clipboard API e, se ela não estiver disponível (file://), recorre a `execCommand`. Anuncia "Copiado" numa região `aria-live`.
 - **Hero:** canvas de onda + órbita (pausa fora da tela ou com a aba oculta; DPR máximo 2); abas avançam sozinhas a cada 6,5s, param com hover/foco e aceitam ←/→.
 - **`prefers-reduced-motion`:** canvas estático, sem avanço automático, sem animações de entrada, contadores e timecode fixos.
@@ -234,13 +237,13 @@ Código inline dentro de parágrafos: `<code>…</code>` (estilizado automaticam
 - Verificado sem rolagem horizontal em 1440, 375 e 360px. Tabelas e código rolam dentro do próprio bloco.
 - Foco visível: contorno argila de 2px (`:focus-visible`). Um único `h1` por página, landmarks semânticos, `lang="pt-BR"`, alvos de toque ≥44px nos controles principais, menor texto 13px.
 
-## 9. Versão do aluno (/aluno/)
+## 9. Versão do aluno (/aluno/ e /iniciante/aluno/)
 
-- **Geração:** `build.mjs` monta um objeto variante `V` (`professor` ← `content/aulas.json`, `aluno` ← `content/alunos.json`) e chama as mesmas `buildLesson(a, i, V)` / `buildHome(V)` com os mesmos templates. O professor continua em `index.html`, `aulas/` e `guia.html`. O aluno sai em `aluno/index.html` e `aluno/aula-NN.html` (assets `../assets/…`, home `index.html`). Sem `alunos.json`, só a versão do professor é gerada.
-- **Diferenças no aluno:** `body[data-versao="aluno"].page-aluno`; selo `.brand__badge` "Versão do aluno" (só "aluno" ≤560px; ≤420px a aula esconde `.brand__text`); a nav não tem guia nem referência (o build falha se uma página do aluno linkar `guia.html`/`#guia`). A home do aluno mostra só Aulas, Módulos e Prompts prontos (+ Exercícios, se houver), com colunas via `--stat-cols`. A seção `#preparo` "O que você precisa" usa o parágrafo `O que você precisa: …` de `curso.introducao` (ou o pré-requisito do curso) e traz passos fixos de estudo.
-- **Alternância:** `a.version-toggle[data-version-toggle]` ("⇄ Ver versão do aluno/professor") é o último item de `.site-nav__links` (com um fio à esquerda e cor mute) e do `#menu-mobile`. Aula ⇄ aula correspondente; home ⇄ home; `guia.html` → `aluno/index.html`.
-- **Progresso:** o aluno usa a chave `edicao-claude:aluno:progresso`, separada da `edicao-claude:progresso` do professor.
-- **Contrato de `content/alunos.json`:**
+- **Geração:** `build.mjs` monta um objeto variante `V` por nível × versão (§10) e chama as mesmas `buildLesson(a, i, V)` / `buildGuide(V)` / `buildHome(V)` com os mesmos templates. Os quatro JSON são obrigatórios e validados (contrato abaixo; o do professor exige também `curso.secoes_extras`).
+- **Diferenças no aluno:** `body[data-versao="aluno"].page-aluno`; selo neon (o do professor é argila); a nav não tem guia nem referência (o build falha se uma página do aluno linkar `guia.html`/`#guia`, e o `check-links.mjs` confere de novo em `aluno/` e `iniciante/aluno/`). A home do aluno mostra só Aulas, Módulos e Prompts prontos (+ Exercícios, se houver), com colunas via `--stat-cols`. A seção `#preparo` "O que você precisa" usa o parágrafo `O que você precisa: …` de `curso.introducao` (ou o pré-requisito do curso) e traz passos fixos de estudo.
+- **Alternância:** `a.version-toggle[data-version-toggle]` ("⇄ Ver versão do aluno/professor"; o "Ver" some na nav larga) é o último item de `.site-nav__links` (com um fio à esquerda e cor mute) e do `#menu-mobile`. Sempre dentro do mesmo nível: aula ⇄ aula correspondente; home ⇄ home; guia → home do aluno.
+- **Progresso:** chaves separadas por nível e versão (§7).
+- **Contrato dos JSON** (`content/<nível>/aulas.json` e `alunos.json`; o do professor tem também `curso.secoes_extras[]` = `{ titulo, blocos[] }`, e uma seção "Mapa do curso" com tabela `[Aulas, Foco, Entrega]` alimenta a "Entrega do módulo"):
 ```json
 { "curso": { "titulo": "…", "subtitulo": "…", "introducao": ["…"] },
   "aulas": [ { "numero": 1, "slug": "aula-01", "titulo": "…",
@@ -248,3 +251,21 @@ Código inline dentro de parágrafos: `<code>…</code>` (estilizado automaticam
                "duracao": "…", "objetivos": ["…"],
                "blocos": [ /* mesmos tipos e campos da §6 */ ] } ] }
 ```
+
+## 10. Níveis (Iniciante · Avançado) e mapa de URLs
+
+| Página | Avançado (Claude Code) | Iniciante (Claude Cowork) |
+|---|---|---|
+| Home do professor | `/avancado.html` | `/iniciante/index.html` |
+| Aulas do professor | `/aulas/aula-NN.html` | `/iniciante/aulas/aula-NN.html` |
+| Guia de referência (só professor) | `/guia.html` | `/iniciante/guia.html` |
+| Home do aluno | `/aluno/index.html` | `/iniciante/aluno/index.html` |
+| Aulas do aluno | `/aluno/aula-NN.html` | `/iniciante/aluno/aula-NN.html` |
+| Conteúdo | `content/avancado/` | `content/iniciante/` |
+
+- **Raiz `/index.html`:** escolha do nível (`body.page-home.page-chooser`). Hero com a marca-palavra em `.hero--chooser` (mais baixo), depois `.levels__grid` com dois `article.level-card` (`--iniciante` neon, `--avancado` argila): número, nome, ferramenta, descrição, `.level-card__tags`, contagem de aulas/módulos e os botões "Versão do professor" (`.btn--clay`) e "Versão do aluno" (`.btn--ghost`). Uma coluna ≤900px. Os textos dos cartões ficam em `CHOOSER_LEVELS` no `build.mjs`.
+- **Configuração:** `LEVELS` (chave, nome, ferramenta, pasta de conteúdo, `base` das URLs, home do professor, nome completo) × `VERSIONS` (arquivo JSON, pasta das aulas, rótulo, se tem guia). O avançado tem `base: ""` para manter as URLs publicadas; só a home do professor saiu de `index.html` para `avancado.html`. Todo link é calculado com `rel(página, destino)`; o template da aula continua escrito como se estivesse em `aulas/`, e `templatePaths()` reescreve `../index.html`, `../guia.html` e `../assets/`.
+- **Rótulos:** toda página de nível tem `body[data-nivel][data-versao]` e o selo `.brand__badge` "Nível · Versão" (`.brand__badge-lvl`, `-sep`, `-ver`; ≤560px vira duas linhas e a aula esconde `.brand__text`). As homes têm `.hero__kicker` "Nível X · Ferramenta · Versão" e título "Edição de Vídeos com Claude — Avançado (Claude Code) · …"; as aulas mostram "Nível: Avançado · Claude Code". O rodapé traz "© 2026 Edição de Vídeos com Claude · Nível · Versão".
+- **Troca de nível:** `a[data-level-link]` "Trocar de nível" → `/index.html`, no menu móvel e no rodapé de todas as páginas de nível. A marca leva à home do nível e da versão atuais.
+- **Nav larga:** com o selo, os links da nav vão para o menu hambúrguer a ≤1280px nas páginas do professor (aula e guia) e a ≤1200px nas homes e aulas do aluno.
+- **Conteúdo do iniciante:** por enquanto, placeholders com o mesmo contrato (títulos e módulos definitivos, "Conteúdo em preparação."). Números zerados (prompts, checklist, exercícios) não aparecem na home.

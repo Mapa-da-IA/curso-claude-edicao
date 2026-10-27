@@ -1,10 +1,10 @@
 {
   "curso": {
     "titulo": "Edição de Vídeos com Claude",
-    "subtitulo": "Guia do professor | Nível iniciante. 12 aulas, roteiros, prompts e checklists",
+    "subtitulo": "Guia do professor | Nível avançado. 12 aulas, roteiros, prompts e checklists",
     "introducao": [
       "Identidade editorial inspirada na comunicação visual do Claude; material independente.",
-      "Este guia consolida as 12 aulas do nível iniciante de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.",
+      "Este guia consolida as 12 aulas do nível avançado de edição de vídeos com Claude Code e Remotion. Foi organizado para apoiar planejamento, gravação, condução de demonstrações e validação de aprendizagem.",
       "Papel do professor: Demonstrar o procedimento em um ambiente previamente testado, explicar o raciocínio de cada decisão, conferir o resultado real e distinguir as verificações automatizadas das avaliações criativas humanas.",
       "Método de cada aula: 1. Mostrar o resultado esperado. 2. Apresentar o problema. 3. Explicar o conceito essencial. 4. Executar o prompt. 5. Validar o resultado. 6. Conectar à próxima aula.",
       "Notas de produção: Duração de referência: aulas 01 a 11, aproximadamente 7 a 10 minutos; aula 12, 10 a 12 minutos. As durações são estimativas editoriais, não tempos garantidos de execução do software.",
@@ -162,7 +162,7 @@
           },
           {
             "tipo": "paragrafo",
-            "texto": "O conjunto das 12 aulas passa, assim, a construir uma jornada contínua de aprendizado: o aluno prepara o ambiente, desenvolve técnicas progressivamente, finaliza seu primeiro vídeo e termina o nível iniciante produzindo um segundo projeto com maior autonomia."
+            "texto": "O conjunto das 12 aulas passa, assim, a construir uma jornada contínua de aprendizado: o aluno prepara o ambiente, desenvolve técnicas progressivamente, finaliza seu primeiro vídeo e termina o nível avançado produzindo um segundo projeto com maior autonomia."
           },
           {
             "tipo": "paragrafo",
@@ -765,7 +765,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Nível iniciante · Windows 10/11. Na aula anterior, o aluno conheceu o Claude no navegador e no aplicativo desktop. Agora ele prepara o computador com três ferramentas: Claude Code, Node.js e Remotion. Ao final, terá um projeto Remotion aberto no Remotion Studio e o Claude Code criando a primeira composição dentro dele."
+          "texto": "Nível avançado · Windows 10/11. Na aula anterior, o aluno conheceu o Claude no navegador e no aplicativo desktop. Agora ele prepara o computador com três ferramentas: Claude Code, Node.js e Remotion. Ao final, terá um projeto Remotion aberto no Remotion Studio e o Claude Code criando a primeira composição dentro dele."
         },
         {
           "tipo": "paragrafo",
@@ -4950,7 +4950,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível iniciante, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia."
+          "texto": "Tema: aplicando todo o conhecimento do curso em um novo projeto. Nas aulas 5 a 11, o aluno construiu aos poucos, no projeto meu-primeiro-video, a composição O-Futuro-da-Criacao: planejou as cenas, usou as Skills oficiais do Remotion e a Skill direcao-de-edicao, adicionou mídias, trabalhou ritmo, áudio e acabamento, revisou e exportou. Nesta última aula do nível avançado, ele começa um projeto completamente novo, numa pasta separada, e repete todo esse fluxo com mais autonomia."
         },
         {
           "tipo": "paragrafo",
@@ -5006,7 +5006,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível iniciante)"
+          "texto": "“TRANSFORME SUAS IDEIAS EM REALIDADE” (projeto final do nível avançado)"
         },
         {
           "tipo": "paragrafo",
@@ -5314,7 +5314,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Chegamos à última aula do nível iniciante do nosso curso de edição de vídeos com Claude."
+          "texto": "Chegamos à última aula do nível avançado do nosso curso de edição de vídeos com Claude."
         },
         {
           "tipo": "paragrafo",
@@ -5514,7 +5514,7 @@
         },
         {
           "tipo": "paragrafo",
-          "texto": "Com isso, encerramos o nível iniciante."
+          "texto": "Com isso, encerramos o nível avançado."
         },
         {
           "tipo": "paragrafo",

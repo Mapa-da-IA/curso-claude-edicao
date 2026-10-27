@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/aulas.json (professor) ou content/alunos.json (aluno). Edite o template, não o HTML gerado. -->
-  <title>{{CURSO_TITULO}} — {{TITLE_TAIL}}, {{N_AULAS}} Aulas</title>
+  <!-- GERADO por build/build.mjs a partir de build/index.template.html + content/<nível>/aulas.json (professor) ou alunos.json (aluno). Edite o template, não o HTML gerado. -->
+  <title>{{PAGE_TITLE}}</title>
   <meta name="description" content="{{META_DESC}}">
   <meta name="theme-color" content="#0c0b0a">
   <script>document.documentElement.classList.add('js')</script>
@@ -21,7 +21,7 @@
   <!-- ============ NAV (glass pill) ============ -->
   <header class="site-nav" data-nav>
     <div class="site-nav__bar">
-      <a class="brand" href="index.html" aria-label="{{BRAND_LABEL}}">
+      <a class="brand" href="{{HOME}}" aria-label="{{BRAND_LABEL}}">
         <span class="brand__mark" aria-hidden="true"></span>
         <span class="brand__text">Edição<span class="brand__dot">·</span>Claude</span>{{BRAND_BADGE}}
       </a>
@@ -53,6 +53,7 @@
       </div>
 
       <div class="hero__inner">
+        <p class="hero__kicker">{{HERO_KICKER}}</p>
         <h1 class="hero__title" id="hero-title">
           <span class="wordmark" aria-hidden="true" data-wordmark>EDIÇÃO</span>
           <span class="sr-only">{{H1_SR}}</span>
@@ -88,7 +89,7 @@
         </div>
         <div class="tile tile--figure reveal">
           <span class="tile__figure">{{N_AULAS}}</span>
-          <span class="tile__caption">aulas · nível iniciante</span>
+          <span class="tile__caption">{{LEVEL_CAPTION}}</span>
         </div>
         <div class="tile tile--wave reveal" aria-hidden="true">
           <canvas class="wave-canvas" data-wave></canvas>

@@ -4,18 +4,18 @@ Site de um curso independente sobre edição de vídeos com o Claude. Este mater
 
 ## Ver localmente
 
-Abra o arquivo `index.html` no navegador. Não precisa de servidor.
+Abra o arquivo `index.html` no navegador (é a escolha do nível). Não precisa de servidor.
 
 ## Reconstruir as páginas
 
-As aulas são geradas a partir de `content/aulas.json`. Com o Node.js instalado, rode na raiz do projeto:
+O curso tem dois níveis, cada um com versão do professor e do aluno. As páginas são geradas a partir de `content/avancado/` e `content/iniciante/` (`aulas.json` = professor, `alunos.json` = aluno). Com o Node.js instalado, rode na raiz do projeto:
 
 ```sh
 node build/build.mjs
 node build/check-links.mjs
 ```
 
-O primeiro comando gera as páginas em `aulas/`, o `index.html` e o `guia.html`; o segundo confere se todos os links internos funcionam.
+O primeiro comando gera a escolha de nível (`index.html`), o nível avançado (`avancado.html`, `aulas/`, `guia.html`, `aluno/`) e o iniciante (`iniciante/`); o segundo confere se todos os links internos funcionam. Detalhes em `DESIGN.md` §10.
 
 ## Publicação
 

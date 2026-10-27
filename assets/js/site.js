@@ -24,10 +24,14 @@
   function announce(msg) { live.textContent = ""; setTimeout(function () { live.textContent = msg; }, 30); }
 
   /* ------------------------------------------------- storage (safe) */
-  // Versão do aluno (body[data-versao="aluno"]) guarda o progresso numa chave própria,
-  // para não misturar com o progresso do professor.
-  var IS_ALUNO = !!(document.body && document.body.getAttribute("data-versao") === "aluno");
-  var KEY = IS_ALUNO ? "edicao-claude:aluno:progresso" : "edicao-claude:progresso";
+  // Uma chave de progresso por nível × versão (body[data-nivel] + body[data-versao]).
+  // O nível avançado mantém as chaves de antes da divisão em níveis, para ninguém perder o progresso.
+  var BODY = document.body;
+  var NIVEL = (BODY && BODY.getAttribute("data-nivel")) || "avancado";
+  var IS_ALUNO = !!(BODY && BODY.getAttribute("data-versao") === "aluno");
+  var KEY = NIVEL === "avancado"
+    ? (IS_ALUNO ? "edicao-claude:aluno:progresso" : "edicao-claude:progresso")
+    : "edicao-claude:" + NIVEL + ":" + (IS_ALUNO ? "aluno" : "professor") + ":progresso";
   function readDone() {
     try { var v = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(v) ? v : []; }
     catch (e) { return []; }
