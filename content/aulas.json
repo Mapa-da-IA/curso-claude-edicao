@@ -106,14 +106,14 @@
                 "Para tarefas de texto; não equivale ao terminal local."
               ],
               [
-                "Claude Desktop — Cowork",
+                "Claude Desktop — Cowork (macOS e Windows)",
                 "Skills e plugins da conta; arquivos locais dependem das capacidades e permissões disponíveis.",
                 "Alternativa visual; testar acesso à pasta e terminal."
               ],
               [
                 "Claude no navegador",
-                "Personalizar > Skills, conforme recursos da conta; Cowork na nuvem tem limites de acesso ao computador.",
-                "Consultar, planejar ou Cowork; não presumir acesso local."
+                "Personalizar > Skills, conforme recursos da conta. O Cowork não fica no navegador: é do Claude Desktop.",
+                "Consultar e planejar; não presumir acesso local."
               ],
               [
                 "Claude Code em Desktop",
@@ -527,7 +527,7 @@
         },
         {
           "tipo": "dica",
-          "texto": "Use o navegador para conversar, escrever e analisar documentos em qualquer computador, sem instalar nada. Use o Desktop quando precisar dos recursos que só existem no aplicativo, como a aba Code, o Cowork e as extensões locais.\n\nNas próximas aulas, o curso usa o aplicativo Claude Desktop. Peça aos alunos que saiam desta aula com ele instalado e com a conta conectada."
+          "texto": "Use o navegador para conversar, escrever e analisar documentos em qualquer computador, sem instalar nada. Use o Desktop quando precisar dos recursos que só existem no aplicativo, como a aba Code, o Cowork e as extensões locais.\n\nNa próxima aula, vamos instalar o Claude Code no terminal do Windows (PowerShell), junto com o Node.js e o Remotion. É essa a ferramenta que o curso usa para editar os vídeos."
         },
         {
           "tipo": "titulo",
